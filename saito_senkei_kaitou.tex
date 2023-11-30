@@ -1,0 +1,1424 @@
+\documentclass[uplatex,dvipdfmx,a4paper,10pt,fleqn]{jsarticle}
+
+\input{preamble.tex}
+
+\usepackage{autobreak}
+
+\usepackage{docmute}
+%ヘッダー・フッダー
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\chead{齋藤正彦・線型代数入門解答集}
+\rhead{\thepage}
+\cfoot{}
+\begin{document}
+
+\title{齋藤正彦・線型代数入門解答集}
+\author{なまちゃん}
+\date{\today}
+\maketitle
+\begin{multicols*}{3}
+    \tableofcontents
+\end{multicols*}
+\addcontentsline{toc}{section}{\texorpdfstring{目次}{目次}}
+\newpage
+\section*{第1章}
+\addcontentsline{toc}{section}{\texorpdfstring{第1章}{第1章}}
+
+\subsection*{p5：問1}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p5：問1}{p5：問1}}
+
+\begin{tleftbar}
+    \begin{proof}
+		線分$\mathrm{PQ}$の中点を$\mathrm{M}$とする．このとき，
+		\begin{align*}
+		\overrightarrow{\mathrm{OM}} & = \overrightarrow{\mathrm{OP}} + \overrightarrow{\mathrm{PM}} \\
+		& = \bm{a} + \frac{\bm{b}-\bm{a}}{2} \\
+		& = \frac{\bm{a}+\bm{b}}{2}
+		\end{align*}
+		である．
+	\end{proof}
+\end{tleftbar}
+\subsection*{p5：問2}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p5：問2}{p5：問2}}
+\begin{tleftbar}
+	\begin{proof}
+		三角形$\mathrm{PQR}$の重心を$\mathrm{G}$，$\mathrm{PQ}$の中点を$\mathrm{N}$とする．$\mathrm{G}$は線分$\mathrm{RN}$を$2：1$に内分する点なので，
+		\begin{align*}
+			\overrightarrow{\mathrm{OG}} &= \overrightarrow{\mathrm{OR}} + \frac{2}{3} \overrightarrow{\mathrm{RN}} \\
+			& = \bm{c}+ \frac{3}{2} \left (\frac{\bm{a}+\bm{b}}{2}-\bm{c} \right) \\
+			& = \frac{\bm{a}+\bm{b}+\bm{c}}{3}
+		\end{align*}
+		である．
+	\end{proof}
+\end{tleftbar}
+
+\newpage
+
+\subsection*{p7：問-(上)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p7：問-(上)}{p7：問-(上)}}
+
+\begin{tleftbar}
+    求めるベクトルを，$\bm{x}=(x，y，z)$~($x^2+y^2 +z^2=1$)とおく．
+    このとき，内積の定義により，
+    \begin{align*}
+        &\bm{x} \cdot 
+        \begin{pmatrix}
+                1 \\
+                1 \\
+                1
+            \end{pmatrix}
+        =x+y+z= 1 \cdot \sqrt{3} \cdot \cos \frac{\pi}{6} =\frac{3}{2} \\
+        &\bm{x} \cdot 
+            \begin{pmatrix}
+                1 \\
+                1 \\
+                4
+            \end{pmatrix}
+        =x+y+4z= 1 \cdot 3\sqrt{2} \cdot \cos \frac{\pi}{4} =3
+        \end{align*}
+        これらの式から，
+        \begin{equation*}
+            \begin{pmatrix}
+            x \\
+            y \\
+            z  
+    \end{pmatrix}
+    =
+                \begin{pmatrix}
+                \frac{2 \pm \sqrt{2}}{4} \\
+                \frac{2 \mp \sqrt{2}}{4} \\
+                \frac{1}{2} 
+    \end{pmatrix}
+            \quad (\text{複号同順})
+    \end{equation*}
+        である．
+    \end{tleftbar}
+    \subsection*{p7：問-(下)}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p7：問-(下)}{p7：問-(下)}}
+\begin{tleftbar}
+	[1.4]の結果を利用する．
+
+	求める三角形の面積を$S$とし．
+    \[
+    \bm{a}=\overrightarrow{\mathrm{P_1 P_2}}=(x_2-x_1，y_2-y_1，z_2-z_1),\quad \bm{b}=\overrightarrow{\mathrm{P_1 P_3}}=(x_3-x_1，y_3-y_1，z_3-z_1)
+    \]
+    とおく，
+	このとき，
+	\begin{align*}
+		S & = \frac{1}{2} \sqrt{\norm{\overrightarrow{\mathrm{P_1 P_2}}}^2 \norm{\overrightarrow{\mathrm{P_1 P_3}}}^2 - (\overrightarrow{\mathrm{P_1 P_2}} \cdot \overrightarrow{\mathrm{P_1 P_3}})^2} \\
+		  & = \frac{1}{2} \sqrt{\norm{\bm{a}}^2 \norm{\bm{b}}^2 - (\bm{a}\cdot \bm{b})^2 } \\
+		  & = \frac{1}{2} \{[(x_2 - x_1)^2+(y_2-y_1)^2+ (z_2 - z_1)^2][(x_3 - x_1)^2+(y_3-y_1)^2+ (z_3 - z_1)^2]\\
+		  & \qquad - [(x_2-x_1)(x_3-x_1)+(y_2 -y_1)(y_3-y_1)+(z_2-z_1)(z_3-z_1)]^2\}^{\frac{1}{2}}
+	\end{align*}
+	である，
+\end{tleftbar}
+	
+\newpage
+
+\subsection*{p8：問1}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p8：問1}{p8：問1}}
+
+\begin{tleftbar}
+	\begin{description}
+        \item[イ] 
+    与えられた直線を$l$とする．$l$の方程式に$x=-2$を代入すると，$y=2$となるため，$l$は点$(-2,2)$を通る．
+	また，$l$の法線ベクトルのひとつは，
+	$
+		\begin{pmatrix}
+			2 \\
+			3
+		\end{pmatrix}
+		$なので，$l$の方向ベクトルのひとつは，
+		$
+		\begin{pmatrix}
+			-3 \\
+			2
+		\end{pmatrix}
+		$である．よって，$l$のベクトル表示のひとつは，
+		$
+		\begin{pmatrix}
+			x \\
+			y
+		\end{pmatrix}
+		= 
+		\begin{pmatrix}
+		-2 \\
+		2
+		\end{pmatrix}
+		+t 
+			\begin{pmatrix}
+				-3 \\
+				2
+			\end{pmatrix}
+			~(-\infty < t < \infty)$である．\\
+
+			\item[ロ]
+            与えられた直線を$l'$とする．$l '$の方向ベクトルのひとつは，$
+				\begin{pmatrix}
+					0 \\
+					1
+				\end{pmatrix}
+			$である．また，$l '$は点$(3,0)$を通るので，そのベクトル表示のひとつは，
+			$
+				\begin{pmatrix}
+					x \\
+					y
+				\end{pmatrix}
+			= 
+				\begin{pmatrix}
+				3 \\
+				0
+				\end{pmatrix}
+			+t 
+				\begin{pmatrix}
+					0 \\
+					1
+                    \end{pmatrix}
+                     ~(-\infty < t < \infty)
+				$となる．
+                \end{description}
+		\end{tleftbar}
+		
+\subsection*{p8：問2}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p8：問2}{p8：問2}}
+		\begin{tleftbar}
+            \begin{description}
+			\item[イ]
+			与えられたベクトル表示から．
+			\begin{align*}
+				\begin{cases}
+					x=1+2t \\
+					y=-1+t
+				\end{cases}
+			\end{align*}
+			であるから，
+			\begin{align*}
+				\begin{cases}
+					t=\frac{x-1}{2} \\
+					t=y+1
+				\end{cases}
+			\end{align*}
+			である．これから$t$を消去すると，
+			\begin{gather*}
+				\frac{x-1}{2} = y+1 \\
+				\therefore ~ x-2y-3 =0
+			\end{gather*}
+			である．
+
+			\item[ロ]
+			点$(-1,-2)$を通り，$x$軸に平行な直線を表すから，$y=-2$が求める直線の方程式である．
+        \end{description}
+		\end{tleftbar}
+%
+\newpage
+%
+%
+
+\subsection*{p10：問1}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p10：問1}{p10：問1}}
+
+\begin{tleftbar}
+\begin{align*}
+    \begin{cases}
+        x+2y+3z=1 \\
+        3x+2y+z=-1
+    \end{cases}
+\end{align*}
+から，
+\begin{gather*}
+    -2x+2z=2 \\
+    \therefore \quad -x+z=1
+\end{gather*}
+である．このとき，$
+    \begin{pmatrix}
+        x \\
+        z
+    \end{pmatrix}
+ =
+    \begin{pmatrix}
+        1 \\
+        2
+    \end{pmatrix}
+，
+    \begin{pmatrix}
+        2 \\
+        3
+    \end{pmatrix}
+$はこれを満たす．このときの$y$の値を計算すると，それぞれ$-3,-5$なので，結局，与えられた直線は2点$(1,-3,2),(2,-5,3)$を通る．
+すなわち，この直線の方向ベクトルのひとつは
+\[
+\begin{pmatrix}
+    2 \\
+    -5 \\
+    3
+\end{pmatrix}
+    -
+        \begin{pmatrix}
+            1 \\
+            -3 \\
+            2
+        \end{pmatrix}
+            =
+                \begin{pmatrix}
+                    1 \\
+                    -2 \\
+                    1
+                \end{pmatrix}
+                    \]
+である．したがって求めるベクトル表示のひとつは，直線上の任意の位置ベクトルを$\bm{x}$とすると，
+\[
+    \bm{x}
+        \begin{pmatrix}
+            1 \\
+            -3 \\
+            2
+        \end{pmatrix}
+            +t
+            \begin{pmatrix}
+                1 \\
+                -2 \\
+                1
+            \end{pmatrix}
+            \]
+            と表せる．
+\end{tleftbar}
+
+\subsection*{p10：問2}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p10：問2}{p10：問2}}
+
+\begin{tleftbar}
+    \begin{proof}
+        $t$を$0 \le t \le 1$をみたす実数，線分$\mathrm{P_1 P_2}$上の任意の点の位置ベクトルを$\bm{x}$とする．
+        このとき，
+        \begin{align*}
+            \bm{x} & = \overrightarrow{\mathrm{O P_1}}+t\overrightarrow{\mathrm{P_1 P_2}} \\
+            & = \bm{x}_1 + t (\bm{x}_2 - \bm{x}_1) \\
+             &= (1-t) \bm{x}_1 + t \bm{x}_2
+        \end{align*}
+        である．$1-t = t_1,~t=t_2$と改めておくと，$t$の定め方から$t_1 \ge 0,~t_2 \ge 0$であり，
+        \[
+            \bm{x}= t_1 \bm{x}_1 + t_2 \bm{x}_2 ,\quad t_1 + t_2 =1
+        \]
+        となり，これが証明すべきことであった．
+    \end{proof}
+\end{tleftbar}
+
+\newpage
+\subsection*{p11：問1}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p11：問1}{p11：問1}}
+
+\begin{tleftbar}
+    与えられた平面を$(S)$とおく．$(S)$は3点$(-1,0,1),~(2,0,-1),~(0,-1,0)$を通るので，
+    \begin{equation*}
+   \bm{x}_1=
+        \begin{pmatrix}
+            -1 \\
+            0 \\
+            1
+        \end{pmatrix}
+   ，\quad \bm{x}_2=
+    \begin{pmatrix}
+        2 \\
+        0 \\
+        -1
+    \end{pmatrix}
+ \quad 
+\bm{x}_3=
+    \begin{pmatrix}
+        0 \\
+        -1 \\
+        0
+    \end{pmatrix}
+\end{equation*}
+と改めておくと，
+\begin{gather*}
+    \bm{x}_2 - \bm{x}_1 =
+        \begin{pmatrix}
+            3 \\
+            0 \\
+            -1
+        \end{pmatrix}
+    ，\quad 
+    \bm{x}_3 - \bm{x}_1 =
+    \begin{pmatrix}
+        1 \\
+        -1 \\
+        -1
+    \end{pmatrix}
+\end{gather*}
+となり，$\bm{x}_2 - \bm{x}_1$と$\bm{x}_3 - \bm{x}_1$は線型独立なので，求めるベクトル表示のひとつは，
+\[
+    (S) \colon \bm{x}=
+        \begin{pmatrix}
+            -1 \\
+            0 \\
+            1
+        \end{pmatrix}
+    + t 
+        \begin{pmatrix}
+            3 \\
+            0 \\
+            -1
+        \end{pmatrix}
+    +s
+        \begin{pmatrix}
+            1 \\
+            -1 \\
+            -1
+        \end{pmatrix}
+        ~( -\infty < t,~s<\infty)
+        \]
+    \end{tleftbar}
+%
+%
+%
+%
+\subsection*{p12：問2}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p12：問2}{p12：問2}}
+
+\begin{tleftbar}
+    \begin{align*}
+        \begin{cases}
+            x=1+t-s \\
+            y=2-t -2s \\
+            z=0+2t+s
+        \end{cases}
+    \end{align*}
+    から$t$と$s$を消去して，
+    \[
+        x-y-z=-1
+    \]
+    これが求める直線の方程式である．
+\end{tleftbar}
+
+\subsection*{p12：問3}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p12：問3}{p12：問3}}
+
+\begin{tleftbar}
+    \begin{proof}
+        \[
+            \overrightarrow{\mathrm{OP_1}}=\bm{x}_1,\quad \overrightarrow{\mathrm{OP_2}}=\bm{x}_2,\quad \overrightarrow{\mathrm{OP_3}}=\bm{x}_3
+        \]
+        とする．このとき，三角形$\mathrm{P_1 P_2 P_3}$上の任意の点の位置ベクトルを$\bm{x}$，$s,t$を$0 \le s,t \le 1$を満たす実数とすると，
+        \begin{gather*}
+            \bm{x}=\bm{x}_1 + s(\bm{x}_2 - \bm{x}_1) + t (\bm{x}_3 - \bm{x}_1) \\
+            \therefore \quad \bm{x} = (1-s-t)\bm{x}_1 + s\bm{x}_2 + t \bm{x}_3
+        \end{gather*}
+        となり，$1-s-t=t_1,~s=t_2,~t=t_3$と改めて書き直すと，$s,t$の定め方より，$0 \le t_1 ，t_2，t_3 \le 1$であり
+        \[
+            \bm{x} = t_1\bm{x}_1 + t_2\bm{x}_2 + t_3 \bm{x}_3,\quad t_1+t_2+t_3=1
+        \]
+        となる．これが証明すべきことであった．
+    \end{proof}
+\end{tleftbar}
+%
+\newpage
+%
+\subsection*{p13：問1}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p13：問1}{p12：問1}}
+%
+問1：
+\begin{tleftbar}
+    $(S_1)$，$(S_2)$の法線ベクトルをそれぞれ$\bm{x}_1$，$\bm{x}_2$とおくと，
+    \begin{gather*}
+        \bm{x}_1 =
+            \begin{pmatrix}
+                1\\
+                1\\
+                2
+            \end{pmatrix}
+        ，
+        \bm{x}_2 =
+            \begin{pmatrix}
+                3\\
+                3\\
+                0
+            \end{pmatrix}
+        \end{gather*}
+        である．ゆえに，交角を$\theta ~(0 \le \theta \le \frac{\pi}{2})$とすると，
+        \[
+            \cos \theta = \frac{\bm{x}_1 \cdot \bm{x}_2}{\norm{\bm{x}_1} \norm{\bm{x}_2}}=\frac{3}{3\sqrt{2}}=\frac{1}{\sqrt{2}}
+        \]
+        であるから，$0 \le \theta \le \frac{\pi}{2}$より$\theta =\frac{\pi}{4}$である．
+    \end{tleftbar}
+%
+%
+\newpage
+%
+%
+%
+\subsection*{p18：問}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p18：問}{p18：問}}
+
+\begin{tleftbar}
+    \begin{proof}
+        $A$，$B$，$C$が$2 \times 2$行列の場合を証明する．
+        \begin{gather*}
+            A=
+            \begin{pmatrix}
+                a & b \\
+                c & d
+            \end{pmatrix}
+            ，
+            B=
+            \begin{pmatrix}
+                e & f \\
+                g & h
+            \end{pmatrix}
+            ，C=
+            \begin{pmatrix}
+                i & j \\
+                k & l
+            \end{pmatrix}
+        \end{gather*}
+        とし，$A$，$B$，$C$の成分はすべて複素数であるとする．このとき，
+        \begin{align*}
+            (AB)C & =
+            \begin{pmatrix}
+                ae+bg & af+bh \\
+                ce+dg & cf+dh
+            \end{pmatrix}
+            \begin{pmatrix}
+                i & j \\
+                k & l
+            \end{pmatrix}
+            \\
+            & =
+            \begin{pmatrix}
+                aei +bgi +afk +bhk & aej+bgj+afl+bhl \\
+                cei +dgi+cfk +dhk & cej +dgj + cfl +dhl
+            \end{pmatrix}
+        \end{align*}
+            となる．他方
+            \begin{align*}
+                A(BC)& =
+                \begin{pmatrix}
+                    a & b \\
+                    c & d
+                \end{pmatrix}
+                \begin{pmatrix}
+                    ei + fk & ej +fl \\
+                    gi + hk & gj +hl 
+                \end{pmatrix}
+                \\
+                & =
+                \begin{pmatrix}
+                    aei + afk +bgi +bhk & aej +afl +bgj +bhl \\
+                    cei + cfk + dgi +dhk & cej + cfl + dgi +dhl
+                \end{pmatrix}
+            \end{align*}
+            となり，たしかに$(AB)C=A(BC)$である．
+        \end{proof}
+    \end{tleftbar}
+%
+\newpage
+\subsection*{p19：問1-(上)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p19：問1}{p19：問1}}
+%
+\begin{tleftbar}
+	\begin{proof}
+		\[
+			\begin{pmatrix}
+				-1 & 0\\
+				0 & -1
+			\end{pmatrix}
+				\begin{pmatrix}
+					x \\
+					y 
+				\end{pmatrix}
+			=
+				\begin{pmatrix}
+					-x \\
+					-y 
+				\end{pmatrix}
+			\]
+			となり，これは明らかに線型変換である．対応する行列は，$
+			\begin{pmatrix}
+				-1 & 0 \\
+				0 & -1
+			\end{pmatrix}
+			$である．
+		\end{proof}
+	\end{tleftbar}
+
+    \subsection*{p19：問2-(上)}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p19：問2}{p19：問2}}
+	\begin{tleftbar}
+		\begin{proof}
+			式(15)より，$2 \times 2$行列$A$，$B$とベクトル$\bm{x}$について，
+			\begin{align*}
+				T_B (T_A (\bm{x})) &= B(A\bm{x}) \\
+				& = (BA) \bm{x} \\
+				& = T_{BA} (\bm{x})
+			\end{align*}
+			である．これが証明すべきことであった．
+		\end{proof}
+    \end{tleftbar}
+
+
+    \subsection*{p19：問1-(下)}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p19：問1-(下)}{p19：問1-(下)}}
+
+\begin{tleftbar}
+$\bm{x} =
+\begin{pmatrix}
+x \\
+y
+\end{pmatrix}
+$
+とおくと，(17)式より，
+\begin{align*}
+T \bm{x} &= \frac{ax+by}{a^2+b^2} \bm{a} \\
+&=
+\begin{pmatrix}
+a^2x +aby \\
+ab x + b^2y \\
+\end{pmatrix}
+\\
+&=
+\begin{pmatrix}
+a^2 & ab \\
+ab & b^2
+\end{pmatrix}
+\begin{pmatrix}
+x \\
+y
+\end{pmatrix}
+ \\
+&= 
+\begin{pmatrix}
+a^2 & ab \\
+ab & b^2
+\end{pmatrix}
+\bm{x}
+\end{align*}
+であるから，
+\[
+T=\begin{pmatrix}
+a^2 & ab \\
+ab & b^2
+\end{pmatrix}
+\]
+となる．
+\end{tleftbar}
+%
+\newpage
+
+\subsection*{p19：問2-(下)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p19：問2-(下)}{p19：問2-(下)}}
+\begin{tleftbar}
+\begin{description}
+    \item[イ] 
+    \begin{proof}
+    $\bm{a}=
+        \begin{pmatrix}
+            a_1 \\
+            a_2
+        \end{pmatrix}
+    $，
+    $\bm{b}=
+        \begin{pmatrix}
+            b_1 \\
+            b_2
+        \end{pmatrix}
+    $，$\bm{a} \ne \bm{0}$かつ$\bm{b} \ne \bm{0}$とする．
+    このとき，
+    \begin{align*}
+        T \bm{x} &=\frac{(\bm{a}，\bm{x})}{(\bm{a}，\bm{a})} \bm{a} \\
+        & = \frac{a_1 x + a_2 y}{{a_1}^2+{a_2}^2} 
+        \begin{pmatrix}
+            a_1 \\
+            a_2
+        \end{pmatrix}
+        \\
+        & =
+        \frac{1}{{a_1}^2+{a_2}^2}
+        \begin{pmatrix}
+            {a_1}^2 & a_1 a_2 \\
+            a_1 a_2 & {a_2}^2
+        \end{pmatrix}
+        \begin{pmatrix}
+            x \\
+            y
+        \end{pmatrix}
+    \end{align*}
+    となる．つまり，$T=\frac{1}{{a_1}^2+{a_2}^2}
+    \begin{pmatrix}
+        {a_1}^2 & a_1 a_2 \\
+        a_1 a_2 & {a_2}^2
+    \end{pmatrix}
+    $である．このとき，
+    \begin{align*}
+        T^2 &= \frac{1}{({a_1}^2+{a_2}^2)^2}
+        \begin{pmatrix}
+            {a_1}^4 + {a_1}^2 {a_2}^2 & {a_1}^3 a_2 + a_1 {a_2}^3 \\
+            {a_1}^3 a_2 + a_1 {a_2}^3 & {a_2}^4 + {a_1}^2 {a_2}^2
+        \end{pmatrix}
+        \\
+        &= \frac{1}{{a_1}^2+{a_2}^2}
+        \begin{pmatrix}
+            {a_1}^2 & a_1 a_2 \\
+            a_1 a_2 & {a_2}^2
+        \end{pmatrix}
+        =T
+    \end{align*}
+    となり，$T^2=T$である．$S^2=S$も同様にして示される．
+\end{proof}
+\item[ロ]
+    \begin{proof}
+        $\bm{a}=
+        \begin{pmatrix}
+            a_1 \\
+            a_2
+        \end{pmatrix}
+        $，$\bm{b}=
+        \begin{pmatrix}
+            b_1 \\
+            b_2
+        \end{pmatrix}
+        $とする．このとき，$\bm{a}$と$\bm{b}$が直交することから，
+        \begin{gather*}
+            \bm{a} \cdot \bm{b}=0 \\
+            \therefore ~a_1 b_1 + a_2 b_2 =0
+        \end{gather*}
+        である．ここで，
+        \begin{align*}
+            TS & = \frac{1}{({a_1}^2 +{a_2}^2)}
+            \begin{pmatrix}
+                {a_1}^2 & a_1 a_2 \\
+                a_1 a_2 & {a_2}^2
+            \end{pmatrix}
+            \frac{1}{({b_1}^2 +{b_2}^2)}
+            \begin{pmatrix}
+                {b_1}^2 & b_1 b_2 \\
+                b_1 b_2 & {b_2}^2
+            \end{pmatrix}
+            \\
+            &=\frac{a_1 b_1 + a_2 b_2}{({a_1}^2 +{a_2}^2)({b_1}^2 +{b_2}^2)}
+            \begin{pmatrix}
+                a_1 b_1 & a_1 b_2 \\
+                a_2 b_1 & a_2 b_2
+            \end{pmatrix}
+            =0 \\
+            & \qquad \qquad  (\because ~ a_1 b_1 + a_2 b_2 =0)
+        \end{align*}
+        である．同様に$ST$を計算すると，$ST=0$であることもわかり，これで$TS=ST=0$が証明された．
+    \end{proof}
+\item[ハ]
+    \begin{proof}
+    イ)，ロ)の文字や結論を用いると，
+        \begin{align*}
+        T \bm{x} + S \bm{x} & =
+        \frac{1}{{a_1}^2+{a_2}^2}
+        \begin{pmatrix}
+            {a_1}^2 & a_1 a_2 \\
+            a_1 a_2 & {a_2}^2
+        \end{pmatrix}
+        \begin{pmatrix}
+            x \\
+            y
+        \end{pmatrix}
+        +
+        \frac{1}{{b_1}^2+{b_2}^2}
+        \begin{pmatrix}
+            {b_1}^2 & b_1 b_2 \\
+            b_1 b_2 & {b_2}^2
+        \end{pmatrix}
+        \begin{pmatrix}
+            x \\
+            y
+        \end{pmatrix}
+        \\
+        & = \frac{1}{({a_1}^2+{a_2}^2)({b_1}^2+{b_2}^2)}
+        \begin{pmatrix}
+            ({a_1}^2+{a_2}^2)({b_1}^2+{b_2}^2) & ({a_1}^2+{a_2}^2)({b_1}^2+{b_2}^2) \\
+            ({a_1}^2+{a_2}^2)({b_1}^2+{b_2}^2) & ({a_1}^2+{a_2}^2)({b_1}^2+{b_2}^2)
+        \end{pmatrix}
+        \begin{pmatrix}
+            x \\
+            y
+        \end{pmatrix}
+        \\
+        & =\begin{pmatrix}
+            x \\
+            y
+        \end{pmatrix}
+        =\bm{x}
+    \end{align*}
+    となる．これが証明すべきことであった．
+\end{proof}
+\end{description}
+\end{tleftbar}
+
+
+\subsection*{p22：問1}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p22：問1}{p22：問1}}
+\begin{tleftbar}
+\begin{description}
+    \item[イ] 
+    \[
+        \begin{pmatrix}
+            -1 & 0 & 0 \\
+            0 & 1 & 0 \\
+            0 & 0 & -1
+        \end{pmatrix}
+        \begin{pmatrix}
+            x \\
+            y \\
+            z
+        \end{pmatrix}
+        =\begin{pmatrix}
+            -x \\
+            y \\
+            -z
+        \end{pmatrix}
+        \]
+        となり，これは$y$軸に関する対象点に移す変換を表す．
+\item[ロ]
+        \[
+        \begin{pmatrix}
+            1 & 0 & 0 \\
+            0 & \cos \alpha & -\sin \alpha \\
+            0 & \sin \alpha & \cos \alpha
+        \end{pmatrix}
+        \begin{pmatrix}
+            x \\
+            y \\
+            z
+        \end{pmatrix}
+        =
+        \begin{pmatrix}
+            x \\
+            y \cos \alpha -z \sin \alpha \\
+            y \sin \alpha + z \cos \alpha 
+        \end{pmatrix}
+        \]
+        となり，これは$x$軸まわりに角$\alpha$だけ回転する変換を表す．
+    \item[ハ]
+        \[
+            \begin{pmatrix}
+                0 & 1 & 0 \\
+                0 & 0 & 1 \\
+                1 & 0 & 0
+            \end{pmatrix}
+            \begin{pmatrix}
+                x \\
+                y \\
+                z
+            \end{pmatrix}
+            =\begin{pmatrix}
+                y \\
+                z \\
+                x
+            \end{pmatrix}
+            \]
+        \end{description}
+        \end{tleftbar}
+
+
+        \setcounter{equation}{0}
+
+\section*{第1章・章末問題}
+\addcontentsline{toc}{section}{\texorpdfstring{第1章・章末問題}{第1章・章末問題}}
+
+
+
+\subsection*{p30：8}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p30：8}{p30：8}}
+\begin{tleftbar}
+    \begin{proof}
+    \[
+    \bm{a}=\begin{pmatrix} a_1 \\ a_2 \\ a_3 \end{pmatrix},\quad \bm{b}=\begin{pmatrix} b_1 \\ b_2 \\ b_3 \end{pmatrix},\quad \bm{c}=\begin{pmatrix} c_1 \\ c_2 \\ c_3 \end{pmatrix}
+    \]
+    とする．このとき，
+    \begin{align*}
+        &
+        \begin{pmatrix}
+            a_1 & a_2 & a_3 \\
+            b_1 & b_2 & b_3 \\
+            c_1 & c_2 & c_3
+        \end{pmatrix}
+        \begin{pmatrix}
+            a_1 & b_1 & c_1 \\
+            a_2 & b_2 & c_2 \\
+            a_3 & b_3 & c_3
+        \end{pmatrix}
+        \\
+         =& \begin{pmatrix}
+            {a_1}^2 +{a_2}^2 +{a_3}^2 & a_1 b_1 + a_2 b_2 + a_3 b_3 & a_1 c_1 + a_2 c_2 + a_3 c_3 \\
+            b_1 a_1 + b_2 a_2 + b_3 a_3 & {b_1}^2 +{b_2}^2 + {b_3}^2 & b_1 c_1 + b_2 c_2 + b_3 c_3 \\
+            c_1 a_1 + c_2 a_2 + c_3 a_3 & c_1 b_1 + c_2 b_2 + c_3 b_3 & {c_1}^2 +{c_2}^2 +{c_3}^2
+        \end{pmatrix}
+        \\
+        =& \begin{pmatrix}
+            (\bm{a},\bm{a}) & (\bm{a},\bm{b}) & (\bm{a},\bm{c}) \\
+            (\bm{b},\bm{a}) & (\bm{b},\bm{b}) & (\bm{b},\bm{c}) \\
+            (\bm{c},\bm{a}) & (\bm{c},\bm{b}) & (\bm{c},\bm{a})
+        \end{pmatrix}
+    \end{align*}
+    である．
+
+    一方，
+    \begin{align*}
+        \det (\bm{a},\bm{b},\bm{c})&=
+        \begin{vmatrix}
+            a_1 & b_1 & c_1 \\
+            a_2 & b_2 & c_2 \\
+            a_3 & b_3 & c_3
+        \end{vmatrix} \\
+        & = c_1
+        \begin{vmatrix}
+            a_2 & b_2 \\
+            a_3 & b_3 
+        \end{vmatrix}
+        + c_2
+        \begin{vmatrix}
+            a_3 & b_3 \\
+            a_1 & b_1
+        \end{vmatrix}
+        + c_3
+        \begin{vmatrix}
+            a_1 & b_1 \\
+            a_2 & b_2
+        \end{vmatrix}
+        \\
+        & = c_1 (a_2 b_3-b_2 a_3)+c_2 (a_3 b_1 - b_3 a_1)+c_3 (a_1 b_2 -b_1 a_2)\\
+        & = a_3 (b_1 c_2 - b_2 c_1)+b_3 (c_1 a_2-c_2 a_1)+ c_3 (a_1 b_2 - b_1 a_2)\\
+        & =
+        \begin{vmatrix}
+            a_1 & a_2 & a_3 \\
+            b_1 & b_2 & b_3 \\
+            c_1 & c_2 & c_3
+        \end{vmatrix}
+    \end{align*}
+    であるから，これと行列式の積の性質により，
+    \[
+        \begin{vmatrix}
+            (\bm{a},\bm{a}) & (\bm{a},\bm{b}) & (\bm{a},\bm{c}) \\
+            (\bm{b},\bm{a}) & (\bm{b},\bm{b}) & (\bm{b},\bm{c}) \\
+            (\bm{c},\bm{a}) & (\bm{c},\bm{b}) & (\bm{c},\bm{a})
+        \end{vmatrix}
+        = {\det (\bm{a},\bm{b},\bm{c})}^2
+    \]
+    である．
+    \end{proof}
+\end{tleftbar}
+
+\subsection*{p30：9}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p30：9}{p30：9}}
+
+\begin{tleftbar}
+    \begin{description}
+        \item[イ] 
+    \begin{proof}
+    単位ベクトル$\bm{e}_1$，$\bm{e}_2$，$\bm{e}_3$を適当にとり，
+    \[
+    \bm{a} = \alpha_1 \bm{e}_1，~\bm{b} = \beta_1 \bm{e}_1+\beta_2 \bm{e}_2，~\bm{c}= \gamma_1 \bm{e}_1 + \gamma_2 \bm{e}_2 + \gamma_3 \bm{e}_3
+    \]
+    とおく．このとき，
+        \begin{align*}
+            (\bm{a} \times \bm{b}) \times \bm{c} &= \alpha_1 \beta_2 \bm{e}_3 \times (\gamma_1 \bm{e}_1 + \gamma_2 \bm{e}_2 + \gamma_3 \bm{e}_3) \\
+            & = \alpha_1 \beta_2 \gamma_1 \bm{e}_2 - \alpha_1 \beta_2 \gamma_2 \bm{e}_1 \\
+            & = -(\bm{b}，\bm{c})\bm{a}+(\bm{a}，\bm{c}) \bm{b}
+        \end{align*}
+        であり，これが証明すべきことであった．
+    \end{proof}
+\end{description}
+    \end{tleftbar}
+\newpage
+
+
+\section*{第2章}
+\addcontentsline{toc}{section}{\texorpdfstring{第2章}{第2章}}
+
+
+\subsection*{p34：問1}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p34：問1}{p34：問1}}
+
+\begin{tleftbar}
+\begin{proof}
+後半二つの主張は明らか．また，二つ目の主張は一つ目の主張と同様にして示すことができるので，一つ目のみ示すことにする．
+
+
+$A=(a_{pq})$を$k \times l$行列，$B= (b_{qr})$，$C=(c_{qr})$を$l \times m$行列とする．示したい式の両辺がともに定義され，ともに$k \times m$行列であることはよい．行列$B+C$の$(q,r)$成分は$b_{qr}+c_{qr}$であるから，左辺の$(p,r)$成分は，
+\[
+\sum_{q=1}^{l}a_{pq}\left(b_{qr}+c_{qr}\right)=\sum_{q=1}^{l}a_{pq}b_{qr}+\sum_{q=1}^{l}a_{pq}c_{qr}
+\]
+とかける．この等号の右辺は$AB$の$(p,r)$成分と$AC$の$(p,r)$成分の和である．これより，主張が示された．
+\end{proof}
+\end{tleftbar}
+
+
+
+\subsection*{p40：問}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p40：問}{p40：問}}
+
+\begin{tleftbar}
+    \begin{description}
+        \item[イ] 
+        \[
+            A_{11} = \begin{pmatrix} 1 & -1 \\ 0 & -2 \end{pmatrix},\quad A_{22} = \begin{pmatrix} -2 & 3 \\ 1 & 1 \end{pmatrix} ,\quad B_{11} = \begin{pmatrix} 2 & 1 \\ 0 & 1\end{pmatrix} ,\quad B_{22}= \begin{pmatrix} 1 & 1 \\ 2 & -3 \end{pmatrix}
+        \]
+        とおくと，
+        \begin{align*} 
+            (\text{与式})&= \begin{pmatrix} A_{11} & O \\ O & A_{22} \end{pmatrix} \begin{pmatrix} B_{11} & O \\ O & B_{22} \end{pmatrix} \\
+            & = \begin{pmatrix} A_{11} B_{11} & O \\ O & A_{22} B_{22} \end{pmatrix} \\
+            & = \begin{pmatrix} 2 & 0 & 0 & 0 \\ 0 & -2 & 0 & 0 \\ 0 & 0 & 4 & -11 \\ 0 & 0 & 3 & -2 \end{pmatrix}
+        \end{align*}
+        である．
+    \end{description}
+\end{tleftbar}
+
+\subsection*{p41：問1}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p41：問1}{p41：問1}}
+%
+
+\begin{tleftbar}
+    \begin{enumerate}
+        \item \mbox{　}
+    $ X =\begin{pmatrix} x_{11} & x_{12} \\ x_{21} & x_{22} \end{pmatrix}$とする．このとき，
+    \[
+        AX =\begin{pmatrix} x_{11}+2x_{21} &  x_{12}+2x_{22}  \\ 2x_{11} + 4x_{21} &2x_{12} + 4x_{22} \end{pmatrix}
+    \]
+    となり，これが$E_2$と等しくなるためには
+    \[
+        \begin{cases}
+            x_{11}+2x_{21} =1 \\
+            x_{12}+2x_{22}  =0 \\
+            2x_{11} + 4x_{21}=0 \\
+            2x_{12} + 4x_{22}=1
+        \end{cases}
+    \]
+    となることが必要であるが，これを満たす$x_{11},x_{12},x_{21},x_{22} \in \mathbb{C}$は存在しない．よって前半の主張が示された．\par 
+    後半について示す．$Y =\begin{pmatrix} y_{11} & y_{12} \\ y_{21} & y_{22} \end{pmatrix}$とする．このとき，
+    \[
+        YA = \begin{pmatrix} y_{11} +2y_{12} & 2y_{11}+4y_{12} \\ y_{21}+2y_{22} & 2y_{21}+4y_{22}  \end{pmatrix}
+    \]
+    となり，これが$E_2$と等しくなるためには
+    \[
+        \begin{cases}
+            y_{11} +2y_{12}=1 \\
+            2y_{11}+4y_{12}  =0 \\
+            y_{21}+2y_{22} =0 \\
+            2y_{21}+4y_{22} =1
+        \end{cases}
+    \]
+    となることが必要であるが，これを満たす$y_{11},y_{12},y_{21},y_{22} \in \mathbb{C}$は存在しない．よって後半の主張も示された．\qed
+    \item \mbox{　}
+        $X,Y$を(1)で定義したものとする．このとき，
+        \[
+            AX = \begin{pmatrix} x_{11}+2x_{21} & x_{12}+2x_{22} \\ 0 & 0 \end{pmatrix}
+        \]
+        となり，これが$B$と等しくならないことは明らか．\par 
+        後半について，
+        \[
+            YA =\begin{pmatrix} x_{11} & 2 x_{11} \\  x_{21}&  2x_{21} \end{pmatrix}
+        \]
+        となり，これが$B$と等しくなるためには$x_{11}=1$，$x_{21}=2$となることが必要であるが，$x_{12}$，$x_{22}$については任意の複素数である．以上の議論により，このような$Y$は無限に存在する．\qed 
+        \item  \mbox{　}
+        $A$の第$k$列の成分が全て$0$であるとする．ただしここで$ 1 \le k \le n,~ k \in \mathbb{N}$であるとする．
+        $XA=E$をみたす$X$が存在すると仮定する．このとき，$X$は明らかに$n \times n$行列であり，積$XA$は定義される．
+        いま$X=(x_{jk})$，$A=(a_{kj})$，$ 1 \le j ,k \le n$と表す．このとき，
+        \[
+           (XA \text{の}(j,j)\text{成分}) = \sum_{k=1}^{n} x_{jk} a_{kj} =0
+        \]
+        となり，これは$XA =E$に矛盾する．よってこのような$X$は存在しないことが示された．\qed
+    \end{enumerate}
+    \end{tleftbar}
+
+
+    \subsection*{p42：問1}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p42：問1}{p42：問1}}
+
+    \begin{tleftbar}
+        \begin{enumerate}
+            \item 
+        まず，
+        \[
+            \overline{A} \ \overline{A^{-1}} = \overline{A A^{-1}}=E,\quad \overline{A^{-1}} \ \overline{A} =\overline{A^{-1} A}=E
+        \]
+        より，$\overline{A}$は正則で，逆行列は$\overline{A^{-1}}$である．さらに，
+        \[
+            {}^t A {}^t A^{-1} ={}^t (A^{-1} A)=E,\quad {}^t A^{-1} {}^t A = {}^t (A A^{-1})=E
+        \]
+        であるから，${}^t A$は正則であり，逆行列は${}^t A^{-1}$である．
+        \item 
+        \[
+            A \coloneqq \begin{pmatrix} a & b \\ c & d \end{pmatrix},\quad A' \coloneqq \begin{pmatrix} x & y \\ z & w \end{pmatrix}
+        \]
+        とする．このとき，
+        \[
+            A A' = \begin{pmatrix} a x + b z & ay + bw \\ cx + dz & cy +dw \end{pmatrix}
+        \]
+        である．$AA'=E$となる条件は，$x$，$y$，$z$，$w$についてのふたつの連立方程式
+        \[
+            \begin{cases}
+                ax+bz =1 \\
+                cx+dz =0
+            \end{cases}
+            ,\quad 
+            \begin{cases}
+                ay+bw=0\\
+                cy+dw=1
+            \end{cases}
+        \]
+        が解を持つことで，その条件は$ad-bc \ne 0$である．そのときの解は，
+        \[
+            (x,y,z,w)=  (\frac{d}{ad-bc},-\frac{b}{ad-bc},-\frac{c}{ad-bc},\frac{a}{ad-bc})
+        \]
+        である．これを用いて$A'A$を計算すると，$A' A =E$となり．たしかに$A'$は$A$の逆行列である．
+    
+        以上の議論により，$ad - bc \ne 0$となればよい．
+        \end{enumerate}
+    \end{tleftbar}
+
+
+    \subsection*{p52：問}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p52：問}{p52：問}}
+
+\begin{tleftbar}
+    \begin{align*} 
+        &
+        \left( 
+            \begin{array}{ccc|ccc}
+            1 & 3 & 2 & 1 & 0 & 0\\ 
+            2 & 6 & 3 & 0 & 1 & 0 \\ 
+            -2 & -5 & -2 & 0 & 0 & 1
+            \end{array}
+            \right) \\
+           \xrightarrow{\text{第$1$行の$(-2)$倍，第$1$行の$2$倍をそれぞれ第$2$行，第$3$行に加える}} &
+            \left( \begin{array}{ccc|ccc}
+                1 & 3 & 2 & 1 & 0 & 0\\ 
+                0 & 0 & -1 & -2 & 1 & 0 \\ 
+                0 & 1 & 2 & 2 & 0 & 1
+                \end{array}
+                \right)\\
+                \xrightarrow{\text{第$2$行と第$3$行を交換する}} &
+                \left( \begin{array}{ccc|ccc}
+                    1 & 3 & 2 & 1 & 0 & 0\\ 
+                    0 & 1 & 2 & 2 & 0 & 1 \\
+                    0 & 0 & -1 & -2 & 1 & 0 
+                    \end{array}
+                    \right)\\
+                   \xrightarrow{\text{第$2$行の$(-3)$倍を第$1$行に加え，第$3$行の$(-4)$倍を第$1$行に加える}} &
+                    \left( \begin{array}{ccc|ccc}
+                    1 & 0 & 0 & 3 & -4 & -3\\ 
+                    0 & 1 & 2 & 2 & 0 & 1 \\
+                    0 & 0 & -1 & -2 & 1 & 0 
+                        \end{array}
+                        \right) \\
+                        \xrightarrow{\text{第$3$行の$2$倍を第$2$行に加え，第$3$行を$(-1)$倍する}} &
+                         \left( \begin{array}{ccc|ccc}
+                            1 & 0 & 0 & 3 & -4 & -3\\ 
+                            0 & 1 & 0 & -2 & 2 & 1 \\
+                            0 & 0 & 1 & 2 & -1 & 0 
+                             \end{array}
+                             \right)
+                            \end{align*}
+        よって，求める逆行列は
+        \[
+            \begin{pmatrix} 
+                3 & -4 & -3 \\
+                -2 & 2 & 1 \\
+                2 & -1 & 0 
+            \end{pmatrix}
+        \]
+        である．
+    \end{tleftbar}
+
+    \subsection*{p62：問1}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p62：問1}{p62：問1}}
+
+\begin{tleftbar}
+    \begin{proof}
+        定義に従って計算すると，
+        \begin{align*}
+            \norm{\bm{x}+\bm{y} }^2 +\norm{\bm{x}-\bm{y} }^2 & = (\bm{x}+\bm{y},\bm{x}+\bm{y})+(\bm{x}-\bm{y},\bm{x}-\bm{y}) \\
+            & =(\bm{x},\bm{x})+(\bm{x},\bm{y})+(\bm{y},\bm{x})+(\bm{y},\bm{y})+(\bm{x},\bm{x})-(\bm{x},\bm{y})-(\bm{y},\bm{x})+(\bm{y},\bm{y}) \\
+            & = 2((\bm{x}，\bm{x})+(\bm{y}，\bm{y})) \\
+            & =2 (\norm{\bm{x}}^2+\norm{\bm{y}}^2)
+        \end{align*}
+        となり，これが証明すべきことであった．
+    \end{proof}
+\end{tleftbar}
+\subsection*{p62：問2}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p62：問2}{p62：問2}}
+\begin{tleftbar}
+    \begin{proof}
+        \[
+        \norm{\bm{x}+\bm{y}}^2=(\bm{x},\bm{x})+(\bm{x},\bm{y})+(\bm{y},\bm{x})+(\bm{y},\bm{y})
+        \]
+        である．ここで，$\bm{x}$と$\bm{y}$が直交することから，
+        \[
+            (\bm{x},\bm{y})＋(\bm{y},\bm{x})=(\bm{x},\bm{y})＋\overline{(\bm{x},\bm{y})}=0
+            \]
+            であり，これを用いると
+        \[
+            \norm{\bm{x}+\bm{y}}^2 =(\bm{x},\bm{x})+(\bm{y},\bm{y})=\norm{\bm{x}}^2 +\norm{\bm{y}}^2
+        \]
+        となる．$\bm{x},~\bm{y}$がともに実ベクトルのときは$(\bm{x},\bm{y})=0$であるから確かに逆が成り立つが，たとえば$\bm{x}=
+        \begin{pmatrix}
+            2 \\
+            0
+        \end{pmatrix}
+        ,~
+        \bm{y}=
+        \begin{pmatrix}
+            2i \\
+            0
+        \end{pmatrix}
+        $とすれば，等式は成り立つが$\bm{x}$と$\bm{y}$は直交しないため，逆は成り立たない．
+    \end{proof}
+\end{tleftbar}
+
+\section*{第2章・章末問題}
+\addcontentsline{toc}{section}{\texorpdfstring{第2章・章末問題}{第2章・章末問題}}
+
+
+\subsection*{p70：1-イ）}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70：1-イ）}{p70：1-イ）}}
+
+\begin{tleftbar}
+        \begin{align*} 
+        &
+        \left( 
+            \begin{array}{cccc|cccc}
+            3 & 3 & -5 & -6 & 1 & 0 & 0 & 0\\ 
+            1 & 2 & -3 & -1 & 0 & 1 & 0 & 0 \\ 
+            2 & 3 & -5 & -3 & 0 & 0 & 1 & 0 \\
+            -1 & 0 & 2 & 2 & 0 & 0 & 0 & 1 
+            \end{array}
+            \right) \\
+           \xrightarrow{\text{第$1$行と第$2$行を交換する}} &
+            \left( \begin{array}{cccc|cccc}
+                1 & 2 & -3 & -1 & 0 & 1 & 0 & 0 \\ 
+                3 & 3 & -5 & -6 & 1 & 0 & 0 & 0\\ 
+                2 & 3 & -5 & -3 & 0 & 0 & 1 & 0 \\
+                -1 & 0 & 2 & 2 & 0 & 0 & 0 & 1 
+                \end{array}
+                \right)\\
+           \xrightarrow{\text{$(1,1)$をかなめとして左から第1列を掃き出す}} &
+           \left( \begin{array}{cccc|cccc}
+            1 & 2 & -3 & -1 & 0 & 1 & 0 & 0 \\ 
+            0 & -3 & 4 & -3 & 1 & -3 & 0 & 0\\ 
+            0 & -1 & 1 & -1 & 0 & -2 & 1 & 0 \\
+            0 & 2 & -1 & 1 & 0 & 1 & 0 & 1 
+            \end{array}
+            \right)\\
+            \xrightarrow{\text{第$3$行を$(-1)$倍して第2行と交換し，$(2,2)$をかなめとして左から第$2$列を掃き出す}} &
+           \left( \begin{array}{cccc|cccc}
+            1 & 0 & -1 & -3 & 0 & -3 & 2 & 0 \\ 
+            0 & 1 & -1 & 1 & 0 & 2 & -1 & 0 \\
+            0 & 0 & 1 & 0 & 1 & 3 & -3 & 0\\ 
+            0 & 0 & 1 & -1 & 0 & -3 & 2 & 1 
+            \end{array}
+            \right)\\
+            \xrightarrow{\text{$(3,3)$をかなめとして左から第$3$列を掃き出す}} &
+            \left( \begin{array}{cccc|cccc}
+                1 & 0 & 0 & -3 & 1 & 0 & -1 & 0 \\ 
+                0 & 1 & 0 & 1 & 1 & 5 & -4 & 0 \\
+                0 & 0 & 1 & 0 & 1 & 3 & -3 & 0\\ 
+                0 & 0 & 0 & -1 & -1 & -6 & 5 & 1 
+                \end{array}
+                \right)\\
+            \xrightarrow{\text{第4行を$(-1)$倍して，$(4,4)$をかなめとして第$4$列を掃き出す}} &
+            \left( \begin{array}{cccc|cccc}
+                1 & 0 & 0 & 0 & 4 & 18 & -16 & -3 \\ 
+                0 & 1 & 0 & 0 & 0 & -1 & 1 & 1 \\
+                0 & 0 & 1 & 0 & 1 & 3 & -3 & 0\\ 
+                0 & 0 & 0 & 1 & 1 & 6 & -5 & -1
+                \end{array}
+                \right)
+            \end{align*} 
+            よって，求める逆行列は，
+            \[
+                \begin{pmatrix}
+                    4 & 18 & -16 & -3 \\ 0 & -1 & 1 & 1\\ 1 & 3 & -3 & 0 \\ 1 & 6 & -5 & -1 
+                \end{pmatrix}
+            \]
+            である．
+            \end{tleftbar}
+
+
+\subsection*{p70：1-ロ）}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70：1-ロ）}{p70：1-ロ）}}
+        \begin{tleftbar}
+        \begin{align*} 
+        &
+        \left( 
+            \begin{array}{cccc|cccc}
+            1 & 2 & 0 & -1 & 1 & 0 & 0 & 0\\ 
+            -3 & -5 & 1 & 2 & 0 & 1 & 0 & 0 \\ 
+            1 & 3 & 2 & -2 & 0 & 0 & 1 & 0 \\
+            0 & 2 & 1 & -1 & 0 & 0 & 0 & 1 
+            \end{array}
+            \right) \\
+           \xrightarrow{\text{$(1,1)$をかなめとして第$1$列を掃き出す}} &
+            \left( \begin{array}{cccc|cccc}
+            1 & 2 & 0 & -1 & 1 & 0 & 0 & 0\\ 
+            0 & 1 & 1 & -1 & 3 & 1 & 0 & 0 \\
+            0 & 1 & 2 & -1 & -1 & 0 & 1 & 0 \\
+            0 & 2 & 1 & -1 & 0 & 0 & 0 & 1 
+            \end{array}
+            \right) \\
+           \xrightarrow{\text{$(2,2)$をかなめとして第$2$列を掃き出す}} &
+           \left( \begin{array}{cccc|cccc}
+            1 & 0 & -2 & 1 & -5 & -2 & 0 & 0\\ 
+            0 & 1 & 1 & -1 & 3 & 1 & 0 & 0 \\
+            0 & 0 & 1 & 0 & -4 & -1 & 1 & 0 \\
+            0 & 0 & -1 & 1 & -6 & -2 & 0 & 1 
+            \end{array}
+            \right) \\
+           \xrightarrow{\text{$(3,3)$をかなめとして第$3$列を掃き出す}} &
+           \left( \begin{array}{cccc|cccc}
+            1 & 0 & 0 & 1 & -13 & -4 & 2 & 0\\ 
+            0 & 1 & 0 & -1 & 7 & 2 & -1 & 0 \\
+            0 & 0 & 1 & 0 & -4 & -1 & 1 & 0 \\
+            0 & 0 & 0 & 1 & -10 & -3 & 1 & 1 
+            \end{array}
+            \right) \\
+           \xrightarrow{\text{$(3,3)$をかなめとして第$3$列を掃き出す}} &
+           \left( \begin{array}{cccc|cccc}
+            1 & 0 & 0 & 0 & -3 & -1 & 1 & -1\\ 
+            0 & 1 & 0 & 0 & -3 & -1 & 0 & 1 \\
+            0 & 0 & 1 & 0 & -4 & -1 & 1 & 0 \\
+            0 & 0 & 0 & 1 & -10 & -3 & 1 & 1 
+            \end{array}
+            \right) \\
+        \end{align*} 
+        よって，求める逆行列は
+        \[
+            \begin{pmatrix} -3 & -1 & 1& -1 \\ -3 & -1 & 0 & 1 \\ -4 & -1 & 1 & 0 \\ -10 & -3 & 1& 1 \end{pmatrix}
+        \]
+        である．
+    \end{tleftbar}
+
+
+    \subsection*{p71：3-イ）}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p71：3-イ）}{p71：3-イ）}}
+
+    \begin{tleftbar}
+    \begin{align*} 
+    &
+    \left( 
+        \begin{array}{ccc|ccc}
+        1 & 3 & 2 & 1 & 0 & 0 \\
+        -1 & -2 & -1 & 0 & 1 & 0 \\
+        2 & 4 & 3 &  0 & 0 & 1
+        \end{array}
+        \right) \\
+       \xrightarrow{\text{第$1$列を掃き出す}} &
+    \left( 
+        \begin{array}{ccc|ccc}
+        1 & 3 & 2 & 1 & 0 & 0 \\
+        0 & 1 & 1 & 1 & 1 & 0 \\
+        0 & -2 & -1 &  -2 & 0 & 1
+        \end{array}
+        \right) \\
+       \xrightarrow{\text{第$2$列を掃き出す}} &
+       \left( 
+           \begin{array}{ccc|ccc}
+           1 & 0 & -1 & -2 & -3 & 0 \\
+           0 & 1 & 1 & 1 & 1 & 0 \\
+           0 & 0 & 1 &  0 & 2 & 1 
+           \end{array}
+           \right) \\
+       \xrightarrow{\text{第$3$列を掃き出す}} &
+       \left( 
+           \begin{array}{ccc|ccc}
+            1 & 0 & 0 & -2 & -1 & 1 \\
+            0 & 1 & 0 & 1 & -1 & -1 \\
+            0 & 0 & 1 &  0 & 2 & 1 
+           \end{array}
+           \right) 
+        \end{align*}
+        である．ゆえに
+        \[
+            P^{-1} = \begin{pmatrix} -2 & -1 & 1\\ 1 & -1 & -1 \\ 0 & 2 & 1 \end{pmatrix}
+        \]
+        である．だから
+        \[
+            P^{-1} A P = \begin{pmatrix} 2 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 0 \end{pmatrix}
+        \]
+    \end{tleftbar}
+
+\subsection*{p71：7}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p71：7}{p71：問7}}
+
+\begin{tleftbar}
+\begin{proof}
+$X=(x_{ij}),~Y=(y_{ij})$とする．
+ここで，$XY$の$(i,i)$成分は$\sum_{j=1}^{n} x_{ij} y_{ji}$であるから，
+\begin{equation*}
+\tr (XY)  =  \sum_{i=1}^{n} \left( \sum_{j=1}^{n} x_{ij} y_{ji} \right)
+\end{equation*}
+となる．$YX$については，同様の議論により，
+\begin{align*}
+\tr  (YX) & =  \sum_{i=1}^{n}\left( \sum_{j=1}^{n}  y_{ij} x_{ji} \right) \\
+ & =  \sum_{i=1}^{n} \left( \sum_{j=1}^{n}  x_{ji} y_{ij} \right)
+\end{align*}
+である．ここで，$i$と$j$をおきかえれば，
+\begin{equation}
+\tr  (YX) = \sum_{j=1}^{n} \left( \sum_{i=1}^{n}  x_{ij} y_{ji} \right)
+\end{equation}
+となる．これより，
+\begin{equation}
+\tr (XY) = \tr  (YX)
+\end{equation}
+を得て，これとトレースの線型性により$\tr (XY-YX) =0$であるが，$\tr  (E_n) =n \neq 0$であるため，これは矛盾である．
+
+ゆえに，$XY-YX=E_n$となる$n$次行列$X,~Y$は存在しないことが示された．
+\end{proof}
+\end{tleftbar}
+
+
+\section*{附録\three}
+\addcontentsline{toc}{section}{\texorpdfstring{附録\three}{附録\three}}
+
+
+\subsection*{p249：問}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p249：問}{p249：問}}
+
+\begin{tleftbar}
+\begin{description}
+    \item[イ] 
+	\begin{proof}
+		体$K$の単位元について，$0=0+0$であるから，
+		\begin{align*}
+			&a 0=a(0+0)=a0 + a0\\
+			&\therefore ~ a0 = a0 + a0
+		\end{align*}
+		$K$は加法について可換群であるから，$a0$の逆元$-a0$が$K$に存在する．これを用いると，
+\begin{align*}
+	&a0 + (-a0) = a0 + a0 + (-a0) \\
+	&\therefore ~ 0 = a0 + a0 +(-a0)
+\end{align*}
+ ここで，
+ \begin{align*}
+	a0 + a0 +(-a0)&=a0+ \{a0+(-a0)\} \\
+	& = a0 + 0 \\
+	& = a0
+ \end{align*}
+となるから，$0=a0$である．$0=0a$についても同様．
+\end{proof}
+\item[ロ]
+\begin{proof}
+        $a \ne 0$とする．このとき，$a$の逆元$a^{-1} \in K$が存在し，$ab=0$の両辺に$a^{-1}$をかけると，
+        \begin{align*}
+            &a^{-1} (ab) = a^{-1} 0 \\
+            &(a^{-1}a)b =0 \\
+            &1b =0 \\
+            &\therefore~ b=0
+        \end{align*}
+        である．これと$b \ne 0$を仮定したときの同様の考察により，$ab=0$のとき，$a=0$または$b=0$である．
+    \end{proof}
+    \end{description}
+\end{tleftbar}
+
+\begin{thebibliography}{9}
+	\bibitem{saito} 齋藤正彦『線型代数入門』，東京大学出版会，1966
+\end{thebibliography}
+
+\end{document}
