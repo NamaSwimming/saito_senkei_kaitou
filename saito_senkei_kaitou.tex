@@ -823,6 +823,55 @@ ab & b^2
 \section*{第1章・章末問題}
 \addcontentsline{toc}{section}{\texorpdfstring{第1章・章末問題}{第1章・章末問題}}
 
+\subsection*{p29-30:2}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p29-30：2}{p29-30：2}}
+
+\begin{tleftbar}
+    \begin{proof}
+    2点$\mathrm{P}_1$，$\mathrm{P_2}$を通る直線の方程式を$ax+by+1=0$（ただし$(a,b)=0$）とおく．
+    このとき，
+    \[
+        \begin{cases}
+            ax+by+c =0 \\
+            ax_1 + by_1 +c=0 \\
+            ax_2 + by_2 +c =0
+        \end{cases}
+    \]
+    が成立する．すなわちこれは
+    \[
+        \begin{pmatrix} 
+            x & y & 1 \\
+            x_1 & y_1 & 1 \\
+            x_2 & y_2 & 1 
+        \end{pmatrix}
+        \begin{pmatrix}
+            a \\
+            b \\
+            c
+        \end{pmatrix}
+        = \bm{0}
+    \]
+    をみたす．これを$a$，$b$，$c$についての連立方程式とみたとき，与条件により自明でない解があり，
+    \[
+    \begin{vmatrix} 
+        x & y & 1 \\
+        x_1 & y_1 & 1 \\
+        x_2 & y_2 & 1 
+    \end{vmatrix}
+    =0
+    \]
+    が成立する．転置行列の行列式は元の行列の行列式に等しいので，行列式の交代性なども用いて，
+    \[ 
+    \begin{vmatrix} 
+        1 & 1 & 1 \\
+        x & x_1 & x_2 \\
+        y & y_1 & y_2 
+    \end{vmatrix}
+    =0
+    \]
+を得る．これが証明すべきことであった．
+\end{proof}
+\end{tleftbar}
 
 
 \subsection*{p30：8}
@@ -906,8 +955,24 @@ ab & b^2
     \end{proof}
 \end{tleftbar}
 
-\subsection*{p30：9}
-\addcontentsline{toc}{subsection}{\texorpdfstring{p30：9}{p30：9}}
+
+\subsection*{p29-30:9}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p29-30：9}{p29-30：9}}
+
+\begin{tleftbar}
+    $ \det (\bm{x},\bm{y},\bm{z})$は，$\bm{x}$，$\bm{y}$，$\bm{z}$の張る平行六面体の体積に符号をつけたものに等しい．
+    与条件より，$\det (\bm{x},\bm{y},\bm{z})$が最大になるのは，$\bm{x}$．$\bm{y}$，$\bm{z}$の張る図形が立方体のときであり，
+    そのとき
+    \[
+        \det (\bm{x},\bm{y},\bm{z}) =1
+    \]
+    である．これからただちに$\det (\bm{x},\bm{y},\bm{z})$の最小値が$-1$であることも従う．
+
+    以上により，$\det (\bm{x},\bm{y},\bm{z})$の最大値は$1$，最小値は$-1$である．
+\end{tleftbar}
+
+\subsection*{p29-30：10}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p29-30：10}{p29-30：10}}
 
 \begin{tleftbar}
     \begin{description}
