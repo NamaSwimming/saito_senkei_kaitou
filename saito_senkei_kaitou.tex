@@ -860,7 +860,7 @@ ab & b^2
     \end{vmatrix}
     =0
     \]
-    が成立する．転置行列の行列式は元の行列の行列式に等しいので，行列式の交代性なども用いて，
+    が成立する．転置行列の行列式はもとの行列の行列式に等しいので，行列式の交代性なども用いて，
     \[ 
     \begin{vmatrix} 
         1 & 1 & 1 \\
@@ -871,6 +871,37 @@ ab & b^2
     \]
 を得る．これが証明すべきことであった．
 \end{proof}
+\end{tleftbar}
+
+
+
+\subsection*{p29-30:3}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p29-30：3}{p29-30：3}}
+
+\begin{tleftbar}
+    \begin{proof}
+        点を以下の順で移動させる変換を考える．
+        \begin{enumerate}
+            \item 原点中心に$-\theta$回転させる．
+            \item $x$軸に関して対称移動させる．
+            \item 原点中心に$\theta$回転させる．
+        \end{enumerate}
+        ここで，(1)から(3)までの変換を表す行列をそれぞれ$R_{-\theta}$，$A_{x}$，$R_{\theta}$とすると．
+        \begin{align*} 
+            & R_{-\theta} = \begin{pmatrix} \cos \theta & \sin \theta \\ -\sin \theta & \cos \theta \end{pmatrix} , \\
+            & A_{x} = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} ,\\
+            & R_{\theta} = \begin{pmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \end{pmatrix} .
+        \end{align*} 
+        となる．よって，この変換を表す行列は
+        \begin{align*}
+            R_{\theta} A_x R_{-\theta} &=\begin{pmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \end{pmatrix}
+            \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}
+            \begin{pmatrix} \cos \theta & \sin \theta \\ -\sin \theta & \cos \theta \end{pmatrix} \\
+            & = \begin{pmatrix} \cos ^2 \theta - \sin ^2 \theta & 2\sin \theta \cos \theta \\ 2\sin \theta \cos \theta & \sin ^2 \theta -\cos ^2 \theta \end{pmatrix} \\
+            & = \begin{pmatrix} \cos 2 \theta & \sin 2 \theta \\ \sin 2\theta & -\cos 2 \theta \end{pmatrix}
+        \end{align*}
+        である．
+    \end{proof}
 \end{tleftbar}
 
 
