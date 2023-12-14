@@ -903,6 +903,35 @@ ab & b^2
 \end{tleftbar}
 
 
+\subsection*{p29-30:4}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p29-30：4}{p29-30：4}}
+
+\begin{tleftbar}
+    \begin{proof}
+        直線$ y = \tan (\theta /4) x$に関する折り返しは，
+        \[
+            R_{\theta/4} = \begin{pmatrix} \cos (\theta /2) & \sin (\theta /2) \\  \sin (\theta /2) & -\cos (\theta /2) \end{pmatrix}
+        \]
+        で表される．
+
+        また，直線$y = \tan (-\theta /4)x$に関する折り返しは，
+        \[
+            R_{-\theta/4} = \begin{pmatrix} \cos (\theta /2) & -\sin (\theta/2) \\ -\sin (\theta/2) & -\cos (\theta /2) \end{pmatrix}
+        \]
+        で表される．
+
+        ここで，
+        \begin{align*} 
+            R_{\theta/4} R_{-\theta/4} & = \begin{pmatrix} \cos (\theta /2) & \sin (\theta /2) \\  \sin (\theta /2) & -\cos (\theta /2) \end{pmatrix} \begin{pmatrix} \cos (\theta /2) & -\sin (\theta/2) \\ -\sin (\theta/2) & -\cos (\theta /2) \end{pmatrix} \\
+            & =\begin{pmatrix} \cos ^2 (\theta /2)-\sin ^2 (\theta/2) & -2\sin (\theta/2) \cos (\theta/2) \\ 2\sin (\theta/2) \cos (\theta/2) & \cos ^2 (\theta/2)-\sin ^2 (\theta/2) \end{pmatrix} \\
+            & = \begin{pmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \end{pmatrix}
+        \end{align*} 
+        となり，これは原点のまわりに$\theta$回転する行列を表す．
+
+        以上の考察により証明された．
+    \end{proof}
+\end{tleftbar}
+
 \subsection*{p29-30:7-(1)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p29-30：7-(1)}{p29-30：7-(1)}}
 
