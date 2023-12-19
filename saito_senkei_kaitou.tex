@@ -823,6 +823,97 @@ ab & b^2
 \section*{第1章・章末問題}
 \addcontentsline{toc}{section}{\texorpdfstring{第1章・章末問題}{第1章・章末問題}}
 
+
+\subsection*{p29-30:1}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p29-30：1}{p29-30：1}}
+
+\begin{leftbar}
+    \begin{proof}
+    四面体$\mathrm{P_1 P_2 P_3 P_4}$を考える．三角形$\mathrm{P_2 P_3 P_4}$の任意の周および内部の点を$\mathrm{T}$とする．
+    $0 \leqq k \leqq 1$，$0 \leqq s \leqq 1$をみたす$k,s \in \mathbb{R}$によって
+    \begin{align*}
+        \overrightarrow{\mathrm{P_2 T}} & = k \{ s \overrightarrow{\mathrm{P_2 P_3}} + (1-s) \overrightarrow{\mathrm{P_2 P_4}} \} \\
+        & = ks(\bm{x}_3 -\bm{x}_2) + k(1-s) (\bm{x}_4-\bm{x}_2) \\
+        & = -k\bm{x}_2 + ks \bm{x}_3 + k(1-s) \bm{x}_4
+    \end{align*}
+    と表される．
+
+    さて，線分$\mathrm{P_1 T}$上の任意の点を$Q$とすると，$0 \leqq t \leqq 1$をみたす$t \in \mathbb{R}$によって
+
+    \begin{align*} 
+        \overrightarrow{\mathrm{P_1 Q}} & =t \overrightarrow{\mathrm{P_1 T}}\\
+        & = t\overrightarrow{\mathrm{P_2 T}} - t\overrightarrow{\mathrm{P_2 P_1}}　\\
+        & = t (-k\bm{x}_2 + ks \bm{x}_3 + k(1-s) \bm{x}_4)-t(\bm{x}_1 -\bm{x}_2) \\
+        & = -t\bm{x}_1 +(t-kt) \bm{x}_2 + kst \bm{x}_3 +kt(1-s) \bm{x}_4 
+    \end{align*} 
+    と表されるから，$k=4$のときの求める位置ベクトルは．
+    \begin{align*}
+        \bm{x} & = \bm{x}_1 + \overrightarrow{\mathrm{P_1 Q}} \\
+        & = (1-t) \bm{x}_1 +(t-kt)\bm{x}_2 +kst \bm{x}_3 +kt(1-s) \bm{x}_4 
+    \end{align*} 
+    となり，
+    \[
+        (1-t)+ (t-kt)+kst + kt(1-s)=1
+    \]
+    であるから，$1-t = t_1$，$t-kt =t_2$，$kst = t_3$，$kt(1-s)=t_4$とおくと，
+    \[
+        \bm{x}= t_1 \bm{x}_1 + t_2 \bm{x}_2 + t_3 \bm{x}_3 + t_4 \bm{x}_4 , \quad t_1, t_2 ,t_3 , t_4 \geqq 0 ,\quad  t_1 +t_2 + t_3 + t_4 =1
+    \]
+    となり，ここまでで$k=4$の場合が示された．
+
+    ここで，$n \geqq 4$として$k=n$のときに主張が成り立つと仮定する．
+    このとき，
+    \[
+        t_1 \bm{x}_1 + t_2 \bm{x}_2+\dots+ t_n \bm{x}_n
+    \]
+    は仮定により多面体$\{ P_n \}$の内部の点であり，これを簡単のために$\bm{X}_n$とおく．
+
+    さて，$\{ P_n \}$の点と$P_{n+1}$とを結ぶ線分上の点は，$ 0 \leqq l \leqq 1$をみたす$l \in \mathbb{R}$によって，
+    \[
+        l \overbrace{(  t_1 \bm{x}_1 + t_2 \bm{x}_2+\dots+ t_n \bm{x}_n)}^{\bm{X}_n}+(1-l) \bm{x}_{n+1} , \quad t_1+t_2+\dots + t_n =1 
+    \]
+    とかける．ここで，
+    \[
+        l(t_1+t_2+\dots+t_n)+(1-l)=1
+    \]
+    なので，$\{ P_n \}$の点と$P_{n+1}$とを結ぶ線分上の点はこのように表せる．
+
+    逆に，
+    \[
+        \bm{x} = t_1 \bm{x}_1 + t_2 \bm{x}_2 + \dots + t_n \bm{x}_n + t_{n+1} \bm{x}_{n+1} , \quad t_1, t_2 ,\dots , t_n,t_{n+1} \geqq 0 ,\quad  t_1 +t_2 + \dots+t_n + t_{n+1} =1
+    \]
+    としたとき，
+    \begin{align*}
+        \bm{x} &=\frac{t_1 \bm{x}_1 + t_2 \bm{x}_2+\dots+ t_n \bm{x}_n}{t_1+t_2+\dots+t_n} \cdot (t_1+t_2+\dots+t_n) +t_{n+1} \bm{x}_{n+1} \\
+        & = T_n \bm{X}_n + t_{n+1} \bm{x}_{n+1}
+    \end{align*}
+    と変形できる．ただし$T_n = t_1 + t_2 +\dots+t_n$とおいた．
+    
+    さて
+    \[
+        \frac{\bm{X}_n }{T_n} = \frac{t_1 \bm{x}_1 }{T_n}+ \frac{t_2 \bm{x}_2 }{T_n}+\dots +  \frac{t_n \bm{x}_n }{T_n}  \\
+    \]
+    であることと
+    \begin{align*}
+        \frac{t_1}{T_n}+\frac{t_2 }{T_n} +\dots +\frac{t_n }{T_n}& = \frac{T_n}{T_n} \\
+        & = 1
+    \end{align*}
+    であることにより，
+    \[
+        \frac{\bm{X}_n}{T_n}
+    \]
+    は，多面体$\{ P_n \}$の内部の点であり．
+    \[
+        T_n \cdot \frac{\bm{X}_n}{T_n} + t_{n+1} \bm{x}_{n+1}
+    \]
+    は多面体$\{ P_n \}$の内部の点と$P_{n+1}$を結ぶ線分上の点である．
+
+    よって，$k=n$のときも問題の主張が成り立つ．
+
+    以上の考察により証明された．
+\end{proof}
+\end{leftbar}
+
 \subsection*{p29-30:2}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p29-30：2}{p29-30：2}}
 
