@@ -1360,7 +1360,7 @@ $A=(a_{pq})$を$k \times l$行列，$B= (b_{qr})$，$C=(c_{qr})$を$l \times m$�
     \subsection*{p42：問1}
     \addcontentsline{toc}{subsection}{\texorpdfstring{p42：問1}{p42：問1}}
 
-    \begin{tleftbar}
+    \begin{leftbar}
         \begin{enumerate}
             \item 
         まず，
@@ -1399,8 +1399,36 @@ $A=(a_{pq})$を$k \times l$行列，$B= (b_{qr})$，$C=(c_{qr})$を$l \times m$�
         である．これを用いて$A'A$を計算すると，$A' A =E$となり．たしかに$A'$は$A$の逆行列である．
     
         以上の議論により，$ad - bc \ne 0$となることが必要十分条件である．
+        \item 計算する．
+    \begin{description}
+        \item[イ] (2)の結果により，
+        \[
+            \frac{1}{3 \cdot 3 - 2 \cdot 4} \begin{pmatrix} 3 & -2 \\ -4 & 3 \end{pmatrix} =  \begin{pmatrix} 3 & -2 \\ -4 & 3 \end{pmatrix}
+        \]
+        が求める逆行列である．
+        \item[ロ] まず，
+        \[
+            X= \begin{pmatrix} x_{11} & x_{12} & x_{13} \\x_{21} & x_{22} & x_{23} \\x_{31} & x_{32} & x_{33}  \end{pmatrix}
+        \]
+        としたときに
+        \begin{align*} 
+           XA &=  \begin{pmatrix} x_{11} & x_{12} & x_{13} \\x_{21} & x_{22} & x_{23} \\x_{31} & x_{32} & x_{33}  \end{pmatrix}
+            \begin{pmatrix} 1 & 2 & -1 \\ 0& 1 & 3 \\ 0 & 0 & 1 \end{pmatrix}  \\
+            & = \begin{pmatrix} x_{11} & 2x_{11} + x_{12} & -x_{11} +3x_{12} +x_{13} \\ x_{21} & 2x_{21} + x_{22} & -x_{21} +3x_{22} +x_{23} \\  x_{31} & 2x_{31} + x_{32} & -x_{31} +3x_{32} +x_{33} \end{pmatrix} \\
+        \end{align*} 
+        であるから，
+        \[
+            \begin{pmatrix} x_{11} & 2x_{11} + x_{12} & -x_{11} +3x_{12} +x_{13} \\ x_{21} & 2x_{21} + x_{22} & -x_{21} +3x_{22} +x_{23} \\  x_{31} & 2x_{31} + x_{32} & -x_{31} +3x_{32} +x_{33} \end{pmatrix} = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}
+        \]
+        となる行列$X$があれば，それが求める逆行列である．
+        計算すると
+        \[
+            X = \begin{pmatrix} 1 & -2 & 7 \\ 0 & 1 & -3 \\ 0 & 0 & 1 \end{pmatrix}
+        \]
+        である．
+    \end{description}
         \end{enumerate}
-    \end{tleftbar}
+    \end{leftbar}
 
 
     \subsection*{p52：問}
