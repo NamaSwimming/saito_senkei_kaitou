@@ -608,7 +608,7 @@ ab & b^2
 
 \subsection*{p19：問2-(下)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p19：問2-(下)}{p19：問2-(下)}}
-\begin{tleftbar}
+\begin{leftbar}
 \begin{description}
     \item[イ] 
     \begin{proof}
@@ -750,8 +750,9 @@ ab & b^2
     となる．これが証明すべきことであった．
 \end{proof}
 \end{description}
-\end{tleftbar}
+\end{leftbar}
 
+\newpage 
 
 \subsection*{p22：問1}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p22：問1}{p22：問1}}
@@ -1555,10 +1556,10 @@ $A=(a_{pq})$を$k \times l$行列，$B= (b_{qr})$，$C=(c_{qr})$を$l \times m$�
 \addcontentsline{toc}{section}{\texorpdfstring{第2章・章末問題}{第2章・章末問題}}
 
 
-\subsection*{p70：1-イ）}
-\addcontentsline{toc}{subsection}{\texorpdfstring{p70：1-イ）}{p70：1-イ）}}
+\subsection*{p70-73：1-イ）}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70-73：1-イ）}{p70-73：1-イ）}}
 
-\begin{tleftbar}
+\begin{leftbar}
         \begin{align*} 
         &
         \left( 
@@ -1617,12 +1618,13 @@ $A=(a_{pq})$を$k \times l$行列，$B= (b_{qr})$，$C=(c_{qr})$を$l \times m$�
                 \end{pmatrix}
             \]
             である．
-            \end{tleftbar}
+            \end{leftbar}
 
+            \newpage
 
-\subsection*{p70：1-ロ）}
-\addcontentsline{toc}{subsection}{\texorpdfstring{p70：1-ロ）}{p70：1-ロ）}}
-        \begin{tleftbar}
+\subsection*{p70-73：1-ロ）}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70-73：1-ロ）}{p70-73：1-ロ）}}
+        \begin{leftbar}
         \begin{align*} 
         &
         \left( 
@@ -1671,13 +1673,13 @@ $A=(a_{pq})$を$k \times l$行列，$B= (b_{qr})$，$C=(c_{qr})$を$l \times m$�
             \begin{pmatrix} -3 & -1 & 1& -1 \\ -3 & -1 & 0 & 1 \\ -4 & -1 & 1 & 0 \\ -10 & -3 & 1& 1 \end{pmatrix}
         \]
         である．
-    \end{tleftbar}
+    \end{leftbar}
 
+\newpage
+    \subsection*{p70-73：3-イ）}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p70-73：3-イ）}{p70-73：3-イ）}}
 
-    \subsection*{p71：3-イ）}
-    \addcontentsline{toc}{subsection}{\texorpdfstring{p71：3-イ）}{p71：3-イ）}}
-
-    \begin{tleftbar}
+    \begin{leftbar}
     \begin{align*} 
     &
     \left( 
@@ -1720,10 +1722,59 @@ $A=(a_{pq})$を$k \times l$行列，$B= (b_{qr})$，$C=(c_{qr})$を$l \times m$�
         \[
             P^{-1} A P = \begin{pmatrix} 2 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 0 \end{pmatrix}
         \]
-    \end{tleftbar}
+    \end{leftbar}
 
-\subsection*{p71：7}
-\addcontentsline{toc}{subsection}{\texorpdfstring{p71：7}{p71：問7}}
+    \newpage 
+
+    \subsection*{p70-73：6}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p70-73：6}{p70-73：6}}
+
+    \begin{leftbar}
+        \begin{description}
+            \item[イ] 計算すると，
+            \[
+                A A^{k-1} = A^{k-1} A = E
+            \]
+            なので，$A$は正則である．
+            \item[ロ] $A$が正則であるとすると，$A^{-1}$が存在して，
+            \begin{align*}
+                & A^{-1} A^{2} = A^{-1} A \\
+                & A = E 
+            \end{align*} 
+            となるが，これは矛盾であるため，$A$は正則でない．
+            \item[ハ] $A$が正則であるとすると，
+            \begin{align*} 
+                E & = (A^{-1} A)^{k} \\
+                & = A^{-k} A^{k} \\
+                & = O 
+            \end{align*} 
+            となるが，これは矛盾であるため，$A$は正則でない．
+            \item[二] $k$を用いて，$A^k$を考えると
+            \[
+                E = (E-A)(E+A+A^2+\dots+A^{k-1})
+            \]
+            であり，逆からかけても同じであるため，$E-A$は正則であり，
+            \[
+                (E-A)^{-1}=E+A+A^2+\dots+A^{k-1}
+            \]
+            である．
+
+            また，
+            \[
+                E=(E+A)(E-A+A^2-\dots+A^{k-1})
+            \]
+            であり，逆からかけても同じなので，$E+A$は正則であり，
+            \[
+                (E+A)^{-1} = E-A+A^2-\dots+A^{k-1}
+            \]
+            である．
+        \end{description}
+    \end{leftbar}
+
+    \newpage 
+
+\subsection*{p70-73：7}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70-73：7}{p70-73：7}}
 
 \begin{tleftbar}
 \begin{proof}
