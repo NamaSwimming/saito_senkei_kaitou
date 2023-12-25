@@ -1803,6 +1803,39 @@ $X=(x_{ij}),~Y=(y_{ij})$とする．
 \end{tleftbar}
 
 
+\subsection*{p70-73：8}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70-73：8}{p70-73：8}}
+
+\begin{leftbar}
+    \begin{proof}
+        行列$B$の階数を$r$とすると，$m$次正則行列$P$，$n$次正則行列$Q$によって，
+        \[
+            P B Q = F_{m,n} (r)
+        \]
+        と表せる．
+
+        これにより，
+        \[
+            ABQ = A P^{-1} F_{m,n} (r) 
+        \]
+        とかける．$A_{11}$を$r$次の行列として，
+        \[
+            A P^{-1} = \begin{pmatrix} A_{11} & A_{12} \\ A_{21} & A_{22} \end{pmatrix}, \quad F_{m,n} (r) = \begin{pmatrix} E_r & O \\ O & O \end{pmatrix}
+        \]
+        とかくと，
+        \begin{align*}
+           A P^{-1} F_{m,n} (r)&= A P^{-1} Q \\
+           & = \begin{pmatrix} A_{11}& O \\ A_{21} & O \end{pmatrix}
+        \end{align*}
+        とかけ，$A_{11}$の定義により，$ABQ$の階数は$r$以下となる．いま$Q$は基本行列の積なので， $AB$の階数も$r$以下である．
+
+        行列$A$についても同様に示せる．
+        
+        以上の議論により，行列$AB$の階数は行列$A$，行列$B$の階数以下であることが証明された．
+
+    \end{proof}
+\end{leftbar}
+
 \section*{附録\three}
 \addcontentsline{toc}{section}{\texorpdfstring{附録\three}{附録\three}}
 
