@@ -1911,6 +1911,60 @@ $X=(x_{ij}),~Y=(y_{ij})$とする．
 
 \newpage 
 
+
+\subsection*{p70-73：11}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70-73：11}{p70-73：11}}
+
+\begin{leftbar}
+    \begin{description}
+        \item[イ] ${}^t PP =E$を加味して$(P \pm E)$の転置行列を考えると
+        \[
+           {}^t (P \pm E) = {}^t P \pm {}^t PP = {}^t P {}^t (E \pm P)
+        \]
+        となり，これを用いると，
+
+        \begin{align*} 
+            {}^t A & ={}^t  \{ (P-E)(P+E)^{-1} \} \\
+            & = {}^t (P+E)^{-1} {}^t (P-E) \\
+            & = (E+{}^t P)^{-1} {}^t P {}^t P (E-P) \\
+            & = \{ {}^t P (P+E)  \}^{-1} {}^t P (E-P) \\
+            & = (P+E)^{-1} {}^t P^{-1} {}^t P (E-P) \\
+            & = (P+E)^{-1} (E-P) \\
+            & = -(P+E)^{-1} \{ (P+E)-2E \} \\
+            & = -(P+E)^{-1} (P+E) +2E (P+E)^{-1} \\
+            & = -(P+E) (P+E)^{-1} +2E (P+E)^{-1} \\
+            & = (-(P+E)+2E) (P+E)^{-1} \\
+            & = -(P-E) (P+E)^{-1} = -A
+        \end{align*} 
+        となり，これが証明すべきことであった． \qed
+        \item[ロ] 計算すると，
+        \begin{align*} 
+            E-A & = E-(P-E) (P+E)^{-1} \\
+            & = (P+E)(P+E)^{-1} - (P-E) (P+E)^{-1} \\
+            & = \{ (P+E)-(P-E) \} (P+E)^{-1} \\
+            & = 2(P+E)^{-1}
+        \end{align*} 
+        と変形でき，いま$(P+E)$が正則だから，$2(P+E)^{-1}$も正則であり，
+        \[
+            (E-A)^{-1} = \frac{1}{2} (P+E)
+        \]
+        である．\qed
+        \item[ハ] まず，
+        \begin{align*}
+            E+A &=(P+E)(P+E)^{-1}+(P-E) (P+E)^{-1} \\
+            & = \{ (P+E)+(P-E) \} (P+E)^{-1} \\
+            & = 2P (P+E)^{-1}
+        \end{align*}
+        であるから，これを用いると
+        \[
+            (E+A)(E-A)^{-1} = 2P (P+E)^{-1} \frac{1}{2} (P+E) =P
+        \]
+        となり，これが証明すべきことであった．\qed 
+    \end{description}
+\end{leftbar}
+
+\newpage 
+
 \section*{附録\three}
 \addcontentsline{toc}{section}{\texorpdfstring{附録\three}{附録\three}}
 
