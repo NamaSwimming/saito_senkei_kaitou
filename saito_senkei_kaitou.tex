@@ -2000,6 +2000,66 @@ $X=(x_{ij}),~Y=(y_{ij})$とする．
 
 \newpage 
 
+\section*{第3章}
+\addcontentsline{toc}{section}{\texorpdfstring{第3章}{第3章}}
+
+\subsection*{p77：問2}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p77：問2}{p77：問2}}
+
+\begin{tleftbar}
+    \begin{proof}
+$S_n$の偶置換全体の集合を$A_n$,偶置換全体の集合を$B_n$とする．
+置換は必ず奇置換か偶置換のいずれかであるから, 
+\begin{align*} 
+    & S_n = A_n \cup B_n , \\
+    &A_n \cap B_n = \varnothing
+\end{align*} 
+となる．
+
+ここで，
+\[
+    \tau = \begin{pmatrix} 1 & 2 & 3 \\ 2 & 1 & 3 \end{pmatrix}
+\]
+とすると，$\tau$は奇置換であり，$\sigma \in  A_n$のとき，$ \tau \sigma \in B_n$である．
+同様に，$ \rho  \in B_n$のとき，$\tau^{-1} \rho = \tau \rho \in A_n$である．
+これらにより，全単射
+\[
+    A_n \ni \sigma \mapsto \tau \sigma \in B_n
+\]
+が存在し，偶置換と奇置換は同数あり，その個数は$n! /2$である．
+\end{proof}
+\end{tleftbar}
+
+
+\subsection*{p77：問3}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p77：問3}{p77：問3}}
+
+\begin{leftbar}
+    $m \in \mathbb{N}$とする．
+    \begin{enumerate}[(I)]
+        \item $n=2m$とかけるとき，この置換を互換の積で表すと，
+        \[
+            (1,2m)(2,2m-1)\dots(m,m+1)
+        \] 
+        となるため，置換の符号は$(-1)^m$，すなわち
+        \[
+            (-1)^{\frac{1}{2}}
+        \]
+        となる．
+        \item $n=2m-1$とかけるとき，この置換を互換の積で表すと，
+        \[
+            (1,2m-1)(2,2m-2)\dots(m-1,m+1)
+        \] 
+        となるため，置換の符号は$(-1)^{m-1}$，すなわち
+        \[
+            (-1)^{\frac{n-1}{2}}
+        \]
+        となる．
+    \end{enumerate}
+\end{leftbar}
+
+\newpage 
+
 \section*{附録\three}
 \addcontentsline{toc}{section}{\texorpdfstring{附録\three}{附録\three}}
 
