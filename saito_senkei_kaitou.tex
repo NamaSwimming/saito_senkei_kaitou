@@ -2039,7 +2039,7 @@ $S_n$の偶置換全体の集合を$A_n$,偶置換全体の集合を$B_n$とす�
     \begin{enumerate}[(I)]
         \item $n=2m$とかけるとき，この置換を互換の積で表すと，
         \[
-            (1,2m)(2,2m-1)\dots(m,m+1)
+            (1,2m)(2,2m-1) \dotsm (m,m+1)
         \] 
         となるため，置換の符号は$(-1)^m$，すなわち
         \[
@@ -2048,7 +2048,7 @@ $S_n$の偶置換全体の集合を$A_n$,偶置換全体の集合を$B_n$とす�
         となる．
         \item $n=2m-1$とかけるとき，この置換を互換の積で表すと，
         \[
-            (1,2m-1)(2,2m-2)\dots(m-1,m+1)
+            (1,2m-1)(2,2m-2) \dotsm (m-1,m+1)
         \] 
         となるため，置換の符号は$(-1)^{m-1}$，すなわち
         \[
@@ -2059,6 +2059,47 @@ $S_n$の偶置換全体の集合を$A_n$,偶置換全体の集合を$B_n$とす�
 \end{leftbar}
 
 \newpage 
+
+
+\subsection*{p79：問}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p79：問}{p77：問}}
+
+\begin{leftbar}
+    \begin{description}
+        \item[イ)] まず
+        \[
+            \sigma = \begin{pmatrix} 1 & 2 & \cdots & n \\ n & n-1 & \cdots & 1 \end{pmatrix}
+        \]
+        とすると，$m \in \mathbb{N}$として，
+        \[
+            \sgn \sigma =
+            \begin{cases} 
+                (-1)^\frac{n}{2} & \text{($n=2m$のとき)}  \\
+                (-1)^\frac{n-1}{2} & \text{($n=2m-1$のとき)}
+            \end{cases}
+        \]
+        となる．
+        また，
+        \[
+            \text{(与式)}  = \sum_{\sigma \in S_n} \sgn \sigma \cdot a_1 a_2 \dotsm a_n 
+        \]
+        だから，
+        \[
+            \text{(与式)}  = 
+            \begin{cases} 
+             (-1)^\frac{n}{2}   a_1 a_2 \dotsm a_n & \text{($n=2m$のとき)} \\
+             (-1)^\frac{n-1}{2} -a_1 a_2 \dotsm a_n & \text{($n=2m-1$のとき)}
+            \end{cases}
+        \]
+        である．
+        \item[ロ)]計算すると，
+        \begin{align*} 
+            \text{(与式)} & = a^3 + b^3 + c^3 -abc -bca -cab \\
+            & = a^3 + b^3 +c^3 -3abc 
+        \end{align*}
+        となる．
+    \end{description}
+\end{leftbar}
 
 \section*{附録\three}
 \addcontentsline{toc}{section}{\texorpdfstring{附録\three}{附録\three}}
