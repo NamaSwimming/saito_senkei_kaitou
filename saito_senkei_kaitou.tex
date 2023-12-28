@@ -1965,6 +1965,41 @@ $X=(x_{ij}),~Y=(y_{ij})$とする．
 
 \newpage 
 
+
+\subsection*{p70-73：14}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70-73：14}{p70-73：14}}
+
+\begin{leftbar}
+\begin{proof} 
+    二つに分けて証明する，
+\begin{description}
+    \item[イ)$\Longrightarrow$ロ)] \mbox{} \\
+    $A$が正則であると仮定すると，$A^{-1}$が存在し，
+    \[
+        \bm{x} = A^{-1} (A\bm{x})
+    \]
+    と変形できるから，$A \bm{x}$が非負ベクトルであれば，$\bm{x}$も非負ベクトルである．
+    \item[ロ)$\Longrightarrow$イ)] \mbox{} \\
+    まず，$ A \bm{x} =\bm{0}$である$\bm{x}$が存在すると仮定する．このとき，$A (-\bm{x}) =\bm{0}$であるから，
+    $A (-\bm{x})$も非負ベクトルであり，条件から$ \bm{x}$，$-\bm{x}$は非負ベクトルである．
+    したがって$\bm{x}=\bm{0}$となり，$A$は正則である．
+
+    また，非負ベクトル$\bm{x}$を任意にとると，
+    \[
+        \bm{x} = A (A^{-1} \bm{x})
+    \]
+    も非負ベクトルであり，条件から$A^{-1} \bm{x}$も非負ベクトルである．
+    ここで，$A^{-1}$が非負行列でないと仮定すると，ある単位ベクトル$\bm{e}_j$について，
+    $A^{-1} \bm{e}_j $が非負ベクトルでないことになり，$\bm{x}$が非負ベクトルであることに反する．
+    これより$A^{-1}$は非負行列である．
+\end{description}
+以上の議論により証明された．
+\end{proof}
+\end{leftbar}
+
+
+\newpage 
+
 \section*{附録\three}
 \addcontentsline{toc}{section}{\texorpdfstring{附録\three}{附録\three}}
 
