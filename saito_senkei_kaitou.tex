@@ -2198,6 +2198,48 @@ $S_n$の偶置換全体の集合を$A_n$,偶置換全体の集合を$B_n$とす�
 \end{leftbar}
 
 \newpage 
+
+
+\subsection*{p90-91：3}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90-91：3}{p90-91：3}}
+
+\begin{leftbar}
+    \begin{proof}
+    $\alpha ^n =1$をみたす$\alpha \in \mathbb{C}$をひとつ固定する．
+    さて，与えられた行列式の第$j$行を$\alpha^{j-1}$倍して第$1$列に足す操作を行うと，この行列式は
+    \[
+        \begin{vmatrix}
+            \sum_{i=0}^{n-1} \alpha^i x_i & x_1 & x_2 & \cdots & x_{n-1} \\
+            \alpha \sum_{i=0}^{n-1} \alpha^i x_i & x_0 & x_1 & \cdots & x_{n-2} \\
+            \alpha^2 \sum_{i=0}^{n-1} \alpha^i x_i & x_{n-1} & x_0 & \cdots & x_{n-3} \\
+            \vdots & \vdots & \vdots & \vdots & \vdots  \\
+            \alpha^{n-1} \sum_{i=0}^{n-1} \alpha^i x_i & x_{n-2} & x_{n-3} & \cdots & x_0 
+        \end{vmatrix}
+    \]
+    と変形できる．これにより，この行列式は
+    \[
+        \sum_{i=0}^{n-1} \alpha^i x_i = x_0 + \alpha x_1 + \alpha^2 x_2 + \dots +\alpha^{n-1} x_{n-1}
+    \]
+    を因数にもつ．すべての$\alpha$に関してこのことがいえるから，因数定理により，この行列式は
+    \[
+        \prod_{\alpha^n=1} (x_0 + \alpha x_1 + \alpha^2 x_2 + \dots +\alpha^{n-1} x_{n-1})
+    \]
+を因数にもつ．これは$n$次式であり，なおかつ$x_0$の係数は$1$であることより，結果として
+\[
+   \begin{vmatrix} 
+    x_0 & x_1 & x_2 & \cdots & x_{n-1} \\
+    x_{n-1} & x_0 & x_1 & \cdots & x_{n-2} \\
+    \vdots & \vdots & \vdots & \vdots & \vdots \\
+    x_1 & x_2 & x_3 & \cdots & x_0 
+   \end{vmatrix} 
+   =  \prod_{\alpha^n=1} (x_0 + \alpha x_1 + \alpha^2 x_2 + \dots +\alpha^{n-1} x_{n-1})
+\]
+である．これが証明すべきことであった．
+\end{proof}
+\end{leftbar}
+
+\newpage 
+
 \section*{附録\three}
 \addcontentsline{toc}{section}{\texorpdfstring{附録\three}{附録\three}}
 
