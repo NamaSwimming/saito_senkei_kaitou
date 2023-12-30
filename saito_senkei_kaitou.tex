@@ -2146,6 +2146,58 @@ $S_n$の偶置換全体の集合を$A_n$,偶置換全体の集合を$B_n$とす�
 \end{proof}
 \end{leftbar}
 
+\newpage 
+
+\section*{第3章・章末問題}
+\addcontentsline{toc}{section}{\texorpdfstring{第3章・章末問題}{第3章・章末問題}}
+
+
+\subsection*{p90-91：3}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90-91：3}{p90-91：3}}
+
+\begin{leftbar}
+    \begin{description}
+        \item[イ] 与えられた行列式に対して多重線型性を用いると，
+        \begin{align*} 
+            \text{(与式)} & = 
+            \begin{vmatrix}
+                A+B & A+B \\
+                B & A 
+            \end{vmatrix}
+            \\
+            & = \begin{vmatrix}
+                A+B &O \\
+                B & A-B 
+            \end{vmatrix}
+            \\
+            & = \abs{A+B} \cdot \abs{A-B}
+        \end{align*} 
+        となり，これが証明すべきことであった．\qed 
+        \item [ロ] 与えられた行列式に対して，多重線型性を用いると，
+        \begin{align*} 
+            \text{(与式)} & = 
+            \begin{vmatrix} 
+                A+iB & iA-B \\
+                B & A 
+            \end{vmatrix}
+            \\
+            & = \begin{vmatrix}
+                A+iB & O \\
+                B & A-iB 
+            \end{vmatrix}
+            \\
+            & = \det (A+iB) \cdot \det(A-iB)
+        \end{align*} 
+        となり，いま$A$，$B$は実行列なので，
+        \begin{align*} 
+            \det (A+iB) \cdot \det(A-iB) & = \det (A+iB) \cdot \overline{\det (A+iB)} \\
+            & = \abs{\det(A+iB)}^2
+        \end{align*} 
+        である．
+    \end{description}
+\end{leftbar}
+
+\newpage 
 \section*{附録\three}
 \addcontentsline{toc}{section}{\texorpdfstring{附録\three}{附録\three}}
 
