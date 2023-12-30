@@ -2101,6 +2101,51 @@ $S_n$の偶置換全体の集合を$A_n$,偶置換全体の集合を$B_n$とす�
     \end{description}
 \end{leftbar}
 
+\newpage 
+
+\subsection*{p83：問}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p83：問}{p83：問}}
+
+\begin{leftbar}
+    \begin{proof}
+    $(n,n)$行列$A$，$X$を
+    \[
+        A = (\bm{a}_1 ,\bm{a}_2, \dots ,\bm{a}_n) , \quad X = (\bm{x}_1,\bm{x}_2,\dots,\bm{x}_n)
+    \]
+    とする．このとき，$AX$は定義され，
+    \[
+        AX = (A\bm{x}_1 , A\bm{x}_2 , \dots ,A\bm{x}_n)
+    \]
+    と表せる．ここで，$A \bm{x}_j=x$を単位ベクトルの線型結合で表すと，
+    \begin{align*} 
+        A \bm{x}_j & = A {}^t (x_{1j} \bm{e}_1 , x_{2j} \bm{e}_2,\ldots ,x_{nj} \bm{e}_n ) \\
+        &=A (x_{1j} \bm{e}_1 + x_{2j} \bm{e}_2+ \dots + x_{nj} \bm{e}_n) \\
+        & = x_{1j} \bm{a}_1 + x_{2j} \bm{a}_2 + x_{nj} \bm{a}_n \\
+        & = \sum_{ i =1}^{n} x_{ij} \bm{a}_{i}
+    \end{align*} 
+    となる．これにより，$\abs{AX}$は，多重線型性を用いて，
+    \begin{align*} 
+        \abs{AX} & = \abs{\sum_{i_1 =1}^{n} x_{i_1 1} \bm{a}_{i_1} , \sum_{i_2 =1}^{n} x_{i_2 2} \bm{a}_{i_2},\ldots , \sum_{i_n =1}^{n} x_{i_n n} \bm{a}_{i_n} } \\
+        & = \sum_{i_1 =1}^{n} \sum_{i_2 = 1}^{n} \dots \sum_{i_n =1}^{n} x_{i_1 1} x_{i_2 2} \dots x_{i_n n} \abs{\bm{a}_{i_1},\bm{a}_{i_2},\dots,\bm{a}_{i_n}} 
+    \end{align*} 
+    と変形できる．ここで，
+    \[
+        \sigma = \begin{pmatrix} 1 & 2 & \cdots & n \\ i_1 & i_2 & \cdots & i_n \end{pmatrix}
+    \]
+    とおくと，
+    \[
+        \abs{\bm{a}_{\sigma (1)},\bm{a}_{\sigma(2)},\dots,\bm{a}_{\sigma(n)}} = \sgn \sigma \abs{A}
+    \]
+    \begin{align*} 
+        \abs{AX} = & \sum_{\sigma \in S_n} x_{\sigma (1)1} x_{\sigma(2)2} \dots x_{\sigma(n)n} \cdot \sgn \sigma  \abs{A} \\
+        & = \sum_{\sigma \in S_n } \sgn \sigma \cdot x_{\sigma(1)1} x_{\sigma(2)2} \dots x_{\sigma (n)n} \abs{A} \\
+        & = \abs{{}^t X} \abs{A} \\
+        & = \abs{A} \abs{X}
+    \end{align*} 
+    を得る．これが証明すべきことであった．
+\end{proof}
+\end{leftbar}
+
 \section*{附録\three}
 \addcontentsline{toc}{section}{\texorpdfstring{附録\three}{附録\three}}
 
