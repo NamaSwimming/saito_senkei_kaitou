@@ -2000,6 +2000,59 @@ $X=(x_{ij}),~Y=(y_{ij})$とする．
 
 \newpage 
 
+
+
+\subsection*{p70-73：15}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70-73：15}{p70-73：15}}
+
+\begin{leftbar}
+    \begin{description}
+        \item[イ] まず，$A=(a_{ij})$，$\bm{f} = {}^t (f_1 , f_2,\dots,f_j) ={}^t (1,1,\dots,1)$とおくと，
+        $A \bm{f}$の第$i$行の成分は
+        \begin{align*}
+            \sum_{j=1}^{n} a_{ij} f_j &= \sum_{j=1}^{n} a_{ij} \\
+            &=1 
+        \end{align*}
+        であるから，$\bm{f}$の定義とあわせて，
+        \[
+            A \bm{f} =\bm{f}
+        \]
+        が成り立つ．\qed 
+        \item[ロ] $C =AB=(c_{ij})$とすると，$C$の$(i,k)$成分は
+        \[
+            c_{ik}  =\sum_{j=1}^{n} a_{ij} b_{jk}
+        \]
+        である．これにより，
+        \begin{align*} 
+            \sum_{k=1}^{n} c_{ik} & = \sum_{k=1}^{n} \left (\sum_{j=1}^{n} a_{ij} b_{jk}\right) \\
+            & = \sum_{j=1}^{n} a_{ij} \sum_{k=1}^{n} b_{jk} \\
+            & = \sum_{j=1}^{n} a_{ij} \cdot 1 \\
+            & = 1
+        \end{align*} 
+        であるから，$C$すなわち$AB$は確率行列である．\qed
+        \item[ハ] $ A \bm{x}=\alpha \bm{x}$において，$\bm{x}$の成分で絶対値が最大のものを$x_p$とする．
+    
+        このとき，$ A \bm{x} = \alpha \bm{x}$の第$p$行成分の絶対値を考えると，
+        \begin{align*} 
+            \abs{\alpha} \abs{x_p} &\leqq \sum_{j=1}^{n} a_{pj} \abs{x_j} \\
+            & \leqq \sum_{j=1}^{n} a_{pj} \abs{x_p} \\
+            & = \abs{x_p}
+        \end{align*} 
+        であるから，
+        \[
+            \abs{\alpha} \abs{x_p} \leqq \abs{x_p}
+        \]
+        を得て，この両辺の絶対値をとると
+        \[
+            \abs{\alpha} \leqq 1
+        \]
+        となり，これが証明すべきことであった．\qed
+        \end{description}
+    \end{leftbar}
+
+    \newpage 
+
+
 \section*{第3章}
 \addcontentsline{toc}{section}{\texorpdfstring{第3章}{第3章}}
 
