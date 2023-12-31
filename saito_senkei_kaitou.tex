@@ -60,7 +60,7 @@
 \addcontentsline{toc}{subsection}{\texorpdfstring{p7：問-(上)}{p7：問-(上)}}
 
 \begin{tleftbar}
-    求めるベクトルを，$\bm{x}=(x，y，z)$~($x^2+y^2 +z^2=1$)とおく．
+    求めるベクトルを，$\bm{x}=(x,y,z)$~(ただし$x^2+y^2 +z^2=1$)とおく．
     このとき，内積の定義により，
     \begin{align*}
         &\bm{x} \cdot 
@@ -102,15 +102,15 @@
 
 	求める三角形の面積を$S$とし．
     \[
-    \bm{a}=\overrightarrow{\mathrm{P_1 P_2}}=(x_2-x_1，y_2-y_1，z_2-z_1),\quad \bm{b}=\overrightarrow{\mathrm{P_1 P_3}}=(x_3-x_1，y_3-y_1，z_3-z_1)
+    \bm{a}=\overrightarrow{\mathrm{P_1 P_2}}=(x_2-x_1,y_2-y_1,z_2-z_1),\quad \bm{b}=\overrightarrow{\mathrm{P_1 P_3}}=(x_3-x_1,y_3-y_1,z_3-z_1)
     \]
     とおく，
 	このとき，
 	\begin{align*}
-		S & = \frac{1}{2} \sqrt{\norm{\overrightarrow{\mathrm{P_1 P_2}}}^2 \norm{\overrightarrow{\mathrm{P_1 P_3}}}^2 - (\overrightarrow{\mathrm{P_1 P_2}} \cdot \overrightarrow{\mathrm{P_1 P_3}})^2} \\
-		  & = \frac{1}{2} \sqrt{\norm{\bm{a}}^2 \norm{\bm{b}}^2 - (\bm{a}\cdot \bm{b})^2 } \\
-		  & = \frac{1}{2} \{[(x_2 - x_1)^2+(y_2-y_1)^2+ (z_2 - z_1)^2][(x_3 - x_1)^2+(y_3-y_1)^2+ (z_3 - z_1)^2]\\
-		  & \qquad - [(x_2-x_1)(x_3-x_1)+(y_2 -y_1)(y_3-y_1)+(z_2-z_1)(z_3-z_1)]^2\}^{\frac{1}{2}}
+		S & = \frac{1}{2} \sqrt{\norm{\overrightarrow{\mathrm{P_1 P_2}}}^2 \norm{\overrightarrow{\mathrm{P_1 P_3}}}^2 - (\overrightarrow{\mathrm{P_1 P_2}}, \overrightarrow{\mathrm{P_1 P_3}})^2} \\
+		  & = \frac{1}{2} \sqrt{\norm{\bm{a}}^2 \norm{\bm{b}}^2 - (\bm{a},\bm{b})^2 } \\
+		  & = \frac{1}{2} \{ \lbrack (x_2 - x_1)^2+(y_2-y_1)^2+ (z_2 - z_1)^2 \rbrack \lbrack (x_3 - x_1)^2+(y_3-y_1)^2+ (z_3 - z_1)^2 \rbrack\\
+		  & \qquad - \lbrack (x_2-x_1)(x_3-x_1)+(y_2 -y_1)(y_3-y_1)+(z_2-z_1)(z_3-z_1)\rbrack ^2\}^{\frac{1}{2}}
 	\end{align*}
 	である，
 \end{tleftbar}
@@ -318,7 +318,7 @@ $はこれを満たす．このときの$y$の値を計算すると，それぞ�
             0 \\
             1
         \end{pmatrix}
-   ，\quad \bm{x}_2=
+   ,\quad \bm{x}_2=
     \begin{pmatrix}
         2 \\
         0 \\
@@ -340,7 +340,7 @@ $はこれを満たす．このときの$y$の値を計算すると，それぞ�
             0 \\
             -1
         \end{pmatrix}
-    ，\quad 
+    ,\quad 
     \bm{x}_3 - \bm{x}_1 =
     \begin{pmatrix}
         1 \\
@@ -406,7 +406,7 @@ $はこれを満たす．このときの$y$の値を計算すると，それぞ�
             \bm{x}=\bm{x}_1 + s(\bm{x}_2 - \bm{x}_1) + t (\bm{x}_3 - \bm{x}_1) \\
             \therefore \quad \bm{x} = (1-s-t)\bm{x}_1 + s\bm{x}_2 + t \bm{x}_3
         \end{gather*}
-        となり，$1-s-t=t_1,~s=t_2,~t=t_3$と改めて書き直すと，$s,t$の定め方より，$0 \le t_1 ，t_2，t_3 \le 1$であり
+        となり，$1-s-t=t_1,~s=t_2,~t=t_3$と改めて書き直すと，$s,t$の定め方より，$0 \le t_1 ,t_2,t_3 \le 1$であり
         \[
             \bm{x} = t_1\bm{x}_1 + t_2\bm{x}_2 + t_3 \bm{x}_3,\quad t_1+t_2+t_3=1
         \]
@@ -626,7 +626,7 @@ ab & b^2
     $，$\bm{a} \ne \bm{0}$かつ$\bm{b} \ne \bm{0}$とする．
     このとき，
     \begin{align*}
-        T \bm{x} &=\frac{(\bm{a}，\bm{x})}{(\bm{a}，\bm{a})} \bm{a} \\
+        T \bm{x} &=\frac{(\bm{a},\bm{x})}{(\bm{a},\bm{a})} \bm{a} \\
         & = \frac{a_1 x + a_2 y}{{a_1}^2+{a_2}^2} 
         \begin{pmatrix}
             a_1 \\
