@@ -2308,6 +2308,54 @@ $S_n$の偶置換全体の集合を$A_n$,偶置換全体の集合を$B_n$とす�
 
 \newpage 
 
+
+\section*{第4章}
+\addcontentsline{toc}{section}{\texorpdfstring{第4章}{第4章}}
+
+
+
+\subsection*{p94：問}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p94：問}{p94：問}}
+
+\begin{tleftbar}
+    3つのことを証明する．
+    \begin{description}
+    \item [反射律について] 明らかに，$A$に基本変形を施して$A$自身にすることができる．
+    \item [対称律について] $P$を$(m,m)$型の基本行列，$Q$を$(n,n)$型の基本行列として，
+    \[
+      A = P B Q
+    \]
+    とかくと，$P$，$Q$は正則なので， $P^{-1}$，$Q^{-1}$が存在し，
+    \[
+      B= P^{-1} A Q^{-1}
+    \]
+    とかける．よって，対称律が成り立つことが示された．
+    \item[推移律について] $P_1$，$P_2$を$(m,m)$型の基本行列，$Q_1$，$Q_2$を$(n,n)$型の基本行列として，
+    \[
+      A = P_1 B Q_1 , \quad B = P_2 C Q_2
+    \]
+    とかく．このとき，$P_1$，$Q_1$は正則だから，${P_1}^{-1}$，${Q_1}^{-1}$が存在し，
+    \[
+      B = {P_1}^{-1} A {Q_1}^{-1}
+    \]
+    となる．これにより，
+    \[
+      {P_1}^{-1} A {Q_1}^{-1} =P_2 C Q_2
+    \]
+    となり，同様の議論によって
+    \[
+      A = P_1 P_2 C Q_2 Q_1
+    \]
+    となり，推移律も成り立つことが示された．\qed 
+  \end{description}
+  さて，行列$A$に基本変形を施すと，$A$の階数を$r$として$F_{m,n} (r)$が得られることと，
+  $r$は$0$から$\min {m,n}$までの整数値を取り得るので，商集合の元の個数は
+  \[
+    \min \{ m , n \} +1
+  \]
+  となる．
+\end{tleftbar}
+
 \section*{附録\three}
 \addcontentsline{toc}{section}{\texorpdfstring{附録\three}{附録\three}}
 
