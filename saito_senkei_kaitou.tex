@@ -2314,6 +2314,23 @@ $S_n$の偶置換全体の集合を$A_n$,偶置換全体の集合を$B_n$とす�
 
 
 
+\subsection*{p93：問}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p93：問}{p239：問}}
+
+\begin{leftbar}
+    \begin{proof} 
+        $\abs{A \cup B}$について，$ \abs{A \cap B}$は$A$と$B$の共通部分の元の個数を考えているので，
+        \begin{align*} 
+            & \abs{A \cup B} = \abs{A}+\abs{B} - \abs{A \cap B} \\
+            & \therefore ~ \abs{A}+\abs{B} = \abs{A \cup B} + \abs{A \cap B}
+        \end{align*} 
+        である．これが証明すべきことであった．
+    \end{proof}
+    \end{leftbar}
+
+    \newpage 
+
+
 \subsection*{p94：問}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p94：問}{p94：問}}
 
@@ -2355,6 +2372,117 @@ $S_n$の偶置換全体の集合を$A_n$,偶置換全体の集合を$B_n$とす�
   \]
   となる．
 \end{tleftbar}
+
+
+\newpage 
+
+
+\subsection*{p107-108：問1}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p107-108：問1}{p107-108：問1}}
+
+\begin{leftbar}
+    \begin{description}
+        \item[イ] この集合を$W_1$とおくと，$W_1$は$\mathbb{C}^n$の部分空間をなす．
+        \[
+            \bm{x} =\bm{0} \in  W_1
+        \] 
+        であるから，$W_1 \ne \varnothing$である．
+        
+        また，
+
+        \[
+            \bm{v} = {}^t ( v_{1} , v_{2} , \ldots ,v_{n} ) , \quad \bm{w} = {}^t (w_{1} , w_{2} , \ldots , w_{n} )
+        \]
+        とおくと，
+        \[
+         \bm{v}+\bm{w}={}^t (v_1+w_1,v_2+w_2,\ldots,v_n + w_n)
+        \]
+        となり，これに加えて
+        \[
+           ( v_1+w_1)+(v_2+w_2) + \dots + (v_n + w_n) =(v_1+v_2+\dots + v_n ) + (w_1+w_2+\dots + w_n )=0+0=0
+        \]
+        となるから，$\bm{v}+\bm{w} \in W_1$である．
+        さらに，$a \in \mathbb{C}$をとると，
+        \[
+            a \bm{v}={}^t ( av_{1} ,av_{2} , \ldots , av_{n} )
+        \]
+        であり，
+        \[
+           av_1 + av_2+ \dots + av_n = a (v_1 + v_2 + \dots + v_n) = a \cdot 0 =0
+        \]
+        であるから，このとき$ a \bm{v} \in W_1$である．
+        
+        以上により，$W_1$は$\mathbb{C}^n$の線型部分空間をなす．\qed 
+        \item[ロ] この集合を$W_2$とおくと，$W_2$は$\mathbb{C}^n$の部分空間をなす．
+        \[
+            \bm{x} = \bm{0} \in W_2
+        \]
+        であるから，$W_2 \ne \varnothing$である．
+        
+        また，
+        \[
+            \bm{v} ={}^t (v_{p+1} , v_{p+2} , \ldots , v_{n} ) , \quad \bm{w} ={}^t ( w_{p+1} , w_{p+2} , \ldots , w_{n} )
+        \]
+        とおくと，
+        \[
+            \bm{v}+ \bm{w} = {}^t (v_{p+1}+w_{p+1},v_{p+2}+w_{p+2},\ldots,v_n + w_n)
+        \]
+        であり，
+        \begin{align*}
+           &( v_{p+1}+w_{p+1}) +(v_{p+2}+w_{p+2})+ \dots + (v_n+w_n) \\
+           =& (v_{p+1}+v_{p+2}+\dots+v_n)+(w_{p+1}+w_{p+2}+\dots+w_n) \\
+           =&0+0\\
+           =&0
+        \end{align*}
+        となるため，このとき$\bm{v}+\bm{w} \in W_2$である．
+
+        また，
+        \[
+            a\bm{v} = {}^t (av_{p+1},av_{p+2},\ldots,av_n)
+        \]
+        であり，
+        \[
+            av_{p+1} + av_{p+2}+\dots + av_n =a (v_{p+1}+v_{p+2}+\dots+v_n) = a\cdot 0 =0
+        \]
+        であるため，このとき$a \bm{v} \in W_2$である．
+
+        以上により，$W_2$は$\mathbb{C}^n$の線型部分空間をなす．\qed
+        \item [ハ] これは部分空間をなさない．
+        \[
+            \bm{v}= {}^t (1,0,0,\ldots , 0),\quad \bm{w}={}^t (0,1,0,\ldots ,0) 
+        \]
+            とすると
+            \[
+                \bm{v} + \bm{w}={}^t (1,1,0,\ldots,0)
+            \]
+        となり，与えられた条件式に当てはめると
+        \[
+            1^2+1^2+0^2 +\dots + 0^2 =2 \ne 1
+        \]
+        であるから，この集合は$\mathbb{C}^n$の部分空間でない．
+        \item [ニ] この集合を$W_3$とおくと，$W_3$は$\mathbb{C}^n$の部分空間をなす．
+        
+        $\bm{x}=\bm{0}$とすると，
+        \[
+        (\bm{a},\bm{x}) =0
+        \] 
+        であるため，$W_3 \ne \varnothing$である．
+
+        さて，$\bm{v}$,$\bm{w}$が条件を満たすとすると，内積の定義から
+        \[
+        (\bm{a},\bm{v}+\bm{w})=(\bm{a},\bm{v})+(\bm{a},\bm{w})=0
+        \]
+        である．また，$ c \in \mathbb{C}$とすると，
+        \[
+        (\bm{a},c\bm{v})=c(\bm{a},\bm{v})=0
+        \]
+        である．
+
+        以上により，$W_3$は$\mathbb{C}^n$の線型部分空間をなす．\qed
+    \end{description}
+\end{leftbar}
+
+\newpage 
 
 \section*{附録\three}
 \addcontentsline{toc}{section}{\texorpdfstring{附録\three}{附録\three}}
