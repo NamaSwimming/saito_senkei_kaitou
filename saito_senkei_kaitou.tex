@@ -2377,6 +2377,187 @@ $S_n$の偶置換全体の集合を$A_n$,偶置換全体の集合を$B_n$とす�
 \newpage 
 
 
+\subsection*{p106-107：問1}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p106-107：問1}{p106-107：問1}}
+\begin{leftbar}
+求める$E\to F$の取り替え行列を$P=(p_{ij})$とし，
+\begin{align*}
+&\bm{e}_1=
+\begin{pmatrix}
+1 \\
+0 \\
+1
+\end{pmatrix}
+,\quad 
+\bm{e}_2=
+\begin{pmatrix}
+2 \\
+1 \\
+0
+\end{pmatrix}
+,\quad 
+\bm{e}_3=
+\begin{pmatrix}
+1 \\
+1 \\
+1
+\end{pmatrix}
+,\\
+&
+\bm{f}_1=
+\begin{pmatrix}
+3 \\
+-1 \\
+4
+\end{pmatrix}
+,\quad 
+\bm{f}_2=
+\begin{pmatrix}
+4 \\
+1 \\
+8
+\end{pmatrix}
+,\quad 
+\bm{f}_3=
+\begin{pmatrix}
+3 \\
+-2 \\
+6
+\end{pmatrix}
+\end{align*}
+とする．ここで，
+\[
+\bm{f}_i=\sum^{3}_{j=1}p_{ji}\bm{e}_{j}=p_{1i}\bm{e}_1+p_{2i}\bm{e}_2+p_{3i}\bm{e}_3
+\]
+であり，$i=1,2,3$の場合についての連立方程式を作ると
+\begin{align*}
+&f_1=p_{11}\bm{e}_1+p_{21}\bm{e}_2+p_{31}\bm{e}_3 \\
+&f_2=p_{12}\bm{e}_1+p_{22}\bm{e}_2+p_{32}\bm{e}_3 \\
+&f_3=p_{13}\bm{e}_1+p_{23}\bm{e}_2+p_{33}\bm{e}_3
+\end{align*}
+これを解くことにより
+\begin{align*}
+&p_{11}=\frac{9}{2},\quad p_{21}=-\frac{1}{2},\quad p_{31}=-\frac{1}{2},\\
+&p_{12}=5,\quad p_{22}=-2,\quad p_{32}=3,\\
+&p_{13}=\frac{13}{2},\quad p_{23}=-\frac{3}{2},\quad p_{33}=-\frac{1}{2}
+\end{align*} 
+なので，
+\[
+P=
+\begin{pmatrix}
+9/2 & 5  & 13/2 \\
+-1/2 & -2 & -3/2 \\
+-1/2 & 3 & -1/2
+\end{pmatrix}
+\]
+である．また
+\begin{equation*}
+(\bm{f}_1,\bm{f}_2,\ldots ,\bm{f}_n)=(\bm{e}_1,\bm{e}_2,\ldots ,\bm{e}_n)P
+\end{equation*}
+であるから
+\begin{align*}
+    &
+\begin{pmatrix}
+3 & 4 & 3 \\
+-1 & 1 & -2 \\
+4 & 8 & 6 
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 2 & 1 \\
+0 & 1 & 1 \\
+1 & 0 & 1 
+\end{pmatrix}
+P \\ 
+&P=
+\begin{pmatrix}
+3 & 4 & 3 \\
+-1 & 1 & -2 \\
+4 & 8 & 6 \\
+\end{pmatrix}
+\begin{pmatrix}
+1 & 2 & 1 \\
+0 & 1 & 1 \\
+1 & 0 & 1 \\
+\end{pmatrix}
+^{-1}
+\end{align*}
+から求めることもできる．
+\end{leftbar}
+
+\newpage 
+
+\subsection*{p106-107：問2}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p106-107：問2}{p106-107：問2}}
+
+\begin{leftbar}
+まず，
+\begin{equation*}
+\bm{f}_i=\sum^{2}_{j=1}p_{ji}\bm{e}_{j}=p_{1i}\bm{e}_1+p_{2i}\bm{e}_2
+\end{equation*}
+である，これにより
+\begin{align*}
+& \bm{f}_1=p_{11}\bm{e}_1+p_{21}\bm{e}_2, \\
+& \bm{f}_2=p_{12}\bm{e}_1+p_{22}\bm{e}_2 
+\end{align*}
+であるから，
+\begin{align*}
+&
+\begin{pmatrix}
+0 \\
+1 \\
+-1 
+\end{pmatrix}
+=
+p_{11}
+\begin{pmatrix}
+1 \\
+-1 \\
+0 
+\end{pmatrix}
++p_{21}
+\begin{pmatrix}
+1 \\
+0 \\
+-1 
+\end{pmatrix}
+,\\ 
+&
+\begin{pmatrix}
+1 \\
+1 \\
+-2 
+\end{pmatrix}
+=
+p_{12}
+\begin{pmatrix}
+1 \\
+-1 \\
+0 
+\end{pmatrix}
++p_{22}
+\begin{pmatrix}
+1 \\
+0 \\
+-1 
+\end{pmatrix}
+\end{align*}
+となり，これにより
+\[
+p_{11}=-1,\quad p_{21}=1,\quad p_{12}=-1,\quad p_{22}=2
+\]
+であるから，基底の取り替え$E \to F$の行列は
+\begin{align*}
+P=
+\begin{pmatrix}
+-1 & -1 \\
+1 & 2 
+\end{pmatrix}
+\end{align*}
+である．
+\end{leftbar}
+
+\newpage 
 \subsection*{p107-108：問1}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p107-108：問1}{p107-108：問1}}
 
