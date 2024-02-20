@@ -1453,6 +1453,7 @@ $A=(a_{pq})$を$k \times l$行列，$B= (b_{qr})$，$C=(c_{qr})$を$l \times m$�
         \end{enumerate}
     \end{leftbar}
 
+    \newpage 
 
     \subsection*{p52：問}
     \addcontentsline{toc}{subsection}{\texorpdfstring{p52：問}{p52：問}}
@@ -1506,6 +1507,52 @@ $A=(a_{pq})$を$k \times l$行列，$B= (b_{qr})$，$C=(c_{qr})$を$l \times m$�
         \]
         である．
     \end{tleftbar}
+
+    \newpage 
+
+
+    \subsection*{p58：問}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p58：問}{p58：問}}
+
+    \begin{tleftbar}
+        \begin{description}
+            \item[イ] 与えられた連立方程式について，拡大係数行列を考えて基本変形を施すと，
+            \[
+                \begin{pmatrix} 1 & 0 & 1 & -4/3 \\ 0 & 1 & 1 & 8/3 \\ 0 & 0 & 0 & 0 \end{pmatrix}
+            \]
+            となる．つまり，解は存在し，ひとつの任意定数を含む．任意定数を$ x_3 =\alpha$とすると，
+            \[
+                x_1 = -\frac{4}{3} - \alpha,\quad x_2 = \frac{8}{3} - \alpha,\quad x_3 = \alpha
+            \]
+            とかける．ベクトルの形で表すと，
+            \[
+                \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix} -4/3 \\ 8/3 \\ 0 \end{pmatrix} + \alpha \begin{pmatrix} -1 \\ -1 \\ 1 \end{pmatrix}
+            \]
+            である．
+            \item[ロ] 与えられた連立方程式について，拡大係数行列を考えて基本変形を施すと，
+            \[
+                \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 1& 0 & 1 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & -1 \end{pmatrix}
+            \]
+            となるが，$0 = -1$とはならないため，この連立方程式は解を持たない．
+            \item[ハ] 与えられた連立方程式について，拡大係数行列を考えて基本変形を施すと，
+            \[
+                \begin{pmatrix} 1 & 0 & 0 & 2 & 6 & 6 \\ 0 & 1& 0 & -2 & -11 & -9 \\ 0 & 0 & 1 & 0 & 19 & 14 \end{pmatrix}
+            \]
+            となる．ただしここで第3列と第4列を入れ替えた．
+            
+            つまり，解は存在し，ふたつの任意定数を含む，任意定数を$x_3 = \alpha$，$x_5 = \beta$とすると，この連立方程式の解は
+            \[
+                x_1 = 6-2\alpha -2 \beta , \quad x_2 = -9 + 2\alpha +11 \beta , \quad x_3 = \alpha , \quad x_4 = 14-19\beta,\quad x_5 =\beta
+            \]
+            とかける．ベクトルの形で表すと，
+            \[
+                \begin{pmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \end{pmatrix} = \begin{pmatrix} 6 \\ -9 \\ 0 \\ 14 \\ 0 \end{pmatrix} + \alpha \begin{pmatrix} -2 \\ 2 \\ 1 \\ 0 \\ 0 \end{pmatrix} + \beta \begin{pmatrix} -2 \\ 11 \\ 0 \\ -19 \\ 1 \end{pmatrix}
+            \]
+            である．
+        \end{description}
+    \end{tleftbar}
+
+    \newpage 
 
     \subsection*{p62：問1}
     \addcontentsline{toc}{subsection}{\texorpdfstring{p62：問1}{p62：問1}}
