@@ -1554,7 +1554,7 @@ $A=(a_{pq})$を$k \times l$行列，$B= (b_{qr})$，$C=(c_{qr})$を$l \times m$�
 
     \newpage 
 
-    \subsection*{p62：問1}
+    \subsection*{p62-63：問1}
     \addcontentsline{toc}{subsection}{\texorpdfstring{p62：問1}{p62：問1}}
 
 \begin{tleftbar}
@@ -1569,7 +1569,7 @@ $A=(a_{pq})$を$k \times l$行列，$B= (b_{qr})$，$C=(c_{qr})$を$l \times m$�
         となり，これが証明すべきことであった．
     \end{proof}
 \end{tleftbar}
-\subsection*{p62：問2}
+\subsection*{p62-63：問2}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p62：問2}{p62：問2}}
 \begin{tleftbar}
     \begin{proof}
@@ -1598,6 +1598,35 @@ $A=(a_{pq})$を$k \times l$行列，$B= (b_{qr})$，$C=(c_{qr})$を$l \times m$�
         $とすれば，等式は成り立つが$\bm{x}$と$\bm{y}$は直交しないため，逆は成り立たない．
     \end{proof}
 \end{tleftbar}
+
+\subsection*{p62-63：問3}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p62-63：問3}{p62-63：問3}}
+
+\begin{tleftbar}
+    \begin{proof}
+        $\bm{x},\bm{y} \in \mathbb{R}^n$のとき，
+        \begin{align*} 
+            \norm{\bm{x}+\bm{y}}^2 - \norm{\bm{x}-\bm{y}}^2 & = (\bm{x}+\bm{y},\bm{x}+\bm{y}) - (\bm{x}-\bm{y},\bm{x}-\bm{y}) \\
+            & = \norm{x}^2 +(\bm{x},\bm{y})+(\bm{y},\bm{x})+ \norm{y}^2 - (\norm{x}^2 -(\bm{x},\bm{y})-(\bm{y},\bm{x})+\norm{y}^2) \\
+            & = \norm{x}^2 + 2(\bm{x},\bm{y}) + \norm{y}^2 - (\norm{x}^2 - 2(\bm{x},\bm{y}) + \norm{y}^2) \\
+            & = 4(\bm{x},\bm{y})
+        \end{align*}
+        であるから，この両辺を$4$で割るとただちに主張が従う．
+        
+        また，$\bm{x},\bm{y} \in \mathbb{C}$のときにはこの等式が成り立たないことがある．
+        $\bm{x}={}^t (2i,0)$，$\bm{y}={}^t (2,0)$とすると，
+        \begin{align*}
+        \frac{\norm{\bm{x}+\bm{y}}^2 - \norm{\bm{x}-\bm{y}}^2 }{4} &= \frac{4-4}{4} \\
+        & =0
+        \end{align*}
+        であるが，
+        \begin{align*}
+        (\bm{x},\bm{y})& =(2,0) \begin{pmatrix} -2i  \\  \end{pmatrix} \\
+        &= -4i
+        \end{align*}
+        となり，確かにこれが反例になっている．
+        \end{proof}
+    \end{tleftbar}
 
 \section*{第2章・章末問題}
 \addcontentsline{toc}{section}{\texorpdfstring{第2章・章末問題}{第2章・章末問題}}
