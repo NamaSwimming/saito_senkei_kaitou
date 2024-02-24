@@ -1751,6 +1751,31 @@ $A=(a_{pq})$を$k \times l$行列，$B= (b_{qr})$，$C=(c_{qr})$を$l \times m$�
         である．
     \end{leftbar}
 
+    \newpage 
+
+
+\subsection*{p70-73：2-イ）}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70-73：2-イ）}{p70-73：2-イ）}}
+
+\begin{tleftbar}
+    与えられた連立方程式について，拡大係数行列を考えて基本変形を施すと，
+    \[
+        \begin{pmatrix} 1 & 0 & 0 & 2 & 2 & 0 \\ 0 & 1& 0 & 0 & 0 & -3/5 \\ 0 & 0 & 1 & -1 & 0 & 1/5 \\ 0 & 0 & 0 & 0 & 0 & 0 \end{pmatrix}
+    \]
+    となる．ただしここで第2列と第5列を入れ替えた．
+
+    つまり，解は存在し，2つの任意定数を含む．任意定数を$x_4 = \alpha$，$x_2 = \beta $とすると，
+    \[
+        x_1 = -2 \alpha - 2 \beta , \quad x_2 =\beta , \quad x_3 = \alpha + \frac{1}{5} , \quad x_4 = \alpha , \quad x_5 = -\frac{3}{5}
+    \]
+    となる．ベクトルの形で表すと
+    \[
+        \begin{pmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \end{pmatrix}= \begin{pmatrix} 0 \\ 0 \\ 1/5 \\ 0 \\ -3/5 \end{pmatrix} + \alpha \begin{pmatrix} -2 \\ 0 \\ 1 \\ 1 \\ 0 \end{pmatrix} + \beta \begin{pmatrix} -2 \\ 1 \\ 0 \\ 0 \\ 0 \end{pmatrix}
+    \]
+    となる．
+\end{tleftbar}
+
+
 \newpage
     \subsection*{p70-73：3-イ）}
     \addcontentsline{toc}{subsection}{\texorpdfstring{p70-73：3-イ）}{p70-73：3-イ）}}
@@ -2277,6 +2302,103 @@ $S_n$の偶置換全体の集合を$A_n$,偶置換全体の集合を$B_n$とす�
 
 \newpage 
 
+\subsection*{p83：問-(イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p83：問-(イ)}{p83：問-(イ)}}
+
+\begin{tleftbar}
+    多重線型性などを用いて変形すると，
+    \begin{align*} 
+        (\text{与式}) & = -
+        \begin{vmatrix} 
+            2 & -5 & 3 & 10 \\
+            1 & 0 & 2 & -3 \\
+            5 & 3 & -2 & 2 \\
+            -3 & -2 & 4 & 2 
+        \end{vmatrix} 
+        = - 
+        \begin{vmatrix}
+            0 & -5 & -1 & 16 \\
+            1 & 0 & 2 & -3 \\
+            0 & 3 & -12 & 17 \\
+            0 & -2 & 10 & -7 
+        \end{vmatrix} 
+        = 
+        \begin{vmatrix}
+            1 & 0 & 2 & -3 \\
+            0 & -5 & -1 & 16 \\
+            0 & 3 & -12 & 17 \\
+            0 & -2 & 10 & -7 
+        \end{vmatrix} \\
+        & = 1 \cdot (-1)^{1+1} 
+        \begin{vmatrix} 
+            -5 & -1 & 16 \\
+            3 & -12 & 17 \\
+            -2 & 10 & -7 
+        \end{vmatrix} 
+        =539 
+    \end{align*} 
+    となるので，この行列式の値は$539$である．
+    \end{tleftbar}
+
+
+    \subsection*{p83：問-(ロ)}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p83：問-(ロ)}{p83：問-(ロ)}}
+    
+    \begin{tleftbar}
+        多重線型性などを用いて変形すると，
+        \begin{align*} 
+            (\text{与式}) & = -
+            \begin{vmatrix} 
+                2 & 3 & 5 & -4 \\
+                1 & -7 & -8 & 6 \\
+                3 & 10 & 6 & 1\\
+                5 & 2 & 4 & 3 
+            \end{vmatrix} 
+            = - 
+            \begin{vmatrix} 
+                0 & 17 & 21 & -16 \\
+                1 & -7 & -8 & 6 \\
+                0 & 31 & 30 & -17 \\
+                0 & 37 & 44 & -27 
+            \end{vmatrix} 
+            = 
+            \begin{vmatrix} 
+                1 & -7 & -8 & 6 \\
+                0 & 17 & 21 & -16 \\
+                0 & 31 & 30 & -17 \\
+                0 & 37 & 44 & -27 
+            \end{vmatrix}
+            \\
+            & = 1 \cdot (-1)^{1+1} 
+            \begin{vmatrix} 
+                17 & 21 & -16 \\
+                31 & 30 & -17 \\
+                37 & 44 & -27 
+            \end{vmatrix}
+        \end{align*} 
+        となる．ここで，第$2$列に第$1$列の$-1$倍を加え，第$3$列に第$1$列を加えると，
+        \[
+            (\text{与式}) =
+             \begin{vmatrix} 
+                17 & 4 & 1\\
+                31 & -1 & 14 \\
+                37 & 7 & 10 
+             \end{vmatrix}
+        \]
+        を得る．ここで，第$1$列に第$3$列の$-2$倍を加えると，
+        \[
+            (\text{与式})= 
+            \begin{vmatrix} 
+                15 & 4 & 1\\
+                3 & -1 & 14 \\
+                17 & 7 & 10 
+            \end{vmatrix} 
+            = -792 
+        \]
+        となるため，この行列式の値は$-792$である．
+        \end{tleftbar}
+
+    \newpage 
 \section*{第3章・章末問題}
 \addcontentsline{toc}{section}{\texorpdfstring{第3章・章末問題}{第3章・章末問題}}
 
