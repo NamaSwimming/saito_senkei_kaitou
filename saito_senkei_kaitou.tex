@@ -2924,6 +2924,53 @@ P=
 \end{leftbar}
 \newpage 
 
+\subsection*{p122：問}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p122：問}{p122：問}}
+
+\begin{tleftbar}
+    まず，
+    \[
+        \bm{a}_1 = \begin{pmatrix} 1 \\ -1 \\ 0 \end{pmatrix},\quad \bm{a}_2 =\begin{pmatrix} 1 \\ 0 \\ -1 \end{pmatrix},\quad \bm{a}_3 = \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix}
+    \]
+    とおく．正規直交基底のひとつを$\bm{e}_1$とすると，$\norm{\bm{a}_1}=\sqrt{2}$により，
+    \[
+    \bm{e}_1 = \frac{1}{\norm{\bm{a}_1 '}} \bm{a}_1 ' = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ -1 \\ 0 \end{pmatrix}
+    \]
+    となる．また，
+    \[
+        \bm{a}_2 ' = \bm{a}_2 - (\bm{a}_2,\bm{e}_1)\bm{e}_1 
+    \]
+    とすると，
+    \[
+        \bm{a}_2 ' = \begin{pmatrix} 1 \\ 0 \\ -1 \end{pmatrix}-\left \{ \begin{pmatrix} 1 \\ 0 \\ -1 \end{pmatrix} \cdot \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ -1 \\ 0 \end{pmatrix} \right \} \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ -1 \\ 0 \end{pmatrix} =\frac{1}{2} \begin{pmatrix} 1 \\ 1\\ -2 \end{pmatrix}
+    \]
+    である．これを用いると，
+    \[
+        \bm{e}_2 = \frac{1}{\norm{\bm{a}_2'}} \bm{a}_2 ' =\frac{1}{\sqrt{6}/2} \cdot \frac{1}{2} \begin{pmatrix} 1 \\ 1\\ -2 \end{pmatrix} = \frac{1}{\sqrt{6}} \begin{pmatrix} 1 \\ 1\\ -2 \end{pmatrix} 
+    \]
+    となる．また，
+    \[
+        \bm{a}_3 ' = \bm{a}_3 - (\bm{a}_3,\bm{e}_1)\bm{e}_1 -(\bm{a}_3,\bm{e}_2)\bm{e}_2
+    \]
+    とすると，
+    \[
+        \bm{a}_3'  = \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix} - \left \{ \begin{pmatrix} 1 \\ 2\\ 3 \end{pmatrix} \cdot \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ -1 \\ 0 \end{pmatrix} \right \} \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ -1 \\ 0 \end{pmatrix}- \left \{ \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix} \cdot  \frac{1}{\sqrt{6}} \begin{pmatrix} 1 \\ 1\\ -2 \end{pmatrix} \right \}  \frac{1}{\sqrt{6}} \begin{pmatrix} 1 \\ 1\\ -2 \end{pmatrix} =\begin{pmatrix} 2 \\ 2 \\ 2 \end{pmatrix}
+    \]
+    となり，
+    \[
+        \bm{e}_3 = \frac{1}{\norm{\bm{a}_3 ' }} \bm{a}_3 ' = \frac{1}{\sqrt{3}} \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix}
+    \]
+    となる．
+
+    以上の考察により，求める正規直交基底は
+    \[
+        \langle \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ -1 \\ 0 \end{pmatrix} , \frac{1}{\sqrt{6}} \begin{pmatrix} 1 \\ 1\\ -2 \end{pmatrix} ,  \frac{1}{\sqrt{3}} \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix} \rangle 
+    \]
+    である．
+\end{tleftbar}
+
+\newpage 
+
 \section*{附録\three}
 \addcontentsline{toc}{section}{\texorpdfstring{附録\three}{附録\three}}
 
