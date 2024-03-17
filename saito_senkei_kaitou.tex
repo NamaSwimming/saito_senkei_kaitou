@@ -417,9 +417,8 @@ $はこれを満たす．このときの$y$の値を計算すると，それぞ�
 \newpage
 %
 \subsection*{p13：問1}
-\addcontentsline{toc}{subsection}{\texorpdfstring{p13：問1}{p12：問1}}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p13：問1}{p13：問1}}
 %
-問1：
 \begin{tleftbar}
     $(S_1)$，$(S_2)$の法線ベクトルをそれぞれ$\bm{x}_1$，$\bm{x}_2$とおくと，
     \begin{gather*}
@@ -444,7 +443,23 @@ $はこれを満たす．このときの$y$の値を計算すると，それぞ�
         であるから，$0 \le \theta \le \frac{\pi}{2}$より$\theta =\frac{\pi}{4}$である．
     \end{tleftbar}
 %
-%
+\subsection*{p13：問2}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p13：問2}{p13：問2}}
+
+\begin{tleftbar}
+    \begin{proof}
+    平面$\pi_1$，$\pi_2$を考え，$\pi_1$，$\pi_2$の法線ベクトルをそれぞれ$\bm{n}_1$，$\bm{n}_2$とおく．
+    \begin{description}
+        \item[$\bm{n}_1$と$\bm{n}_2$が平行なとき]
+        $\pi_1$に垂直な平面は$\pi_2$にも垂直であり，このような平面を$\pi_3$とすると，
+        $\pi_3$は$\bm{n}_1$，$\bm{n}_2$と平行である．よって$\pi_3$と$\pi_1$，$\pi_2$はそれぞれ並行であり，このような平面は確かに存在する．
+        \item[$\bm{n}_1$と$\bm{n}_2$が平行でないとき]
+        $\bm{n}_1 , \bm{n}_2 \ne \bm{0}$は明らかなので，$\bm{n}_3 \coloneqq \bm{n}_1 \times \bm{n}_2$とすると，
+        $\bm{n}_3 \ne \bm{0}$である．よって，$\bm{n}_3$は$\pi_1$，$\pi_2$に垂直である．このとき$n_3$を法線ベクトルとする平面を取ればよい．
+    \end{description}
+    以上の考察により証明された．
+\end{proof}
+\end{tleftbar}
 \newpage
 %
 %
@@ -1891,6 +1906,21 @@ $A=(a_{pq})$を$k \times l$行列，$B= (b_{qr})$，$C=(c_{qr})$を$l \times m$�
         \]
     \end{leftbar}
 
+
+    \subsection*{p70-73：3-ロ）}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p70-73：3-ロ）}{p70-73：3-ロ）}}
+
+
+
+    \begin{tleftbar}
+        $P^{-1} A P = B$とおくと，
+        \begin{align*}
+            A^n &= P B^n P^{-1} \\
+            & = \begin{pmatrix} 1 & 3 & 2 \\ -1 & -2 & -1 \\ 2 & 4 & 3 \end{pmatrix} \begin{pmatrix} 2^n & 0 & 0 \\ 0 & 1^n & 0 \\ 0 & 0 & 0^n \end{pmatrix} \begin{pmatrix} -2 & -1 & 1\\ 1 & -1 & -1 \\ 0 & 2 & 1 \end{pmatrix} \\
+            & = \begin{pmatrix} -2^{n+1}+3 & -2^n -3 & 2^n -3 \\ 2^{n+1}-2 & 2^n +2 & -2^n -2 \\ -2^{n+2}+4 & -2^{n+1} -4 & 2^{n+1} -4 \end{pmatrix}
+        \end{align*}
+        となる．
+    \end{tleftbar}
     \newpage 
 
 
