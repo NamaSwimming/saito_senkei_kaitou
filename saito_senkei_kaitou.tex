@@ -1643,6 +1643,51 @@ $A=(a_{pq})$を$k \times l$行列，$B= (b_{qr})$，$C=(c_{qr})$を$l \times m$�
         \end{proof}
     \end{tleftbar}
 
+    \newpage 
+
+    \subsection*{p65:問1}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p65:問1}{p65:問1}}
+
+    \begin{tleftbar} 
+        \[
+            A \coloneqq \begin{pmatrix} a & b \\ c & d\end{pmatrix} \in \mathbb{R}^{2 \times 2}
+        \]
+        とおく．このとき，
+        \begin{align*}
+            A {}^t A &= \begin{pmatrix} a & b \\ c & d \end{pmatrix} \begin{pmatrix} a & c \\ b & d\end{pmatrix} \\
+            & = \begin{pmatrix} a^2 +b^2 & ac+bd \\ ac+bd & c^2 + d^2 \end{pmatrix}
+        \end{align*}
+        となり，これが$E$に等しいので，
+        \[
+            \begin{cases}
+                a^2 + b^2 =1 ,\\
+                c^2 + d^2 =1 ,\\
+                ac+bd =0 
+            \end{cases}
+        \]
+        となる．このことから$ 0 \leqq \theta < 2\pi $，$ 0 \leqq \phi < 2\pi$として
+        \begin{align*}
+            & a = \cos \theta , \quad b = \sin \theta,\\
+            & c = \cos \phi , \quad d = \sin \phi 
+        \end{align*}
+        とおくと，
+        \begin{align*} 
+            ac+bd & = \cos \theta \cos \phi + \sin \theta \sin \phi \\
+            & = \cos (\theta - \phi)
+        \end{align*}
+        となり，これが$0$に等しいので．
+        \begin{align*}
+            & \theta -\phi = \pi /2 , 3\pi /2 , \\
+            \therefore & \phi = \theta - \pi /2 , \theta - 3\pi/2.
+        \end{align*}
+        これより，任意の二次直交行列は$ 0 \leqq \theta < 2\pi $，$ 0 \leqq \phi < 2\pi$として
+        \[
+            \begin{pmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \end{pmatrix},\quad \begin{pmatrix} \cos \theta & \sin \theta \\ \sin \theta & -\cos \theta \end{pmatrix}
+        \]
+        のいずれかで表される．
+    \end{tleftbar}
+
+    \newpage 
 \section*{第2章・章末問題}
 \addcontentsline{toc}{section}{\texorpdfstring{第2章・章末問題}{第2章・章末問題}}
 
