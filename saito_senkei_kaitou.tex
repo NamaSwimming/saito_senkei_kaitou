@@ -1687,6 +1687,32 @@ $A=(a_{pq})$を$k \times l$行列，$B= (b_{qr})$，$C=(c_{qr})$を$l \times m$�
         のいずれかで表される．
     \end{tleftbar}
 
+    \subsection*{p65：問2}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p65：問2}{p65：問2}}
+
+\begin{tleftbar}
+    \begin{proof}
+    \[
+        (A^\ast A)^{\ast} = A^{\ast} A^{\ast \ast} = A^{\ast} A, \quad (A A^{\ast})^\ast = A^{\ast \ast} A^\ast =A A^{\ast}
+    \]
+    であるから，$A^\ast A$，$A A^{\ast}$はエルミート行列である．
+
+    また，任意の$n \times 1$ベクトル$\bm{x}$に対して，
+    \begin{align*} 
+        (\bm{x}, A^{\ast}A \bm{x}) & = (A^{\ast \ast} \bm{x}, A \bm{x}) \\
+        & = (A \bm{x}, A \bm{x}) \\
+        & = \norm{A \bm{x}}^2 \geqq 0
+    \end{align*}
+    であり，また，$\bm{x}$として第$i$成分のみ1でほかの成分は$0$のベクトル$\bm{e}_i$をとると，
+    \[
+        (\bm{e}_i, A^{\ast}A \bm{e}_i) = \text{$A^{\ast}A$の$(i,i)$成分}
+    \]
+    となる．先の不等式よりこれは$0$または正なので，$A^{\ast}A$の対角成分は$0$または正である．同様にして$AA^{\ast}$の対角成分も$0$または正である．
+
+    以上のことが証明すべきことであった．
+\end{proof}
+\end{tleftbar}
+
     \newpage 
 \section*{第2章・章末問題}
 \addcontentsline{toc}{section}{\texorpdfstring{第2章・章末問題}{第2章・章末問題}}
