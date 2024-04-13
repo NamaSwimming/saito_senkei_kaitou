@@ -935,7 +935,7 @@ ab & b^2
 
 \begin{tleftbar}
     \begin{proof}
-    2点$\mathrm{P}_1$，$\mathrm{P_2}$を通る直線の方程式を$ax+by+1=0$（ただし$(a,b)=0$）とおく．
+    2点$\mathrm{P}_1$，$\mathrm{P_2}$を通る直線の方程式を$ax+by+c=0$（ただし$(a,b)=0$）とおく．
     このとき，
     \[
         \begin{cases}
@@ -2669,6 +2669,52 @@ $S_n$の偶置換全体の集合を$A_n$,偶置換全体の集合を$B_n$とす�
     \end{align*} 
     となる．
 \end{leftbar}
+
+
+\subsection*{p90-91：9}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90-91：9}{p90-91：9}}
+
+\begin{tleftbar}
+    \begin{proof}
+    3点$\mathrm{P}_1$，$\mathrm{P_2}$，$\mathrm{P_3}$を通る平面の方程式を$ax+by+cz+d=0$とおく．
+    このとき，
+    \[
+        \begin{cases}
+            ax+by+cz + d =0 \\
+            ax_1 + by_1 +cz_1 +d =0 \\
+            ax_2 + by_2 +cz_2 +d =0 \\
+            ax_3 + by_3 +cz_3 +d =0
+        \end{cases}
+    \]
+    が成立する．すなわちこれは
+    \[
+        \begin{pmatrix} 
+            x & y & z & 1 \\
+            x_1 & y_1 & z_1& 1 \\
+            x_2 & y_2 &z_2 & 1 \\
+            x_3 & y_3 &z_3 & 1 
+        \end{pmatrix}
+        \begin{pmatrix}
+            a \\
+            b \\
+            c \\
+            d 
+        \end{pmatrix}
+        = \bm{0}
+    \]
+    をみたす．これを$a$，$b$，$c$，$d$についての連立方程式とみたとき，与条件により自明でない解があり，
+    \[
+    \begin{vmatrix} 
+        x & y & z & 1 \\
+        x_1 & y_1 & z_1& 1 \\
+        x_2 & y_2 &z_2 & 1 \\
+        x_3 & y_3 &z_3 & 1 
+    \end{vmatrix}
+    =0
+    \]
+    が成立する．これが証明すべきことであった．
+\end{proof}
+\end{tleftbar}
 
 \subsection*{p90-91：11}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p90-91：11}{p90-91：11}}
