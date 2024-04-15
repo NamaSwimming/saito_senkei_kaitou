@@ -2255,6 +2255,53 @@ $X=(x_{ij}),~Y=(y_{ij})$とする．
     \end{description}
 \end{leftbar}
 
+
+\newpage 
+
+
+\subsection*{p70-73：13-イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70-73：13-イ)}{p70-73：13-イ)}}
+
+\begin{tleftbar}
+    まず，
+\begin{align*} 
+    [ [X,Y],Z ] & = [XY-YX,Z] \\
+    & = (XY-YX)Z -Z(XY-YX) \\
+    & = XYZ -YXZ -ZXY +ZYX.
+\end{align*}
+同様に計算すると，
+\begin{align*} 
+    & [[Y,Z],X] = YZX -ZYX -XYZ +XZY, \\
+    & [ [Z,X],Y] = ZXY -XZY -YZX +YXZ.
+\end{align*} 
+よって，
+\[
+    [[X,Y],Z] +[[Y,Z],X]+[[Z,X],Y]=O
+\]
+である．
+\end{tleftbar}
+
+\subsection*{p70-73：13-ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70-73：13-ロ)}{p70-73：13-ロ)}}
+
+\begin{tleftbar}
+    \begin{proof}
+        $X$，$Y$は交代行列だから，
+        \[
+          X=- {}^t X ,\quad Y = -{}^t Y .
+        \]
+        これを用いると，
+        \begin{align*} 
+            [X,Y] & = XY -YX \\
+            & = (-{}^t X) (-{}^t Y) - (-{}^t Y)(-{}^t X) \\
+            & = {}^t (YX) - {}^t (XY) \\
+            & = -{}^t (XY-YX) \\
+            & = -{}^t [X,Y]
+        \end{align*} 
+        となる．よってこのとき$[X,Y]$は交代行列である．
+    \end{proof}
+    \end{tleftbar}
+
 \newpage 
 
 
