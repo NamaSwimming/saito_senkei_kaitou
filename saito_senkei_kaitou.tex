@@ -2751,19 +2751,19 @@ $S_n$の偶置換全体の集合を$A_n$,偶置換全体の集合を$B_n$とす�
         $i \in \{ 1,2,\ldots,n \}$のもとで，$n$個の点を$(x_i , y_i ) \in \mathbb{R}^2$とする．このとき，
         \[
             \begin{cases} 
-                a_0 + a_1 x_1 + a_2 {x_1}^2 + \dots + a_n {x_1}^n = y_1 \\
-                a_0 + a_1 x_2 + a_2 {x_2}^2 + \dots + a_n {x_2}^n = y_2\\
+                a_0 + a_1 x_1 + a_2 {x_1}^2 + \dots + a_n {x_1}^{n-1} = y_1 \\
+                a_0 + a_1 x_2 + a_2 {x_2}^2 + \dots + a_n {x_2}^{n-1} = y_2\\
                 \vdots \\
-                a_0 + a_1 x_n + a_2 {x_n}^2 + \dots + a_n {x_n}^n = y_3
+                a_0 + a_1 x_n + a_2 {x_n}^2 + \dots + a_n {x_n}^{n-1} = y_3
             \end{cases}
         \]
         である，これを行列の形に表すと，
         \[
             \begin{pmatrix} 
-                1 & x_1 & {x_1}^2 & \cdots & {x_1}^n \\
-                1 & x_2 & {x_2}^2 & \cdots & {x_2}^n \\
+                1 & x_1 & {x_1}^2 & \cdots & {x_1}^{n-1} \\
+                1 & x_2 & {x_2}^2 & \cdots & {x_2}^{n-1} \\
                 \vdots & \vdots & \vdots & \ddots & \vdots \\
-                1 & x_n & {x_n}^2 & \cdots & {x_n}^n
+                1 & x_n & {x_n}^2 & \cdots & {x_n}^{n-1}
             \end{pmatrix}
             \begin{pmatrix}
                 a_0 \\
@@ -2785,10 +2785,10 @@ $S_n$の偶置換全体の集合を$A_n$,偶置換全体の集合を$B_n$とす�
         \[
             A \coloneqq 
         \begin{pmatrix} 
-            1 & x_1 & {x_1}^2 & \cdots & {x_1}^n \\
-            1 & x_2 & {x_2}^2 & \cdots & {x_2}^n \\
+            1 & x_1 & {x_1}^2 & \cdots & {x_1}^{n-1} \\
+            1 & x_2 & {x_2}^2 & \cdots & {x_2}^{n-1} \\
             \vdots & \vdots & \vdots & \ddots & \vdots \\
-            1 & x_n & {x_n}^2 & \cdots & {x_n}^n
+            1 & x_n & {x_n}^2 & \cdots & {x_n}^{n-1}
         \end{pmatrix}
         \]
         とおくと，$\abs{{}^t A}$はヴァンデルモンドの行列式である．
