@@ -2741,6 +2741,69 @@ $S_n$の偶置換全体の集合を$A_n$,偶置換全体の集合を$B_n$とす�
     となる．
 \end{leftbar}
 
+\newpage 
+
+\subsection*{p90-91：6}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90-91：6}{p90-91：6}}
+
+\begin{tleftbar}
+    \begin{proof}
+        $i \in \{ 1,2,\ldots,n \}$のもとで，$n$個の点を$(x_i , y_i ) \in \mathbb{R}^2$とする．このとき，
+        \[
+            \begin{cases} 
+                a_0 + a_1 x_1 + a_2 {x_1}^2 + \dots + a_n {x_1}^n = y_1 \\
+                a_0 + a_1 x_2 + a_2 {x_2}^2 + \dots + a_n {x_2}^n = y_2\\
+                \vdots \\
+                a_0 + a_1 x_n + a_2 {x_n}^2 + \dots + a_n {x_n}^n = y_3
+            \end{cases}
+        \]
+        である，これを行列の形に表すと，
+        \[
+            \begin{pmatrix} 
+                1 & x_1 & {x_1}^2 & \cdots & {x_1}^n \\
+                1 & x_2 & {x_2}^2 & \cdots & {x_2}^n \\
+                \vdots & \vdots & \vdots & \ddots & \vdots \\
+                1 & x_n & {x_n}^2 & \cdots & {x_n}^n
+            \end{pmatrix}
+            \begin{pmatrix}
+                a_0 \\
+                a_1 \\
+                \vdots \\
+                a_n
+            \end{pmatrix}
+            =
+            \begin{pmatrix}
+                y_1 \\
+                y_2 \\
+                \vdots \\
+                y_n
+            \end{pmatrix}
+        \]
+        となる．
+
+        ここで，
+        \[
+            A \coloneqq 
+        \begin{pmatrix} 
+            1 & x_1 & {x_1}^2 & \cdots & {x_1}^n \\
+            1 & x_2 & {x_2}^2 & \cdots & {x_2}^n \\
+            \vdots & \vdots & \vdots & \ddots & \vdots \\
+            1 & x_n & {x_n}^2 & \cdots & {x_n}^n
+        \end{pmatrix}
+        \]
+        とおくと，$\abs{{}^t A}$はヴァンデルモンドの行列式である．
+
+        行列式の値は，行列の転置に対して不変なので，
+        \[
+            \abs{A}= \prod_{i < j} (x_j - x_i)
+        \]
+        となり，条件によりこの値は$0$でない．ゆえに先の連立方程式はただ一つの解をもつ．
+
+        以上の考察によって，これら$n$個の点を通る直線がただ一つ存在することが示された．
+    \end{proof}
+\end{tleftbar}
+
+\newpage 
 
 \subsection*{p90-91：9}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p90-91：9}{p90-91：9}}
