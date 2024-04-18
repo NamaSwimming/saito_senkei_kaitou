@@ -2301,6 +2301,61 @@ $X=(x_{ij}),~Y=(y_{ij})$とする．
         となる．よってこのとき$[X,Y]$は交代行列である．
     \end{proof}
     \end{tleftbar}
+\newpage 
+
+    \subsection*{p70-73：13-ハ)}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p70-73：13-ハ)}{p70-73：13-ハ)}}
+
+    \begin{leftbar}
+        \begin{proof}
+            以下では
+        \[
+            Y = \begin{pmatrix} 0 & -z ' & y ' \\ z' & 0 & -x' \\ -y' & x ' & 0 \end{pmatrix},\quad \bm{y} = \begin{pmatrix} x' \\ y ' \\ z ' \end{pmatrix}
+        \]
+        とおく．
+        \begin{description}
+            \item[【$X+Y$と$\bm{x}+\bm{y}$について】]
+        \[
+            X + Y  = \begin{pmatrix} 0 & -z & y \\ z & 0 & -x \\ -y & x & 0 \end{pmatrix}+ \begin{pmatrix} 0 & -z ' & y ' \\ z' & 0 & -x' \\ -y' & x ' & 0 \end{pmatrix} = \begin{pmatrix} 0 & -(z+z)' & y+y' \\ z+z & 0 & -(x+x') \\ -(y+y') & x+x' & 0 \end{pmatrix}
+        \]
+        であり，なおかつ
+        \[
+            \bm{x}+\bm{y} =\begin{pmatrix} x \\ y \\ z \end{pmatrix}+ \begin{pmatrix} x' \\ y' \\ z' \end{pmatrix} = \begin{pmatrix} x+x' \\ y+y' \\ z+z' \end{pmatrix}
+        \]
+        であるから，たしかに$X+Y$と$\bm{x}+\bm{y}$は対応する．
+        \item[【$cX$と$c\bm{x}$について】]
+        \[
+            cX =c\begin{pmatrix} 0 & -z & y \\ z & 0 & -x \\ -y & x & 0 \end{pmatrix} =\begin{pmatrix} 0 & -cz & cy \\ cz & 0 & -cx \\ -cy & cx & 0 \end{pmatrix}
+        \]
+        であり，なおかつ
+        \[
+            c\bm{x} = c\begin{pmatrix} x \\ y \\ z \end{pmatrix} = \begin{pmatrix} cx \\ cy \\ cz \end{pmatrix}
+        \]
+        であるから，たしかに$cX$と$c\bm{x}$は対応する．
+        \item [【\text{$[X,Y]$と$\bm{x} \times \bm{y}$について】}]
+        \begin{align*} 
+            [X,Y] &=\begin{pmatrix} 0 & -z & y \\ z & 0 & -x \\ -y & x & 0 \end{pmatrix}\begin{pmatrix} 0 & -z ' & y ' \\ z' & 0 & -x' \\ -y' & x ' & 0 \end{pmatrix}-\begin{pmatrix} 0 & -z ' & y ' \\ z' & 0 & -x' \\ -y' & x ' & 0 \end{pmatrix} \begin{pmatrix} 0 & -z & y \\ z & 0 & -x \\ -y & x & 0 \end{pmatrix} \\
+            & = \begin{pmatrix} 0 & -z'x+x'z & y'x-x'y \\ z'x-x'z & 0 & -y'z+z'y \\ -y'x+x'y & z'y-y'z & 0 \end{pmatrix}
+        \end{align*} 
+        であり，なおかつ
+        \[
+            \bm{x}\times \bm{y} = \begin{pmatrix} x \\ y \\ z \end{pmatrix} \times \begin{pmatrix} x' \\ y ' \\ z' \end{pmatrix} = \begin{pmatrix} yz'-zy' \\ zx'-xz' \\ xy'-yx' \end{pmatrix}
+        \]
+        であるから，たしかに$[X,Y]$と$\bm{x} \times \bm{y}$は対応する．
+        \item[【$X\bm{y}$と$\bm{x}\times\bm{y}$について】]
+        \[
+            \begin{pmatrix} 0 & -z & y \\ z & 0 & -x \\ -y & x & 0 \end{pmatrix} \begin{pmatrix} x' \\ y' \\ z' \end{pmatrix} = \begin{pmatrix} -zy'+yz' \\ zx'-xz' \\ -yx'+xy' \end{pmatrix}
+        \]
+        であり，なおかつ
+   
+        \[
+            \bm{x}\times \bm{y} = \begin{pmatrix} x \\ y \\ z \end{pmatrix} \times \begin{pmatrix} x' \\ y ' \\ z' \end{pmatrix} = \begin{pmatrix} yz'-zy' \\ zx'-xz' \\ xy'-yx' \end{pmatrix}
+        \]
+        であるから，たしかに$X\bm{y}$と$\bm{x} \times \bm{y}$は対応する．
+    \end{description}
+    \end{proof}
+    \end{leftbar}
+    
 
 \newpage 
 
