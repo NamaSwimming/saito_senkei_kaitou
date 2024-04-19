@@ -2204,6 +2204,83 @@ $X=(x_{ij}),~Y=(y_{ij})$とする．
 \newpage 
 
 
+\subsection*{p70-73：10-イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70-73：10-イ)}{p70-73：10-イ)}}
+
+\begin{tleftbar}
+    \begin{proof}
+    $AX=E$をみたす$n$次正則行列$X$が存在するとする．このとき，
+    \[
+        X = \begin{pmatrix} x_{11} & x_{12} \\ x_{21} & x_{22} \end{pmatrix}
+    \]
+    とおくと，
+    \begin{align*}
+        AX & = \begin{pmatrix} a & -b \\ b & a \end{pmatrix} \begin{pmatrix} x_{11} & x_{12} \\ x_{21} & x_{22} \end{pmatrix} \\
+        & = \begin{pmatrix} ax_{11}-bx_{21} & ax_{12}-bx_{22} \\ bx_{11}+ax_{21} & bx_{12}+ax_{22} \end{pmatrix}
+    \end{align*} 
+    となり，これが$E$に等しいので，
+    \[
+        \begin{cases} 
+            ax_{11}-bx_{21} =1 \\
+            ax_{12}-bx_{22} =0 \\
+            bx_{11}+ax_{21} =0 \\
+            bx_{12}+ax_{22} =1
+        \end{cases}
+    \]
+    となり，これを変形すると，
+    \[
+        \begin{cases} 
+            (a^2+b^2) x_{11} = a \\
+            (a^2+b^2) x_{12} = b \\
+            (a^2+b^2) x_{21}=-b \\
+            (a^2+b^2) x_{22} = a
+        \end{cases}
+    \]
+    となるから，このような$x_{11}$，$x_{12}$，$x_{21}$，$x_{22}$が存在する必要十分条件は
+    \[
+    a^2 + b^2 \ne 0
+    \]
+    である．このことから直ちに主張が従う．
+    \end{proof}
+\end{tleftbar}
+
+\newpage 
+
+
+\subsection*{p70-73：10-ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70-73：10-ロ)}{p70-73：10-ロ)}}
+
+\begin{tleftbar}
+    \begin{proof}
+    \[
+        A' = \begin{pmatrix} a' & -b' \\ b' & a' \end{pmatrix} , \quad \alpha ' = a' + b' i
+    \]
+    とおく．
+
+    和については
+    \[
+        A+A' = \begin{pmatrix} a+a' & -(b+b') \\ b+b' & a+a' \end{pmatrix} , \quad \alpha + \alpha ' = (a+a') + (b+b') i
+    \]
+    となり，このときたしかに$A+A'$と$\alpha + \alpha '$が一対一に対応する．
+
+    積については
+    \[
+        A A' = \begin{pmatrix} a a' - b b' & - (a b' + b a') \\ a b' + b a' & a a' - b b' \end{pmatrix} , \quad \alpha \alpha ' = (a a' - b b') + (a b' + b a') i
+    \]
+    となり，たしかに$AA'$と$\alpha \alpha '$が一対一に対応する．
+
+    逆数については
+    \[
+        A^{-1} = \frac{1}{a^2+b^2} \begin{pmatrix} a & b \\ -b & a \end{pmatrix},\quad \frac{1}{\alpha} = \frac{1}{a^2+b^2}(a -bi )
+    \]
+    となり，たしかに$A^{-1}$と$1/\alpha$が一対一に対応する．
+
+    以上の考察により証明された．
+    \end{proof}
+\end{tleftbar}
+
+\newpage 
+
 \subsection*{p70-73：11}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p70-73：11}{p70-73：11}}
 
