@@ -34,17 +34,18 @@
 
 この文書は，なまちゃんが運営する「数学書解答集作成班」が制作した，齋藤正彦著『線型代数入門』(東京大学出版会)の解答集である．
 
-未完ではあるものの，編集の際の利便性を考慮して，オープンソースでの公開となった．また，未完であるので，数学的な誤りや誤植，改善案の提案などがあればぜひIssueやPull Requestを送っていただきたい．
+未完ではあるものの，編集の際の利便性を考慮して，オープンソースでの公開となった．また，未完であるので，数学的な誤りや誤植，改善案の提案などがあればぜひIssueに書き込んだり，Pull Requestを送っていただきたい．
 
 
 \subsection*{Special Thanks}
 \addcontentsline{toc}{subsection}{\texorpdfstring{Special Thanks}{Special Thanks}}
 
-掲載許可を得た方のみ\footnote{掲載されていないという方は「ニックネーム」を記入のもと，なまちゃんへ連絡していただきたい．}を掲載する．
+掲載許可を得た方のみ\footnote{掲載されていないという方は「ニックネーム」を記入のもと，なまちゃんへ連絡していただきたい．}を敬称略で掲載する．
 \begin{itemize}
     \item ねたんほ(解答の提供)
     \item まっちゃん(解答の提供)
     \item やたろう(解答の提供，Git管理)
+    \item 不自然対数(\LaTeX 関連)
 \end{itemize}
 
 その他，多くの方々．
@@ -2303,6 +2304,31 @@ $X=(x_{ij}),~Y=(y_{ij})$とする．
     となり，たしかに$A^{-1}$と$1/\alpha$が一対一に対応する．
 
     以上の考察により証明された．
+    \end{proof}
+\end{tleftbar}
+
+
+\subsection*{p70-73：10-ハ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70-73：10-ハ)}{p70-73：10-ハ)}}
+
+\begin{tleftbar} 
+    \begin{proof}
+    \[
+        \alpha = r (\cos \theta + i \sin \theta)
+    \]
+    と表せるとすると，
+    \[
+        a+bi = r (\cos \theta + i \sin \theta ) 
+    \]
+    であるから，
+    \[
+        a= r \cos \theta , \quad r = r \sin \theta
+    \]
+    とかけ，このとき
+    \[
+        \begin{pmatrix} a & -b \\ b & a \end{pmatrix} = r \begin{pmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \end{pmatrix}
+    \]
+    となる．これが証明すべきことであった．
     \end{proof}
 \end{tleftbar}
 
