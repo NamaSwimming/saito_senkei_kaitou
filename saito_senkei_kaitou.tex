@@ -2845,6 +2845,87 @@ $S_n$の偶置換全体の集合を$A_n$,偶置換全体の集合を$B_n$とす�
 \addcontentsline{toc}{section}{\texorpdfstring{第3章・章末問題}{第3章・章末問題}}
 
 
+\subsection*{p90-91：1-イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90-91：1-イ)}{p90-91：1-イ)}}
+
+\begin{tleftbar}
+    $ k \in \{ 2,3 ,\ldots,n \}$として，第$1$列に第$k$列の$x^k$倍を加えると，
+    \[
+        \begin{vmatrix} 
+            0 & -1 & 0 & \cdots & 0 & 0 \\
+            0 & x & -1 & \cdots & 0 & 0\\
+            0 & 0 & x & \cdots & 0 & 0 \\
+            \vdots & \vdots & \vdots & \ddots & \vdots & \vdots\\
+            0 & 0 & 0 & \cdots & x & -1 \\
+            a_n + a_{n-1} x + \dots +a_1 x^{n-1} + a_0 x^n & a_{n-1} & a_{n-2} & \cdots & a_1 & a_0
+        \end{vmatrix}.
+    \]
+    第$1$列で余因子展開すると，
+    \begin{align*} 
+        (\text{与式})& = (-1)^{n+2} (a_n + a_{n-1} x + \dots +a_1 x^{n-1} + a_0 x^n)
+        \begin{vmatrix} 
+            -1 & 0 & \cdots & 0 \\
+             x & -1 & \cdots & 0\\
+             0 & x & \cdots & 0 \\
+            \vdots & \vdots & \ddots & \vdots &\\
+             0 & 0 & \cdots & x & -1 \\
+        \end{vmatrix} \\
+        & = (-1)^{n+2}(a_n + a_{n-1} x + \dots +a_1 x^{n-1} + a_0 x^n) \cdot (-1)^{n-2} \begin{vmatrix} -1 & 0 \\ x & -1 \end{vmatrix} \quad (\text{$\ast$})\\
+        & = (-1)^{n+2} (a_n + a_{n-1} x + \dots +a_1 x^{n-1} + a_0 x^n) \cdot (-1)^{n-2}　\\
+        & = (-1)^{2n} (a_n + a_{n-1} x + \dots +a_1 x^{n-1} + a_0 x^n) \\
+        & = a_n + a_{n-1} x + \dots +a_1 x^{n-1} + a_0 x^n
+    \end{align*} 
+    となる．ただし($\ast$)では同様の余因子展開を繰り返した．
+
+    以上の計算により，
+    \[
+        (\text{与式}) = a_n + a_{n-1} x + \dots +a_1 x^{n-1} + a_0 x^n.
+    \]
+\end{tleftbar}
+
+
+\subsection*{p90-91：1-ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90-91：1-ロ)}{p90-91：1-ロ)}}
+
+\begin{tleftbar}
+    与式の第$2$列から第$n$列までを第$1$列に足すと，
+    \[
+        \begin{vmatrix} 
+            x+\sum_{k=1}^{n} a_k & a_1 & a_2 & \cdots & a_n \\
+            x+\sum_{k=1}^{n} a_k & x & a_2 & \cdots & a_n \\
+            x+\sum_{k=1}^{n} a_k & a_2 & x &\cdots & a_n \\
+            \vdots & \vdots & \vdots & \ddots & \vdots \\
+            x+\sum_{k=1}^{n} a_k & a_n & a_{n-1} & \cdots & x
+        \end{vmatrix}
+    \]
+    である．第$2$行から第$n$行のそれぞれから第$1$行を引くと，
+    \[
+        \begin{vmatrix} 
+            x+\sum_{k=1}^{n} a_k & a_1 & a_2 & \cdots & a_n \\
+            0 & x-a_1 & 0 & \cdots & 0 \\
+            0 & a_2 -a_1 & x-a_2 &\cdots & 0 \\
+            \vdots & \vdots & \vdots & \ddots & \vdots \\
+            0 & a_n-a_1 & a_{n-1}-a_2 & \cdots & x-a_n 
+        \end{vmatrix}
+    \]
+    である．第$1$列で余因子展開すると，
+    \begin{align*} 
+        & 
+        (x+\sum_{k=1}^{n} a_k)
+        \begin{vmatrix} 
+            x-a_1 & 0 & \cdots & 0 \\
+            a_2 -a_1 & x-a_2 &\cdots & 0 \\
+            \vdots & \vdots & \ddots & \vdots \\
+            a_n-a_1 & a_{n-1}-a_2 & \cdots & x-a_n 
+        \end{vmatrix}
+        \\
+        & = (x+\sum_{k=1}^{n} a_k) (x-a_1)(x-a_2) \dotsm (x-a_n) \\
+        & = (x+\sum_{k=1}^{n} a_k) \prod_{k=1}^{n} (x-a_k).
+    \end{align*}
+    \end{tleftbar}
+
+\newpage 
+
 \subsection*{p90-91：3}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p90-91：3}{p90-91：3}}
 
