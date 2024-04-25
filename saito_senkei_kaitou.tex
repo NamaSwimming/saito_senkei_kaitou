@@ -2926,6 +2926,47 @@ $S_n$の偶置換全体の集合を$A_n$,偶置換全体の集合を$B_n$とす�
 
 \newpage 
 
+
+\subsection*{p90-91：2-イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90-91：2-イ)}{p90-91：2-イ)}}
+
+\begin{tleftbar}
+    \begin{proof}
+    余因子展開を用いると，
+    \begin{align*}
+            (\text{与式}) & = -a \begin{vmatrix} a & b & c \\ -d & 0 &f \\ -e & -f & 0 \end{vmatrix} +b \begin{vmatrix} a & b & c \\ 0 & d & e \\ -e & -f & 0 \end{vmatrix} -c \begin{vmatrix} a & b & c \\ 0 & d & e \\ -d & 0 & f \end{vmatrix} \\
+            & = -a (-cdf +bfe-af^2)+b(be^2-cde-adf)-c(-adf+bde-cd^2) \\
+            & = af (cd-be+af) -be(-be+cd+af) +cf(af-be-cd) \\
+            & = (af-be+cd)^2.
+        \end{align*}
+        となり，これが証明すべきことであった．
+    \end{proof}
+    \end{tleftbar}
+
+
+\subsection*{p90-91：2-ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90-91：2-ロ)}{p90-91：2-ロ)}}
+
+\begin{tleftbar}
+    \begin{proof}
+    $A$を$n$次行列とする．${}^t A = -A$であるから，
+    \[
+        \abs{{}^t A}=(-1)^n\abs{A}.
+    \]
+    ここで，$n$は奇数であるから，
+    \[
+        \abs{{}^t A}=-\abs{A}.
+    \]
+    また，行列式の転置に関する不変性により，$\abs{{}^t A}=\abs{A}$なので，
+    \begin{align*} 
+        & \abs{A}=-\abs{A} , \\
+        & \therefore ~ \abs{A}=0
+    \end{align*}
+    となり，これが証明すべきことであった．
+\end{proof}
+\end{tleftbar}
+
+\newpage 
 \subsection*{p90-91：3}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p90-91：3}{p90-91：3}}
 
