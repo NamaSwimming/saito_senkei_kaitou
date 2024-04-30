@@ -2385,7 +2385,61 @@ $X=(x_{ij}),~Y=(y_{ij})$とする．
         となり，これが証明すべきことであった．\qed 
     \end{description}
 \end{leftbar}
+\newpage 
+\subsection*{p70-73：12}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70-73：12}{p70-73：12}}
 
+\begin{tleftbar}
+    \begin{proof}
+    以下の3つの命題が同値であることを示す．
+    \begin{enumerate}[(1)]
+        \item $A$は正規行列である．すなわち$A^\ast A = A A^\ast$である．
+        \item 任意の$\bm{x} \in \mathbb{C}^n$について，$\norm{A \bm{x}}=\norm{A^\ast \bm{x}}$が成立する．
+        \item 任意の$\bm{x},\bm{y} \in \mathbb{C}^n$について，$(A\bm{x}, A\bm{y}) = (A^\ast \bm{x}, A^\ast\bm{y})$が成立する．
+    \end{enumerate}
+    \begin{description}
+        \item[(1) $\Longrightarrow$ (2)] $\bm{x} \in \mathbb{C}^n$を任意にとる．このとき
+        \begin{align*} 
+            \norm{A \bm{x}}^2 & = (A \bm{x}, A \bm{x}) \\
+            & = (\bm{x}, A^\ast A\bm{x}) \\
+            & = (\bm{x}, A A^\ast \bm{x}) \quad (\because \text{正規行列の定義})\\
+            & = (A^\ast \bm{x}, A^\ast \bm{x}) = \norm{A^\ast \bm{x}}^2
+        \end{align*}
+        であるから，$\norm{A \bm{x}}=\norm{A^\ast \bm{x}}$が成立する．
+        \item[(2) $\Longrightarrow$ (3)] $\bm{x},\bm{y} \in \mathbb{C}^n$を任意にとる．このとき
+        \begin{align*} 
+            \norm{A(\bm{x}+\bm{y})}^2 & = (A(\bm{x}+\bm{y}), A(\bm{x}+\bm{y})) \\
+            & = \norm{A\bm{x}}^2  + (A\bm{x}, A\bm{y}) + (A\bm{y}, A\bm{x}) +\norm{A\bm{y}}^2\\
+            & = \norm{A\bm{x}}^2  + (A\bm{x}, A\bm{y}) + \overline{(A\bm{x}, A\bm{y})} +\norm{A\bm{y}}^2
+        \end{align*}
+        であり，同様に計算すると
+        \[
+            \norm{A^\ast(\bm{x}+\bm{y})}^2 = \norm{A^\ast \bm{x}}^2  + (A^\ast \bm{x}, A^\ast\bm{y}) + \overline{(A^\ast \bm{x}, A^\ast\bm{y})} +\norm{A^\ast\bm{y}}^2
+        \]
+        を得る．$\norm{A(\bm{x}+\bm{y})}=\norm{A^\ast(\bm{x}+\bm{y})}$，$\norm{A\bm{x}}=\norm{A^\ast \bm{x}}$，$\norm{A\bm{y}}=\norm{A^\ast \bm{y}}$を仮定したので，
+        \[
+            (A\bm{x}, A\bm{y}) + \overline{(A\bm{x}, A\bm{y})} = (A^\ast \bm{x}, A^\ast\bm{y}) + \overline{(A^\ast \bm{x}, A^\ast\bm{y})}
+        \]
+        となり，これは$ \Re (A\bm{x}, A\bm{y}) = \Re (A^\ast \bm{x}, A^\ast\bm{y})$であることを表す．
+
+        また，$\bm{x}$を$i\bm{x}$におきかえることで，$ \Im (A\bm{x}, A\bm{y}) = \Im (A^\ast \bm{x}, A^\ast\bm{y})$も示される．ゆえにこのとき
+        \[
+            (A\bm{x}, A\bm{y}) = (A^\ast \bm{x}, A^\ast\bm{y}).
+        \]
+        \item[(3) $\Longrightarrow$ (1)] $\bm{x},\bm{y} \in \mathbb{C}^n$を任意にとる．このとき
+        \[
+            (\bm{x}, ((A^\ast A-A A^\ast)\bm{y}) =0
+        \]
+        である．いま$\bm{x}$は任意に取ったので，$\bm{x}=(A^\ast A-A A^\ast)\bm{y}$とすると，
+        \begin{align*} 
+            & \norm{(A^\ast A-A A^\ast)\bm{y}}^2  = 0, \\
+            & \because ~ (A^\ast A-A A^\ast)\bm{y} = \bm{0}.
+        \end{align*} 
+        ゆえに，$\bm{y}$を任意に取ったことから$A^\ast A=A A^\ast$となり，$A$は正規行列である．
+    \end{description}
+    以上の議論により証明された．
+\end{proof}
+\end{tleftbar}
 
 \newpage 
 
@@ -2432,6 +2486,7 @@ $X=(x_{ij}),~Y=(y_{ij})$とする．
         となる．よってこのとき$[X,Y]$は交代行列である．
     \end{proof}
     \end{tleftbar}
+
 \newpage 
 
     \subsection*{p70-73：13-ハ)}
