@@ -1,33 +1,44 @@
-\documentclass[uplatex,dvipdfmx,a4paper,10pt,fleqn]{jsarticle}
+\documentclass[uplatex,dvipdfmx,a4paper,11pt,fleqn]{jsarticle}
 
 \input{preamble.tex}
 
 \usepackage{autobreak}
 
 \usepackage{docmute}
-%ヘッダー・フッダー
+
 \usepackage{fancyhdr}
+
+\renewcommand{\headrulewidth}{0.4pt} % 線の太さ
+\renewcommand{\headrule}{\color{BlueViolet}\hrule width\headwidth height\headrulewidth \vskip-\headrulewidth} % 線の色
+
 \pagestyle{fancy}
-\lhead{}
-\chead{齋藤正彦・線型代数入門解答集}
-\rhead{\thepage}
-\cfoot{}
+\fancyhf{} % 既存の設定をクリア
+\fancyhead[C]{\textcolor{BlueViolet}{線型代数入門・解答集}} % ヘッダーの中央にテキストを挿入
+\fancyhead[R]{\textcolor{BlueViolet}{\thepage}} % ヘッダーの右側にページ番号を挿入
+
+\setcounter{secnumdepth}{0}
+
 \begin{document}
 
-\title{齋藤正彦・線型代数入門解答集}
-\author{数学書解答集作成班}
-\date{\today}
-\maketitle
-\begin{multicols*}{3}
-    \tableofcontents
-\end{multicols*}
-\addcontentsline{toc}{section}{\texorpdfstring{目次}{目次}}
+% タイトルページの呼び出し
+\tituloum{線型代数入門・解答集}{数学書解答集作成班}{}{}{\today}
+
+%\include{Preambulo/Capa}
+
+\thispagestyle{empty}
 
 \newpage
+\pagenumbering{arabic}
+\pagecolor{none}
+
+\begin{multicols}{3}
+\tableofcontents
+\end{multicols}
+
+\newpage 
 
 \section*{はじめに}
 \addcontentsline{toc}{section}{\texorpdfstring{はじめに}{はじめに}}
-
 
 \subsection*{概要}
 \addcontentsline{toc}{subsection}{\texorpdfstring{概要}{概要}}
@@ -2654,6 +2665,59 @@ $X=(x_{ij}),~Y=(y_{ij})$とする．
 \section*{第3章}
 \addcontentsline{toc}{section}{\texorpdfstring{第3章}{第3章}}
 
+
+\subsection*{p77：問1}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p77：問1}{p77：問1}}
+
+\kakko{3文字の置換}
+
+\begin{tleftbar}
+    3文字の置換は$3!=6$通りある．それを互換の回数によって分類する．
+    \begin{description}
+        \item[0回] 1つのみ．偶置換かつ恒等置換．
+        \[
+            \begin{pmatrix} 1 & 2 & 3 \\ 1 & 2 & 3 \end{pmatrix}.
+        \]
+        \item [1回] 3つ．奇置換．
+        \[
+            \begin{pmatrix} 1 & 2 & 3\\ 1 & 3 & 2 \end{pmatrix},\quad 
+            \begin{pmatrix} 1 & 2 & 3\\ 3 & 2 & 1 \end{pmatrix},\quad 
+            \begin{pmatrix} 1 & 2 & 3\\ 2 & 1 & 3 \end{pmatrix}.
+        \]
+        \item [2回] 2つ．偶置換．
+        \[
+            \begin{pmatrix} 1 & 2 & 3\\ 2 & 3 & 1 \end{pmatrix},\quad 
+            \begin{pmatrix} 1 & 2 & 3\\ 3 & 1 & 2 \end{pmatrix}.
+        \]
+    \end{description}
+\end{tleftbar}
+
+\kakko{4文字の置換}
+
+\begin{tleftbar}
+    4文字の置換は$4!=24$通りある．それを互換の回数によって分類する．
+    \begin{description}
+        \item[0回] 1つのみ．偶置換かつ恒等置換．
+        \[
+            \begin{pmatrix} 1 & 2 & 3 &4 \\ 1 & 2 & 3 &4\end{pmatrix}.
+        \]
+        \item [1回] 6つ．奇置換．
+        \begin{align*}
+            & \begin{pmatrix} 1 & 2 & 3 & 4\\ 1 & 3 & 2 & 4\end{pmatrix},\quad 
+            \begin{pmatrix} 1 & 2 & 3 &4 \\ 3 & 2 & 1  & 4\end{pmatrix},\quad 
+            \begin{pmatrix} 1 & 2 & 3 & 4\\ 2 & 1 & 3 & 4\end{pmatrix},\\
+            & \begin{pmatrix} 1 & 2 & 3 & 4\\ 1 & 2 & 4 & 3\end{pmatrix},\quad 
+            \begin{pmatrix} 1 & 2 & 3 & 4\\ 1 & 4 & 3 & 2\end{pmatrix},\quad 
+            \begin{pmatrix} 1 & 2 & 3 & 4\\ 4 & 2 & 3 & 1\end{pmatrix}.
+    \end{align*}
+        \item [2回] 偶置換．
+        \[
+            \begin{pmatrix} 1 & 2 & 3 & 4 \\ 2 & 3 & 1 & 4\end{pmatrix},\quad 
+            \begin{pmatrix} 1 & 2 & 3 & 4 \\ 3 & 1 & 2 & 4 \end{pmatrix},
+        \]
+    \end{description}
+\end{tleftbar}
+
 \subsection*{p77：問2}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p77：問2}{p77：問2}}
 
@@ -3099,7 +3163,7 @@ $S_n$の偶置換全体の集合を$A_n$,偶置換全体の集合を$B_n$とす�
             \alpha^{n-1} \sum_{i=0}^{n-1} \alpha^i x_i & x_{n-2} & x_{n-3} & \cdots & x_0 
         \end{vmatrix}
     \]
-    と変形できる．これにより，この行列式は
+    と変形できる．よって，この行列式は
     \[
         \sum_{i=0}^{n-1} \alpha^i x_i = x_0 + \alpha x_1 + \alpha^2 x_2 + \dots +\alpha^{n-1} x_{n-1}
     \]
