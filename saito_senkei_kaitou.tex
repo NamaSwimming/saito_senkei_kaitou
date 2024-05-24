@@ -9,12 +9,12 @@
 \usepackage{fancyhdr}
 
 \renewcommand{\headrulewidth}{0.4pt} % 線の太さ
-\renewcommand{\headrule}{\color{BlueViolet}\hrule width\headwidth height\headrulewidth \vskip-\headrulewidth} % 線の色
+\renewcommand{\headrule}{\color{black}\hrule width\headwidth height\headrulewidth \vskip-\headrulewidth} % 線の色
 
 \pagestyle{fancy}
 \fancyhf{} % 既存の設定をクリア
-\fancyhead[C]{\textcolor{BlueViolet}{線型代数入門・解答集}} % ヘッダーの中央にテキストを挿入
-\fancyhead[R]{\textcolor{BlueViolet}{\thepage}} % ヘッダーの右側にページ番号を挿入
+\fancyhead[C]{\textcolor{black}{線型代数入門・解答集}} % ヘッダーの中央にテキストを挿入
+\fancyhead[R]{\textcolor{black}{\thepage}} % ヘッダーの右側にページ番号を挿入
 
 \setcounter{secnumdepth}{0}
 
@@ -23,13 +23,12 @@
 % タイトルページの呼び出し
 \tituloum{線型代数入門・解答集}{数学書解答集作成班}{}{}{\today}
 
-%\include{Preambulo/Capa}
 
 \thispagestyle{empty}
 
 \newpage
 \pagenumbering{arabic}
-\pagecolor{none}
+\pagecolor{white}
 
 \begin{multicols}{3}
 \tableofcontents

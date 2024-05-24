@@ -20,19 +20,29 @@
 \usepackage[bbsets]{jkmath} %\Nなどをつかえる
 \usepackage{amsthm}
 
-%ハイパーリンク用
-\usepackage{url}
-\usepackage[dvipdfmx]{hyperref}
+% xcolorをロード
+\usepackage{titletoc}
 \usepackage{xcolor}
 
-% BlueVioletを定義
+% 色を定義
 \definecolor{BlueViolet}{RGB}{105,39,255}
+\definecolor{mylightgray}{HTML}{DDDDDD}
+\definecolor{mydarkgray}{HTML}{555555}
 
-%hyperrefの続き
-\hypersetup{colorlinks=true,citecolor={BlueViolet},linkcolor={blue!50!black},urlcolor={blue!70!black},}
+% ハイパーリンク用
+\usepackage{url}
+
+% hyperrefをロード
+\usepackage[dvipdfmx,hidelinks]{hyperref}
 \usepackage[otfcid,otfmacros]{pxjahyper}
 \usepackage{bookmark}
 
+\hypersetup{
+  colorlinks=true,
+  citecolor=BlueViolet,
+  linkcolor=blue!50!black,
+  urlcolor=blue!70!black,
+}
 
 
 %tcolorbox系
@@ -41,7 +51,7 @@
 \newtcolorbox{hosoibox}[1]{colframe=black,colback=white,coltitle=black,colbacktitle=white,boxrule=0.5pt,arc=0mm,enhanced,attach boxed title to top left={xshift=10mm,yshift=-3mm},boxed title style={frame hidden},title=#1}
 
 %leftbar環境に注釈が入れられないことを解消する環境．名前は，tcolorboxの[t]とleftbarの組み合わせ
-\newtcolorbox{tbleftline}{blanker,left=5mm,borderline west={1.1mm}{0pt}{BlueViolet!90}}
+\newtcolorbox{tbleftline}{blanker,left=5mm,borderline west={1.1mm}{0pt}{mydarkgray}}
 \newenvironment{tleftbar}{\begin{tbleftline}\setlength{\parindent}{1zw}}{\end{tbleftline}}
 
 
@@ -51,7 +61,7 @@
 \makeatletter
 \renewenvironment{leftbar}{%
   \def\FrameCommand{%
-    {\color{BlueViolet}\vrule width 3pt}%
+    {\color{mydarkgray}\vrule width 3pt}%
     \hspace{10pt}%
     \fboxsep=\FrameSep\colorbox{white}}%
   \MakeFramed{\hsize\hsize\advance\hsize-\width\FrameRestore}%
@@ -115,12 +125,12 @@
 
 \DeclareMathOperator{\sgn}{sgn}
 %タイトルページを定義
-\usepackage[pagecolor=BlueViolet,nopagecolor={none}]{pagecolor} % 背景色を変更するためのパッケージ
+\usepackage[pagecolor=white,nopagecolor={none}]{pagecolor} % 背景色を変更するためのパッケージ
 
 \newcommand{\tituloum}[5]{\begin{titlepage} 
     \begin{center} 
-        \pagecolor{BlueViolet} % 背景色をBlueVioletに設定
-        \color{white} % テキストカラーを白に設定
+        \pagecolor{white} % 背景色をBlueVioletに設定
+        \color{black} % テキストカラーを白に設定
         
         \vspace*{2\baselineskip}
         
@@ -169,17 +179,6 @@
 \usepackage{docmute}
 
 \everymath{\displaystyle}
-
-%--新設定
-\usepackage{titletoc}
-\usepackage{titlesec}
-
-% 見出しの色をBlueVioletに設定
-\titleformat{\section}{\Large\bfseries\sffamily\color{BlueViolet}}{\thesection}{1em}{}
-\titleformat{\subsection}{\large\bfseries\sffamily\color{BlueViolet}}{\thesubsection}{1em}{}
-\titleformat{\subsubsection}{\normalsize\bfseries\sffamily\color{BlueViolet}}{\thesubsubsection}{1em}{}
-\titleformat{\paragraph}{\normalsize\bfseries\sffamily\color{BlueViolet}}{\theparagraph}{1em}{}
-\titleformat{\subparagraph}{\normalsize\bfseries\sffamily\color{BlueViolet}}{\thesubparagraph}{1em}{}
 
 
 %新設定2
