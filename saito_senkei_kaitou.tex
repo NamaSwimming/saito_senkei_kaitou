@@ -3386,11 +3386,11 @@ A^{-1}=\frac{1}{\det A}\tilde{A}
 
 \newpage 
 
-\subsection*{p90-91：11}
-\addcontentsline{toc}{subsection}{\texorpdfstring{p90-91：11}{p90-91：11}}
+\subsection*{p90-91：11-イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90-91：11-イ)}{p90-91：11-イ)}}
 \begin{tleftbar}
-    \begin{description}
-        \item[イ] ${}^t A_\sigma$は$(j,\sigma(j))$成分が$1$でそれ以外が$0$である行列である．
+    \begin{proof}
+     ${}^t A_\sigma$は$(j,\sigma(j))$成分が$1$でそれ以外が$0$である行列である．
         いま$A = (\bm{a}_1,\bm{a}_2,\ldots,\bm{a}_n)$とすると，
         \begin{align*}
             {}^t A_\sigma A_\sigma &= 
@@ -3405,8 +3405,59 @@ A^{-1}=\frac{1}{\det A}\tilde{A}
             &= E
         \end{align*}
         となり，$A$は直交行列である．
-    \end{description}
+    \end{proof}
 \end{tleftbar}
+
+
+\subsection*{p90-91：11-ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90-91：11-ロ)}{p90-91：11-ロ)}}
+
+\begin{tleftbar}
+	\begin{proof}
+置換$\sigma$，$\tau$に関して
+\[ 
+a_{ij} = 
+\begin{cases}
+1 & \text{if } i = \sigma(j) \\
+0 & \text{otherwise}
+\end{cases},
+\quad 
+b_{ij}
+\begin{cases} 
+1 & \text{if }  i = \tau(j) \\
+0 & \text{otherwise}
+\end{cases}
+\]
+と定義する．
+このとき，
+\[
+(A_\sigma A_\tau)_{ik} = \sum_{j=1}^n a_{ij} b_{jk}.
+\]
+$b_{jk}$が$0$以外の値を取るのは$j= \tau(k)$のときなので，クロネッカーのデルタを用いると
+\[
+	(A_\sigma A_\tau)_{ik} =\sum_{j=1}^n a_{ij} \delta_{j,\tau(k)}
+\]
+と書き換えられる．また，$a_{ij}$が$0$以外の値を取るのは，$i=\sigma(j)$のときなので，
+\[
+	(A_\sigma A_\tau)_{ik} = \sum_{j=1}^n a_{i,\sigma(\tau(k))}
+\]
+となり，これは$i= \sigma(\tau(k))$のときのみ$1$であり，残りは$0$である．
+
+よって，
+\[
+(A_\sigma A_\tau)_{ik} = 
+\begin{cases} 
+	1 & \text{if } i=\sigma \tau(k) \\
+	0 & \text{otherwise}
+\end{cases}
+\]
+となり，これは$A_{\sigma \tau}$の定義そのものなので，
+\[
+A_\sigma A_\tau = A_{\sigma \tau}.
+\]
+\end{proof}
+\end{tleftbar}
+
 
 \newpage 
 
