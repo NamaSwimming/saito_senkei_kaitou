@@ -3276,6 +3276,48 @@ $S_n$の偶置換全体の集合を$A_n$,偶置換全体の集合を$B_n$とす�
 
 \newpage 
 
+\subsection*{p90-91：7}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90-91：7}{p90-91：7}}
+
+
+\begin{tleftbar}
+    与えられた行列式の係数行列式を$A$， $A$の第$j$列を${}^t (1, 0, 0 ,0 )$で置き換えた行列を$A_j$とする．
+    また，
+    \[
+    T = \begin{pmatrix} a & -b\\ b & a \end{pmatrix},\quad S = \begin{pmatrix} c & -d\\ d & c \end{pmatrix}
+    \]
+    とする．このとき，
+    \begin{align*} 
+        \begin{vmatrix} T & -T \\  S & S \end{vmatrix}& = \begin{vmatrix} 2T & - T \\ O & S \end{vmatrix} \\
+            & = \abs{2T} \abs{S} \\
+            & = 4(a^2+b^2) (c^2+d^2).
+        \end{align*} 
+        クラメールの公式により
+        \[
+            \begin{cases}
+            x  = \abs{A_1}/\abs{A}, \\
+            y = \abs{A_2}/\abs{A},\\
+            z = \abs{A_3}/\abs{A}, \\
+            u = \abs{A_4}/\abs{A}.
+            \end{cases}
+        \]
+        さて，
+        \begin{align*} 
+            \abs{A_1} & = \begin{vmatrix} 1 & -b & -a & b \\ 0 & a & -b & -a \\ 0 & -d & c & d \\ 0 & c & d & c \end{vmatrix} \\
+            & = 1 \cdot \begin{vmatrix} a & -b & -a \\ -d & c & d \\ c & d & c \end{vmatrix} \\
+            & = 2a(c^2+d^2).
+        \end{align*}
+        よって，
+        \[
+        x = \frac{\abs{A_1}}{\abs{A}} = \frac{2a(c^2+d^2)}{4(a^2+b^2)(c^2+d^2)} = \frac{a}{2(a^2+b^2)}.
+        \]
+        同様にして$y$，$z$，$u$を求めると
+        \[
+        x= \frac{a}{2(a^2+b^2)},\quad y = -\frac{b}{2(a^2+b^2)},\quad z = -\frac{a}{2(a^2+a^2)},\quad u = \frac{b}{2(a^2+b^2)}.
+        \]
+    \end{tleftbar}
+
+    \newpage 
 
 
 \subsection*{p90-91：8}
