@@ -1109,6 +1109,59 @@ ab & b^2
     である，
 \end{tleftbar}
 
+\newpage 
+
+\subsection*{p29-30：6-イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p29-30：6-イ)}{p29-30：6-イ)}}
+
+\begin{tleftbar}
+$(S)$と$x$軸，$y$軸，$z$軸の交点をそれぞれ$\mathrm{A}$， $\mathrm{B}$，$\mathrm{C}$とする．
+このとき，$\mathrm{A}$，$\mathrm{B}$，$\mathrm{C}$の座標は図のようになり，
+この三角錐の体積を$V$とすると，
+\begin{align*}
+  V= & \frac{1}{2} \cdot \frac{1}{3} \cdot\abs{ \det (\overrightarrow{\mathrm{OA}}, \overrightarrow{\mathrm{OB}}, \overrightarrow{\mathrm{OC}})} \\
+   = & \frac{1}{6} \cdot \frac{\abs{d}^3}{\abs{abc}}= \frac{\abs{d}^3}{6\abs{abc}}
+\end{align*}
+である．ここで，$\abs{\det (\overrightarrow{\mathrm{OA}}, \overrightarrow{\mathrm{OB}}, \overrightarrow{\mathrm{OC}})}$が$\overrightarrow{\mathrm{OA}}$，$\overrightarrow{\mathrm{OB}}$，$\overrightarrow{\mathrm{OC}}$の張る平行六面体の体積を表すことを用いた．
+
+\end{tleftbar}
+%回転角
+\tdplotsetmaincoords{70}{135}
+\begin{tikzpicture}[tdplot_main_coords]
+%軸
+\draw[->,>=stealth,semithick](0,0,0)--(5,0,0)node[below]{$x$};%x軸
+\draw[->,>=stealth,semithick](0,0,0)--(0,5,0)node[right]{$y$};%y軸
+\draw[->,>=stealth,semithick](0,0,0)--(0,0,5)node[right]{$z$};%y軸
+\draw(0,0)node[below]{O};%原点
+
+\draw[dashed,semithick](3,0,0)--(0,4,0)--(0,0,7/2)--cycle;
+\fill[color=gray ,opacity=0.1] (3,0,0)--(0,4,0)--(0,0,7/2)--cycle;
+
+\node at (3,0,0) [above left]{$\mathrm{A} (d/a,0,0)$};
+\node at (0,4,0) [above right]{$\mathrm{B}(0,d/b,0)$};
+\node at (0,0,7/2) [right]{$\mathrm{C}(0,0,d/c)$};
+\end{tikzpicture}
+
+
+\subsection*{p29-30：6-ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p29-30：6-ロ)}{p29-30：6-ロ)}}
+
+\begin{tleftbar}
+三角形$\mathrm{ABC}$の体積を$T$，$\mathrm{O}$から平面$ABC$におろした垂線の足を$H$とすると，
+\[
+V = \frac{1}{3} \norm{\overrightarrow{\mathrm{OH}}} \cdot T 
+\]
+である．ここで，
+\[
+    \norm{\overrightarrow{\mathrm{OH}}}=\frac{\abs{a \cdot 0 + b \cdot 0 + c \cdot 0-d}}{\sqrt{a^2+b^2+c^2}}=\frac{\abs{d}}{\sqrt{a^2+b^2+c^2}}
+\]
+なので，イ)の結果から$V =\frac{\abs{d}^3}{6\abs{abc}}$なのを加味すると，
+\[
+T = \frac{d^2\sqrt{a^2+b^2+c^2}}{2\abs{abc}}
+\]
+である．
+\end{tleftbar}
+
 \subsection*{p29-30:7-(1)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p29-30：7-(1)}{p29-30：7-(1)}}
 
