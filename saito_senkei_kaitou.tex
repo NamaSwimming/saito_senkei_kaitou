@@ -3108,6 +3108,67 @@ $S_n$の偶置換全体の集合を$A_n$,偶置換全体の集合を$B_n$とす�
         & = (x+\sum_{k=1}^{n} a_k) \prod_{k=1}^{n} (x-a_k).
     \end{align*}
     \end{tleftbar}
+    \newpage 
+
+    \subsection*{p90-91：1-ハ)}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p90-91：1-ハ)}{p90-91：1-ハ)}}
+    
+\begin{tleftbar}
+    この形の$n\times n $行列を$A_n$とすると，
+    \begin{align*} 
+        A_{n+2} & = 
+        \begin{vmatrix} 
+            1+x^2 & x & 0& \cdots & 0 \\
+             x & 1+x^2 & x & \cdots & 0 \\
+            0 & x & 1+x^2 & \cdots & 0 \\
+            \vdots & \vdots & \dots & \ddots & \vdots \\
+            0 & 0 & 0 & \cdots & 1+x^2 
+            \end{vmatrix} \\
+     & = (1+x^2)
+     \begin{vmatrix}
+        1+x^2 & x & \cdots & 0 \\
+        x & 1+x^2 & \cdots & 0 \\
+        \vdots & \dots & \ddots & \vdots \\
+        0 & 0 & \cdots & 1+x^2
+     \end{vmatrix} 
+     -x \begin{vmatrix}
+        x & 0 & \cdots & 0 \\
+        x & 1+x^2 & \cdots & 0 \\
+        \vdots & \dots & \ddots & \vdots \\
+        0 & 0 & \cdots & 1+x^2
+     \end{vmatrix}
+     \\
+     & = (1+x^2) A_{n+1} -x^2 A_n  
+    \end{align*}
+    となる．
+    
+    よって，
+    \[
+    A_{n+2}-A_{n+1}=x^2 (A_{n+1}-A_n)\quad ( n \geqq 2) .
+    \]
+    これと$ A_1=1+x^2$，$ A_2 = 1+x^2 + x^4$により，$n \geqq 2$のとき
+    
+    \begin{align*} 
+        A_{n+1}-A_{n} & = x^2 (A_n-A_{n-1}) \\
+        & = x^4 (A_{n-1} - A_{n-2}) \\
+        & = \dots = x^{2(n-1)}(A_2-A_1)\\
+        & = x^{2(n-1)} ((1+x^2 + x^4) -(1+x^2)) \\
+        & = x^{2(n+1)}
+    \end{align*} 
+    であるから，$n \geqq 2$のとき，
+    \begin{align*} 
+        A_n & = A_1 +\sum_{k=1}^{n-1} x^{2k+2} \\
+        & = 1+x^2 + \frac{x^4(1-x^{2(n-1)})}{1-x^2} \\
+        & = 1+x^2 + \frac{x^4 (1-x^2)(1+x^2 + \dots + x^{2(n-2)})}{1-x^2} \\
+        & = 1+x^2 + x^4 + x^6 + \dots + x^{2n} 
+    \end{align*}
+    となる．この$ A_n$を用いると，$ A_1 = 1+x^2 $，$ A_2 = 1+x^2+x^4$であるから，
+    与えられた行列式の値は，$n \times n$行列の場合
+    \[
+        1+x^2 + x^4 + x^6 + \dots + x^{2n} 
+    \]
+    である．
+    \end{tleftbar}
 
     \newpage 
 
