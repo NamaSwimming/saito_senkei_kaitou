@@ -4262,6 +4262,40 @@ v
     である．
 \end{tleftbar} 
 
+\newpage 
+
+\subsection*{p127-130：5}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p127-130：5}{p127-130：5}}
+
+\begin{tleftbar} 
+    $A$，$B$の定める線型写像をそれぞれ$T_A$，$T_B$とする．$ \bm{x} \in \Im (T_A + T_B)$を任意にとると，
+    ある$\bm{y} \in \mathbb{R}^n$が存在して，
+    \begin{alignat*}{2}
+    \bm{x} &= (T_A+T_B)(\bm{y}) \quad & &\\
+    & = T_A (\bm{y}) + T_B (\bm{y}) \quad & & \text{($\because$~$T_A$と$T_B$は線型写像)}.
+    \end{alignat*}
+    よって，
+    \begin{equation}
+    \Im (T_A + T_B) \subset \Im T_A + \Im T_B \quad \tag{$\ast$}
+    \label{eq:p127-130:5_ast}
+    \end{equation}
+    これにより，
+    \begin{alignat*}{2}
+        \rank (T_A + T_B) & = \dim (\Im (T_A + T_B))\quad  & & \text{($\because$~階数の定義)}\\
+        & \leqq \dim (\Im (T_A) + \Im (T_B))\quad  && \text{($\because$ ~\eqref{eq:p127-130:5_ast})}  \\
+        & \leqq \dim (\Im (T_A)) + \dim (\Im (T_B))\quad  && \text{($\because$~定理[4.7])} \\
+        & = \rank (T_A)+\rank( T_B).\quad  &&\text{($\because$~階数の定義)}\\
+    \end{alignat*}
+    これを書き換えると
+    \[
+    \rank (A+B) \leqq \rank (A) + \rank (B).
+    \]
+    これが証明すべきことであった．
+\end{tleftbar}
+
+\newpage 
+
+
 
 \section*{附録\three}
 \addcontentsline{toc}{section}{\texorpdfstring{附録\three}{附録\three}}
