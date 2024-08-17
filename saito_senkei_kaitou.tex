@@ -4295,6 +4295,47 @@ v
 
 \newpage 
 
+\subsection*{p127-130：6-イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p127-130：6-イ)}{p127-130：6-イ)}}
+
+\begin{tleftbar}
+    \begin{proof}
+     $BA$は$n$次の正方行列である．ここで，
+     \begin{align*} 
+        \rank (BA) & \leqq \min \{ \rank B, \rank A \} \\
+        & =  m <n 
+     \end{align*}
+     であるから，$\rank (BA)<n$である．よって$BA$は正則行列でない．
+    \end{proof}
+\end{tleftbar}
+
+
+\subsection*{p127-130：6-ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p127-130：6-ロ)}{p127-130：6-ロ)}}
+
+\begin{tleftbar} 
+    $AB$は$m \times m$行列であり，これが正則なのは$\rank (AB)=m$のときである．
+
+    $\rank (AB) \leqq \min \{ \rank A, \rank B \} = m$であり，$\rank A \leqq m$かつ$\rank B \leqq m$であるから，
+    $AB$が正則であるためには， $\rank A =m$かつ$\rank B =m$であることが必要である．
+
+    さて，$A$や$B$の定める線型写像を$T_A$，$T_B$などと書くことにすると，次元定理により，
+    \begin{align*} 
+        \rank (AB) & = \dim ( \Im (T_{AB}( \mathbb{C}^m))) \\
+        & = \dim ( \Im (T_A \circ T_B ( \mathbb{C}^m))) \\
+        & = \dim ( T_B (\mathbb{C}^m) ) - \dim ( {T_A}^{-1} ( \bm{o_m})) \\
+        & =  m - \dim ( T_B(\mathbb{C}^m)  \cap (T_A)^{-1} (\bm{o_m})). 
+    \end{align*}
+    よって，$ T_B ( \mathbb{C}^m)  \cap (T_A)^{-1} (\bm{o_m}) = \{ \bm{o_n} \}$であれば，$\rank (AB)=m$である．
+
+    以上の考察により，$AB$が正則であるのは，以下の2条件が成り立つときである．
+    \begin{enumerate}[(I)]
+        \item $\rank A =m$かつ$\rank B =m$.
+        \item $ T_B ( \mathbb{C}^m)  \cap (T_A)^{-1} (\bm{o_m}) = \{ \bm{o_n} \}$.
+    \end{enumerate}
+    \end{tleftbar}
+
+    \newpage 
 
 
 \section*{附録\three}
