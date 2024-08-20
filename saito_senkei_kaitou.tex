@@ -4322,8 +4322,8 @@ v
 
     さて，$A$や$B$の定める線型写像を$T_A$，$T_B$などと書くことにすると，次元定理により，
     \begin{alignat*}{2}
-        \rank (AB) & = \dim \Im (T_A \circ T_B)\quad &&  \\
-        & = \dim I_B (\mathbb{C}^n)  - \dim \ker (T_A \circ T_B )  \quad && \text{($\because$~次元定理)}\\
+        \rank (AB) & = \dim \Im T_A ( T_B ( \mathbb{C}^m) )\quad &&  \\
+        & = \dim T_B (\mathbb{C}^m)  - \dim \ker (T_A)  \quad && \text{($\because$~次元定理)}\\
         & \leqq m - \dim ( T_B(\mathbb{C}^m)  \cap T_{A^{-1}} (\bm{o_m})) \quad && \text{($\because ~\dim I_B ( \mathbb{C}^m) \leqq m $)}\\
         & = m - \dim ( T_B(\mathbb{C}^m)  \cap T_{A^{-1}} (\bm{o_m})) \quad &&
     \end{alignat*}
