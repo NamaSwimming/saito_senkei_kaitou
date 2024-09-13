@@ -3585,47 +3585,43 @@ A^{-1}=\frac{1}{\det A}\tilde{A}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p90-91：11-ロ)}{p90-91：11-ロ)}}
 
 \begin{tleftbar}
-	\begin{proof}
-置換$\sigma$，$\tau$に関して
-\[ 
-a_{ij} = 
-\begin{cases}
-1 & \text{if } i = \sigma(j) \\
-0 & \text{otherwise}
-\end{cases},
-\quad 
-b_{ij}=
-\begin{cases} 
-1 & \text{if }  i = \tau(j) \\
-0 & \text{otherwise}
-\end{cases}
-\]
-と定義する．
-このとき，
-\[
-(A_\sigma A_\tau)_{ik} = \sum_{j=1}^n a_{ij} b_{jk}.
-\]
-$b_{jk}$が$0$以外の値を取るのは$j= \tau(k)$のときなので，クロネッカーのデルタを用いると
-\[
-	(A_\sigma A_\tau)_{ik} =\sum_{j=1}^n a_{ij} \delta_{j,\tau(k)}
-\]
-と書き換えられる．$\delta_{j,\tau (k)}$が$0$以外の値を取るのは$j= \tau(k)$のときであり，
-\[
-	(A_\sigma A_\tau)_{ik} = a_{i, \tau(k)}=\delta_{i, \sigma(\tau(k))}.
-\]
-よって，
-\[
-(A_\sigma A_\tau)_{ik} = 
-\begin{cases} 
-	1 & \text{if } i=\sigma \tau(k) \\
-	0 & \text{otherwise}
-\end{cases}
-\]
-となり，これは$A_{\sigma \tau}$の定義そのものなので，
-\[
-A_\sigma A_\tau = A_{\sigma \tau}.
-\]
-\end{proof}
+    \begin{proof}
+        置換$\sigma$，$\tau$に関して
+        \[ 
+        a_{ij} = 
+        \begin{cases}
+        1 & \text{if } i = \sigma(j) \\
+        0 & \text{otherwise}
+        \end{cases},
+        \quad 
+        b_{ij}=
+        \begin{cases} 
+        1 & \text{if } i = \tau(j) \\
+        0 & \text{otherwise}
+        \end{cases}
+        \]
+        と定義する．
+        このとき，
+        \[
+        (A_\sigma A_\tau)_{ik} = \sum_{j=1}^n a_{ij} b_{jk}.
+        \]
+        $b_{jk}$が$1$になるのは$j= \tau(k)$のときなので，
+        \[
+        (A_\sigma A_\tau)_{ik} = a_{i, \tau(k)}.
+        \]
+        さらに，$a_{i, \tau(k)}$が$1$になるのは$i = \sigma(\tau(k))$のときなので，
+        \[
+        (A_\sigma A_\tau)_{ik} =
+        \begin{cases} 
+            1 & \text{if } i=\sigma \tau(k) \\
+            0 & \text{otherwise}
+        \end{cases}.
+        \]
+        これは$A_{\sigma \tau}$の定義そのものなので，
+        \[
+        A_\sigma A_\tau = A_{\sigma \tau}.
+        \]
+        \end{proof}        
 \end{tleftbar}
 
 
@@ -4293,51 +4289,76 @@ v
     これが証明すべきことであった．
 \end{tleftbar}
 
-\newpage 
+%\newpage 
 
-\subsection*{p127-130：6-イ)}
-\addcontentsline{toc}{subsection}{\texorpdfstring{p127-130：6-イ)}{p127-130：6-イ)}}
+% \subsection*{p127-130：6-イ)}
+% \addcontentsline{toc}{subsection}{\texorpdfstring{p127-130：6-イ)}{p127-130：6-イ)}}
 
-\begin{tleftbar}
-    \begin{proof}
-     $BA$は$n$次の正方行列である．ここで，
-     \begin{align*} 
-        \rank (BA) & \leqq \min \{ \rank B, \rank A \} \\
-        & =  m <n 
-     \end{align*}
-     であるから，$\rank (BA)<n$である．よって$BA$は正則行列でない．
-    \end{proof}
-\end{tleftbar}
+% \begin{tleftbar}
+   % \begin{proof}
+   %  $BA$は$n$次の正方行列である．ここで，
+    % \begin{align*} 
+    %    \rank (BA) & \leqq \min \{ \rank B, \rank A \} \\
+    %    & =  m <n 
+   %  \end{align*}
+   %  であるから，$\rank (BA)<n$である．よって$BA$は正則行列でない．
+   % \end{proof}
+%\end{tleftbar}
 
-
-\subsection*{p127-130：6-ロ)}
-\addcontentsline{toc}{subsection}{\texorpdfstring{p127-130：6-ロ)}{p127-130：6-ロ)}}
-
-
-\begin{tleftbar} 
-    $AB$は$m \times m$行列であり，これが正則なのは$\rank (AB)=m$のときである．
-
-    $\rank (AB) \leqq \min \{ \rank A, \rank B \} \leqq  m$であり，$\rank A \leqq m$かつ$\rank B \leqq m$であるから，
-    $AB$が正則であるためには， $\rank A =m$かつ$\rank B =m$であることが必要である．
-
-    さて，$A$や$B$の定める線型写像を$T_A$，$T_B$などと書くことにすると，次元定理により，
-    \begin{alignat*}{2}
-        \rank (AB) & = \dim \Im T_A ( T_B ( \mathbb{C}^m) )\quad &&  \\
-        & = \dim T_B (\mathbb{C}^m)  - \dim \ker (T_A)  \quad && \text{($\because$~次元定理)}\\
-        & \leqq m - \dim ( T_B(\mathbb{C}^m)  \cap T_{A^{-1}} (\bm{o_m})) \quad && \text{($\because ~\dim I_B ( \mathbb{C}^m) \leqq m $)}\\
-        & = m - \dim ( T_B(\mathbb{C}^m)  \cap T_{A^{-1}} (\bm{o_m})) \quad &&
-    \end{alignat*}
-    よって，$ T_B ( \mathbb{C}^m)  \cap T_{A^{-1}} (\bm{o_m}) = \{ \bm{o_n} \}$であれば，$\rank (AB)=m$である．
-
-    以上の考察により，$AB$が正則であるのは，以下の2条件が成り立つときである．
-    \begin{enumerate}[(I)]
-        \item $\rank A =m$かつ$\rank B =m$.
-        \item $  T_B ( \mathbb{C}^m)  \cap T_{A^{-1}} (\bm{o_m}) = \{ \bm{o_n} \}$.
-    \end{enumerate}
-    \end{tleftbar}
 
     \newpage 
 
+
+\subsection*{p127-130：10-イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p127-130：10-イ)}{p127-130：10-イ)}}
+
+
+    \begin{tleftbar}
+        \begin{proof}
+             (1)，(2)で双線型性，(3)で対称性，(4)で正値性を証明する．
+                \begin{enumerate}[(1)]
+                    \item 
+                    \begin{align*}
+                        (f,g_1+g_2)_p & = \int_{a}^{b} p(x) f(x) \{ g_1(x)+g_2(x) \} \, dx \\
+                        & = \int_{a}^{b} p(x) f(x) g_1 (x) \, dx + \int_{a}^{b} p(x) f(x) g_2(x) \, dx \\
+                        & = (f,g_1)_p + (f,g_2)_p.
+                    \end{align*}
+                    また，
+                    \begin{align*} (f_1 + f_2 , g)_p & = \int_{a}^{b} p(x) \{ f_1(x)+f_2(x) \} g(x) \, dx \\
+                        & = \int_{a}^{b} p(x) f_1 (x) g(x) \, dx + \int_{a}^{b} p(x) f_2 (x) g(x) \, dx \\
+                        & = (f_1,g)_p + (f_2,g)_p.
+                    \end{align*}
+                    \item $c$は任意の実数とする．
+                    \begin{align*} 
+                        (cf,g)_p & = \int_{a}^{b} p(x) \{ cf(x) \} g(x) \, dx \\
+                        & = c \int_{a}^{b} p(x) f(x) g(x) \, dx \\
+                        & = c(f,g)_p .
+                    \end{align*}
+                    また，
+                    \begin{align*} 
+                        (f,cg)_p & = \int_{a}^{b} p(x) f(x) \{ cg(x) \} \, dx \\
+                        & = c \int_{a}^{b} p(x) f(x) g(x) \, dx \\
+                        & = c(f,g)_p .
+                    \end{align*}
+                    \item
+                    \begin{align*} 
+                        (f,g)_p & = \int_{a}^{b} p(x) f(x) g(x) \, dx \\
+                        & = \int_{a}^{b} p(x) g(x) f(x) \, dx \\
+                        & =(g,f)_p .
+                    \end{align*}
+                    \item
+                     \begin{alignat*}{2}
+                    (f,f)_p & = \int_{a}^{b} p(x) f(x) f(x) \, dx  && \\
+                    & =\int_{a}^{b} p(x) \{ f(x) \}^2 \, dx &&\\
+                    & >0. & \quad  & \text{($\because$~ $p(x)$は常に正)}
+                     \end{alignat*}
+                     等号が成立するのは$f(x)=0$のとき．
+                    \end{enumerate}
+                    (1)から(4)の考察により，$(f,g)_p$は内積の定義をみたす．
+                \end{proof}
+                \end{tleftbar}
+
+                \newpage 
 
 \section*{附録\three}
 \addcontentsline{toc}{section}{\texorpdfstring{附録\three}{附録\three}}
