@@ -56,6 +56,8 @@
 \begin{itemize}
     \item ねたんほ(解答の提供)
     \item まっちゃん(解答の提供)
+    \item かねこ(解答の提供)
+    \item qwer(解答の提供)
     \item やたろう(解答の提供，Git管理)
     \item 不自然対数(\LaTeX 関連)
 \end{itemize}
@@ -4304,6 +4306,164 @@ v
    %  であるから，$\rank (BA)<n$である．よって$BA$は正則行列でない．
    % \end{proof}
 %\end{tleftbar}
+
+\newpage 
+
+\subsection*{p127-130：7}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p127-130：7}{p127-130：7}}
+\begin{tleftbar}
+  \begin{proof}
+$M_n(\mathbb{K})$ の基底 $\langle \bm{e}_{11}, \bm{e}_{12}, \dots, \bm{e}_{1n}, \bm{e}_{21}, \dots, \bm{e}_{nn} \rangle$ を，
+$\bm{e}_{ij}$の$(i,j)$成分が$1$で，その他の成分は$0$であるものとして定義する．
+
+$X = (x_{ji}) \in M_n(\mathbb{K})$ を取り，
+$A = (a_{ji})$を$a_{ij} = T \bm{e}_{ji}$であるものとすれば，
+\begin{align*} 
+\tr (AX) & = \tr \left(
+\begin{pmatrix}
+T \bm{e}_{11} & T \bm{e}_{12} & \dots & T \bm{e}_{1n} \\
+T \bm{e}_{21} & T \bm{e}_{22}  & \dots & T \bm{e}_{2n}  \\
+\vdots & \vdots & \ddots & \vdots \\
+T \bm{e}_{n1} & T \bm{e}_{n2}  & \dots & T \bm{e}_{nn}
+\end{pmatrix}
+\begin{pmatrix}
+x_{11} & x_{12} &\dots & x_{1n}\\
+x_{21} & x_{22}& \dots & x_{2n}\\
+\vdots & \vdots & \ddots & \vdots \\
+x_{n1} & x_{n2} & \dots & x_{nn}
+\end{pmatrix}
+\right) \\
+& = \tr \left(
+\begin{pmatrix}
+x_{11}T \bm{e}_{11} + x_{12}T \bm{e}_{12} + \cdots + x_{1n}T \bm{e}_{1n}  &  \\
+&  \ddots & \\
+& &  x_{n1}T \bm{e}_{n1} + \cdots + x_{nn}T \bm{e}_{nn} 
+\end{pmatrix}
+\right) \\
+& = \sum_{1 \leq i,j \leq n} x_{ij} T \bm{e}_{i,j} \\
+& = T \left(\sum_{1 \leq i,j \leq n } x_{ij} \bm{e}_{ij}\right) \\
+& = T(X)
+\end{align*}
+となり，上記のように$A$をとればよい．
+\end{proof}
+\end{tleftbar}
+
+\newpage 
+
+\subsection*{p127-130：12-イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p127-130：12-イ)}{p127-130：12-イ)}}
+
+
+\begin{tleftbar}
+  \begin{proof}
+ペクトル空間 $V$ に対して，$V$ の線型汎函数全体の集合を $V^*$ とする．
+
+$V$ の基底 $E= \langle \bm{e}_1, \bm{e}_2, \dots, \bm{e}_n\rangle $ に対して，
+    $V^*$の元$\bm{f}_i$を$\bm{f}_i(\bm{e}_j)=\delta_{ij}$とする．
+    $E^* = \langle \bm{f}_1, \bm{f}_2, \dots, \bm{f}_n\rangle$ は $V^*$ の基底である．
+    
+    任意の $\bm{f}_i  \in V^*$ が線型結合で表されることを示す．
+    \[
+    (c_1 \bm{f}_1 + \dots + c_n \bm{f}_n) (\bm{x}) = \bm{0}
+    \]
+    とする．
+    ここで $\bm{x} = \bm{e}_i$ ~($1 \leqq i \leqq n$)を代入すると，
+    $\bm{f}_i (\bm{e}_j) = \delta_{ij}$となり，$c_i =0$と併せると
+    \[
+    c_1=c_2 = \dots =c_n = 0
+    \]
+    となり線型独立である．
+
+次に，$V^\ast$ の元が $\bm{f}_1, \bm{f}_2, \dots, \bm{f}_n$ の線型結合で表されることを示す．
+
+    $V^\ast$の元$\bm{f}$ が $V$ の元$\bm{x}=x_1 \bm{e}_1 + \dots + x_n \bm{e}_n$に対して
+    $\bm{f}(\bm{e}_j) = a_i$~ ($1 \leqq i \leqq n$)とすると，
+\begin{alignat*}{2}
+    \bm{f} (\bm{x}) & = \sum_{i=1}^{n} x_i \bm{f}(\bm{e}_i) & \quad&  (\text{$\because$~$f$の線型性}) \\
+    & = \sum_{i=1}^{n} a_i x_i & & \\
+    & = \sum_{i=1}^{n} a_i \bm{f}_i (x_1 \bm{e}_1 + x_2 \bm{e}_2 +\dots+ x_n \bm{e}_n) & \quad & (\text{$\because~ \bm{f}_i (\bm{e}_j)=\delta_{i,j}$}) \\
+    & = \left( \sum_{i=1}^{n} a_i \bm{f}_i \right) (\bm{x}) &&
+\end{alignat*}
+と$\bm{f}_1 , \bm{f}_2 , \dots ,\bm{f}_n$の線型結合として表される．
+
+以上により，$E^\ast$は$V^\ast$の基底である．
+\end{proof}
+\end{tleftbar}
+\newpage 
+\subsection*{p127-130：12-ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p127-130：12-ロ)}{p127-130：12-ロ)}}
+
+
+\begin{tleftbar}
+  \begin{proof}
+$ W^\ast$の元$\bm{f}= c_1 \bm{f}_1' + \dots + c_n \bm{f}_n'$をとる．
+$V$の元$\bm{x} =\sum_{k=1}^{n} x_k \bm{e}_k$に対して
+\begin{alignat*}{2}
+  (T^\ast \bm{f}') (\bm{x}) & = \bm{f} \circ T(\bm{x}) &\quad & \\
+  & = \sum_{k=1}^{m} c_k \bm{f}_k ' \circ T \left( \sum_{l=1}^{n} x_l \bm{e}_l \right) & \quad & (\text{$\because$~$\bm{f}'$の線型性}) \\
+  & = \sum_{k=1}^{m} c_k \bm{f}_k ' \left( \sum_{l=1}^{n} x_l T (\bm{e}_l) \right) & \quad & (\text{$\because$~$T$の線型性}) \\
+  & = \sum_{k=1}^{m} c_k \sum_{l=1}^{n} x_l \bm{f}_k ' (a_{1l} \bm{e}_1 ' + a_{2l} \bm{e}_2 ' + \dots + a_{nl} \bm{e}_n ' ) & \quad & \\
+  & = \sum_{k=1}^{m} c_k \sum_{l=1}^{n} x_l a_{kl} & \quad &  (\text{$\because$~双対基底の定義と$\bm{f}_k '$の線型性}) \\
+  & = \sum_{k=1}^{m} c_K \sum_{l=1}^{n} c_{kl} \bm{f}_l ( x_1 \bm{e}_1 + \dots + x_n \bm{e}_n) & & (\text{$\because$~双対基底の定義と$\bm{f}_l '$の線型性}) \\
+  & = \left( \sum_{l=1}^{n} \left( \sum_{k=1}^{m} c_k a_{kl} \right) \bm{f}_l\right) (\bm{x})
+\end{alignat*}
+より，基底$E^\ast$，$F^\ast$に関する$T^\ast$の表現行列$B= (b_{ij})$は
+\[
+\begin{pmatrix} \sum_{k=1}^{m} c_k a_{k1} \\ \vdots \\ \sum_{k=1}^{m} c_k a_{kn} \end{pmatrix} 
+= 
+\begin{pmatrix} l_{11} & l_{12} & \dots & l_{1m} \\ \vdots & & & \vdots \\ l_{n1} & l_{n2} & \dots & l_{nm} \end{pmatrix}
+\begin{pmatrix} c_1 \\ \vdots \\ c_n \end{pmatrix}
+\]
+より，$b_{ij}=a_{ji}$となり，$B= {}^t A$である．
+\end{proof}
+\end{tleftbar}
+
+\newpage 
+
+\subsection*{p127-130：12-ハ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p127-130：12-ハ)}{p127-130：12-ハ)}}
+
+\begin{tleftbar}
+  \begin{proof}
+    この写像を$\varphi$とする．
+まず，$\varphi$が線型写像であることを示す．
+
+$\bm{x} , \bm{y} \in V$ と $c \in \mathbb{R}$ に対して，$ \forall \bm{f} \in V^\ast$で
+
+\begin{align*}
+( \varphi(\bm{x}+\bm{y})) (\bm{f}) &= \bm{f} (\bm{x}+\bm{y}) \\
+& =\bm{f} (\bm{x}) + \bm{f} (\bm{y}) \\
+& = (\varphi(\bm{x})) (\bm{f}) + (\varphi(\bm{y})) (\bm{f}) \\
+& = ( \varphi(\bm{x}) + \varphi(\bm{y})) (\bm{f})
+\end{align*}
+\begin{align*} 
+( \varphi(c \bm{x})) (\bm{f}) &= \bm{f} (c \bm{x}) \\
+& = c \bm{f} (\bm{x}) \\
+& = c (\varphi(\bm{x})) (\bm{f}) \\
+& = (c \varphi(\bm{x})) (\bm{f})
+\end{align*}
+であるから，$\varphi$は線型写像である．
+
+次に，$V$の基底$E= \langle \bm{e}_1 , \bm{e}_2 1, \dots , \bm{e}_n \rangle$に対して，
+$\bm{e}_i ' = \varphi ( \bm{e}_i)$ ~(ただし$1 \leqq i \leqq n$)としたとき，
+$(E^\ast )^\ast= \langle \bm{e}_1 ' , \bm{e}_2 ' , \dots , \bm{e}_n ' \rangle$が$(V^\ast)^\ast$の基底であることを示す．
+
+$ E^\ast = \langle \bm{f}_1 , \bm{f}_2 , \dots , \bm{f}_n \rangle$を$E$の双対基底とする．
+$ c_1 \bm{e}_1 ' + c_2 \bm{e}_2 ' + \dots + c_n \bm{e}_n ' = \bm{0}$となるとき，
+$\varphi$は線型写像で$\varphi (c_1 \bm{e}_1 + c_2 \bm{e}_2 + \dots + c_n \bm{e}_n) = c_1 \bm{e}_1 ' + c_2 \bm{e}_2 ' + \dots + c_n \bm{e}_n '$であるので，
+\begin{align*} 
+  (c_1 \bm{e}_1 ' + c_2 \bm{e}_2 ' + \dots + c_n \bm{e}_n ') (\bm{f}_i) &= \bm{f}_i (c_1 \bm{e}_1 + c_2 \bm{e}_2 + \dots + c_n \bm{e}_n) \\
+  & = \sum_{k=1}^{n} c_k \bm{f}_i (\bm{e}_k) \\
+  & = \sum_{k=1}^{n} c_k \delta_{ik} \\
+  & = c_i=0 
+\end{align*}
+となり，$c_1 = c_2 = \dots = c_n = 0$であるから，
+$e_1 ' , e_2 ' , \dots , e_n '$は線型独立であり，
+$\dim (V^\ast)^\ast = n $より$(E^\ast)^\ast$は基底である．
+とくに$\varphi$の階数は$n$となる．適当な基底での$\varphi$の表現行列$A$に対してp.117の(3)により，$r(A)=n$となり，
+これは$\varphi$が全単射対応を与えることを示す．
+\end{proof}
+\end{tleftbar}
 
 
     \newpage 
