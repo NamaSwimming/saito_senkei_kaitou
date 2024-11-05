@@ -4113,34 +4113,28 @@ P=
 \end{tleftbar}
 \newpage 
 
-%要修正．量化のミス．
+
 \subsection*{p124：問-1)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p124：問-1)}{p124：問-1)}}
 
 \begin{tleftbar}
     \begin{proof}
-$^{\forall}\bm{x} \in W$に対し，$(\bm{x},\bm{y})=0$となる$\bm{y} \in W^{\perp}$が存在する．
-よって$(\bm{x},\bm{y})=(\bm{y},\bm{x})=0$なので，$\bm{y} \in W^{\perp}$に対し，$\bm{x} \in (W^{\perp})^{\perp}$である．
-これで$\bm{x} \in W \Longrightarrow \bm{x} \in  (W^{\perp})^{\perp}$が言えたので，$W \subset  (W^{\perp})^{\perp}$である．
+        $ W^\perp$は$V$の部分空間である．ゆえに，
+        \[
+        V = W\perp \oplus (W^\perp)^\perp
+        \]
+        である．また，$V = W \oplus W^\perp$でもあるから，
+        $\bm{x}+\bm{y}=\bm{y}+\bm{x}$により，
+        \[
+        V =W^\perp \oplus W
+        \]
+        である．
 
-また，定理[4.7]から
-\begin{align*}
-& \dim W +\dim W^{\perp} =\dim (W +W^{\perp} )+\dim (W \cap W^{\perp} ), \\
-& \dim W +\dim W^{\perp} =n.
-\end{align*}
-ここで定理[6.4]から$\mathbb{R}^n$の計量空間$V$は$W\dot{+}W^{\perp}$と表されること，[4.8]から，この直和の共通部分は$\{ \bm{o} \}$のみであることを用いた．
-
-同様に
-\[
-\dim W^{\perp} +\dim (W^{\perp})^{\perp} =n
-\]
-でもあるので
-\[
-\dim W =\dim (W^{\perp})^{\perp}
-\]
-よって$W \subset  (W^{\perp})^{\perp}$と上の等式から，$W =  (W^{\perp})^{\perp}$である．
-\end{proof}
+        以上の考察により，$(W^\perp)^\perp=W$である．
+    \end{proof}
 \end{tleftbar}
+
+
 \newpage
 \section*{第4章・章末問題}
 \addcontentsline{toc}{section}{\texorpdfstring{第4章・章末問題}{第4章・章末問題}}
