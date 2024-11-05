@@ -4580,7 +4580,7 @@ $\dim (V^\ast)^\ast = n $より$(E^\ast)^\ast$は基底である．
 \subsection*{p228：問-ロ)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p228：問-ロ)}{p228：問-ロ)}}
 
-以下により，求める最大公約数は$x+7$である．
+以下により，これらは互いに素である．
 
 \begin{figure}[ht]
     \centering
@@ -4609,9 +4609,10 @@ $\dim (V^\ast)^\ast = n $より$(E^\ast)^\ast$は基底である．
 \begin{tleftbar}
     計算すると以下のようになる：
     \begin{align*} 
-           {x_1}^3 + {x_2}^3+\dots+{x_n}^3 & = \left (\sum_{i=1}^{n} x_i \right )^3 - 3\sum_{1\leqq i < j < k \leqq n} x_j x_k x_l \\
-           & = (x_1+x_2+\dots+x_n)^3 - 3(x_1 x_2 x_3 + x_1 x_2 x_4 + \dots + x_{n-2} x_{n-1} x_n) \\
-           & = s_1^3 - 3s_3.
+           {x_1}^3 + {x_2}^3+\dots+{x_n}^3 & = \left (\sum_{i=1}^{n} x_i \right )^3 - 3\left (\sum_{i=1}^{n} x_i \right ) \left(\sum_{1 \leqq i <j \leqq n} x_i x_j \right) + 3\sum_{1\leqq i < j < k \leqq n} x_i x_j x_k \\
+           & = (x_1+x_2+\dots+x_n)^3 -3 (x_1+x_2+\dots+x_n)(x_1 x_2 +x_1 x_3 + \dots + x_{n-1} x_n) \\
+           & \quad  +3(x_1 x_2 x_3 + x_1 x_2 x_4 + \dots + x_{n-2} x_{n-1} x_n) \\
+           & = s_1^3 -3s_1 s_2 + 3s_3.
     \end{align*}
 \end{tleftbar}
 
@@ -4645,23 +4646,22 @@ $\dim (V^\ast)^\ast = n $より$(E^\ast)^\ast$は基底である．
 
 $a+b+c=0$のとき，
 \[
-a^2 + b^2 + c^2 = 2(ab+bc+ca).
+a^2 + b^2 + c^2 = -2(ab+bc+ca).
 \]
 
 \kakko{補題}
 
+$a+b+c=0$のとき，
 \[
-a^5 + b^5 + c^5 = 5abc(a^2 + b^2 + c^2).
+a^5 + b^5 + c^5 = -5abc(a^2 + b^2 + c^2).
 \]
 
 \begin{tleftbar}
     上記の2つの補題により，
     \begin{align*}
-           & (x-y)^5 + (y-z)^5 + (z-x)^5 \\
-           & = 5(x-y)(y-z)(z-x) \left \{  (x-y)^2 + (y-z)^2 + (z-x)^2 \right \}  \\
-           & = 5(x-y)(y-z)(z-x) \cdot 2\{ (x-y)(y-z)+(y-z)(z-x)+(z-x)(x-y) \} \\
-           & = 10(x-y)(y-z)(z-x)\{ 2(xy+yz+zx)-(x^2+y^2+z^2) \} \\
-           & = 10(x-y)(y-z)(z-x)\{ 3(xy+yz+zx)-(x+y+z)^2 \} .
+        (x-y)^5+(y-z)^5+(z-x)^5 &= -5(x-y)(y-z)(z-x)\{ (x-y)(y-z)+(y-z)(z-x)+(z-x)(x-y)\} \\
+        &= -5(x-y)(y-z)(z-x)\{(xy+xz+yz)-(x^2+y^2+z^2)\} \\
+        &= 5(x-y)(y-z)(z-x)\{(x+y+z)^2-3(xy+xz+yz)\}.
     \end{align*}
 \end{tleftbar}
 
