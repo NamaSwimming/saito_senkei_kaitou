@@ -4362,14 +4362,14 @@ x_{11}T \bm{e}_{11} + x_{12}T \bm{e}_{12} + \cdots + x_{1n}T \bm{e}_{1n}  &  \\
 \]
 とする．このとき，
 \begin{align*}
-\norm{f-g}&= \int_{-\pi}^{\pi} \abs{f(x) - g(x)}^2 \, dx  \\
+\norm{f-g}^2&= \int_{-\pi}^{\pi} \abs{f(x) - g(x)}^2 \, dx  \\
 & = \int_{-\pi}^{\pi} (f(x)-g(x))^2 \, dx \\
-& = \int_{-\pi}^{\pi} \abs{f(x)}^2 dx - \int_{-\pi}^{\pi} 2 f(x) g(x) \, dx + \int_{-\pi}^{\pi} \abs{g(x)}^2 \,  dx
+& = \int_{-\pi}^{\pi} \abs{f(x)}^2 \,dx - \int_{-\pi}^{\pi} 2 f(x) g(x) \, dx + \int_{-\pi}^{\pi} \abs{g(x)}^2 \,  dx
 \end{align*}
 である．さらに，第2項と第3項に関連して，
 \begin{align*}
  & \int_{-\pi}^{\pi} f(x) g(x)  \, dx = a_0 \int_{-\pi}^{\pi} f(x) \,  dx + \sum_{k=1}^{n} \left( a_k \int_{-\pi}^{\pi} f(x) \cos kx \, dx + b_k \int_{-\pi}^{\pi} f(x) \sin kx \, dx \right), \\
- & \int_{-\pi}^{\pi} \abs{g(x)}^2 dx = (g, g) = 2\pi {a_0}^2 + \pi \sum_{k=1}^{n} ({a_k}^2 + {b_k}^2).
+ & \int_{-\pi}^{\pi} \abs{g(x)}^2 \,dx = 2\pi {a_0}^2 + \pi \sum_{k=1}^{n} ({a_k}^2 + {b_k}^2).
 \end{align*}
 これらを用いると，
 \begin{align*}
@@ -4389,7 +4389,7 @@ x_{11}T \bm{e}_{11} + x_{12}T \bm{e}_{12} + \cdots + x_{1n}T \bm{e}_{1n}  &  \\
 R= \int_{-\pi}^{\pi} f(x)^2 \, dx - 2\pi \left( \frac{1}{2\pi} \int_{-\pi}^{\pi} f(x) \, dx \right)^2 - \pi \sum_{k=1}^{n} \left( \left( \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \cos kx \, dx \right)^2 + \left( \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \sin kx \, dx \right)^2 \right).
 \]
 
-したがって，$\norm{f - g}$ を最小にする $g(x)$ は，
+したがって，$\norm{f - g}^2$ を最小にする $g(x)$ は，
 
 \[
 g(x) = \frac{1}{2\pi} \int_{-\pi}^{\pi} f(x) \, dx + \sum_{k=1}^{n} \left(\frac{1}{\pi}  \left(\int_{-\pi}^{\pi} f(x) \cos kx \, dx \right) \cos kx + \frac{1}{\pi} \left(\int_{-\pi}^{\pi} f(x) \sin kx\,  dx \right) \sin kx \right).
@@ -4636,7 +4636,7 @@ $\dim (V^\ast)^\ast = n $より$(E^\ast)^\ast$は基底である．
     \[
     (x-y)+(y-z)+(z-x) =0.
     \]
-    これをふまえ，補題において$a=x-y$，１$b=y-z$，$c=z-x$とおくと，
+    これをふまえ，補題において$a=x-y$，$b=y-z$，$c=z-x$とおくと，
     \begin{align*} 
            & 0 = (x-y)^3 + (y-z)^3 + (z-x)^3 - 3(x-y)(y-z)(z-x) \\
            & \therefore ~ (x-y)^3 + (y-z)^3 + (z-x)^3 = 3(x-y)(y-z)(z-x).
