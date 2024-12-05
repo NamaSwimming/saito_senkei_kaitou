@@ -4119,18 +4119,19 @@ P=
 
 \begin{tleftbar}
     \begin{proof}
-        $ W^\perp$は$V$の部分空間である．ゆえに，
-        \[
-        V = W^\perp \oplus (W^\perp)^\perp
-        \]
-        である．また，$V = W \oplus W^\perp$でもあるから，
-        $\bm{x}+\bm{y}=\bm{y}+\bm{x}$により，
-        \[
-        V =W^\perp \oplus W
-        \]
-        である．
+任意に $\bm{x} \in W$ をとる．$W^{\perp}$ は「$W$ の任意のベクトルと直交するベクトル全体の集合」であるから，$\bm{x} \in W$ に対しては，任意の $\bm{y} \in W^{\perp}$ において $(\bm{x}, \bm{y})=0$ が成り立つ．
 
-        以上の考察により，$(W^\perp)^\perp=W$である．
+ゆえに，任意の $\bm{x} \in W$ は $W^{\perp}$ の元全てと直交することになり，したがって $\bm{x} \in (W^{\perp})^{\perp}$ が従う．このことから
+\[
+W \subset (W^{\perp})^{\perp}
+\]
+が得られる．
+        また，定理[4.7]から
+        \begin{align*}
+        & \dim W +\dim W^{\perp} =\dim (W +W^{\perp} )+\dim (W \cap W^{\perp} ), \\
+        & \dim W +\dim W^{\perp} =n.
+        \end{align*}
+        ここで定理[6.4]から$\mathbb{R}^n$の計量空間$V$は$W\dot{+}W^{\perp}$と表されること，[4.8]から，この直和の共通部分は$\{ \bm{o} \}$のみであることを用いた．
     \end{proof}
 \end{tleftbar}
 
