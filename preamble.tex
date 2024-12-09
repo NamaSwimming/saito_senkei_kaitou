@@ -23,20 +23,20 @@
 \usepackage{titletoc}
 
 \AtEndPreamble{
-%ハイパーリンク用
-\usepackage{url}
-\usepackage{hyperref}
-\usepackage{xcolor}
-\definecolor{BlueViolet}{RGB}{105,39,255}
-\definecolor{mylightgray}{HTML}{DDDDDD}
-\definecolor{mydarkgray}{HTML}{777777}
-\hypersetup{
+  %ハイパーリンク用
+  \usepackage{url}
+  \usepackage{hyperref}
+  \usepackage{xcolor}
+  \definecolor{BlueViolet}{RGB}{105,39,255}
+  \definecolor{mylightgray}{HTML}{DDDDDD}
+  \definecolor{mydarkgray}{HTML}{777777}
+  \hypersetup{
     colorlinks=true,
     citecolor=BlueViolet,
     linkcolor=blue!50!black,
     urlcolor=blue!70!black,
   }
-\usepackage{bookmark}
+  \usepackage{bookmark}
 }
 
 
@@ -91,15 +91,15 @@
 \newlength{\wdTempA}
 \newlength{\wdTempB}
 \newcommand{\adunderbrace}[2]{%
-\settowidth{\wdTempA}{$#1$}%
-\settowidth{\wdTempB}{${\scriptstyle #2}$}%
-\ifthenelse{\wdTempA<\wdTempB}{%
-\hspace*{.5\wdTempA}\hspace*{-.5\wdTempB}%
-\underbrace{#1}_{#2}%
-\hspace*{.5\wdTempA}\hspace*{-.5\wdTempB}%
-}{%
-\underbrace{#1}_{#2}%
-}%
+  \settowidth{\wdTempA}{$#1$}%
+  \settowidth{\wdTempB}{${\scriptstyle #2}$}%
+  \ifthenelse{\wdTempA<\wdTempB}{%
+    \hspace*{.5\wdTempA}\hspace*{-.5\wdTempB}%
+    \underbrace{#1}_{#2}%
+    \hspace*{.5\wdTempA}\hspace*{-.5\wdTempB}%
+  }{%
+    \underbrace{#1}_{#2}%
+  }%
 }%
 %丸付き文字
 \newcommand{\ctext}[1]{\raise0.2ex\hbox{\textcircled{\scriptsize{#1}}}}
@@ -115,6 +115,22 @@
 \renewcommand{\proofname}{\textgt{証明}}
 \renewcommand{\qed}{\unskip\nobreak\quad\qedsymbol}
 
+%proof環境の変更
+\makeatletter
+\renewenvironment{proof}[1][\proofname]{%
+  \par\pushQED{\qed}%
+  \normalfont
+  % 元の設定：\topsep6\p@\@plus6\p@、\trivlistなど
+  \topsep6\p@\@plus6\p@%
+  \trivlist
+  \item[\hskip\labelsep\itshape #1\@addpunct{.}]% デフォルトではここで終わっていた
+  % 以下に改行を挿入
+  \mbox{}\par% ここで改行と適当な空白を入れる
+}{%
+  \popQED\endtrivlist\@endpefalse
+}
+\makeatother
+
 
 \renewcommand{\leq}{\leqq}
 \renewcommand{\geq}{\geqq}
@@ -128,46 +144,46 @@
 %タイトルページを定義
 \usepackage[pagecolor=white,nopagecolor={none}]{pagecolor} % 背景色を変更するためのパッケージ
 
-\newcommand{\tituloum}[5]{\begin{titlepage} 
-    \begin{center} 
-        \pagecolor{white} % 背景色をBlueVioletに設定
-        \color{black} % テキストカラーを白に設定
-        
-        \vspace*{2\baselineskip}
-        
-        \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} 
-        \rule{\textwidth}{0.4pt} 
-        
-        \vspace{0.75\baselineskip} 
-        
-        {\huge #1} 
-        
-        \vspace{0.75\baselineskip}
-        
-        \rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
-        \rule{\textwidth}{1.6pt}
-        
-        \vspace{2\baselineskip}
-        
-        #3
-        
-        \vspace*{3\baselineskip}
-        
-        
-        {\huge #2}
-        
-        \vspace{0.5\baselineskip}
-        
-        \textit{#4}
-        
-        \vfill
-        
-        \vspace{0.3\baselineskip}
-        
-        #5
-        
+\newcommand{\tituloum}[5]{\begin{titlepage}
+    \begin{center}
+      \pagecolor{white} % 背景色をBlueVioletに設定
+      \color{black} % テキストカラーを白に設定
+
+      \vspace*{2\baselineskip}
+
+      \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+      \rule{\textwidth}{0.4pt}
+
+      \vspace{0.75\baselineskip}
+
+      {\huge #1}
+
+      \vspace{0.75\baselineskip}
+
+      \rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+      \rule{\textwidth}{1.6pt}
+
+      \vspace{2\baselineskip}
+
+      #3
+
+      \vspace*{3\baselineskip}
+
+
+      {\huge #2}
+
+      \vspace{0.5\baselineskip}
+
+      \textit{#4}
+
+      \vfill
+
+      \vspace{0.3\baselineskip}
+
+      #5
+
     \end{center}
-\end{titlepage}}
+  \end{titlepage}}
 
 % 数式のディスプレイスタイル設定
 \everymath{\displaystyle}
@@ -185,12 +201,12 @@
 %新設定2
 \definecolor{burgundy}{rgb}{0.5, 0.0, 0.13}
 \tcbset{mytheo/.style={fonttitle=\gtfamily\sffamily\bfseries\upshape,
-enhanced,colframe=burgundy,colback=burgundy!2!white,colbacktitle=burgundy,
-boxed title style={},
-attach boxed title to top left={xshift=5mm,yshift*=-\tcboxedtitleheight/2},
-before skip=25pt plus 2pt,
-after skip=15pt plus 2pt
-}}
+      enhanced,colframe=burgundy,colback=burgundy!2!white,colbacktitle=burgundy,
+      boxed title style={},
+      attach boxed title to top left={xshift=5mm,yshift*=-\tcboxedtitleheight/2},
+      before skip=25pt plus 2pt,
+      after skip=15pt plus 2pt
+    }}
 
 %Theorem
 \newtcbtheorem[number within=subsection]{theorem}{Theorem}%
@@ -211,17 +227,17 @@ after skip=15pt plus 2pt
 %Definition
 \newtcbtheorem[use counter from=theorem]{definition}{Definition}%
 {mytheo,
-colframe=blue!50!black,colback=blue!50!black!2!white,colbacktitle=blue!50!black,borderline south={2pt}{-2pt}{blue!50!black},}{de}
+  colframe=blue!50!black,colback=blue!50!black!2!white,colbacktitle=blue!50!black,borderline south={2pt}{-2pt}{blue!50!black},}{de}
 \newcommand{\deref}[1]{{\bfseries\sffamily Definition \ref{de:#1}}}
 %Lemma
 \newtcbtheorem[use counter from=theorem]{lemma}{Lemma}%
 {mytheo,
-colframe=green!50!black,colback=green!50!black!2!white,colbacktitle=green!50!black,borderline south={2pt}{-2pt}{green!50!black},}{le}
+  colframe=green!50!black,colback=green!50!black!2!white,colbacktitle=green!50!black,borderline south={2pt}{-2pt}{green!50!black},}{le}
 \newcommand{\leref}[1]{{\bfseries\sffamily Lemma \ref{le:#1}}}
 %Example
 \definecolor{charcoal}{rgb}{0.21, 0.27, 0.31}
 \newtcbtheorem[use counter from=theorem]{example}{Example}%
 {mytheo,
-colframe=charcoal,colback=charcoal!2!white,colbacktitle=charcoal,borderline south={2pt}{-2pt}{charcoal},}{ex}
+  colframe=charcoal,colback=charcoal!2!white,colbacktitle=charcoal,borderline south={2pt}{-2pt}{charcoal},}{ex}
 \newcommand{\exref}[1]{{\bfseries\sffamily Example \ref{ex:#1}}}
 
