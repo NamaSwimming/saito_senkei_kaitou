@@ -4528,22 +4528,83 @@
     これが証明すべきことであった．
 \end{tleftbar}
 
-%\newpage 
+\newpage
 
-% \section*{p127-130：6-イ)}
-% \addcontentsline{toc}{section}{\texorpdfstring{p127-130：6-イ)}{p127-130：6-イ)}}
+\section*{p127-130：6}
+\addcontentsline{toc}{section}{\texorpdfstring{p127-130：6}{p127-130：6}}
 
-% \begin{tleftbar}
-% \begin{proof}
-%  $BA$は$n$次の正方行列である．ここで，
-% \begin{align*} 
-%    \rank (BA) & \leqq \min \{ \rank B, \rank A \} \\
-%    & =  m <n 
-%  \end{align*}
-%  であるから，$\rank (BA)<n$である．よって$BA$は正則行列でない．
-% \end{proof}
-%\end{tleftbar}
 
+\subsection*{p127-130：6-(イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p127-130：6-(イ)}{p127-130：6-(イ)}}
+
+\begin{tleftbar}
+    \begin{proof}
+        $BA$は$n$次の正方行列である．ここで，
+        \begin{align*}
+            \rank (BA) & \leqq \min \{ \rank B, \rank A \} \\
+                       & =  m <n
+        \end{align*}
+        であるから，$\rank (BA)<n$である．よって$BA$は正則行列でない．
+    \end{proof}
+\end{tleftbar}
+
+
+\subsection*{p127-130：6-(ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p127-130：6-(ロ)}{p127-130：6-(ロ)}}
+
+\begin{tleftbar}
+    \begin{proof}
+        $AB$ が正則であるとする．$m = \rank AB \leq \min\{\rank A,\rank B \}$ であるから，
+        $m \leq \rank A$ かつ $m \leq \rank B$ である．一方 $\rank A \leq m,\ \rank B \leq m$ でもあるから
+        $m = \rank A = \rank B$ である．
+
+        行列 $X$ の定める線形写像を $T_X$ と書くことにする
+        （$T_A \colon  \mathbb{C}^n \to \mathbb{C}^m$，$ T_B \colon  \mathbb{C}^m \to \mathbb{C}^n$ である）．
+
+        \begin{align*}
+            \rank AB & = \dim(T_{AB}(\mathbb{C}^m))           \\
+                     & = \dim((T_A \circ T_B)(\mathbb{C}^m)).
+        \end{align*}
+
+        $W = T_B(\mathbb{C}^m)$ とおく．$T_A$ の定義域を $W$ に制限した写像 $T_A \upharpoonright W : W \to \mathbb{C}^n$ について次元定理を適用すると，
+
+        \[
+            \dim W = \dim((T_A \upharpoonright W)(W)) + \dim((T_A \upharpoonright W)^{-1}(\{o_m\})).
+        \]
+
+        ここで，
+
+        \begin{align*}
+            (T_A \upharpoonright W)^{-1}(\{o_m\}) & = \{ x \in W : (T_A \upharpoonright W)(x) = o_m \} \\
+                                                  & = \{ x \in W : T_A(x) = o_m \}                     \\
+                                                  & = \{ x \in \mathbb{C}^n : T_A(x) = o_m \} \cap W   \\
+                                                  & = {T_A}^{-1}(\{o_m\}) \cap W.
+        \end{align*}
+
+        であるから，
+
+        \[
+            m = \dim((T_A \circ T_B)(\mathbb{C}^m)) + \dim({T_A}^{-1}(\{0_m\}) \cap W).
+        \]
+
+        となる．よって，
+
+        \[
+            \rank AB = m - \dim({T_A}^{-1}(\{o_m\}) \cap W).
+        \]
+
+        だから $\dim({T_A}^{-1}(\{o_m\}) \cap W) = 0$ である．以上より，
+
+        \begin{enumerate}[(I)]
+            \item $m = \rank A = \rank B.$ \label{enu:p127-130：6-I}
+            \item $\dim({T_A}^{-1}(\{o_m\}) \cap T_B(\mathbb{C}^m)) = 0.$\label{enu:p127-130：6-II}
+        \end{enumerate}
+
+        は必要条件である．一方，\ref{enu:p127-130：6-I}かつ \ref{enu:p127-130：6-II} を仮定すると，$\rank AB = m$ であるから $AB$ は正則でもある．
+
+        よって\ref{enu:p127-130：6-I}かつ\ref{enu:p127-130：6-II}が必要十分条件である．
+    \end{proof}
+\end{tleftbar}
 \newpage
 
 \section*{p127-130：7}
