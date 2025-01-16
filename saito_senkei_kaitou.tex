@@ -5026,6 +5026,48 @@ $a+b+c=0$のとき，
     \end{proof}
 \end{tleftbar}
 
+\newpage
+
+\section*{p255：1}
+\addcontentsline{toc}{section}{\texorpdfstring{p255：1}{p255：1}}
+\begin{tleftbar}
+    \begin{proof}
+        $a,b,c \in H$について，$G$の演算により，$a(bc)=(ab)c$が成り立ち，このことから結合法則は成立する．
+
+        また，仮定より$H \ne \varnothing $なので，$x \in H$をひとつとり，$a=x$，$b=x$とすると，
+        \[
+            ab^{-1} = x x^{-1}=e
+        \]
+        となり，仮定から$e$は$H$の元である．よって$H$は単位元を持つ．
+
+        次に，$ a=e$，$b=x$とすると，
+        \[
+            ab^{-1}=ex^{-1}=x^{-1}
+        \]
+        となり，仮定により$x^{-1}$は$H$の元である．よって$H$の任意の要素は逆元を持つ．
+
+        上の考察により，どの要素も逆元を持つので，$a=x$，$b=y^{-1}$とすると，
+        \[
+            ab^{-1}=x(y^{-1})^{-1} = xy.
+        \]
+        これは$H$の元であるから，$H$は$G$の演算について閉じている．
+
+        以上の考察から，
+        \begin{itemize}
+            \item $H$は$G$の演算について閉じている
+            \item $H$の元は$G$の演算について結合法則を満たす
+            \item $H$は単位元$e$を持つ
+            \item $H$の任意の要素は逆元を持つ
+        \end{itemize}
+        ということがわかり，$H$は$G$の演算について$G$の部分群である．
+    \end{proof}
+\end{tleftbar}
+
+\begin{column}
+    本題にはあまり関係のない余談ですが，群が単位元をもつことは群の定義からただちに従います．
+\end{column}
+
+\newpage
 \begin{thebibliography}{9}
     \bibitem{saito} 齋藤正彦『線型代数入門』，東京大学出版会，1966
 \end{thebibliography}
