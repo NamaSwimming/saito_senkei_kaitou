@@ -4871,6 +4871,50 @@
 
 \newpage
 
+
+\part*{第5章}
+\addcontentsline{toc}{part}{\texorpdfstring{第5章}{第5章}}
+
+
+\section*{p139：問}
+\addcontentsline{toc}{section}{\texorpdfstring{p139：問}{p139：問}}
+
+\kakko{前半}
+
+\begin{tleftbar}
+    \begin{proof}
+        $T$をエルミート変換とし，$ \lambda \in \mathbb{K}$をとり，$T \bm{x} = \lambda \bm{x}$，$\bm{x} \ne \bm{o}$とする．
+
+        このとき，
+        \begin{alignat*}{2}
+            \lambda (\bm{x},\bm{x}) & = (\lambda \bm{x},\bm{x})            & \quad & \text{（内積の定義）}       \\
+                                    & = (T \bm{x},\bm{x})                  &       & \text{（固有値の定義）}      \\
+                                    & = ( \bm{x},T^{\ast} \bm{x})          &       & \text{（p139~式(1)）}   \\
+                                    & = ( \bm{x},T \bm{x})                 &       & \text{（$T$はエルミート変換）} \\
+                                    & = (\bm{x},\lambda \bm{x})            &       & \text{（固有値の定義）}      \\
+                                    & = \overline{\lambda} (\bm{x},\bm{x}) &       & \text{（内積の定義）}
+        \end{alignat*}
+        となり，$\bm{x} \ne \bm{o}$より$\lambda = \overline{\lambda}$であるから$ \lambda \in \mathbb{R}$である．
+    \end{proof}
+\end{tleftbar}
+
+\kakko{後半}
+\begin{tleftbar}
+    \begin{proof}
+        $T$をユニタリ変換とし，$T \bm{x} = \lambda \bm{x}$，$\bm{x} \ne \bm{o}$とする．
+
+        このとき，
+        \begin{alignat*}{2}
+            \lambda \overline{\lambda} (\bm{x},\bm{x}) & = (\lambda \bm{x},\lambda \bm{x}) & \quad & \text{（内積の定義）}      \\
+                                                       & = (T \bm{x},T \bm{x})             &       & \text{（固有値の定義）}     \\
+                                                       & = (\bm{x},\bm{x})                 &       & \text{（$T$はユニタリ変換）}
+        \end{alignat*}
+        となり，$\bm{x} \ne \bm{o}$より$\abs{\lambda} = 1$である．
+    \end{proof}
+\end{tleftbar}
+
+\newpage
+
 \part*{附録\three}
 \addcontentsline{toc}{part}{\texorpdfstring{附録\three}{附録\three}}
 
