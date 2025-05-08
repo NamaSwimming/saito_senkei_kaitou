@@ -1,4 +1,12 @@
+% パッケージの読み込み
+\usepackage{luatexja}
+\usepackage{luatexja-fontspec}
+\usepackage{auxhook}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+
 \usepackage{cite}
+
 
 %括弧
 \usepackage{delimseasy}
@@ -7,20 +15,46 @@
 \usepackage{multicol}
 \setlength{\columnseprule}{.5pt} %中央の線
 
-%見出しのフォント
+% --- 日本語フォント -------------------------------------------------
+\setmainjfont[
+  YokoFeatures={JFM=jlreq},
+  TateFeatures={JFM=jlreqv},
+  BoldFont={Hiragino Kaku Gothic ProN W6},
+]{Hiragino Kaku Gothic ProN}
+
+\setsansjfont[
+  YokoFeatures={JFM=jlreq},
+  TateFeatures={JFM=jlreqv},
+  BoldFont={Hiragino Kaku Gothic ProN W6},
+]{Hiragino Kaku Gothic ProN}
+
+
+
+% 英文フォントの設定
+\setmainfont{Latin Modern Roman}[%
+  BoldFont=lmroman10-bold,%
+  BoldItalicFont=lmroman10-bolditalic,%
+  ItalicFont=lmromanslant10-regular,%
+  SmallCapsFont=lmromancaps10-regular,%
+  SlantedFont=lmromanslant10-regular,%
+  FontFace={sb}{n}{lmromandemi10-regular},%
+  OpticalSize=0
+]
+\setsansfont{Latin Modern Sans}[%
+  BoldFont=lmsans10-bold,%
+  ItalicFont=lmsans10-oblique%
+]
+\setmonofont{Latin Modern Mono}[%
+  BoldFont=lmmonolt10-bold,%
+  ItalicFont=lmmono10-italic%
+]
+
+% ヘッダーフォントの設定
 \renewcommand{\headfont}{\sffamily\bfseries}
+\renewcommand{\familydefault}{\sfdefault}
 
 
-%数式
-\usepackage{nccmath,amsmath,amssymb}
-\usepackage{mathtools}
-\usepackage{empheq} %数式の囲いに使う
-\usepackage{physics}
-\usepackage{bm}
-\usepackage[bbsets]{jkmath} %\Nなどをつかえる
-\usepackage{amsthm}
-
-\usepackage{titletoc}
+% 色を定義
 
 \AtEndPreamble{
   %ハイパーリンク用
@@ -40,17 +74,43 @@
 }
 
 
+
+
+%数式
+\usepackage{nccmath,amsmath,amssymb}
+\usepackage{mathtools}
+\usepackage{empheq} %数式の囲いに使う
+\usepackage{bm}
+\usepackage[bbsets]{jkmath} %\Nなどをつかえる
+\usepackage{amsthm}
+\usepackage{color}
+
+
+%箇条書き
+\usepackage[shortlabels]{enumitem}
+\setlist[description]{font={\bfseries\sffamily}}
+
+
 %tcolorbox系
 \usepackage[many]{tcolorbox}
-\tcbuselibrary{breakable,skins,theorems}
+\tcbuselibrary{breakable,skins}
 \newtcolorbox{hosoibox}[1]{colframe=black,colback=white,coltitle=black,colbacktitle=white,boxrule=0.5pt,arc=0mm,enhanced,attach boxed title to top left={xshift=10mm,yshift=-3mm},boxed title style={frame hidden},title=#1}
 
-%leftbar環境に注釈が入れられないことを解消する環境．名前は，tcolorboxの[t]とleftbarの組み合わせ
-\newtcolorbox{tbleftline}{blanker,left=5mm,borderline west={1.1mm}{0pt}{mydarkgray}}
-\newenvironment{tleftbar}{\begin{tbleftline}\setlength{\parindent}{1\zw}}{\end{tbleftline}}
+\usepackage{framed}                 % ← leftbar と同系列の空きを得る
+\newtcolorbox{tbleftline}[1][]{%
+  breakable,                        % ← これを追加
+  blanker,
+  left=5mm,
+  borderline west={1.1mm}{0pt}{mydarkgray},
+  before skip=\dimexpr\topsep\relax,
+  after skip=\dimexpr\topsep\relax,
+  #1}
+
+\newenvironment{tleftbar}
+{\begin{tbleftline}\setlength{\parindent}{1\zw}}
+    {\end{tbleftline}}
 
 
-\usepackage{framed,color}
 
 % leftbar環境の色を変更
 \makeatletter
@@ -64,6 +124,78 @@
   \endMakeFramed%
 }
 \makeatother
+
+
+\definecolor{mypurple}{HTML}{9900FF}
+
+\definecolor{applePaper}{HTML}{F5F5F7}
+\definecolor{appleInk}{HTML}{1D1D1F}
+\definecolor{appleLine}{HTML}{D1D1D6}
+\definecolor{appleCard}{HTML}{FFFFFF}
+
+
+\tcbset{
+  appleMonoBase/.style={
+      enhanced, breakable,
+      colback=appleCard, colframe=appleLine, coltitle=appleInk,
+      fonttitle=\sffamily\bfseries,
+      boxrule=0.5pt, arc=3pt,
+      left=8pt,right=8pt,top=6pt,bottom=6pt,
+      attach boxed title to top left={xshift=8pt,yshift=-3pt},
+      boxed title style={size=small,interior engine=empty},
+      drop shadow={black!6!applePaper}
+    }
+}
+
+
+
+\newtcbtheorem
+[auto counter, number within=subsection]%
+{theorem}{Theorem}% ←英文タイトル
+{appleMonoBase,%
+  title={\thetcbcounter.\, #2}}% ←タイトル行 1 行で書く
+{th}
+% 定理環境の定義% ─── 定理ボックス ───────────────────────────────────
+\newtcbtheorem
+[use counter from=theorem]%
+{proposition}{Proposition}% ←英文タイトル
+{appleMonoBase,%
+  title={\thetcbcounter.\, #2}}% ←タイトル行 1 行で書く
+{pr}
+\newtcbtheorem
+[use counter from=theorem]%
+{corollary}{Corollary}% ←英文タイトル
+{appleMonoBase,%
+  title={\thetcbcounter.\, #2}}% ←タイトル行 1 行で書く
+{co}
+\newtcbtheorem
+[use counter from=theorem]%
+{definition}{Definition}% ←英文タイトル
+{appleMonoBase,%
+  title={\thetcbcounter.\, #2}}% ←タイトル行 1 行で書く
+{de}
+\newtcbtheorem
+[use counter from=theorem]%
+{lemma}{Lemma}% ←英文タイトル
+{appleMonoBase,%
+  title={\thetcbcounter.\, #2}}% ←タイトル行 1 行で書く
+{le}
+\newtcbtheorem
+[use counter from=theorem]%
+{example}{Example}% ←英文タイトル
+{appleMonoBase,%
+  title={\thetcbcounter.\, #2}}% ←タイトル行 1 行で書く
+{ex}
+
+
+% 参照用コマンド
+\newcommand{\thref}[1]{{\sffamily\bfseries Theorem\,\ref{th:#1}}}
+\newcommand{\prref}[1]{{\sffamily\bfseries Proposition\,\ref{pr:#1}}}
+\newcommand{\coref}[1]{{\sffamily\bfseries Corollary\,\ref{co:#1}}}
+\newcommand{\deref}[1]{{\sffamily\bfseries Definition\,\ref{de:#1}}}
+\newcommand{\leref}[1]{{\sffamily\bfseries Lemma\,\ref{le:#1}}}
+\newcommand{\exref}[1]{{\sffamily\bfseries Example\,\ref{ex:#1}}}
+
 
 %コラム環境
 \colorlet{colexam}{lightgray!60!black}
@@ -129,17 +261,28 @@
     },%
 }
 
+
 %題名付き四角
 \usepackage{ascmac}
 \usepackage{fancybox}
 
 %図に使うもの
 \usepackage{tikz}
-\usetikzlibrary{intersections,calc,arrows.meta,3d,mindmap}
+\usetikzlibrary{intersections,calc,arrows.meta}
 \usepackage{tikz-3dplot}
-\usepackage[marginparwidth=0pt,margin=25truemm]{geometry}
+\usepackage[
+  % ---- 共通 ----
+  marginparwidth = 0pt,
+  % ---- 上下左右 ----
+  top    = 25truemm,   %  ← ここは現状維持
+  bottom = 25truemm,   %  ← 欲しい下余白に調整
+  left   = 25truemm,
+  right  = 25truemm
+]{geometry}
+
 \usepackage{bxpapersize}
 \usepackage[absolute,overlay]{textpos} %図の配置を好きにする
+
 
 %画像
 \usepackage{wrapfig}
@@ -168,6 +311,8 @@
 %丸付き文字
 \newcommand{\ctext}[1]{\raise0.2ex\hbox{\textcircled{\scriptsize{#1}}}}
 
+\setlength{\abovedisplayskip}{5pt}
+\setlength{\belowdisplayskip}{3pt}
 %ユーザー定義
 \newcommand{\dash}[1]{#1^\prime}
 \newcommand{\ddash}[1]{#1^{\prime\prime}}
@@ -176,24 +321,10 @@
 \renewcommand{\labelenumi}{(\arabic{enumi})}%itemを(数字)に変更
 \newcommand{\two}{I\hspace{-1.2pt}I}
 \newcommand{\three}{I\hspace{-1.2pt}I\hspace{-1.2pt}I}
-\renewcommand{\proofname}{\textgt{証明}}
+\renewcommand{\proofname}{証明}
 \renewcommand{\qed}{\unskip\nobreak\quad\qedsymbol}
-
-%proof環境の変更
-\makeatletter
-\renewenvironment{proof}[1][\proofname]{%
-  \par\pushQED{\qed}%
-  \normalfont
-  % 元の設定：\topsep6\p@\@plus6\p@、\trivlistなど
-  \topsep6\p@\@plus6\p@%
-  \trivlist
-  \item[\hskip\labelsep\itshape #1\@addpunct{.}]% デフォルトではここで終わっていた
-  % 以下に改行を挿入
-  \mbox{}\par% ここで改行と適当な空白を入れる
-}{%
-  \popQED\endtrivlist\@endpefalse
-}
-\makeatother
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\sgn}{sgn}
 
 
 \renewcommand{\leq}{\leqq}
@@ -201,11 +332,95 @@
 \renewcommand{\le}{\leqq}
 \renewcommand{\ge}{\geqq}
 
+\newcommand{\Laplacian}{{\mathop{}\!\mathbin\bigtriangleup}}
 
-\newcommand\kakko[1]{\noindent\textbf{《#1》}}
 
-\DeclareMathOperator{\sgn}{sgn}
-%タイトルページを定義
+\newcommand{\cmd}[1]{\texttt{\symbol{"5C}#1}}% 《》囲みコマンド（\kakko）をシンプル囲みに変更
+\newcommand\kakko[1]{\noindent{\setlength{\fboxsep}{3.5pt}\colorbox{gray!25}{\textbf{#1}}}}
+
+\newcommand{\pH}{\ensuremath{\mathrm{pH}}}
+%%%〈amsthm 読み込み後〉%%%
+\makeatletter
+\newlength{\proofindent}
+\setlength{\proofindent}{1\zw}   % 好きな字下げ幅
+
+\renewenvironment{proof}[1][\proofname]{%
+  \par\pushQED{\qed}%
+  \normalfont
+  \topsep6\p@\@plus6\p@      % 見出し前後の間隔
+  \trivlist
+  %── 見出し「証明」（ピリオド無し） ──
+  \item[\hskip\labelsep\itshape #1]%
+  \setlength{\parindent}{\proofindent}% 本文の字下げ量
+  \leavevmode\par                  % ★空の 1 段落を作る
+  \ignorespaces                    %   → 次行から本文
+}{%
+  \popQED\endtrivlist\@endpefalse
+}
+\makeatother
+% ── 「証明」を左バー付きボックスに包む環境 ──────────────────
+% 使い方：  \begin{tproof}[任意の見出し] ... \end{tproof}
+%          見出しを省略すると従来の \proofname（灰色ラベル「証明」）になる
+\newenvironment{tproof}[1][\proofname]{%
+  \begin{tleftbar}% 左バー付きボックス
+    \begin{proof}[{%
+            \normalfont                 %  ← ここでイタリックを解除
+            \noindent
+            \setlength{\fboxsep}{3.5pt}%
+            \colorbox{gray!25}{\sffamily\bfseries #1}%
+          }]%
+      }{%
+    \end{proof}% □ を出力
+  \end{tleftbar}%
+}
+
+
+% ──────────────────────────────────────────────
+% 「解答」ラベル（tanswer 用）
+\newcommand{\answername}{解答}
+
+% ── 左バー付き「解答」環境 ─────────────────────
+% 使い方：\begin{tanswer}[任意の見出し] ... \end{tanswer}
+%        見出し省略時は \answername（灰色ラベル「解答」）
+\newenvironment{tanswer}[1][\answername]{%
+  \begin{tleftbar}% ← 左バー付きボックス開始
+    \begingroup
+    \renewcommand{\qed}{}%  □ マークを無効化
+    \begin{proof}[{%
+            \normalfont                 %  ← ここでイタリックを解除
+            \noindent
+            \setlength{\fboxsep}{3.5pt}%
+            \colorbox{gray!25}{\sffamily\bfseries #1}%
+          }]%
+      }{%
+    \end{proof}%          ← proof 終了（□ は出ない）
+    \endgroup
+  \end{tleftbar}%        ← ボックスを閉じる
+}
+%増減表関連
+\newcommand{\ner}{
+  \begin{tikzpicture}[scale=0.3,baseline=0.3]
+    \draw[->,>=stealth] (0,0) to[bend right=45] (1,1);
+  \end{tikzpicture}
+}
+
+\newcommand{\nel}{
+  \begin{tikzpicture}[scale=0.3,baseline=0.3]
+    \draw[->,>=stealth] (0,0) to[bend left=45] (1.2,1);
+  \end{tikzpicture}
+}
+
+\newcommand{\sel}{
+  \begin{tikzpicture}[scale=0.3,baseline=0.3]
+    \draw[->,>=stealth] (0,1) to[bend left=45] (1,0);
+  \end{tikzpicture}
+}
+
+\newcommand{\ser}{
+  \begin{tikzpicture}[scale=0.3,baseline=0.3]
+    \draw[->,>=stealth] (0,1) to[bend right=45] (1.2,0);
+  \end{tikzpicture}
+}
 \usepackage[pagecolor=white,nopagecolor={none}]{pagecolor} % 背景色を変更するためのパッケージ
 
 \newcommand{\tituloum}[5]{\begin{titlepage}
@@ -249,59 +464,9 @@
     \end{center}
   \end{titlepage}}
 
-% 数式のディスプレイスタイル設定
 \everymath{\displaystyle}
 
-
-%箇条書き
-\usepackage[shortlabels]{enumitem}
-
-%inputなどのプリアンブルを無視
-\usepackage{docmute}
-
-\everymath{\displaystyle}
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
 
 
-%新設定2
-\definecolor{burgundy}{rgb}{0.5, 0.0, 0.13}
-\tcbset{mytheo/.style={fonttitle=\gtfamily\sffamily\bfseries\upshape,
-      enhanced,colframe=burgundy,colback=burgundy!2!white,colbacktitle=burgundy,
-      boxed title style={},
-      attach boxed title to top left={xshift=5mm,yshift*=-\tcboxedtitleheight/2},
-      before skip=25pt plus 2pt,
-      after skip=15pt plus 2pt
-    }}
-
-%Theorem
-\newtcbtheorem[number within=subsection]{theorem}{Theorem}%
-{mytheo}{th}
-\newcommand{\thref}[1]{{\bfseries\sffamily Theorem \ref{th:#1}}}
-%Proposition
-\newtcbtheorem[use counter from=theorem]{prop}{Proposition}%
-{mytheo}{pr}
-\newcommand{\prref}[1]{{\bfseries\sffamily Proposition \ref{pr:#1}}}
-%Corollary
-\newtcbtheorem[use counter from=theorem]{cor}{Corollary}%
-{mytheo}{co}
-\newcommand{\coref}[1]{{\bfseries\sffamily Corollary \ref{co:#1}}}
-% Axiom
-\newtcbtheorem[use counter from=theorem]{axiom}{Axiom}%
-{mytheo}{ax}
-\newcommand{\axref}[1]{{\bfseries\sffamily Axiom \ref{ax:#1}}}
-%Definition
-\newtcbtheorem[use counter from=theorem]{definition}{Definition}%
-{mytheo,
-  colframe=blue!50!black,colback=blue!50!black!2!white,colbacktitle=blue!50!black,borderline south={2pt}{-2pt}{blue!50!black},}{de}
-\newcommand{\deref}[1]{{\bfseries\sffamily Definition \ref{de:#1}}}
-%Lemma
-\newtcbtheorem[use counter from=theorem]{lemma}{Lemma}%
-{mytheo,
-  colframe=green!50!black,colback=green!50!black!2!white,colbacktitle=green!50!black,borderline south={2pt}{-2pt}{green!50!black},}{le}
-\newcommand{\leref}[1]{{\bfseries\sffamily Lemma \ref{le:#1}}}
-%Example
-\definecolor{charcoal}{rgb}{0.21, 0.27, 0.31}
-\newtcbtheorem[use counter from=theorem]{example}{Example}%
-{mytheo,
-  colframe=charcoal,colback=charcoal!2!white,colbacktitle=charcoal,borderline south={2pt}{-2pt}{charcoal},}{ex}
-\newcommand{\exref}[1]{{\bfseries\sffamily Example \ref{ex:#1}}}
-
+\AtBeginDocument{\RenewCommandCopy\qty\SI}

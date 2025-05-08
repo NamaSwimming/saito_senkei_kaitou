@@ -1,0 +1,38 @@
+
+
+\part*{第5章}
+\addcontentsline{toc}{part}{\texorpdfstring{第5章}{第5章}}
+
+
+\section*{p139：問}
+\addcontentsline{toc}{section}{\texorpdfstring{p139：問}{p139：問}}
+
+\kakko{前半}
+
+\begin{tproof}
+  $T$をエルミート変換とする．また，$ \lambda \in \mathbb{K}$を$T$の固有値，$\bm{x} \ne \bm{o}$を$T$の固有値$\lambda$に対する固有ベクトルとする．
+
+  このとき，
+  \begin{alignat*}{2}
+    \lambda (\bm{x},\bm{x}) & = (\lambda \bm{x},\bm{x})            & \quad & \text{（内積の定義）}       \\
+                            & = (T \bm{x},\bm{x})                  &       & \text{（固有値の定義）}      \\
+                            & = ( \bm{x},T^{\ast} \bm{x})          &       & \text{（p139~式(1)）}   \\
+                            & = ( \bm{x},T \bm{x})                 &       & \text{（$T$はエルミート変換）} \\
+                            & = (\bm{x},\lambda \bm{x})            &       & \text{（固有値の定義）}      \\
+                            & = \overline{\lambda} (\bm{x},\bm{x}) &       & \text{（内積の定義）}
+  \end{alignat*}
+  となり，$\bm{x} \ne \bm{o}$より$\lambda = \overline{\lambda}$であるから$ \lambda \in \mathbb{R}$である．
+\end{tproof}
+
+\kakko{後半}
+\begin{tproof}
+  $T$をユニタリ変換とする．また，$ \lambda \in \mathbb{K}$を$T$の固有値，$\bm{x} \ne \bm{o}$を$T$の固有値$\lambda$に対する固有ベクトルとする．
+
+  このとき，
+  \begin{alignat*}{2}
+    \lambda \overline{\lambda} (\bm{x},\bm{x}) & = (\lambda \bm{x},\lambda \bm{x}) & \quad & \text{（内積の定義）}      \\
+                                               & = (T \bm{x},T \bm{x})             &       & \text{（固有値の定義）}     \\
+                                               & = (\bm{x},\bm{x})                 &       & \text{（$T$はユニタリ変換）}
+  \end{alignat*}
+  となり，$\bm{x} \ne \bm{o}$より$\abs{\lambda} = 1$である．
+\end{tproof}

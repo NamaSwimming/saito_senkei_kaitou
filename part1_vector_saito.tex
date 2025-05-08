@@ -1,0 +1,1330 @@
+
+\part*{第1章}
+\addcontentsline{toc}{part}{\texorpdfstring{第1章}{第1章}}
+
+\section*{p5：問1}
+\addcontentsline{toc}{section}{\texorpdfstring{p5：問1}{p5：問1}}
+
+\begin{tproof}
+  線分$\mathrm{PQ}$の中点を$\mathrm{M}$とする．このとき，
+  \begin{align*}
+    \overrightarrow{\mathrm{OM}} & = \overrightarrow{\mathrm{OP}} + \overrightarrow{\mathrm{PM}} \\
+                                 & = \bm{a} + \frac{\bm{b}-\bm{a}}{2}                            \\
+                                 & = \frac{\bm{a}+\bm{b}}{2}
+  \end{align*}
+  である．
+\end{tproof}
+\section*{p5：問2}
+\addcontentsline{toc}{section}{\texorpdfstring{p5：問2}{p5：問2}}
+\begin{tproof}
+  三角形$\mathrm{PQR}$の重心を$\mathrm{G}$，$\mathrm{PQ}$の中点を$\mathrm{N}$とする．$\mathrm{G}$は線分$\mathrm{RN}$を$2：1$に内分する点なので，
+  \begin{align*}
+    \overrightarrow{\mathrm{OG}} & = \overrightarrow{\mathrm{OR}} + \frac{2}{3} \overrightarrow{\mathrm{RN}} \\
+                                 & = \bm{c}+ \frac{2}{3} \left (\frac{\bm{a}+\bm{b}}{2}-\bm{c} \right)       \\
+                                 & = \frac{\bm{a}+\bm{b}+\bm{c}}{3}
+  \end{align*}
+  である．
+\end{tproof}
+
+
+
+\section*{p7：問-(上)}
+\addcontentsline{toc}{section}{\texorpdfstring{p7：問-(上)}{p7：問-(上)}}
+
+
+\begin{tanswer}
+  求めるベクトルを，$\bm{x}=(x,y,z)$~(ただし$x^2+y^2 +z^2=1$)とおく．
+  このとき，内積の定義により，
+  \begin{align*}
+     & \bm{x} \cdot
+    \begin{pmatrix}
+      1 \\
+      1 \\
+      1
+    \end{pmatrix}
+    =x+y+z= 1 \cdot \sqrt{3} \cdot \cos \frac{\pi}{6} =\frac{3}{2} \\
+     & \bm{x} \cdot
+    \begin{pmatrix}
+      1 \\
+      1 \\
+      4
+    \end{pmatrix}
+    =x+y+4z= 1 \cdot 3\sqrt{2} \cdot \cos \frac{\pi}{4} =3
+  \end{align*}
+  これらの式から，
+  \begin{equation*}
+    \begin{pmatrix}
+      x \\
+      y \\
+      z
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+      (2 \pm \sqrt{2})/4 \\
+      (2 \mp \sqrt{2})/4 \\
+      1/2
+    \end{pmatrix}
+    \quad (\text{複号同順})
+  \end{equation*}
+  である．
+\end{tanswer}
+\section*{p7：問-(下)}
+\addcontentsline{toc}{section}{\texorpdfstring{p7：問-(下)}{p7：問-(下)}}
+\begin{tanswer}
+  ここでは，[1.4]の結果を利用する．
+
+  求める三角形の面積を$S$とし．
+  \[
+    \bm{a}=\overrightarrow{\mathrm{P_1 P_2}}=(x_2-x_1,y_2-y_1,z_2-z_1),\quad \bm{b}=\overrightarrow{\mathrm{P_1 P_3}}=(x_3-x_1,y_3-y_1,z_3-z_1)
+  \]
+  とおく，
+  このとき，
+  \begin{align*}
+    S & = \frac{1}{2} \sqrt{\norm{\overrightarrow{\mathrm{P_1 P_2}}}^2 \norm{\overrightarrow{\mathrm{P_1 P_3}}}^2 - (\overrightarrow{\mathrm{P_1 P_2}}, \overrightarrow{\mathrm{P_1 P_3}})^2} \\
+      & = \frac{1}{2} \sqrt{\norm{\bm{a}}^2 \norm{\bm{b}}^2 - (\bm{a},\bm{b})^2 }                                                                                                             \\
+      & = \frac{1}{2} \{ \lbrack (x_2 - x_1)^2+(y_2-y_1)^2+ (z_2 - z_1)^2 \rbrack \lbrack (x_3 - x_1)^2+(y_3-y_1)^2+ (z_3 - z_1)^2 \rbrack                                                    \\
+      & \qquad - \lbrack (x_2-x_1)(x_3-x_1)+(y_2 -y_1)(y_3-y_1)+(z_2-z_1)(z_3-z_1)\rbrack ^2\}^{\frac{1}{2}}
+  \end{align*}
+  である．
+\end{tanswer}
+
+
+
+\section*{p8：問1}
+\addcontentsline{toc}{section}{\texorpdfstring{p8：問1}{p8：問1}}
+
+
+\subsection*{p8：問1-(イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p8：問1-(イ)}{p8：問1-(イ)}}
+
+\begin{tanswer}
+  与えられた直線を$l$とする．$l$の方程式に$x=-1$を代入すると，$y=2$となるため，$l$は点$(-1,2)$を通る．
+  また，$l$は点$(2,0)$を通るため，
+  $l$の方向ベクトルのひとつは，
+  \[
+    \begin{pmatrix}
+      2-(-1) \\
+      0-2
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+      3 \\
+      -2
+    \end{pmatrix}
+  \]
+  である．よって，$l$のベクトル表示のひとつは，
+  $
+    \begin{pmatrix}
+      x \\
+      y
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+      2 \\
+      0
+    \end{pmatrix}
+    +t
+    \begin{pmatrix}
+      3 \\
+      -2
+    \end{pmatrix}
+    ~(-\infty < t < \infty)$である．
+\end{tanswer}
+
+
+\subsection*{p8：問1-(ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p8：問1-(ロ)}{p8：問1-(ロ)}}
+
+\begin{tanswer}
+  与えられた直線を$l'$とする．$l '$の方向ベクトルのひとつは，$
+    \begin{pmatrix}
+      0 \\
+      1
+    \end{pmatrix}
+  $である．また，$l '$は点$(3,0)$を通るので，そのベクトル表示のひとつは，
+  $
+    \begin{pmatrix}
+      x \\
+      y
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+      3 \\
+      0
+    \end{pmatrix}
+    +t
+    \begin{pmatrix}
+      0 \\
+      1
+    \end{pmatrix}
+    ~(-\infty < t < \infty)
+  $となる．
+\end{tanswer}
+
+\section*{p8：問2}
+\addcontentsline{toc}{section}{\texorpdfstring{p8：問2}{p8：問2}}
+
+
+\subsection*{p8：問2-(イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p8：問2-(イ)}{p8：問2-(イ)}}
+
+\begin{tanswer}
+  与えられたベクトル表示から．
+  \begin{align*}
+    \begin{cases}
+      x=1+2t \\
+      y=-1+t
+    \end{cases}
+  \end{align*}
+  であるから，
+  \begin{align*}
+    \begin{cases}
+      t=\frac{x-1}{2} \\
+      t=y+1
+    \end{cases}
+  \end{align*}
+  である．これから$t$を消去すると，
+  \begin{gather*}
+    \frac{x-1}{2} = y+1 \\
+    \therefore ~ x-2y-3 =0
+  \end{gather*}
+  である．
+\end{tanswer}
+
+
+\subsection*{p8：問2-(ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p8：問2-(ロ)}{p8：問2-(ロ)}}
+
+\begin{tanswer}
+  点$(-1,-2)$を通り，$x$軸に平行な直線を表すから，$y=-2$が求める直線の方程式である．
+\end{tanswer}
+%
+
+%
+%
+
+\section*{p10：問1}
+\addcontentsline{toc}{section}{\texorpdfstring{p10：問1}{p10：問1}}
+
+\begin{tanswer}
+  \begin{align*}
+    \begin{cases}
+      x+2y+3z=1 \\
+      3x+2y+z=-1
+    \end{cases}
+  \end{align*}
+  から，
+  \begin{gather*}
+    -2x+2z=2 \\
+    \therefore \quad -x+z=1
+  \end{gather*}
+  である．このとき，$
+    \begin{pmatrix}
+      x \\
+      z
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+      1 \\
+      2
+    \end{pmatrix}
+    ，
+    \begin{pmatrix}
+      2 \\
+      3
+    \end{pmatrix}
+  $はこれを満たす．このときの$y$の値を計算すると，それぞれ$-3,-5$なので，結局，与えられた直線は2点$(1,-3,2),(2,-5,3)$を通る．
+  すなわち，この直線の方向ベクトルのひとつは
+  \[
+    \begin{pmatrix}
+      2  \\
+      -5 \\
+      3
+    \end{pmatrix}
+    -
+    \begin{pmatrix}
+      1  \\
+      -3 \\
+      2
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+      1  \\
+      -2 \\
+      1
+    \end{pmatrix}
+  \]
+  である．したがって求めるベクトル表示のひとつは，直線上の任意の位置ベクトルを$\bm{x}$とすると，
+  \[
+    \bm{x} =
+    \begin{pmatrix}
+      1  \\
+      -3 \\
+      2
+    \end{pmatrix}
+    +t
+    \begin{pmatrix}
+      1  \\
+      -2 \\
+      1
+    \end{pmatrix}
+  \]
+  と表せる．
+\end{tanswer}
+
+\section*{p10：問2}
+\addcontentsline{toc}{section}{\texorpdfstring{p10：問2}{p10：問2}}
+
+\begin{tproof}
+  $t$を$0 \le t \le 1$をみたす実数，線分$\mathrm{P_1 P_2}$上の任意の点の位置ベクトルを$\bm{x}$とする．
+  このとき，
+  \begin{align*}
+    \bm{x} & = \overrightarrow{\mathrm{O P_1}}+t\overrightarrow{\mathrm{P_1 P_2}} \\
+           & = \bm{x}_1 + t (\bm{x}_2 - \bm{x}_1)                                 \\
+           & = (1-t) \bm{x}_1 + t \bm{x}_2
+  \end{align*}
+  である．$1-t = t_1,~t=t_2$と改めておくと，$t$の定め方から$t_1 \ge 0,~t_2 \ge 0$であり，
+  \[
+    \bm{x}= t_1 \bm{x}_1 + t_2 \bm{x}_2 ,\quad t_1 + t_2 =1
+  \]
+  となり，これが証明すべきことであった．
+\end{tproof}
+
+
+\section*{p11：問1}
+\addcontentsline{toc}{section}{\texorpdfstring{p11：問1}{p11：問1}}
+
+\begin{tanswer}
+  与えられた平面を$(S)$とおく．$(S)$は3点$(-1,0,1),~(2,0,-1),~(0,-1,0)$を通るので，
+  \begin{equation*}
+    \bm{x}_1=
+    \begin{pmatrix}
+      -1 \\
+      0  \\
+      1
+    \end{pmatrix}
+    ,\quad \bm{x}_2=
+    \begin{pmatrix}
+      2 \\
+      0 \\
+      -1
+    \end{pmatrix}
+    \quad
+    \bm{x}_3=
+    \begin{pmatrix}
+      0  \\
+      -1 \\
+      0
+    \end{pmatrix}
+  \end{equation*}
+  と改めておくと，
+  \begin{gather*}
+    \bm{x}_2 - \bm{x}_1 =
+    \begin{pmatrix}
+      3 \\
+      0 \\
+      -1
+    \end{pmatrix}
+    ,\quad
+    \bm{x}_3 - \bm{x}_1 =
+    \begin{pmatrix}
+      1  \\
+      -1 \\
+      -1
+    \end{pmatrix}
+  \end{gather*}
+  となり，$\bm{x}_2 - \bm{x}_1$と$\bm{x}_3 - \bm{x}_1$は線型独立なので，求めるベクトル表示のひとつは，
+  \[
+    (S) \colon \bm{x}=
+    \begin{pmatrix}
+      -1 \\
+      0  \\
+      1
+    \end{pmatrix}
+    + t
+    \begin{pmatrix}
+      3 \\
+      0 \\
+      -1
+    \end{pmatrix}
+    +s
+    \begin{pmatrix}
+      1  \\
+      -1 \\
+      -1
+    \end{pmatrix}
+    ~( -\infty < t,~s<\infty)
+  \]
+\end{tanswer}
+%
+%
+%
+%
+\section*{p12：問2}
+\addcontentsline{toc}{section}{\texorpdfstring{p12：問2}{p12：問2}}
+
+\begin{tanswer}
+  \begin{align*}
+    \begin{cases}
+      x=1+t-s   \\
+      y=2-t -2s \\
+      z=0+2t+s
+    \end{cases}
+  \end{align*}
+  から$t$と$s$を消去して，
+  \[
+    x-y-z=-1
+  \]
+  これが求める直線の方程式である．
+\end{tanswer}
+
+\section*{p12：問3}
+\addcontentsline{toc}{section}{\texorpdfstring{p12：問3}{p12：問3}}
+
+\begin{tproof}
+  \[
+    \overrightarrow{\mathrm{OP_1}}=\bm{x}_1,\quad \overrightarrow{\mathrm{OP_2}}=\bm{x}_2,\quad \overrightarrow{\mathrm{OP_3}}=\bm{x}_3
+  \]
+  とする．このとき，三角形$\mathrm{P_1 P_2 P_3}$上の任意の点の位置ベクトルを$\bm{x}$，$s,t$を$0 \le s,t \le 1$を満たす実数とすると，
+  \begin{gather*}
+    \bm{x}=\bm{x}_1 + s(\bm{x}_2 - \bm{x}_1) + t (\bm{x}_3 - \bm{x}_1) \\
+    \therefore \quad \bm{x} = (1-s-t)\bm{x}_1 + s\bm{x}_2 + t \bm{x}_3
+  \end{gather*}
+  となり，$1-s-t=t_1,~s=t_2,~t=t_3$と改めて書き直すと，$s,t$の定め方より，$0 \le t_1 ,t_2,t_3 \le 1$であり
+  \[
+    \bm{x} = t_1\bm{x}_1 + t_2\bm{x}_2 + t_3 \bm{x}_3,\quad t_1+t_2+t_3=1
+  \]
+  となる．これが証明すべきことであった．
+\end{tproof}
+%
+
+%
+\section*{p13：問1}
+\addcontentsline{toc}{section}{\texorpdfstring{p13：問1}{p13：問1}}
+%
+\begin{tanswer}
+  $(S_1)$，$(S_2)$の法線ベクトルをそれぞれ$\bm{x}_1$，$\bm{x}_2$とおくと，
+  \begin{gather*}
+    \bm{x}_1 =
+    \begin{pmatrix}
+      1 \\
+      1 \\
+      2
+    \end{pmatrix}
+    ，
+    \bm{x}_2 =
+    \begin{pmatrix}
+      3 \\
+      3 \\
+      0
+    \end{pmatrix}
+  \end{gather*}
+  である．ゆえに，交角を$\theta ~(0 \le \theta \le \frac{\pi}{2})$とすると，
+  \[
+    \cos \theta = \frac{\bm{x}_1 \cdot \bm{x}_2}{\norm{\bm{x}_1} \norm{\bm{x}_2}}=\frac{3}{3\sqrt{2}}=\frac{1}{\sqrt{2}}
+  \]
+  であるから，$0 \le \theta \le \frac{\pi}{2}$より$\theta =\frac{\pi}{4}$である．
+\end{tanswer}
+%
+\section*{p13：問2}
+\addcontentsline{toc}{section}{\texorpdfstring{p13：問2}{p13：問2}}
+
+\begin{tproof}
+  平面$\pi_1$，$\pi_2$を考え，$\pi_1$，$\pi_2$の法線ベクトルをそれぞれ$\bm{n}_1$，$\bm{n}_2$とおく．
+  \begin{description}
+    \item[$\bm{n}_1$と$\bm{n}_2$が平行なとき] \mbox{}\\
+          $\pi_1$に垂直な平面は$\pi_2$にも垂直であり，このような平面を$\pi_3$とすると，
+          $\pi_3$は$\bm{n}_1$，$\bm{n}_2$と平行である．よって$\pi_3$と$\pi_1$，$\pi_2$はそれぞれ並行であり，このような平面は確かに存在する．
+    \item[$\bm{n}_1$と$\bm{n}_2$が平行でないとき] \mbox{} \\
+          $\bm{n}_1 , \bm{n}_2 \ne \bm{0}$は明らかなので，$\bm{n}_3 \coloneqq \bm{n}_1 \times \bm{n}_2$とすると，
+          $\bm{n}_3 \ne \bm{0}$である．よって，$\bm{n}_3$は$\pi_1$，$\pi_2$に垂直である．このとき$n_3$を法線ベクトルとする平面を取ればよい．
+  \end{description}
+  以上の考察により証明された．
+\end{tproof}
+
+%
+%
+%
+\section*{p18：問}
+\addcontentsline{toc}{section}{\texorpdfstring{p18：問}{p18：問}}
+
+\begin{tproof}
+  $A$，$B$，$C$が$2 \times 2$行列の場合を証明する．
+  \begin{gather*}
+    A=
+    \begin{pmatrix}
+      a & b \\
+      c & d
+    \end{pmatrix}
+    ，
+    B=
+    \begin{pmatrix}
+      e & f \\
+      g & h
+    \end{pmatrix}
+    ，C=
+    \begin{pmatrix}
+      i & j \\
+      k & l
+    \end{pmatrix}
+  \end{gather*}
+  とし，$A$，$B$，$C$の成分はすべて複素数であるとする．このとき，
+  \begin{align*}
+    (AB)C & =
+    \begin{pmatrix}
+      ae+bg & af+bh \\
+      ce+dg & cf+dh
+    \end{pmatrix}
+    \begin{pmatrix}
+      i & j \\
+      k & l
+    \end{pmatrix}
+    \\
+          & =
+    \begin{pmatrix}
+      aei +bgi +afk +bhk & aej+bgj+afl+bhl     \\
+      cei +dgi+cfk +dhk  & cej +dgj + cfl +dhl
+    \end{pmatrix}
+  \end{align*}
+  となる．他方
+  \begin{align*}
+    A(BC) & =
+    \begin{pmatrix}
+      a & b \\
+      c & d
+    \end{pmatrix}
+    \begin{pmatrix}
+      ei + fk & ej +fl \\
+      gi + hk & gj +hl
+    \end{pmatrix}
+    \\
+          & =
+    \begin{pmatrix}
+      aei + afk +bgi +bhk  & aej +afl +bgj +bhl   \\
+      cei + cfk + dgi +dhk & cej + cfl + dgi +dhl
+    \end{pmatrix}
+  \end{align*}
+  となり，たしかに$(AB)C=A(BC)$である．
+\end{tproof}
+%
+
+\section*{p19：問1-(上)}
+\addcontentsline{toc}{section}{\texorpdfstring{p19：問1-(上)}{p19：問1-(上)}}
+%
+%
+\begin{tproof}
+  \[
+    \begin{pmatrix}
+      -1 & 0  \\
+      0  & -1
+    \end{pmatrix}
+    \begin{pmatrix}
+      x \\
+      y
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+      -x \\
+      -y
+    \end{pmatrix}
+  \]
+  となり，これは明らかに線型変換である．対応する行列は，$
+    \begin{pmatrix}
+      -1 & 0  \\
+      0  & -1
+    \end{pmatrix}
+  $である．
+\end{tproof}
+
+\section*{p19：問2-(上)}
+\addcontentsline{toc}{section}{\texorpdfstring{p19：問2-(上)}{p19：問2-(上)}}
+\begin{tproof}
+  式(15)より，$2 \times 2$行列$A$，$B$とベクトル$\bm{x}$について，
+  \begin{align*}
+    T_B (T_A (\bm{x})) & = B(A\bm{x})      \\
+                       & = (BA) \bm{x}     \\
+                       & = T_{BA} (\bm{x})
+  \end{align*}
+  である．これが証明すべきことであった．
+\end{tproof}
+
+
+\section*{p19：問1-(下)}
+\addcontentsline{toc}{section}{\texorpdfstring{p19：問1-(下)}{p19：問1-(下)}}
+
+\begin{tanswer}
+  $\bm{x} =
+    \begin{pmatrix}
+      x \\
+      y
+    \end{pmatrix}
+  $
+  とおくと，(17)式より，
+  \begin{align*}
+    T \bm{x} & = \frac{ax+by}{a^2+b^2} \bm{a} \\
+             & =
+    \begin{pmatrix}
+      a^2x +aby   \\
+      ab x + b^2y \\
+    \end{pmatrix}
+    \\
+             & =
+    \begin{pmatrix}
+      a^2 & ab  \\
+      ab  & b^2
+    \end{pmatrix}
+    \begin{pmatrix}
+      x \\
+      y
+    \end{pmatrix}
+    \\
+             & =
+    \begin{pmatrix}
+      a^2 & ab  \\
+      ab  & b^2
+    \end{pmatrix}
+    \bm{x}
+  \end{align*}
+  であるから，
+  \[
+    T=\begin{pmatrix}
+      a^2 & ab  \\
+      ab  & b^2
+    \end{pmatrix}
+  \]
+  となる．
+\end{tanswer}
+%
+
+
+\section*{p19：問2-(下)}
+\addcontentsline{toc}{section}{\texorpdfstring{p19：問2-(下)}{p19：問2-(下)}}
+
+
+\subsection*{p19：問2-(下)-(イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p19：問2-(下)-(イ)}{p19：問2-(下)-(イ)}}
+\begin{tproof}
+  $\bm{a}=
+    \begin{pmatrix}
+      a_1 \\
+      a_2
+    \end{pmatrix}
+  $，
+  $\bm{b}=
+    \begin{pmatrix}
+      b_1 \\
+      b_2
+    \end{pmatrix}
+  $，$\bm{a} \ne \bm{0}$かつ$\bm{b} \ne \bm{0}$とする．
+  このとき，
+  \begin{align*}
+    T \bm{x} & =\frac{(\bm{a},\bm{x})}{(\bm{a},\bm{a})} \bm{a} \\
+             & = \frac{a_1 x + a_2 y}{{a_1}^2+{a_2}^2}
+    \begin{pmatrix}
+      a_1 \\
+      a_2
+    \end{pmatrix}
+    \\
+             & =
+    \frac{1}{{a_1}^2+{a_2}^2}
+    \begin{pmatrix}
+      {a_1}^2 & a_1 a_2 \\
+      a_1 a_2 & {a_2}^2
+    \end{pmatrix}
+    \begin{pmatrix}
+      x \\
+      y
+    \end{pmatrix}
+  \end{align*}
+  となる．つまり，$T=\frac{1}{{a_1}^2+{a_2}^2}
+    \begin{pmatrix}
+      {a_1}^2 & a_1 a_2 \\
+      a_1 a_2 & {a_2}^2
+    \end{pmatrix}
+  $である．このとき，
+  \begin{align*}
+    T^2 & = \frac{1}{({a_1}^2+{a_2}^2)^2}
+    \begin{pmatrix}
+      {a_1}^4 + {a_1}^2 {a_2}^2 & {a_1}^3 a_2 + a_1 {a_2}^3 \\
+      {a_1}^3 a_2 + a_1 {a_2}^3 & {a_2}^4 + {a_1}^2 {a_2}^2
+    \end{pmatrix}
+    \\
+        & = \frac{1}{{a_1}^2+{a_2}^2}
+    \begin{pmatrix}
+      {a_1}^2 & a_1 a_2 \\
+      a_1 a_2 & {a_2}^2
+    \end{pmatrix}
+    =T
+  \end{align*}
+  となり，$T^2=T$である．$S^2=S$も同様にして示される．
+\end{tproof}
+
+\subsection*{p19：問2-(下)-(ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p19：問2-(下)-(ロ)}{p19：問2-(下)-(ロ)}}
+\begin{tproof}
+  $\bm{a}=
+    \begin{pmatrix}
+      a_1 \\
+      a_2
+    \end{pmatrix}
+  $，$\bm{b}=
+    \begin{pmatrix}
+      b_1 \\
+      b_2
+    \end{pmatrix}
+  $とする．このとき，$\bm{a}$と$\bm{b}$が直交することから，
+  \begin{gather*}
+    \bm{a} \cdot \bm{b}=0 \\
+    \therefore ~a_1 b_1 + a_2 b_2 =0
+  \end{gather*}
+  である．ここで，
+  \begin{align*}
+    TS & = \frac{1}{({a_1}^2 +{a_2}^2)}
+    \begin{pmatrix}
+      {a_1}^2 & a_1 a_2 \\
+      a_1 a_2 & {a_2}^2
+    \end{pmatrix}
+    \frac{1}{({b_1}^2 +{b_2}^2)}
+    \begin{pmatrix}
+      {b_1}^2 & b_1 b_2 \\
+      b_1 b_2 & {b_2}^2
+    \end{pmatrix}
+    \\
+       & =\frac{a_1 b_1 + a_2 b_2}{({a_1}^2 +{a_2}^2)({b_1}^2 +{b_2}^2)}
+    \begin{pmatrix}
+      a_1 b_1 & a_1 b_2 \\
+      a_2 b_1 & a_2 b_2
+    \end{pmatrix}
+    =O                                                                   \\
+       & \qquad \qquad  (\because ~ a_1 b_1 + a_2 b_2 =0)
+  \end{align*}
+  である．同様に$ST$を計算すると，$ST=O$であることもわかり，これで$TS=ST=O$が証明された．
+\end{tproof}
+
+\subsection*{p19：問2-(下)-(ハ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p19：問2-(下)-(ハ)}{p19：問2-(下)-(ハ)}}
+\begin{tproof}
+  イ)，ロ)の文字や結論を用いると，
+  \begin{align*}
+    T \bm{x} + S \bm{x} & =
+    \frac{1}{{a_1}^2+{a_2}^2}
+    \begin{pmatrix}
+      {a_1}^2 & a_1 a_2 \\
+      a_1 a_2 & {a_2}^2
+    \end{pmatrix}
+    \begin{pmatrix}
+      x \\
+      y
+    \end{pmatrix}
+    +
+    \frac{1}{{b_1}^2+{b_2}^2}
+    \begin{pmatrix}
+      {b_1}^2 & b_1 b_2 \\
+      b_1 b_2 & {b_2}^2
+    \end{pmatrix}
+    \begin{pmatrix}
+      x \\
+      y
+    \end{pmatrix}
+    \\
+                        & = \frac{1}{({a_1}^2+{a_2}^2)({b_1}^2+{b_2}^2)}
+    \begin{pmatrix}
+      ({a_1}^2+{a_2}^2)({b_1}^2+{b_2}^2) & ({a_1}^2+{a_2}^2)({b_1}^2+{b_2}^2) \\
+      ({a_1}^2+{a_2}^2)({b_1}^2+{b_2}^2) & ({a_1}^2+{a_2}^2)({b_1}^2+{b_2}^2)
+    \end{pmatrix}
+    \begin{pmatrix}
+      x \\
+      y
+    \end{pmatrix}
+    \\
+                        & =\begin{pmatrix}
+                             x \\
+                             y
+                           \end{pmatrix}
+    =\bm{x}
+  \end{align*}
+  となる．これが証明すべきことであった．
+\end{tproof}
+
+
+
+\section*{p22：問1}
+\addcontentsline{toc}{section}{\texorpdfstring{p22：問1}{p22：問1}}
+
+
+\subsection*{p22：問1-(イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p22：問1-(イ)}{p22：問1-(イ)}}
+\begin{tanswer}
+  \[
+    \begin{pmatrix}
+      -1 & 0 & 0  \\
+      0  & 1 & 0  \\
+      0  & 0 & -1
+    \end{pmatrix}
+    \begin{pmatrix}
+      x \\
+      y \\
+      z
+    \end{pmatrix}
+    =\begin{pmatrix}
+      -x \\
+      y  \\
+      -z
+    \end{pmatrix}
+  \]
+  となり，これは$y$軸に関する対象点に移す変換を表す．
+\end{tanswer}
+
+\subsection*{p22：問1-(ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p22：問1-(ロ)}{p22：問1-(ロ)}}
+\begin{tanswer}
+  \[
+    \begin{pmatrix}
+      1 & 0           & 0            \\
+      0 & \cos \alpha & -\sin \alpha \\
+      0 & \sin \alpha & \cos \alpha
+    \end{pmatrix}
+    \begin{pmatrix}
+      x \\
+      y \\
+      z
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+      x                            \\
+      y \cos \alpha -z \sin \alpha \\
+      y \sin \alpha + z \cos \alpha
+    \end{pmatrix}
+  \]
+  となり，これは$x$軸まわりに角$\alpha$だけ回転する変換を表す．
+\end{tanswer}
+
+\subsection*{p22：問1-(ハ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p22：問1-(ハ)}{p22：問1-(ハ)}}
+
+\begin{tanswer}
+  \[
+    \begin{pmatrix}
+      0 & 1 & 0 \\
+      0 & 0 & 1 \\
+      1 & 0 & 0
+    \end{pmatrix}
+    \begin{pmatrix}
+      x \\
+      y \\
+      z
+    \end{pmatrix}
+    =\begin{pmatrix}
+      y \\
+      z \\
+      x
+    \end{pmatrix}
+  \]
+\end{tanswer}
+
+
+\setcounter{equation}{0}
+
+\part*{第1章・章末問題}
+\addcontentsline{toc}{part}{\texorpdfstring{第1章・章末問題}{第1章・章末問題}}
+
+
+\section*{p29--30:1}
+\addcontentsline{toc}{section}{\texorpdfstring{p29--30：1}{p29--30：1}}
+
+\begin{tproof}
+  四面体$\mathrm{P_1 P_2 P_3 P_4}$を考える．三角形$\mathrm{P_2 P_3 P_4}$の任意の周および内部の点を$\mathrm{T}$とする．
+  $0 \leqq k \leqq 1$，$0 \leqq s \leqq 1$をみたす$k,s \in \mathbb{R}$によって
+  \begin{align*}
+    \overrightarrow{\mathrm{P_2 T}} & = k \{ s \overrightarrow{\mathrm{P_2 P_3}} + (1-s) \overrightarrow{\mathrm{P_2 P_4}} \} \\
+                                    & = ks(\bm{x}_3 -\bm{x}_2) + k(1-s) (\bm{x}_4-\bm{x}_2)                                   \\
+                                    & = -k\bm{x}_2 + ks \bm{x}_3 + k(1-s) \bm{x}_4
+  \end{align*}
+  と表される．
+
+  さて，線分$\mathrm{P_1 T}$上の任意の点を$\mathrm{Q}$とすると，$0 \leqq t \leqq 1$をみたす$t \in \mathbb{R}$によって
+
+  \begin{align*}
+    \overrightarrow{\mathrm{P_1 Q}} & =t \overrightarrow{\mathrm{P_1 T}}                                      \\
+                                    & = t\overrightarrow{\mathrm{P_2 T}} - t\overrightarrow{\mathrm{P_2 P_1}} \\
+                                    & = t (-k\bm{x}_2 + ks \bm{x}_3 + k(1-s) \bm{x}_4)-t(\bm{x}_1 -\bm{x}_2)  \\
+                                    & = -t\bm{x}_1 +(t-kt) \bm{x}_2 + kst \bm{x}_3 +kt(1-s) \bm{x}_4
+  \end{align*}
+  と表されるから，$k=4$のときの求める位置ベクトルは．
+  \begin{align*}
+    \bm{x} & = \bm{x}_1 + \overrightarrow{\mathrm{P_1 Q}}                     \\
+           & = (1-t) \bm{x}_1 +(t-kt)\bm{x}_2 +kst \bm{x}_3 +kt(1-s) \bm{x}_4
+  \end{align*}
+  となり，
+  \[
+    (1-t)+ (t-kt)+kst + kt(1-s)=1
+  \]
+  であるから，$1-t = t_1$，$t-kt =t_2$，$kst = t_3$，$kt(1-s)=t_4$とおくと，
+  \[
+    \bm{x}= t_1 \bm{x}_1 + t_2 \bm{x}_2 + t_3 \bm{x}_3 + t_4 \bm{x}_4 , \quad t_1, t_2 ,t_3 , t_4 \geqq 0 ,\quad  t_1 +t_2 + t_3 + t_4 =1
+  \]
+  となり，ここまでで$k=4$の場合が示された．
+
+  ここで，$n \geqq 4$として$k=n$のときに主張が成り立つと仮定する．
+  このとき，
+  \[
+    t_1 \bm{x}_1 + t_2 \bm{x}_2+\dots+ t_n \bm{x}_n
+  \]
+  は仮定により多面体$\{ \mathrm{P}_n \}$の内部の点であり，これを簡単のために$\bm{X}_n$とおく．
+
+  さて，$\{ \mathrm{P}_n \}$の点と$\mathrm{P}_{n+1}$とを結ぶ線分上の点は，$ 0 \leqq l \leqq 1$をみたす$l \in \mathbb{R}$によって，
+  \[
+    l \overbrace{(  t_1 \bm{x}_1 + t_2 \bm{x}_2+\dots+ t_n \bm{x}_n)}^{\bm{X}_n}+(1-l) \bm{x}_{n+1} , \quad t_1+t_2+\dots + t_n =1
+  \]
+  とかける．ここで，
+  \[
+    l(t_1+t_2+\dots+t_n)+(1-l)=1
+  \]
+  なので，$\{ \mathrm{P}_n \}$の点と$\mathrm{P}_{n+1}$とを結ぶ線分上の点はこのように表せる．
+
+  逆に，
+  \[
+    \bm{x} = t_1 \bm{x}_1 + t_2 \bm{x}_2 + \dots + t_n \bm{x}_n + t_{n+1} \bm{x}_{n+1} , \quad t_1, t_2 ,\dots , t_n,t_{n+1} \geqq 0 ,\quad  t_1 +t_2 + \dots+t_n + t_{n+1} =1
+  \]
+  としたとき，
+  \begin{align*}
+    \bm{x} & =\frac{t_1 \bm{x}_1 + t_2 \bm{x}_2+\dots+ t_n \bm{x}_n}{t_1+t_2+\dots+t_n} \cdot (t_1+t_2+\dots+t_n) +t_{n+1} \bm{x}_{n+1} \\
+           & = T_n \bm{X}_n + t_{n+1} \bm{x}_{n+1}
+  \end{align*}
+  と変形できる．ただし$T_n = t_1 + t_2 +\dots+t_n$とおいた．
+
+  さて
+  \[
+    \frac{\bm{X}_n }{T_n} = \frac{t_1 \bm{x}_1 }{T_n}+ \frac{t_2 \bm{x}_2 }{T_n}+\dots +  \frac{t_n \bm{x}_n }{T_n}  \\
+  \]
+  であることと
+  \begin{align*}
+    \frac{t_1}{T_n}+\frac{t_2 }{T_n} +\dots +\frac{t_n }{T_n} & = \frac{T_n}{T_n} \\
+                                                              & = 1
+  \end{align*}
+  であることにより，
+  \[
+    \frac{\bm{X}_n}{T_n}
+  \]
+  は，多面体$\{ \mathrm{P}_n \}$の内部の点であり．
+  \[
+    T_n \cdot \frac{\bm{X}_n}{T_n} + t_{n+1} \bm{x}_{n+1}
+  \]
+  は多面体$\{ \mathrm{P}_n \}$の内部の点と$\mathrm{P}_{n+1}$を結ぶ線分上の点である．
+
+  よって，$k=n$のときも問題の主張が成り立つ．
+
+  以上の考察により証明された．
+\end{tproof}
+
+\section*{p29--30:2}
+\addcontentsline{toc}{section}{\texorpdfstring{p29--30：2}{p29--30：2}}
+
+\begin{tproof}
+  2点$\mathrm{P}_1$，$\mathrm{P_2}$を通る直線の方程式を$ax+by+c=0$（ただし$(a,b)=0$）とおく．
+  このとき，
+  \[
+    \begin{cases}
+      ax+by+c =0       \\
+      ax_1 + by_1 +c=0 \\
+      ax_2 + by_2 +c =0
+    \end{cases}
+  \]
+  が成立する．すなわちこれは
+  \[
+    \begin{pmatrix}
+      x   & y   & 1 \\
+      x_1 & y_1 & 1 \\
+      x_2 & y_2 & 1
+    \end{pmatrix}
+    \begin{pmatrix}
+      a \\
+      b \\
+      c
+    \end{pmatrix}
+    = \bm{0}
+  \]
+  をみたす．これを$a$，$b$，$c$についての連立方程式とみたとき，与条件により自明でない解があり，
+  \[
+    \begin{vmatrix}
+      x   & y   & 1 \\
+      x_1 & y_1 & 1 \\
+      x_2 & y_2 & 1
+    \end{vmatrix}
+    =0
+  \]
+  が成立する．転置行列の行列式はもとの行列の行列式に等しいので，行列式の交代性なども用いて，
+  \[
+    \begin{vmatrix}
+      1 & 1   & 1   \\
+      x & x_1 & x_2 \\
+      y & y_1 & y_2
+    \end{vmatrix}
+    =0
+  \]
+  を得る．これが証明すべきことであった．
+\end{tproof}
+
+
+
+\section*{p29--30:3}
+\addcontentsline{toc}{section}{\texorpdfstring{p29--30：3}{p29--30：3}}
+
+\begin{tanswer}
+  点を以下の順で移動させる変換を考える．
+  \begin{enumerate}
+    \item 原点中心に$-\theta$回転させる．
+    \item $x$軸に関して対称移動させる．
+    \item 原点中心に$\theta$回転させる．
+  \end{enumerate}
+  ここで，(1)から(3)までの変換を表す行列をそれぞれ$R_{-\theta}$，$A_{x}$，$R_{\theta}$とすると．
+  \begin{align*}
+     & R_{-\theta} = \begin{pmatrix} \cos \theta & \sin \theta \\ -\sin \theta & \cos \theta \end{pmatrix} , \\
+     & A_{x} = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} ,                                               \\
+     & R_{\theta} = \begin{pmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \end{pmatrix} .
+  \end{align*}
+  となる．よって，この変換を表す行列は
+  \begin{align*}
+    R_{\theta} A_x R_{-\theta} & =\begin{pmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \end{pmatrix}
+    \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}
+    \begin{pmatrix} \cos \theta & \sin \theta \\ -\sin \theta & \cos \theta \end{pmatrix}                                                                                                \\
+                               & = \begin{pmatrix} \cos ^2 \theta - \sin ^2 \theta & 2\sin \theta \cos \theta \\ 2\sin \theta \cos \theta & \sin ^2 \theta -\cos ^2 \theta \end{pmatrix} \\
+                               & = \begin{pmatrix} \cos 2 \theta & \sin 2 \theta \\ \sin 2\theta & -\cos 2 \theta \end{pmatrix}
+  \end{align*}
+  である．
+\end{tanswer}
+
+
+\section*{p29--30:4}
+\addcontentsline{toc}{section}{\texorpdfstring{p29--30：4}{p29--30：4}}
+
+\begin{tproof}
+  以下では，直線$y= \tan \theta$に関する折り返しを$T_{\theta}$とかくことにする．
+
+  さて，直線$ y = \tan (\theta /4) x$に関する折り返しは，
+  \[
+    T_{\theta/4} = \begin{pmatrix} \cos (\theta /2) & \sin (\theta /2) \\  \sin (\theta /2) & -\cos (\theta /2) \end{pmatrix}
+  \]
+  で表される．
+
+  また，直線$y = \tan (-\theta /4)x$に関する折り返しは．
+  \[
+    T_{-\theta/4} = \begin{pmatrix} \cos (\theta /2) & -\sin (\theta/2) \\ -\sin (\theta/2) & -\cos (\theta /2) \end{pmatrix}
+  \]
+  で表される．
+
+  ここで，
+  \begin{align*}
+    T_{\theta/4} T_{-\theta/4} & = \begin{pmatrix} \cos (\theta /2) & \sin (\theta /2) \\  \sin (\theta /2) & -\cos (\theta /2) \end{pmatrix} \begin{pmatrix} \cos (\theta /2) & -\sin (\theta/2) \\ -\sin (\theta/2) & -\cos (\theta /2) \end{pmatrix} \\
+                               & =\begin{pmatrix} \cos ^2 (\theta /2)-\sin ^2 (\theta/2) & -2\sin (\theta/2) \cos (\theta/2) \\ 2\sin (\theta/2) \cos (\theta/2) & \cos ^2 (\theta/2)-\sin ^2 (\theta/2) \end{pmatrix}                                  \\
+                               & = \begin{pmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \end{pmatrix}
+  \end{align*}
+  となり，これは原点のまわりに$\theta$回転する行列を表す．
+
+  以上の考察により証明された．
+\end{tproof}
+
+\section*{p29--30：5}
+\addcontentsline{toc}{section}{\texorpdfstring{p29--30：5}{p29--30：5}}
+
+\begin{tanswer}
+  任意の点$\mathrm{P}(\bm{p}),~\bm{p} \in \mathbb{R}^3$を平面$(\bm{a},\bm{x})$に対して折り返すことを考える．
+
+  点$\mathrm{P}$から$(\bm{a},\bm{x})$におろした垂線の足は，$t \in \mathbb{R}$を用いて
+  \[
+    \bm{p} + t \frac{\bm{a}}{(\bm{a},\bm{a})}
+  \]
+  と表せ，これが平面$(\bm{a},\bm{x})$上にあるので，
+  \begin{align*}
+                 & (\bm{a},p+t\frac{\bm{a}}{(\bm{a},\bm{a})})=0 \\
+    \therefore ~ & t=- (\bm{a},\bm{p})
+  \end{align*}
+  である．
+
+  また，求める点を$\mathrm{P}' (\bm{p}')$とすると，
+  \begin{align*}
+    \bm{p}' & = \bm{p}+t \frac{2\bm{a}}{(\bm{a},\bm{a})}               \\
+            & = \bm{p}-\frac{2(\bm{a},\bm{p})}{(\bm{a},\bm{a})} \bm{a}
+  \end{align*}
+  であるから，これはたしかに$V^3$の線型変換を引き起こし，その変換公式は
+  \[
+    \bm{x} \mapsto \bm{x}-\frac{2(\bm{a},\bm{x})}{(\bm{a},\bm{a})} \bm{a}
+  \]
+  である，
+\end{tanswer}
+
+
+\section*{p29--30：6}
+\addcontentsline{toc}{section}{\texorpdfstring{p29--30：6}{p29--30：6}}
+
+\subsection*{p29--30：6-(イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p29--30：6-(イ)}{p29--30：6-(イ)}}
+
+\begin{tanswer}
+  $(S)$と$x$軸，$y$軸，$z$軸の交点をそれぞれ$\mathrm{A}$， $\mathrm{B}$，$\mathrm{C}$とする．
+  このとき，$\mathrm{A}$，$\mathrm{B}$，$\mathrm{C}$の座標は図のようになり，
+  この三角錐の体積を$V$とすると，
+  \begin{align*}
+    V= & \frac{1}{2} \cdot \frac{1}{3} \cdot\abs{ \det (\overrightarrow{\mathrm{OA}}, \overrightarrow{\mathrm{OB}}, \overrightarrow{\mathrm{OC}})} \\
+    =  & \frac{1}{6} \cdot \frac{\abs{d}^3}{\abs{abc}}= \frac{\abs{d}^3}{6\abs{abc}}
+  \end{align*}
+  である．ここで，$\abs{\det (\overrightarrow{\mathrm{OA}}, \overrightarrow{\mathrm{OB}}, \overrightarrow{\mathrm{OC}})}$が$\overrightarrow{\mathrm{OA}}$，$\overrightarrow{\mathrm{OB}}$，$\overrightarrow{\mathrm{OC}}$の張る平行六面体の体積を表すことを用いた．
+
+\end{tanswer}
+%回転角
+\tdplotsetmaincoords{70}{135}
+\begin{tikzpicture}[tdplot_main_coords]
+  %軸
+  \draw[->,>=stealth,semithick](0,0,0)--(5,0,0)node[below]{$x$};%x軸
+  \draw[->,>=stealth,semithick](0,0,0)--(0,5,0)node[right]{$y$};%y軸
+  \draw[->,>=stealth,semithick](0,0,0)--(0,0,5)node[right]{$z$};%y軸
+  \draw(0,0)node[below]{O};%原点
+
+  \draw[dashed,semithick](3,0,0)--(0,4,0)--(0,0,7/2)--cycle;
+  \fill[color=gray ,opacity=0.1] (3,0,0)--(0,4,0)--(0,0,7/2)--cycle;
+
+  \node at (3,0,0) [above left]{$\mathrm{A} (d/a,0,0)$};
+  \node at (0,4,0) [above right]{$\mathrm{B}(0,d/b,0)$};
+  \node at (0,0,7/2) [right]{$\mathrm{C}(0,0,d/c)$};
+\end{tikzpicture}
+
+\subsection*{p29--30：6-(ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p29--30：6-(ロ)}{p29--30：6-(ロ)}}
+
+\begin{tanswer}
+  三角形$\mathrm{ABC}$の体積を$T$，$\mathrm{O}$から平面$ABC$におろした垂線の足を$H$とすると，
+  \[
+    V = \frac{1}{3} \norm{\overrightarrow{\mathrm{OH}}} \cdot T
+  \]
+  である．ここで，
+  \[
+    \norm{\overrightarrow{\mathrm{OH}}}=\frac{\abs{a \cdot 0 + b \cdot 0 + c \cdot 0-d}}{\sqrt{a^2+b^2+c^2}}=\frac{\abs{d}}{\sqrt{a^2+b^2+c^2}}
+  \]
+  なので，イ)の結果から$V =\frac{\abs{d}^3}{6\abs{abc}}$なのを加味すると，
+  \[
+    T = \frac{d^2\sqrt{a^2+b^2+c^2}}{2\abs{abc}}
+  \]
+  である．
+\end{tanswer}
+
+
+\section*{p29--30：7}
+\addcontentsline{toc}{section}{\texorpdfstring{p29--30：7}{p29--30：7}}
+
+\subsection*{p29--30:7-(イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p29--30：7-(イ)}{p29--30：7-(イ)}}
+
+\begin{tanswer}
+  $\bm{a}$，$\bm{b}$，$\bm{c}$が張る平行六面体の体積は，
+  \[
+    \abs{\det (\bm{a},\bm{b},\bm{c})}
+  \]
+  で与えられる．
+
+  一方，この平行六面体の$\mathrm{O}$，$\mathrm{B}$，$\mathrm{C}$を含む面の面積は，
+
+  \[
+    \norm{\bm{b} \times \bm{c}}
+  \]
+
+  で与えられる．
+
+  以上の考察により，求める長さは，
+  \[
+    \frac{\abs{\det(\bm{a},\bm{b},\bm{c})}}{\norm{\bm{b} \times \bm{c}}}
+  \]
+  である．
+  \scalebox{0.6}[0.6]{
+    \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+      %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+      %Straight Lines [id:da9042715539337772] 
+      \draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ]   (150,250) -- (246.89,105.66) ;
+      \draw [shift={(248,104)}, rotate = 123.87] [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][line width=0.75]    (13.12,-3.95) .. controls (8.34,-1.68) and (3.97,-0.36) .. (0,0) .. controls (3.97,0.36) and (8.34,1.68) .. (13.12,3.95)   ;
+      %Straight Lines [id:da29183874211574523] 
+      \draw [color={rgb, 255:red, 144; green, 19; blue, 254 }  ,draw opacity=1 ]   (150,250) -- (348,250) ;
+      \draw [shift={(350,250)}, rotate = 180] [color={rgb, 255:red, 144; green, 19; blue, 254 }  ,draw opacity=1 ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+      %Straight Lines [id:da3012672762383153] 
+      \draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ] [dash pattern={on 4.5pt off 4.5pt}]  (150,250) -- (250.21,200.39) ;
+      \draw [shift={(252,199.5)}, rotate = 153.66] [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+      %Straight Lines [id:da7013310145085282] 
+      \draw    (248,104) -- (451,102.5) ;
+      %Straight Lines [id:da9417424223698198] 
+      \draw    (451,102.5) -- (350,250) ;
+      %Straight Lines [id:da10714474623977321] 
+      \draw  [dash pattern={on 4.5pt off 4.5pt}]  (247,202.5) -- (452,199.5) ;
+      %Straight Lines [id:da9346887424461314] 
+      \draw    (452,199.5) -- (350,250) ;
+      %Straight Lines [id:da9143571217608703] 
+      \draw    (451,102.5) -- (551,51.5) ;
+      %Straight Lines [id:da1037466616997732] 
+      \draw    (248,104) -- (348,50.5) ;
+      %Straight Lines [id:da921854997991198] 
+      \draw    (551,51.5) -- (452,199.5) ;
+      %Straight Lines [id:da6285253534318218] 
+      \draw  [dash pattern={on 4.5pt off 4.5pt}]  (348,50.5) -- (252,199.5) ;
+      %Straight Lines [id:da23538555105346293] 
+      \draw    (348,50.5) -- (551,51.5) ;
+      %Straight Lines [id:da381755385753077] 
+      \draw [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ][fill={rgb, 255:red, 65; green, 117; blue, 5 }  ,fill opacity=1 ]   (250,105) -- (250,235) ;
+      %Shape: Right Angle [id:dp3981791931061768] 
+      \draw  [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ][fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (235,235) -- (235,220) -- (250,220) ;
+
+      % Text Node
+      \draw (125,245) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\mathrm{O}$};
+      % Text Node
+      \draw (225,80) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\mathrm{A}$};
+      % Text Node
+      \draw (275,175) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\mathrm{B}$};
+      % Text Node
+      \draw (350,260) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\mathrm{C}$};
+    \end{tikzpicture}
+  }
+\end{tanswer}
+
+
+\subsection*{p29--30:7-(ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p29--30：7-(ロ)}{p29--30：7-(ロ)}}
+
+\begin{tanswer}
+  $ \overrightarrow{\mathrm{BA}}$と$\overrightarrow{\mathrm{BC}}$の外積は，
+  \[
+    \norm{(\bm{a}-\bm{b})\times(\bm{c}-\bm{b})}.
+  \]
+  これを$\norm{\overrightarrow{\mathrm{BC}}}$で割ればよく，求める長さは
+  \[
+    \frac{\norm{(\bm{a}-\bm{b})\times(\bm{c}-\bm{b})}}{\norm{\bm{c}-\bm{b}}}.
+  \]
+\end{tanswer}
+
+\section*{p29--30：8}
+\addcontentsline{toc}{section}{\texorpdfstring{p29--30：8}{p29--30：8}}
+\begin{tproof}
+  \[
+    \bm{a}=\begin{pmatrix} a_1 \\ a_2 \\ a_3 \end{pmatrix},\quad \bm{b}=\begin{pmatrix} b_1 \\ b_2 \\ b_3 \end{pmatrix},\quad \bm{c}=\begin{pmatrix} c_1 \\ c_2 \\ c_3 \end{pmatrix}
+  \]
+  とする．このとき，
+  \begin{align*}
+      &
+    \begin{pmatrix}
+      a_1 & a_2 & a_3 \\
+      b_1 & b_2 & b_3 \\
+      c_1 & c_2 & c_3
+    \end{pmatrix}
+    \begin{pmatrix}
+      a_1 & b_1 & c_1 \\
+      a_2 & b_2 & c_2 \\
+      a_3 & b_3 & c_3
+    \end{pmatrix}
+    \\
+    = & \begin{pmatrix}
+          {a_1}^2 +{a_2}^2 +{a_3}^2   & a_1 b_1 + a_2 b_2 + a_3 b_3 & a_1 c_1 + a_2 c_2 + a_3 c_3 \\
+          b_1 a_1 + b_2 a_2 + b_3 a_3 & {b_1}^2 +{b_2}^2 + {b_3}^2  & b_1 c_1 + b_2 c_2 + b_3 c_3 \\
+          c_1 a_1 + c_2 a_2 + c_3 a_3 & c_1 b_1 + c_2 b_2 + c_3 b_3 & {c_1}^2 +{c_2}^2 +{c_3}^2
+        \end{pmatrix}
+    \\
+    = & \begin{pmatrix}
+          (\bm{a},\bm{a}) & (\bm{a},\bm{b}) & (\bm{a},\bm{c}) \\
+          (\bm{b},\bm{a}) & (\bm{b},\bm{b}) & (\bm{b},\bm{c}) \\
+          (\bm{c},\bm{a}) & (\bm{c},\bm{b}) & (\bm{c},\bm{c})
+        \end{pmatrix}
+  \end{align*}
+  である．
+
+  一方，
+  \begin{align*}
+    \det (\bm{a},\bm{b},\bm{c}) & =
+    \begin{vmatrix}
+      a_1 & b_1 & c_1 \\
+      a_2 & b_2 & c_2 \\
+      a_3 & b_3 & c_3
+    \end{vmatrix}                                                                                        \\
+                                & = c_1
+    \begin{vmatrix}
+      a_2 & b_2 \\
+      a_3 & b_3
+    \end{vmatrix}
+    + c_2
+    \begin{vmatrix}
+      a_3 & b_3 \\
+      a_1 & b_1
+    \end{vmatrix}
+    + c_3
+    \begin{vmatrix}
+      a_1 & b_1 \\
+      a_2 & b_2
+    \end{vmatrix}
+    \\
+                                & = c_1 (a_2 b_3-b_2 a_3)+c_2 (a_3 b_1 - b_3 a_1)+c_3 (a_1 b_2 -b_1 a_2)   \\
+                                & = a_3 (b_1 c_2 - b_2 c_1)+b_3 (c_1 a_2-c_2 a_1)+ c_3 (a_1 b_2 - b_1 a_2) \\
+                                & =
+    \begin{vmatrix}
+      a_1 & a_2 & a_3 \\
+      b_1 & b_2 & b_3 \\
+      c_1 & c_2 & c_3
+    \end{vmatrix}
+  \end{align*}
+  であるから，これと行列式の積の性質により，
+  \[
+    \begin{vmatrix}
+      (\bm{a},\bm{a}) & (\bm{a},\bm{b}) & (\bm{a},\bm{c}) \\
+      (\bm{b},\bm{a}) & (\bm{b},\bm{b}) & (\bm{b},\bm{c}) \\
+      (\bm{c},\bm{a}) & (\bm{c},\bm{b}) & (\bm{c},\bm{a})
+    \end{vmatrix}
+    = {\det (\bm{a},\bm{b},\bm{c})}^2
+  \]
+  である．
+\end{tproof}
+
+
+\section*{p29--30:9}
+\addcontentsline{toc}{section}{\texorpdfstring{p29--30：9}{p29--30：9}}
+
+\begin{tanswer}
+  $ \det (\bm{x},\bm{y},\bm{z})$は，$\bm{x}$，$\bm{y}$，$\bm{z}$の張る平行六面体の体積に符号をつけたものに等しい．
+  与条件より，$\det (\bm{x},\bm{y},\bm{z})$が最大になるのは，$\bm{x}$．$\bm{y}$，$\bm{z}$の張る図形が立方体のときであり，
+  そのとき
+  \[
+    \det (\bm{x},\bm{y},\bm{z}) =1
+  \]
+  である．これからただちに$\det (\bm{x},\bm{y},\bm{z})$の最小値が$-1$であることも従う．
+
+  以上により，$\det (\bm{x},\bm{y},\bm{z})$の最大値は$1$，最小値は$-1$である．
+\end{tanswer}
+
+\section*{p29--30：10}
+\addcontentsline{toc}{section}{\texorpdfstring{p29--30：10}{p29--30：10}}
+
+\subsection*{p29--30：10-(イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p29--30：10-(イ)}{p29--30：10-(イ)}}
+
+\begin{tproof}
+  単位ベクトル$\bm{e}_1$，$\bm{e}_2$，$\bm{e}_3$を適当にとり，
+  \[
+    \bm{a} = \alpha_1 \bm{e}_1,\quad \bm{b} = \beta_1 \bm{e}_1+\beta_2 \bm{e}_2,\quad \bm{c}= \gamma_1 \bm{e}_1 + \gamma_2 \bm{e}_2 + \gamma_3 \bm{e}_3
+  \]
+  とおく．このとき，
+  \begin{align*}
+    (\bm{a} \times \bm{b}) \times \bm{c} & = \alpha_1 \beta_2 \bm{e}_3 \times (\gamma_1 \bm{e}_1 + \gamma_2 \bm{e}_2 + \gamma_3 \bm{e}_3) \\
+                                         & = \alpha_1 \beta_2 \gamma_1 \bm{e}_2 - \alpha_1 \beta_2 \gamma_2 \bm{e}_1                      \\
+                                         & = -(\bm{b},\bm{c})\bm{a}+(\bm{a},\bm{c}) \bm{b}
+  \end{align*}
+  であり，これが証明すべきことであった\footnote{この等式をラグランジュの恒等式とよぶ．}．
+\end{tproof}
+
+\subsection*{p29--30：10-(ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p29--30：10-(ロ)}{p29--30：10-(ロ)}}
+
+\begin{tproof}
+  イ)の結果により．
+  \begin{align*}
+     & (\bm{a}\times\bm{b}) \times \bm{c} =  -(\bm{b},\bm{c})\bm{a}+(\bm{a},\bm{c}) \bm{b} ,    \\
+     & (\bm{b} \times \bm{c} ) \times \bm{a} = -(\bm{c},\bm{a}) \bm{b} +(\bm{b},\bm{a}) \bm{c}, \\
+     & (\bm{c} \times \bm{a} ) \times \bm{b} = -(\bm{a},\bm{b}) \bm{c} +(\bm{c},\bm{b}) \bm{a}.
+  \end{align*}
+  であるから，
+  \[
+    (\bm{a}\times\bm{b}) \times \bm{c} + (\bm{b} \times \bm{c} ) \times \bm{a}+(\bm{c} \times \bm{a} ) \times \bm{b} =\bm{0}
+  \]
+  となる．これが証明すべきことであった．
+\end{tproof}

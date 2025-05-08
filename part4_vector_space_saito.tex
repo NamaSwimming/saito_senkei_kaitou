@@ -1,0 +1,1004 @@
+\part*{第4章}
+\addcontentsline{toc}{part}{\texorpdfstring{第4章}{第4章}}
+
+
+
+\section*{p93：問}
+\addcontentsline{toc}{section}{\texorpdfstring{p93：問}{p239：問}}
+
+\begin{tproof}
+  $\abs{A \cup B}$について，$ \abs{A \cap B}$は$A$と$B$の共通部分の元の個数を考えているので，
+  \begin{align*}
+     & \abs{A \cup B} = \abs{A}+\abs{B} - \abs{A \cap B}              \\
+     & \therefore ~ \abs{A}+\abs{B} = \abs{A \cup B} + \abs{A \cap B}
+  \end{align*}
+  である．これが証明すべきことであった．
+\end{tproof}
+
+
+
+
+\section*{p94：問}
+\addcontentsline{toc}{section}{\texorpdfstring{p94：問}{p94：問}}
+
+\begin{tanswer}
+  3つのことを証明する．
+  \begin{description}
+    \item [反射律について] 明らかに，$A$に基本変形を施して$A$自身にすることができる．
+    \item [対称律について] $P$を$(m,m)$型の基本行列，$Q$を$(n,n)$型の基本行列として，
+          \[
+            A = P B Q
+          \]
+          とかくと，$P$，$Q$は正則なので， $P^{-1}$，$Q^{-1}$が存在し，
+          \[
+            B= P^{-1} A Q^{-1}
+          \]
+          とかける．よって，対称律が成り立つことが示された．
+    \item[推移律について] $P_1$，$P_2$を$(m,m)$型の基本行列，$Q_1$，$Q_2$を$(n,n)$型の基本行列として，
+          \[
+            A = P_1 B Q_1 , \quad B = P_2 C Q_2
+          \]
+          とかく．このとき，$P_1$，$Q_1$は正則だから，${P_1}^{-1}$，${Q_1}^{-1}$が存在し，
+          \[
+            B = {P_1}^{-1} A {Q_1}^{-1}
+          \]
+          となる．これにより，
+          \[
+            {P_1}^{-1} A {Q_1}^{-1} =P_2 C Q_2
+          \]
+          となり，同様の議論によって
+          \[
+            A = P_1 P_2 C Q_2 Q_1
+          \]
+          となり，推移律も成り立つことが示された．\qed
+  \end{description}
+  さて，行列$A$に基本変形を施すと，$A$の階数を$r$として$F_{m,n} (r)$が得られることと，
+  $r$は$0$から$\min \{m,n\}$までの整数値を取り得るので，商集合の元の個数は
+  \[
+    \min \{ m , n \} +1
+  \]
+  となる．
+\end{tanswer}
+
+
+
+
+
+\section*{p106--107：問1}
+\addcontentsline{toc}{section}{\texorpdfstring{p106--107：問1}{p106--107：問1}}
+\begin{tanswer}
+  求める$E\to F$の取り替え行列を$P=(p_{ij})$とし，
+  \begin{align*}
+     & \bm{e}_1=
+    \begin{pmatrix}
+      1 \\
+      0 \\
+      1
+    \end{pmatrix}
+    ,\quad
+    \bm{e}_2=
+    \begin{pmatrix}
+      2 \\
+      1 \\
+      0
+    \end{pmatrix}
+    ,\quad
+    \bm{e}_3=
+    \begin{pmatrix}
+      1 \\
+      1 \\
+      1
+    \end{pmatrix}
+    ,            \\
+     &
+    \bm{f}_1=
+    \begin{pmatrix}
+      3  \\
+      -1 \\
+      4
+    \end{pmatrix}
+    ,\quad
+    \bm{f}_2=
+    \begin{pmatrix}
+      4 \\
+      1 \\
+      8
+    \end{pmatrix}
+    ,\quad
+    \bm{f}_3=
+    \begin{pmatrix}
+      3  \\
+      -2 \\
+      6
+    \end{pmatrix}
+  \end{align*}
+  とする．ここで，
+  \[
+    \bm{f}_i=\sum^{3}_{j=1}p_{ji}\bm{e}_{j}=p_{1i}\bm{e}_1+p_{2i}\bm{e}_2+p_{3i}\bm{e}_3
+  \]
+  であり，$i=1,2,3$の場合についての連立方程式を作ると
+  \begin{align*}
+     & f_1=p_{11}\bm{e}_1+p_{21}\bm{e}_2+p_{31}\bm{e}_3 \\
+     & f_2=p_{12}\bm{e}_1+p_{22}\bm{e}_2+p_{32}\bm{e}_3 \\
+     & f_3=p_{13}\bm{e}_1+p_{23}\bm{e}_2+p_{33}\bm{e}_3
+  \end{align*}
+  これを解くことにより
+  \begin{align*}
+     & p_{11}=\frac{9}{2},\quad p_{21}=-\frac{1}{2},\quad p_{31}=-\frac{1}{2}, \\
+     & p_{12}=5,\quad p_{22}=-2,\quad p_{32}=3,                                \\
+     & p_{13}=\frac{13}{2},\quad p_{23}=-\frac{3}{2},\quad p_{33}=-\frac{1}{2}
+  \end{align*}
+  なので，
+  \[
+    P=
+    \begin{pmatrix}
+      9/2  & 5  & 13/2 \\
+      -1/2 & -2 & -3/2 \\
+      -1/2 & 3  & -1/2
+    \end{pmatrix}
+  \]
+  である．また
+  \begin{equation*}
+    (\bm{f}_1,\bm{f}_2,\ldots ,\bm{f}_n)=(\bm{e}_1,\bm{e}_2,\ldots ,\bm{e}_n)P
+  \end{equation*}
+  であるから
+  \begin{align*}
+     &
+    \begin{pmatrix}
+      3  & 4 & 3  \\
+      -1 & 1 & -2 \\
+      4  & 8 & 6
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+      1 & 2 & 1 \\
+      0 & 1 & 1 \\
+      1 & 0 & 1
+    \end{pmatrix}
+    P     \\
+     & P=
+    \begin{pmatrix}
+      1 & 2 & 1 \\
+      0 & 1 & 1 \\
+      1 & 0 & 1
+    \end{pmatrix}
+    ^{-1}
+    \begin{pmatrix}
+      3  & 4 & 3  \\
+      -1 & 1 & -2 \\
+      4  & 8 & 6
+    \end{pmatrix}
+  \end{align*}
+  から求めることもできる．
+\end{tanswer}
+
+
+
+\section*{p106--107：問2}
+\addcontentsline{toc}{section}{\texorpdfstring{p106--107：問2}{p106--107：問2}}
+
+\begin{tanswer}
+  まず，
+  \begin{equation*}
+    \bm{f}_i=\sum^{2}_{j=1}p_{ji}\bm{e}_{j}=p_{1i}\bm{e}_1+p_{2i}\bm{e}_2
+  \end{equation*}
+  である，これにより
+  \begin{align*}
+     & \bm{f}_1=p_{11}\bm{e}_1+p_{21}\bm{e}_2, \\
+     & \bm{f}_2=p_{12}\bm{e}_1+p_{22}\bm{e}_2
+  \end{align*}
+  であるから，
+  \begin{align*}
+     &
+    \begin{pmatrix}
+      0 \\
+      1 \\
+      -1
+    \end{pmatrix}
+    =
+    p_{11}
+    \begin{pmatrix}
+      1  \\
+      -1 \\
+      0
+    \end{pmatrix}
+    +p_{21}
+    \begin{pmatrix}
+      1 \\
+      0 \\
+      -1
+    \end{pmatrix}
+    ,  \\
+     &
+    \begin{pmatrix}
+      1 \\
+      1 \\
+      -2
+    \end{pmatrix}
+    =
+    p_{12}
+    \begin{pmatrix}
+      1  \\
+      -1 \\
+      0
+    \end{pmatrix}
+    +p_{22}
+    \begin{pmatrix}
+      1 \\
+      0 \\
+      -1
+    \end{pmatrix}
+  \end{align*}
+  となり，これにより
+  \[
+    p_{11}=-1,\quad p_{21}=1,\quad p_{12}=-1,\quad p_{22}=2
+  \]
+  であるから，基底の取り替え$E \to F$の行列は
+  \begin{align*}
+    P=
+    \begin{pmatrix}
+      -1 & -1 \\
+      1  & 2
+    \end{pmatrix}
+  \end{align*}
+  である．
+\end{tanswer}
+
+
+\section*{p107--108：問1}
+\addcontentsline{toc}{section}{\texorpdfstring{p107--108：問1}{p107--108：問1}}
+
+
+\subsection*{p107--108：問1-(イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p107--108：問1-(イ)}{p107--108：問1-(イ)}}
+
+
+\begin{tanswer}
+  この集合を$W_1$とおくと，$W_1$は$\mathbb{C}^n$の部分空間をなす．
+  \[
+    \bm{x} =\bm{0} \in  W_1
+  \]
+  であるから，$W_1 \ne \varnothing$である．
+
+  また，
+
+  \[
+    \bm{v} = {}^t ( v_{1} , v_{2} , \ldots ,v_{n} ) , \quad \bm{w} = {}^t (w_{1} , w_{2} , \ldots , w_{n} )
+  \]
+  とおくと，
+  \[
+    \bm{v}+\bm{w}={}^t (v_1+w_1,v_2+w_2,\ldots,v_n + w_n)
+  \]
+  となり，これに加えて
+  \[
+    ( v_1+w_1)+(v_2+w_2) + \dots + (v_n + w_n) =(v_1+v_2+\dots + v_n ) + (w_1+w_2+\dots + w_n )=0+0=0
+  \]
+  となるから，$\bm{v}+\bm{w} \in W_1$である．
+  さらに，$a \in \mathbb{C}$をとると，
+  \[
+    a \bm{v}={}^t ( av_{1} ,av_{2} , \ldots , av_{n} )
+  \]
+  であり，
+  \[
+    av_1 + av_2+ \dots + av_n = a (v_1 + v_2 + \dots + v_n) = a \cdot 0 =0
+  \]
+  であるから，このとき$ a \bm{v} \in W_1$である．
+
+  以上により，$W_1$は$\mathbb{C}^n$の線型部分空間をなす．
+\end{tanswer}
+
+
+\subsection*{p107--108：問1-(ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p107--108：問1-(ロ)}{p107--108：問1-(ロ)}}
+
+\begin{tanswer}
+  この集合を$W_2$とおくと，$W_2$は$\mathbb{C}^n$の部分空間をなす．
+  \[
+    \bm{x} = \bm{0} \in W_2
+  \]
+  であるから，$W_2 \ne \varnothing$である．
+
+  また，
+  \[
+    \bm{v} ={}^t (v_{p+1} , v_{p+2} , \ldots , v_{n} ) , \quad \bm{w} ={}^t ( w_{p+1} , w_{p+2} , \ldots , w_{n} )
+  \]
+  とおくと，
+  \[
+    \bm{v}+ \bm{w} = {}^t (v_{p+1}+w_{p+1},v_{p+2}+w_{p+2},\ldots,v_n + w_n)
+  \]
+  であり，
+  \begin{align*}
+      & ( v_{p+1}+w_{p+1}) +(v_{p+2}+w_{p+2})+ \dots + (v_n+w_n) \\
+    = & (v_{p+1}+v_{p+2}+\dots+v_n)+(w_{p+1}+w_{p+2}+\dots+w_n)  \\
+    = & 0+0                                                      \\
+    = & 0
+  \end{align*}
+  となるため，このとき$\bm{v}+\bm{w} \in W_2$である．
+
+  また，
+  \[
+    a\bm{v} = {}^t (av_{p+1},av_{p+2},\ldots,av_n)
+  \]
+  であり，
+  \[
+    av_{p+1} + av_{p+2}+\dots + av_n =a (v_{p+1}+v_{p+2}+\dots+v_n) = a\cdot 0 =0
+  \]
+  であるため，このとき$a \bm{v} \in W_2$である．
+
+  以上により，$W_2$は$\mathbb{C}^n$の線型部分空間をなす．
+\end{tanswer}
+
+\subsection*{p107--108：問1-(ハ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p107--108：問1-(ハ)}{p107--108：問1-(ハ)}}
+
+\begin{tanswer}
+  これは部分空間をなさない．
+  \[
+    \bm{v}= {}^t (1,0,0,\ldots , 0),\quad \bm{w}={}^t (0,1,0,\ldots ,0)
+  \]
+  とすると
+  \[
+    \bm{v} + \bm{w}={}^t (1,1,0,\ldots,0)
+  \]
+  となり，与えられた条件式に当てはめると
+  \[
+    1^2+1^2+0^2 +\dots + 0^2 =2 \ne 1
+  \]
+  であるから，この集合は$\mathbb{C}^n$の部分空間でない．
+\end{tanswer}
+
+
+\subsection*{p107--108：問1-(ニ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p107--108：問1-(ニ)}{p107--108：問1-(ニ)}}
+
+\begin{tanswer}
+  この集合を$W_3$とおくと，$W_3$は$\mathbb{C}^n$の部分空間をなす．
+
+  $\bm{x}=\bm{0}$とすると，
+  \[
+    (\bm{a},\bm{x}) =0
+  \]
+  であるため，$W_3 \ne \varnothing$である．
+
+  さて，$\bm{v}$,$\bm{w}$が条件を満たすとすると，内積の定義から
+  \[
+    (\bm{a},\bm{v}+\bm{w})=(\bm{a},\bm{v})+(\bm{a},\bm{w})=0
+  \]
+  である．また，$ c \in \mathbb{C}$とすると，
+  \[
+    (\bm{a},c\bm{v})=c(\bm{a},\bm{v})=0
+  \]
+  である．
+
+  以上により，$W_3$は$\mathbb{C}^n$の線型部分空間をなす．
+\end{tanswer}
+
+
+\section*{p107--108：問2}
+\addcontentsline{toc}{section}{\texorpdfstring{p107--108：問2}{p107--108：問2}}
+
+
+\subsection*{p107--108：問2-(イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p107--108：問2-(イ)}{p107--108：問2-(イ)}}
+
+\begin{tanswer}この集合を$W_1$とおくと，$W_1$は$\mathbb{K}^n$の線型部分空間とならない．
+
+  たとえば
+  \[
+    A = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix},\quad B = \begin{pmatrix} 0 & 0 \\ 0 & 1 \end{pmatrix}
+  \]
+  とおくと，$ A , B \in W_1$であるが，
+  \[
+    A + B = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}
+  \]
+  となり，$A+B$は正則行列である．よって$W_1$は$\mathbb{K}^n$の線型部分空間とならない．
+\end{tanswer}
+
+
+\subsection*{p107--108：問2-(ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p107--108：問2-(ロ)}{p107--108：問2-(ロ)}}
+
+\begin{tanswer}
+  この集合を$W_2$とおくと，$W_2$は$\mathbb{K}^n$の線型部分空間となる．
+
+  $X =O$としたとき，$A O = OB$が成り立つのは明らかなので，$ W_2 \ne \varnothing$である．
+
+  また， $X,Y \in W_2$とすると，
+  \[
+    A(X+Y)=(X+Y)B
+  \]
+  が成立し，さらに$ a\in \mathbb{K}$とすると，
+  \[
+    A(aX)=(aX)B
+  \]
+  が成立する．
+
+  以上により， $W_2$は$\mathbb{K}^n$の線型部分空間である．
+\end{tanswer}
+
+\subsection*{p107--108：問2-(ハ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p107--108：問2-(ハ)}{p107--108：問2-(ハ)}}
+
+\begin{tanswer}
+  この集合を$W_3$とおくと，これは$\mathbb{K}^n$の線型部分空間とならない．
+
+  たとえば
+  \[
+    A = \begin{pmatrix} -1 & 1 \\ -1 & 1 \end{pmatrix} , \quad B = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}
+  \]
+  とおくと，
+  \[
+    A^2 = O , \quad B^2 =O
+  \]
+  となり，$A ,B \in W_3$であるが，
+
+  \[
+    A+B = \begin{pmatrix} -1 & 2\\-1 & 1\end{pmatrix}
+  \]
+  となり，これは冪零行列とならない．よって$W_3$は$\mathbb{K}^n$の線型部分空間とならない．
+\end{tanswer}
+
+\subsection*{p107--108：問2-(ニ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p107--108：問2-(ニ)}{p107--108：問2-(ニ)}}
+
+\begin{tanswer}
+  この集合を$W_4$とおくと，これは$\mathbb{K}^n$の線型部分空間とならない．
+
+  たとえば，
+  \[
+    A= \begin{pmatrix} 1 & 0 \\ 0 & 1 \\ \end{pmatrix}
+  \]
+  とおき，$ 1/2 \in \mathbb{K}$をとると，
+  \[
+    \frac{1}{2} A = \begin{pmatrix} 1/2 & 0 \\ 0 & 1/2 \end{pmatrix}
+  \]
+  となり，これは$W_4$の元ではない．よって$W_4$は$\mathbb{K}^n$の線型部分空間とならない．
+\end{tanswer}
+
+
+\section*{p122：問}
+\addcontentsline{toc}{section}{\texorpdfstring{p122：問}{p122：問}}
+
+\begin{tanswer}
+  まず，
+  \[
+    \bm{a}_1 = \begin{pmatrix} 1 \\ -1 \\ 0 \end{pmatrix},\quad \bm{a}_2 =\begin{pmatrix} 1 \\ 0 \\ -1 \end{pmatrix},\quad \bm{a}_3 = \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix}
+  \]
+  とおく．正規直交基底のひとつを$\bm{e}_1$とすると，$\norm{\bm{a}_1}=\sqrt{2}$により，
+  \[
+    \bm{e}_1 = \frac{1}{\norm{\bm{a}_1}} \bm{a}_1 = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ -1 \\ 0 \end{pmatrix}
+  \]
+  となる．また，
+  \[
+    \bm{a}_2 ' = \bm{a}_2 - (\bm{a}_2,\bm{e}_1)\bm{e}_1
+  \]
+  とすると，
+  \[
+    \bm{a}_2 ' = \begin{pmatrix} 1 \\ 0 \\ -1 \end{pmatrix}-\left \{ \begin{pmatrix} 1 \\ 0 \\ -1 \end{pmatrix} \cdot \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ -1 \\ 0 \end{pmatrix} \right \} \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ -1 \\ 0 \end{pmatrix} =\frac{1}{2} \begin{pmatrix} 1 \\ 1\\ -2 \end{pmatrix}
+  \]
+  である．これを用いると，
+  \[
+    \bm{e}_2 = \frac{1}{\norm{\bm{a}_2'}} \bm{a}_2 ' =\frac{1}{\sqrt{6}/2} \cdot \frac{1}{2} \begin{pmatrix} 1 \\ 1\\ -2 \end{pmatrix} = \frac{1}{\sqrt{6}} \begin{pmatrix} 1 \\ 1\\ -2 \end{pmatrix}
+  \]
+  となる．また，
+  \[
+    \bm{a}_3 ' = \bm{a}_3 - (\bm{a}_3,\bm{e}_1)\bm{e}_1 -(\bm{a}_3,\bm{e}_2)\bm{e}_2
+  \]
+  とすると，
+  \[
+    \bm{a}_3'  = \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix} - \left \{ \begin{pmatrix} 1 \\ 2\\ 3 \end{pmatrix} \cdot \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ -1 \\ 0 \end{pmatrix} \right \} \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ -1 \\ 0 \end{pmatrix}- \left \{ \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix} \cdot  \frac{1}{\sqrt{6}} \begin{pmatrix} 1 \\ 1\\ -2 \end{pmatrix} \right \}  \frac{1}{\sqrt{6}} \begin{pmatrix} 1 \\ 1\\ -2 \end{pmatrix} =\begin{pmatrix} 2 \\ 2 \\ 2 \end{pmatrix}
+  \]
+  となり，
+  \[
+    \bm{e}_3 = \frac{1}{\norm{\bm{a}_3 ' }} \bm{a}_3 ' = \frac{1}{\sqrt{3}} \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix}
+  \]
+  となる．
+
+  以上の考察により，求める正規直交基底は
+  \[
+    \langle \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ -1 \\ 0 \end{pmatrix} , \frac{1}{\sqrt{6}} \begin{pmatrix} 1 \\ 1\\ -2 \end{pmatrix} ,  \frac{1}{\sqrt{3}} \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix} \rangle
+  \]
+  である．
+\end{tanswer}
+
+
+
+\section*{p124：問-1)}
+\addcontentsline{toc}{section}{\texorpdfstring{p124：問-1)}{p124：問-1)}}
+
+\begin{tproof}
+  任意に $\bm{x} \in W$ をとる．$W^{\perp}$ は「$W$ の任意のベクトルと直交するベクトル全体の集合」であるから，$\bm{x} \in W$ に対しては，任意の $\bm{y} \in W^{\perp}$ において $(\bm{x}, \bm{y})=0$ が成り立つ．
+
+  ゆえに，任意の $\bm{x} \in W$ は $W^{\perp}$ の元全てと直交することになり，したがって $\bm{x} \in (W^{\perp})^{\perp}$ が従う．このことから
+  \[
+    W \subset (W^{\perp})^{\perp}
+  \]
+  が得られる．
+  また，定理[4.7]から
+  \begin{align*}
+     & \dim W +\dim W^{\perp} =\dim (W +W^{\perp} )+\dim (W \cap W^{\perp} ), \\
+     & \dim W +\dim W^{\perp} =n.
+  \end{align*}
+  ここで定理[6.4]から$\mathbb{R}^n$の計量空間$V$は$W\dot{+}W^{\perp}$と表されること，[4.8]から，この直和の共通部分は$\{ \bm{o} \}$のみであることを用いた．
+\end{tproof}
+
+
+
+\part*{第4章・章末問題}
+\addcontentsline{toc}{part}{\texorpdfstring{第4章・章末問題}{第4章・章末問題}}
+
+
+\section*{p127--130：1}
+\addcontentsline{toc}{section}{\texorpdfstring{p127--130：1}{p127--130：1}}
+
+\begin{tanswer}
+  $s,t,u,v \in \mathbb{R}$とし．
+  \[
+    s\bm{a}_1+t\bm{a}_2=u\bm{a}_3+v\bm{a}_4
+  \]
+  とおく．これにより，
+  \begin{align*}
+     &
+    \begin{pmatrix}
+      1 & -1 & 0  & 1 \\
+      2 & 1  & -1 & 9 \\
+      0 & 3  & 5  & 1 \\
+      4 & -3 & 2  & 4
+    \end{pmatrix}
+    \begin{pmatrix}
+      s \\
+      t \\
+      u \\
+      v
+    \end{pmatrix}
+    =\bm{o} , \\
+     &
+    \begin{pmatrix}
+      1 & 0 & 0 & 3  \\
+      0 & 1 & 0 & 2  \\
+      0 & 0 & 1 & -1 \\
+      0 & 0 & 0 & 0
+    \end{pmatrix}
+    \begin{pmatrix}
+      s \\
+      t \\
+      u \\
+      v
+    \end{pmatrix}
+    =\bm{o} , \\
+     &
+    \begin{pmatrix}
+      s \\
+      t \\
+      u \\
+      v
+    \end{pmatrix}
+    =a
+    \begin{pmatrix}
+      -3 \\
+      -2 \\
+      1  \\
+      1
+    \end{pmatrix}
+    . \quad \text{($a$は任意の定数)}
+  \end{align*}
+  とかけるので，$W_1 \cap W_2$の次元は$1$であり，その基底は
+  \[
+    s \bm{a}_1+ t \bm{a}_2 =-a \begin{pmatrix} 1 \\ 8 \\ 6 \\ 6 \end{pmatrix}
+  \]
+  により，
+  \[
+    \langle
+    \begin{pmatrix}
+      1 \\
+      8 \\
+      6 \\
+      6
+    \end{pmatrix}
+    \rangle
+  \]
+  である．
+\end{tanswer}
+
+
+
+\section*{p127--130：2}
+\addcontentsline{toc}{section}{\texorpdfstring{p127--130：2}{p127--130：2}}
+
+\begin{tanswer}
+  $ W_1$に関して，$x_3 =s$，$x_4 =t$とおくと，
+  \[
+    \begin{pmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \end{pmatrix} = s \begin{pmatrix} 1 \\ -1 \\ 1 \\ 0 \end{pmatrix} + t \begin{pmatrix} -9 \\ 3 \\ 0 \\ 1 \end{pmatrix}
+  \]
+  とかけるため，$\dim W_1 = 2$であり，その基底は
+  \[
+    \langle  \begin{pmatrix} 1 \\ -1 \\ 1 \\ 0 \end{pmatrix} , \begin{pmatrix} -9 \\ 3 \\ 0 \\ 1 \end{pmatrix} \rangle
+  \]
+  である．$W_2$に関しても同様にして，$\dim W_2 = 2$であり，その基底は
+  \[
+    \langle \begin{pmatrix} 0 \\ -1 \\ 1 \\ 0 \end{pmatrix} , \begin{pmatrix} -1 \\ 3 \\ 0 \\ 1 \end{pmatrix} \rangle
+  \]
+  である．したがって$W_1 + W_2$は
+  \[
+    \begin{pmatrix} 1 \\ -1 \\ 1 \\ 0 \end{pmatrix} ,\quad  \begin{pmatrix} -9 \\ 3 \\ 0 \\ 1 \end{pmatrix},\quad \begin{pmatrix} 0 \\ -1 \\ 1 \\ 0 \end{pmatrix} ,\quad  \begin{pmatrix} -1 \\ 3 \\ 0 \\ 1 \end{pmatrix}
+  \]
+  によって生成される．
+
+  ここで，
+  \[
+    x \begin{pmatrix} 1 \\ -1 \\ 1 \\ 0 \end{pmatrix} + y \begin{pmatrix} -9 \\ 3 \\ 0 \\ 1 \end{pmatrix} + z \begin{pmatrix} 0 \\ -1 \\ 1 \\ 0 \end{pmatrix} + w \begin{pmatrix} -1 \\ 3 \\ 0 \\ 1 \end{pmatrix} =\bm{o}
+  \]
+  とすると，
+  \[
+    \begin{pmatrix} 1 & -9 & 0 & -1 \\ -1 & 3 & -1 & 3 \\ 1 & 0 & 1 & 0 \\ 0 & 1 & 0 & 1 \end{pmatrix} \begin{pmatrix} x \\ y \\ z \\ w \end{pmatrix} = \bm{o}
+  \]
+  となり，これに基本変形を施すと，
+  \[
+    \begin{pmatrix} 1 & 0 & 0 & 8 \\ 0 & 1 & 0 & -8 \\0 & 0 & 1 & 1 \\ 0 & 0 & 0 & 0 \end{pmatrix} \begin{pmatrix} x \\ z \\ y \\ w \end{pmatrix} = \bm{o}
+  \]
+  となる．
+  したがって，$W_1 + W_2$の次元は$3$であり，その基底は
+  \[
+    \langle \begin{pmatrix} 1 \\ -1 \\ 1 \\ 0 \end{pmatrix} , \begin{pmatrix} -9 \\ 3 \\ 0 \\ 1 \end{pmatrix} , \begin{pmatrix} 0 \\ -1 \\ 1 \\ 0 \end{pmatrix} \rangle
+  \]
+  である．
+\end{tanswer}
+
+
+
+\section*{p127--130：5}
+\addcontentsline{toc}{section}{\texorpdfstring{p127--130：5}{p127--130：5}}
+
+\begin{tanswer}
+  $A$，$B$の定める線型写像をそれぞれ$T_A$，$T_B$とする．$ \bm{x} \in \Im (T_A + T_B)$を任意にとると，
+  ある$\bm{y} \in \mathbb{R}^n$が存在して，
+  \begin{alignat*}{2}
+    \bm{x} & = (T_A+T_B)(\bm{y}) \quad           &  &                                       \\
+           & = T_A (\bm{y}) + T_B (\bm{y}) \quad &  & \text{($\because$~$T_A$と$T_B$は線型写像)}.
+  \end{alignat*}
+  よって，
+  \begin{equation}
+    \Im (T_A + T_B) \subset \Im T_A + \Im T_B \quad \tag{$\ast$}
+    \label{eq:p127--130:5_ast}
+  \end{equation}
+  これにより，
+  \begin{alignat*}{2}
+    \rank (T_A + T_B) & = \dim (\Im (T_A + T_B))\quad                  &  & \text{($\because$~階数の定義)}                       \\
+                      & \leqq \dim (\Im (T_A) + \Im (T_B))\quad        &  & \text{($\because$ ~\eqref{eq:p127--130:5_ast})} \\
+                      & \leqq \dim (\Im (T_A)) + \dim (\Im (T_B))\quad &  & \text{($\because$~定理[4.7])}                     \\
+                      & = \rank (T_A)+\rank( T_B).\quad                &  & \text{($\because$~階数の定義)}
+  \end{alignat*}
+  これを書き換えると
+  \[
+    \rank (A+B) \leqq \rank (A) + \rank (B).
+  \]
+  これが証明すべきことであった．
+\end{tanswer}
+
+
+
+\section*{p127--130：6}
+\addcontentsline{toc}{section}{\texorpdfstring{p127--130：6}{p127--130：6}}
+
+
+\subsection*{p127--130：6-(イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p127--130：6-(イ)}{p127--130：6-(イ)}}
+
+\begin{tproof}
+  $BA$は$n$次の正方行列である．ここで，
+  \begin{align*}
+    \rank (BA) & \leqq \min \{ \rank B, \rank A \} \\
+               & =  m <n
+  \end{align*}
+  であるから，$\rank (BA)<n$である．よって$BA$は正則行列でない．
+\end{tproof}
+
+
+\subsection*{p127--130：6-(ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p127--130：6-(ロ)}{p127--130：6-(ロ)}}
+
+\begin{tproof}
+  $AB$ が正則であるとする．$m = \rank AB \leq \min\{\rank A,\rank B \}$ であるから，
+  $m \leq \rank A$ かつ $m \leq \rank B$ である．一方 $\rank A \leq m,\ \rank B \leq m$ でもあるから
+  $m = \rank A = \rank B$ である．
+
+  行列 $X$ の定める線形写像を $T_X$ と書くことにする
+  （$T_A \colon  \mathbb{C}^n \to \mathbb{C}^m$，$ T_B \colon  \mathbb{C}^m \to \mathbb{C}^n$ である）．
+
+  \begin{align*}
+    \rank AB & = \dim(T_{AB}(\mathbb{C}^m))           \\
+             & = \dim((T_A \circ T_B)(\mathbb{C}^m)).
+  \end{align*}
+
+  $W = T_B(\mathbb{C}^m)$ とおく．$T_A$ の定義域を $W$ に制限した写像 $T_A \upharpoonright W : W \to \mathbb{C}^n$ について次元定理を適用すると，
+
+  \[
+    \dim W = \dim((T_A \upharpoonright W)(W)) + \dim((T_A \upharpoonright W)^{-1}(\{o_m\})).
+  \]
+
+  ここで，
+
+  \begin{align*}
+    (T_A \upharpoonright W)^{-1}(\{o_m\}) & = \{ x \in W : (T_A \upharpoonright W)(x) = o_m \} \\
+                                          & = \{ x \in W : T_A(x) = o_m \}                     \\
+                                          & = \{ x \in \mathbb{C}^n : T_A(x) = o_m \} \cap W   \\
+                                          & = {T_A}^{-1}(\{o_m\}) \cap W.
+  \end{align*}
+
+  であるから，
+
+  \[
+    m = \dim((T_A \circ T_B)(\mathbb{C}^m)) + \dim({T_A}^{-1}(\{0_m\}) \cap W).
+  \]
+
+  となる．よって，
+
+  \[
+    \rank AB = m - \dim({T_A}^{-1}(\{o_m\}) \cap W).
+  \]
+
+  だから $\dim({T_A}^{-1}(\{o_m\}) \cap W) = 0$ である．以上より，
+
+  \begin{enumerate}[(I)]
+    \item $m = \rank A = \rank B.$ \label{enu:p127--130：6-I}
+    \item $\dim({T_A}^{-1}(\{o_m\}) \cap T_B(\mathbb{C}^m)) = 0.$\label{enu:p127--130：6-II}
+  \end{enumerate}
+
+  は必要条件である．一方，\ref{enu:p127--130：6-I}かつ \ref{enu:p127--130：6-II} を仮定すると，$\rank AB = m$ であるから $AB$ は正則でもある．
+
+  よって\ref{enu:p127--130：6-I}かつ\ref{enu:p127--130：6-II}が必要十分条件である．
+\end{tproof}
+
+
+\section*{p127--130：7}
+\addcontentsline{toc}{section}{\texorpdfstring{p127--130：7}{p127--130：7}}
+\begin{tproof}
+  $M_n(\mathbb{K})$ の基底 $\langle \bm{e}_{11}, \bm{e}_{12}, \dots, \bm{e}_{1n}, \bm{e}_{21}, \dots, \bm{e}_{nn} \rangle$ を，
+  $\bm{e}_{ij}$の$(i,j)$成分が$1$で，その他の成分は$0$であるものとして定義する．
+
+  $X = (x_{ji}) \in M_n(\mathbb{K})$ を取り，
+  $A = (a_{ij})$を$a_{ij} = T \bm{e}_{ji}$であるものとすれば，
+  \begin{align*}
+    \tr (AX) & = \tr \left(
+    \begin{pmatrix}
+        T \bm{e}_{11} & T \bm{e}_{12} & \dots  & T \bm{e}_{1n} \\
+        T \bm{e}_{21} & T \bm{e}_{22} & \dots  & T \bm{e}_{2n} \\
+        \vdots        & \vdots        & \ddots & \vdots        \\
+        T \bm{e}_{n1} & T \bm{e}_{n2} & \dots  & T \bm{e}_{nn}
+      \end{pmatrix}
+    \begin{pmatrix}
+        x_{11} & x_{21} & \dots  & x_{n1} \\
+        x_{12} & x_{22} & \dots  & x_{n2} \\
+        \vdots & \vdots & \ddots & \vdots \\
+        x_{1n} & x_{2n} & \dots  & x_{nn}
+      \end{pmatrix}
+    \right)                                                                  \\
+             & = \tr \left(
+    \begin{pmatrix}
+        x_{11}T \bm{e}_{11} + x_{12}T \bm{e}_{12} + \cdots + x_{1n}T \bm{e}_{1n} &                                                             \\
+                                                                                 & \ddots &                                                    \\
+                                                                                 &        & x_{n1}T \bm{e}_{n1} + \cdots + x_{nn}T \bm{e}_{nn}
+      \end{pmatrix}
+    \right)                                                                  \\
+             & = \sum_{1 \leq i,j \leq n} x_{ij} T \bm{e}_{i,j}              \\
+             & = T \left(\sum_{1 \leq i,j \leq n } x_{ij} \bm{e}_{ij}\right) \\
+             & = T(X)
+  \end{align*}
+  となり，上記のように$A$をとればよい．
+\end{tproof}
+
+
+
+\section*{p127--130：8}
+\addcontentsline{toc}{section}{\texorpdfstring{p127--130：8}{p127--130：8}}
+
+\begin{tanswer}
+  例7をふまえ，
+  \[
+    (f, g) = \int_{-\pi}^{\pi} f(x) g(x) \, dx
+  \]
+  とする．このとき，
+  \begin{align*}
+    \norm{f-g}^2 & = \int_{-\pi}^{\pi} \abs{f(x) - g(x)}^2 \, dx                                                                       \\
+                 & = \int_{-\pi}^{\pi} (f(x)-g(x))^2 \, dx                                                                             \\
+                 & = \int_{-\pi}^{\pi} \abs{f(x)}^2 \,dx - \int_{-\pi}^{\pi} 2 f(x) g(x) \, dx + \int_{-\pi}^{\pi} \abs{g(x)}^2 \,  dx
+  \end{align*}
+  である．さらに，第2項と第3項に関連して，
+  \begin{align*}
+     & \int_{-\pi}^{\pi} f(x) g(x)  \, dx = a_0 \int_{-\pi}^{\pi} f(x) \,  dx + \sum_{k=1}^{n} \left( a_k \int_{-\pi}^{\pi} f(x) \cos kx \, dx + b_k \int_{-\pi}^{\pi} f(x) \sin kx \, dx \right), \\
+     & \int_{-\pi}^{\pi} \abs{g(x)}^2 \,dx = 2\pi {a_0}^2 + \pi \sum_{k=1}^{n} ({a_k}^2 + {b_k}^2).
+  \end{align*}
+  これらを用いると，
+  \begin{align*}
+    \int_{-\pi}^{\pi} \abs{f(x) - g(x)}^2 \, dx
+     & = 2\pi {a_0}^2 + \pi \sum_{k=1}^{n} ({a_k}^2 + {b_k}^2)                                                     \\
+     & \quad - 2 \left( a_0 \int_{-\pi}^{\pi} f(x) \, dx
+    + \sum_{k=1}^{n} \left( a_k \int_{-\pi}^{\pi} f(x) \cos kx \, dx
+    + b_k \int_{-\pi}^{\pi} f(x) \sin kx \, dx \right) \right)                                                     \\
+     & \quad + \int_{-\pi}^{\pi} \abs{f(x)}^2 \, dx                                                                \\
+     & = 2\pi \left( a_0 - \frac{1}{2\pi} \int_{-\pi}^{\pi} f(x) \, dx \right)^2
+    + \pi \sum_{k=1}^{n} \left\{ \left( a_k - \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \cos kx \, dx \right)^2 \right. \\
+     & \quad + \left. \left( b_k - \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \sin kx \, dx \right)^2 \right\} + R.
+  \end{align*}
+
+  ただし，
+  \[
+    R= \int_{-\pi}^{\pi} f(x)^2 \, dx - 2\pi \left( \frac{1}{2\pi} \int_{-\pi}^{\pi} f(x) \, dx \right)^2 - \pi \sum_{k=1}^{n} \left( \left( \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \cos kx \, dx \right)^2 + \left( \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \sin kx \, dx \right)^2 \right).
+  \]
+  ï
+  したがって，$\norm{f - g}^2$ を最小にする $g(x)$ は，
+
+  \[
+    g(x) = \frac{1}{2\pi} \int_{-\pi}^{\pi} f(x) \, dx + \sum_{k=1}^{n} \left(\frac{1}{\pi}  \left(\int_{-\pi}^{\pi} f(x) \cos kx \, dx \right) \cos kx + \frac{1}{\pi} \left(\int_{-\pi}^{\pi} f(x) \sin kx\,  dx \right) \sin kx \right).
+  \]
+\end{tanswer}
+
+
+
+
+\section*{p127--130：12}
+\addcontentsline{toc}{section}{\texorpdfstring{p127--130：12}{p127--130：12}}
+
+
+\subsection*{p127--130：12-(イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p127--130：12-(イ)}{p127--130：12-(イ)}}
+
+
+\begin{tproof}
+  ペクトル空間 $V$ に対して，$V$ の線型汎函数全体の集合を $V^*$ とする．
+
+  $V$ の基底 $E= \langle \bm{e}_1, \bm{e}_2, \dots, \bm{e}_n\rangle $ に対して，
+  $V^*$の元$\bm{f}_i$を$\bm{f}_i(\bm{e}_j)=\delta_{ij}$とする．
+  $E^* = \langle \bm{f}_1, \bm{f}_2, \dots, \bm{f}_n\rangle$ は $V^*$ の基底である．
+
+  任意の $\bm{f}_i  \in V^*$ が線型結合で表されることを示す．
+  \[
+    (c_1 \bm{f}_1 + \dots + c_n \bm{f}_n) (\bm{x}) = \bm{0}
+  \]
+  とする．
+  ここで $\bm{x} = \bm{e}_i$ ~($1 \leqq i \leqq n$)を代入すると，
+  $\bm{f}_i (\bm{e}_j) = \delta_{ij}$となり，$c_i =0$と併せると
+  \[
+    c_1=c_2 = \dots =c_n = 0
+  \]
+  となり線型独立である．
+
+  次に，$V^\ast$ の元が $\bm{f}_1, \bm{f}_2, \dots, \bm{f}_n$ の線型結合で表されることを示す．
+
+  $V^\ast$の元$\bm{f}$ が $V$ の元$\bm{x}=x_1 \bm{e}_1 + \dots + x_n \bm{e}_n$に対して
+  $\bm{f}(\bm{e}_j) = a_i$~ ($1 \leqq i \leqq n$)とすると，
+  \begin{alignat*}{2}
+    \bm{f} (\bm{x}) & = \sum_{i=1}^{n} x_i \bm{f}(\bm{e}_i)                                            & \quad & (\text{$\because$~$f$の線型性})                           \\
+                    & = \sum_{i=1}^{n} a_i x_i                                                         &       &                                                       \\
+                    & = \sum_{i=1}^{n} a_i \bm{f}_i (x_1 \bm{e}_1 + x_2 \bm{e}_2 +\dots+ x_n \bm{e}_n) & \quad & (\text{$\because~ \bm{f}_i (\bm{e}_j)=\delta_{i,j}$}) \\
+                    & = \left( \sum_{i=1}^{n} a_i \bm{f}_i \right) (\bm{x})                            &       &
+  \end{alignat*}
+  と$\bm{f}_1 , \bm{f}_2 , \dots ,\bm{f}_n$の線型結合として表される．
+
+  以上により，$E^\ast$は$V^\ast$の基底である．
+\end{tproof}
+
+
+\subsection*{p127--130：12-(ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p127--130：12-(ロ)}{p127--130：12-(ロ)}}
+
+\begin{tproof}
+  $ W^\ast$の元$\bm{f}= c_1 \bm{f}_1' + \dots + c_n \bm{f}_n'$をとる．
+  $V$の元$\bm{x} =\sum_{k=1}^{n} x_k \bm{e}_k$に対して
+  \begin{alignat*}{2}
+    (T^\ast \bm{f}') (\bm{x}) & = \bm{f} \circ T(\bm{x})                                                                                                & \quad &                                              \\
+                              & = \sum_{k=1}^{m} c_k \bm{f}_k ' \circ T \left( \sum_{l=1}^{n} x_l \bm{e}_l \right)                                      & \quad & (\text{$\because$~$\bm{f}'$の線型性})            \\
+                              & = \sum_{k=1}^{m} c_k \bm{f}_k ' \left( \sum_{l=1}^{n} x_l T (\bm{e}_l) \right)                                          & \quad & (\text{$\because$~$T$の線型性})                  \\
+                              & = \sum_{k=1}^{m} c_k \sum_{l=1}^{n} x_l \bm{f}_k ' (a_{1l} \bm{e}_1 ' + a_{2l} \bm{e}_2 ' + \dots + a_{nl} \bm{e}_n ' ) & \quad &                                              \\
+                              & = \sum_{k=1}^{m} c_k \sum_{l=1}^{n} x_l a_{kl}                                                                          & \quad & (\text{$\because$~双対基底の定義と$\bm{f}_k '$の線型性}) \\
+                              & = \sum_{k=1}^{m} c_K \sum_{l=1}^{n} c_{kl} \bm{f}_l ( x_1 \bm{e}_1 + \dots + x_n \bm{e}_n)                              &       & (\text{$\because$~双対基底の定義と$\bm{f}_l '$の線型性}) \\
+                              & = \left( \sum_{l=1}^{n} \left( \sum_{k=1}^{m} c_k a_{kl} \right) \bm{f}_l\right) (\bm{x})
+  \end{alignat*}
+  より，基底$E^\ast$，$F^\ast$に関する$T^\ast$の表現行列$B= (b_{ij})$は
+  \[
+    \begin{pmatrix} \sum_{k=1}^{m} c_k a_{k1} \\ \vdots \\ \sum_{k=1}^{m} c_k a_{kn} \end{pmatrix}
+    =
+    \begin{pmatrix} l_{11} & l_{12} & \dots & l_{1m} \\ \vdots & & & \vdots \\ l_{n1} & l_{n2} & \dots & l_{nm} \end{pmatrix}
+    \begin{pmatrix} c_1 \\ \vdots \\ c_n \end{pmatrix}
+  \]
+  より，$b_{ij}=a_{ji}$となり，$B= {}^t A$である．
+\end{tproof}
+
+
+
+\section*{p127--130：9}
+\addcontentsline{toc}{section}{\texorpdfstring{p127--130：9}{p127--130：9}}
+\begin{tproof}
+  この写像を$\varphi$とする．
+  まず，$\varphi$が線型写像であることを示す．
+
+  $\bm{x} , \bm{y} \in V$ と $c \in \mathbb{R}$ に対して，$ \forall \bm{f} \in V^\ast$で
+
+  \begin{align*}
+    ( \varphi(\bm{x}+\bm{y})) (\bm{f}) & = \bm{f} (\bm{x}+\bm{y})                                  \\
+                                       & =\bm{f} (\bm{x}) + \bm{f} (\bm{y})                        \\
+                                       & = (\varphi(\bm{x})) (\bm{f}) + (\varphi(\bm{y})) (\bm{f}) \\
+                                       & = ( \varphi(\bm{x}) + \varphi(\bm{y})) (\bm{f})
+  \end{align*}
+  \begin{align*}
+    ( \varphi(c \bm{x})) (\bm{f}) & = \bm{f} (c \bm{x})            \\
+                                  & = c \bm{f} (\bm{x})            \\
+                                  & = c (\varphi(\bm{x})) (\bm{f}) \\
+                                  & = (c \varphi(\bm{x})) (\bm{f})
+  \end{align*}
+  であるから，$\varphi$は線型写像である．
+
+  次に，$V$の基底$E= \langle \bm{e}_1 , \bm{e}_2, \dots , \bm{e}_n \rangle$に対して，
+  $\bm{e}_i ' = \varphi ( \bm{e}_i)$ ~(ただし$1 \leqq i \leqq n$)としたとき，
+  $(E^\ast )^\ast= \langle \bm{e}_1 ' , \bm{e}_2 ' , \dots , \bm{e}_n ' \rangle$が$(V^\ast)^\ast$の基底であることを示す．
+
+  $ E^\ast = \langle \bm{f}_1 , \bm{f}_2 , \dots , \bm{f}_n \rangle$を$E$の双対基底とする．
+  $ c_1 \bm{e}_1 ' + c_2 \bm{e}_2 ' + \dots + c_n \bm{e}_n ' = \bm{0}$となるとき，
+  $\varphi$は線型写像で$\varphi (c_1 \bm{e}_1 + c_2 \bm{e}_2 + \dots + c_n \bm{e}_n) = c_1 \bm{e}_1 ' + c_2 \bm{e}_2 ' + \dots + c_n \bm{e}_n '$であるので，
+  \begin{align*}
+    (c_1 \bm{e}_1 ' + c_2 \bm{e}_2 ' + \dots + c_n \bm{e}_n ') (\bm{f}_i) & = \bm{f}_i (c_1 \bm{e}_1 + c_2 \bm{e}_2 + \dots + c_n \bm{e}_n) \\
+                                                                          & = \sum_{k=1}^{n} c_k \bm{f}_i (\bm{e}_k)                        \\
+                                                                          & = \sum_{k=1}^{n} c_k \delta_{ik}                                \\
+                                                                          & = c_i=0
+  \end{align*}
+  となり，$c_1 = c_2 = \dots = c_n = 0$であるから，
+  $e_1 ' , e_2 ' , \dots , e_n '$は線型独立であり，
+  $\dim (V^\ast)^\ast = n $より$(E^\ast)^\ast$は基底である．
+  とくに$\varphi$の階数は$n$となる．適当な基底での$\varphi$の表現行列$A$に対してp.117の(3)により，$r(A)=n$となり，
+  これは$\varphi$が全単射対応を与えることを示す．
+\end{tproof}
+
+
+
+
+
+\section*{p127--130：10}
+\addcontentsline{toc}{section}{\texorpdfstring{p127--130：10}{p127--130：10}}
+
+
+\subsection*{p127--130：10-(イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p127--130：10-(イ)}{p127--130：10-(イ)}}
+
+\begin{tproof}
+  (1)，(2)で双線型性，(3)で対称性，(4)で正値性を証明する．
+  \begin{enumerate}[(1)]
+    \item
+          \begin{align*}
+            (f,g_1+g_2)_p & = \int_{a}^{b} p(x) f(x) \{ g_1(x)+g_2(x) \} \, dx                           \\
+                          & = \int_{a}^{b} p(x) f(x) g_1 (x) \, dx + \int_{a}^{b} p(x) f(x) g_2(x) \, dx \\
+                          & = (f,g_1)_p + (f,g_2)_p.
+          \end{align*}
+          また，
+          \begin{align*} (f_1 + f_2 , g)_p & = \int_{a}^{b} p(x) \{ f_1(x)+f_2(x) \} g(x) \, dx                            \\
+                                 & = \int_{a}^{b} p(x) f_1 (x) g(x) \, dx + \int_{a}^{b} p(x) f_2 (x) g(x) \, dx \\
+                                 & = (f_1,g)_p + (f_2,g)_p.
+          \end{align*}
+    \item $c$は任意の実数とする．
+          \begin{align*}
+            (cf,g)_p & = \int_{a}^{b} p(x) \{ cf(x) \} g(x) \, dx \\
+                     & = c \int_{a}^{b} p(x) f(x) g(x) \, dx      \\
+                     & = c(f,g)_p .
+          \end{align*}
+          また，
+          \begin{align*}
+            (f,cg)_p & = \int_{a}^{b} p(x) f(x) \{ cg(x) \} \, dx \\
+                     & = c \int_{a}^{b} p(x) f(x) g(x) \, dx      \\
+                     & = c(f,g)_p .
+          \end{align*}
+    \item
+          \begin{align*}
+            (f,g)_p & = \int_{a}^{b} p(x) f(x) g(x) \, dx \\
+                    & = \int_{a}^{b} p(x) g(x) f(x) \, dx \\
+                    & =(g,f)_p .
+          \end{align*}
+    \item
+          \begin{alignat*}{2}
+            (f,f)_p & = \int_{a}^{b} p(x) f(x) f(x) \, dx   &       &                                 \\
+                    & =\int_{a}^{b} p(x) \{ f(x) \}^2 \, dx &       &                                 \\
+                    & >0.                                   & \quad & \text{($\because$~ $p(x)$は常に正)}
+          \end{alignat*}
+          等号が成立するのは$f(x)=0$のとき．
+  \end{enumerate}
+  (1)から(4)の考察により，$(f,g)_p$は内積の定義をみたす．
+\end{tproof}
+

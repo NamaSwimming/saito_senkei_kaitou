@@ -1,0 +1,919 @@
+
+\part*{第3章}
+\addcontentsline{toc}{part}{\texorpdfstring{第3章}{第3章}}
+
+
+\section*{p77：問1}
+\addcontentsline{toc}{section}{\texorpdfstring{p77：問1}{p77：問1}}
+
+\kakko{3文字の置換}
+
+\begin{tanswer}
+  3文字の置換は$3!=6$通りある．それを互換の回数によって分類する．
+  \begin{description}
+    \item[0回] 1つのみ．偶置換かつ恒等置換．
+          \[
+            \begin{pmatrix} 1 & 2 & 3 \\ 1 & 2 & 3 \end{pmatrix}.
+          \]
+    \item [1回] 3つ．奇置換．
+          \[
+            \begin{pmatrix} 1 & 2 & 3\\ 1 & 3 & 2 \end{pmatrix},\quad
+            \begin{pmatrix} 1 & 2 & 3\\ 3 & 2 & 1 \end{pmatrix},\quad
+            \begin{pmatrix} 1 & 2 & 3\\ 2 & 1 & 3 \end{pmatrix}.
+          \]
+    \item [2回] 2つ．偶置換．
+          \[
+            \begin{pmatrix} 1 & 2 & 3\\ 2 & 3 & 1 \end{pmatrix},\quad
+            \begin{pmatrix} 1 & 2 & 3\\ 3 & 1 & 2 \end{pmatrix}.
+          \]
+  \end{description}
+\end{tanswer}
+
+\kakko{4文字の置換}
+
+\begin{tanswer}
+  4文字の置換は$4!=24$通りある．それを互換の回数によって分類する．
+  \begin{description}
+    \item[0回] 1つのみ．偶置換かつ恒等置換．
+          \[
+            \begin{pmatrix} 1 & 2 & 3 &4 \\ 1 & 2 & 3 &4\end{pmatrix}.
+          \]
+    \item [1回] 6つ．奇置換．
+          \begin{align*}
+             & \begin{pmatrix} 1 & 2 & 3 & 4\\ 1 & 3 & 2 & 4\end{pmatrix},\quad
+            \begin{pmatrix} 1 & 2 & 3 &4 \\ 3 & 2 & 1  & 4\end{pmatrix},\quad
+            \begin{pmatrix} 1 & 2 & 3 & 4\\ 2 & 1 & 3 & 4\end{pmatrix},         \\
+             & \begin{pmatrix} 1 & 2 & 3 & 4\\ 1 & 2 & 4 & 3\end{pmatrix},\quad
+            \begin{pmatrix} 1 & 2 & 3 & 4\\ 1 & 4 & 3 & 2\end{pmatrix},\quad
+            \begin{pmatrix} 1 & 2 & 3 & 4\\ 4 & 2 & 3 & 1\end{pmatrix}.
+          \end{align*}
+    \item [2回] 偶置換．
+          \[
+            \begin{pmatrix} 1 & 2 & 3 & 4 \\ 2 & 3 & 1 & 4\end{pmatrix},\quad
+            \begin{pmatrix} 1 & 2 & 3 & 4 \\ 3 & 1 & 2 & 4 \end{pmatrix},
+          \]
+  \end{description}
+\end{tanswer}
+
+\section*{p77：問2}
+\addcontentsline{toc}{section}{\texorpdfstring{p77：問2}{p77：問2}}
+
+\begin{tproof}
+  $S_n$の偶置換全体の集合を$A_n$,偶置換全体の集合を$B_n$とする．
+  置換は必ず奇置換か偶置換のいずれかであるから,
+  \begin{align*}
+     & S_n = A_n \cup B_n ,       \\
+     & A_n \cap B_n = \varnothing
+  \end{align*}
+  となる．
+
+  ここで，
+  \[
+    \tau = \begin{pmatrix} 1 & 2 & 3 \\ 2 & 1 & 3 \end{pmatrix}
+  \]
+  とすると，$\tau$は奇置換であり，$\sigma \in  A_n$のとき，$ \tau \sigma \in B_n$である．
+  同様に，$ \rho  \in B_n$のとき，$\tau^{-1} \rho = \tau \rho \in A_n$である．
+  これらにより，全単射
+  \[
+    A_n \ni \sigma \mapsto \tau \sigma \in B_n
+  \]
+  が存在し，偶置換と奇置換は同数あり，その個数は$n! /2$である．
+\end{tproof}
+
+
+\section*{p77：問3}
+\addcontentsline{toc}{section}{\texorpdfstring{p77：問3}{p77：問3}}
+
+\begin{tanswer}
+  $m \in \mathbb{N}$とする．
+  \begin{enumerate}[(I)]
+    \item $n=2m$とかけるとき，この置換を互換の積で表すと，
+          \[
+            (1,2m)(2,2m-1) \dotsm (m,m+1)
+          \]
+          となるため，置換の符号は$(-1)^m$，すなわち
+          \[
+            (-1)^{\frac{n}{2}}
+          \]
+          となる．
+    \item $n=2m-1$とかけるとき，この置換を互換の積で表すと，
+          \[
+            (1,2m-1)(2,2m-2) \dotsm (m-1,m+1)
+          \]
+          となるため，置換の符号は$(-1)^{m-1}$，すなわち
+          \[
+            (-1)^{\frac{n-1}{2}}
+          \]
+          となる．
+  \end{enumerate}
+\end{tanswer}
+
+
+
+
+\section*{p79：問}
+\addcontentsline{toc}{section}{\texorpdfstring{p79：問}{p77：問}}
+
+
+\subsection*{p79：問-(イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p79：問-(イ)}{p77：問-(イ)}}
+
+\begin{tanswer}
+  \[
+    \sigma = \begin{pmatrix} 1 & 2 & \cdots & n \\ n & n-1 & \cdots & 1 \end{pmatrix}
+  \]
+  とすると，$m \in \mathbb{N}$として，
+  \[
+    \sgn \sigma =
+    \begin{cases}
+      (-1)^\frac{n}{2}   & \text{($n=2m$のとき)}   \\
+      (-1)^\frac{n-1}{2} & \text{($n=2m-1$のとき)}
+    \end{cases}
+  \]
+  となる．
+  また，
+  \[
+    \text{(与式)}  = \sum_{\sigma \in S_n} \sgn \sigma \cdot a_1 a_2 \dotsm a_n
+  \]
+  だから，
+  \[
+    \text{(与式)}  =
+    \begin{cases}
+      (-1)^\frac{n}{2}   a_1 a_2 \dotsm a_n & \text{($n=2m$のとき)}   \\
+      (-1)^\frac{n-1}{2} a_1 a_2 \dotsm a_n & \text{($n=2m-1$のとき)}
+    \end{cases}
+  \]
+  である．
+\end{tanswer}
+
+\subsection*{p79：問-(ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p79：問-(ロ)}{p77：問-(ロ)}}
+
+\begin{tanswer}
+  計算すると，
+  \begin{align*}
+    \text{(与式)} & = a^3 + b^3 + c^3 -abc -bca -cab \\
+                & = a^3 + b^3 +c^3 -3abc
+  \end{align*}
+  となる．
+\end{tanswer}
+
+
+
+\section*{p83：問}
+\addcontentsline{toc}{section}{\texorpdfstring{p83：問}{p83：問}}
+
+\begin{tproof}
+  $(n,n)$行列$A$，$X$を
+  \[
+    A = (\bm{a}_1 ,\bm{a}_2, \dots ,\bm{a}_n) , \quad X = (\bm{x}_1,\bm{x}_2,\dots,\bm{x}_n)
+  \]
+  とする．このとき，$AX$は定義され，
+  \[
+    AX = (A\bm{x}_1 , A\bm{x}_2 , \dots ,A\bm{x}_n)
+  \]
+  と表せる．ここで，$A \bm{x}_j$を単位ベクトルの線型結合で表すと，
+  \begin{align*}
+    A \bm{x}_j & = A {}^t (x_{1j} \bm{e}_1 , x_{2j} \bm{e}_2,\ldots ,x_{nj} \bm{e}_n ) \\
+               & =A (x_{1j} \bm{e}_1 + x_{2j} \bm{e}_2+ \dots + x_{nj} \bm{e}_n)       \\
+               & = x_{1j} \bm{a}_1 + x_{2j} \bm{a}_2 + x_{nj} \bm{a}_n                 \\
+               & = \sum_{ i =1}^{n} x_{ij} \bm{a}_{i}
+  \end{align*}
+  となる．これにより，$\abs{AX}$は，多重線型性を用いて，
+  \begin{align*}
+    \abs{AX} & = \abs{\sum_{i_1 =1}^{n} x_{i_1 1} \bm{a}_{i_1} , \sum_{i_2 =1}^{n} x_{i_2 2} \bm{a}_{i_2},\ldots , \sum_{i_n =1}^{n} x_{i_n n} \bm{a}_{i_n} }        \\
+             & = \sum_{i_1 =1}^{n} \sum_{i_2 = 1}^{n} \dots \sum_{i_n =1}^{n} x_{i_1 1} x_{i_2 2} \dots x_{i_n n} \abs{\bm{a}_{i_1},\bm{a}_{i_2},\dots,\bm{a}_{i_n}}
+  \end{align*}
+  と変形できる．ここで，
+  \[
+    \sigma = \begin{pmatrix} 1 & 2 & \cdots & n \\ i_1 & i_2 & \cdots & i_n \end{pmatrix}
+  \]
+  とおくと，
+  \[
+    \abs{\bm{a}_{\sigma (1)},\bm{a}_{\sigma(2)},\dots,\bm{a}_{\sigma(n)}} = \sgn \sigma \abs{A}
+  \]
+  \begin{align*}
+    \abs{AX} = & \sum_{\sigma \in S_n} x_{\sigma (1)1} x_{\sigma(2)2} \dots x_{\sigma(n)n} \cdot \sgn \sigma  \abs{A}   \\
+               & = \sum_{\sigma \in S_n } \sgn \sigma \cdot x_{\sigma(1)1} x_{\sigma(2)2} \dots x_{\sigma (n)n} \abs{A} \\
+               & = \abs{{}^t X} \abs{A}                                                                                 \\
+               & = \abs{A} \abs{X}
+  \end{align*}
+  を得る．これが証明すべきことであった．
+\end{tproof}
+
+
+
+\section*{p83：問}
+\addcontentsline{toc}{section}{\texorpdfstring{p83：問}{p83：問}}
+
+\subsection*{p83：問-(イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p83：問-(イ)}{p83：問-(イ)}}
+
+\begin{tanswer}
+  多重線型性などを用いて変形すると，
+  \begin{align*}
+    (\text{与式}) & = -
+    \begin{vmatrix}
+      2  & -5 & 3  & 10 \\
+      1  & 0  & 2  & -3 \\
+      5  & 3  & -2 & 2  \\
+      -3 & -2 & 4  & 2
+    \end{vmatrix}
+    = -
+    \begin{vmatrix}
+      0 & -5 & -1  & 16 \\
+      1 & 0  & 2   & -3 \\
+      0 & 3  & -12 & 17 \\
+      0 & -2 & 10  & -7
+    \end{vmatrix}
+    =
+    \begin{vmatrix}
+      1 & 0  & 2   & -3 \\
+      0 & -5 & -1  & 16 \\
+      0 & 3  & -12 & 17 \\
+      0 & -2 & 10  & -7
+    \end{vmatrix}                  \\
+                & = 1 \cdot (-1)^{1+1}
+    \begin{vmatrix}
+      -5 & -1  & 16 \\
+      3  & -12 & 17 \\
+      -2 & 10  & -7
+    \end{vmatrix}
+    =539
+  \end{align*}
+  となるので，この行列式の値は$539$である．
+\end{tanswer}
+
+
+\subsection*{p83：問-(ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p83：問-(ロ)}{p83：問-(ロ)}}
+
+\begin{tanswer}
+  多重線型性などを用いて変形すると，
+  \begin{align*}
+    (\text{与式}) & = -
+    \begin{vmatrix}
+      2 & 3  & 5  & -4 \\
+      1 & -7 & -8 & 6  \\
+      3 & 10 & 6  & 1  \\
+      5 & 2  & 4  & 3
+    \end{vmatrix}
+    = -
+    \begin{vmatrix}
+      0 & 17 & 21 & -16 \\
+      1 & -7 & -8 & 6   \\
+      0 & 31 & 30 & -17 \\
+      0 & 37 & 44 & -27
+    \end{vmatrix}
+    =
+    \begin{vmatrix}
+      1 & -7 & -8 & 6   \\
+      0 & 17 & 21 & -16 \\
+      0 & 31 & 30 & -17 \\
+      0 & 37 & 44 & -27
+    \end{vmatrix}
+    \\
+                & = 1 \cdot (-1)^{1+1}
+    \begin{vmatrix}
+      17 & 21 & -16 \\
+      31 & 30 & -17 \\
+      37 & 44 & -27
+    \end{vmatrix}
+  \end{align*}
+  となる．ここで，第$2$列に第$1$列の$-1$倍を加え，第$3$列に第$1$列を加えると，
+  \[
+    (\text{与式}) =
+    \begin{vmatrix}
+      17 & 4  & 1  \\
+      31 & -1 & 14 \\
+      37 & 7  & 10
+    \end{vmatrix}
+  \]
+  を得る．ここで，第$1$列に第$3$列の$-2$倍を加えると，
+  \[
+    (\text{与式})=
+    \begin{vmatrix}
+      15 & 4  & 1  \\
+      3  & -1 & 14 \\
+      17 & 7  & 10
+    \end{vmatrix}
+    = -750
+  \]
+  となるため，この行列式の値は$-750$である．
+\end{tanswer}
+
+
+\part*{第3章・章末問題}
+\addcontentsline{toc}{part}{\texorpdfstring{第3章・章末問題}{第3章・章末問題}}
+
+
+\section*{p90--91：1}
+\addcontentsline{toc}{section}{\texorpdfstring{p90--91：1}{p90--91：1}}
+
+
+\subsection*{p90--91：1-(イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90--91：1-(イ)}{p90--91：1-(イ)}}
+
+\begin{tanswer}
+  $ k \in \{ 2,3 ,\ldots,n \}$として，第$1$列に第$k$列の$x^k$倍を加えると，
+  \[
+    \begin{vmatrix}
+      0                                              & -1      & 0       & \cdots & 0      & 0      \\
+      0                                              & x       & -1      & \cdots & 0      & 0      \\
+      0                                              & 0       & x       & \cdots & 0      & 0      \\
+      \vdots                                         & \vdots  & \vdots  & \ddots & \vdots & \vdots \\
+      0                                              & 0       & 0       & \cdots & x      & -1     \\
+      a_n + a_{n-1} x + \dots +a_1 x^{n-1} + a_0 x^n & a_{n-1} & a_{n-2} & \cdots & a_1    & a_0
+    \end{vmatrix}.
+  \]
+  第$1$列で余因子展開すると，
+  \begin{align*}
+    (\text{与式}) & = (-1)^{n+2} (a_n + a_{n-1} x + \dots +a_1 x^{n-1} + a_0 x^n)
+    \begin{vmatrix}
+      -1     & 0      & \cdots & 0           \\
+      x      & -1     & \cdots & 0           \\
+      0      & x      & \cdots & 0           \\
+      \vdots & \vdots & \ddots & \vdots &    \\
+      0      & 0      & \cdots & x      & -1 \\
+    \end{vmatrix}                                                                                                                           \\
+                & = (-1)^{n+2}(a_n + a_{n-1} x + \dots +a_1 x^{n-1} + a_0 x^n) \cdot (-1)^{n-2} \begin{vmatrix} -1 & 0 \\ x & -1 \end{vmatrix} \quad (\text{$\ast$}) \\
+                & = (-1)^{n+2} (a_n + a_{n-1} x + \dots +a_1 x^{n-1} + a_0 x^n) \cdot (-1)^{n-2}                                                                     \\
+                & = (-1)^{2n} (a_n + a_{n-1} x + \dots +a_1 x^{n-1} + a_0 x^n)                                                                                       \\
+                & = a_n + a_{n-1} x + \dots +a_1 x^{n-1} + a_0 x^n
+  \end{align*}
+  となる．ただし($\ast$)では同様の余因子展開を繰り返した．
+
+  以上の計算により，
+  \[
+    (\text{与式}) = a_n + a_{n-1} x + \dots +a_1 x^{n-1} + a_0 x^n.
+  \]
+\end{tanswer}
+
+
+\subsection*{p90--91：1-(ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90--91：1-(ロ)}{p90--91：1-(ロ)}}
+
+\begin{tanswer}
+  与式の第$2$列から第$n$列までを第$1$列に足すと，
+  \[
+    \begin{vmatrix}
+      x+\sum_{k=1}^{n} a_k & a_1    & a_2     & \cdots & a_n    \\
+      x+\sum_{k=1}^{n} a_k & x      & a_2     & \cdots & a_n    \\
+      x+\sum_{k=1}^{n} a_k & a_2    & x       & \cdots & a_n    \\
+      \vdots               & \vdots & \vdots  & \ddots & \vdots \\
+      x+\sum_{k=1}^{n} a_k & a_n    & a_{n-1} & \cdots & x
+    \end{vmatrix}
+  \]
+  である．第$2$行から第$n$行のそれぞれから第$1$行を引くと，
+  \[
+    \begin{vmatrix}
+      x+\sum_{k=1}^{n} a_k & a_1      & a_2         & \cdots & a_n    \\
+      0                    & x-a_1    & 0           & \cdots & 0      \\
+      0                    & a_2 -a_1 & x-a_2       & \cdots & 0      \\
+      \vdots               & \vdots   & \vdots      & \ddots & \vdots \\
+      0                    & a_n-a_1  & a_{n-1}-a_2 & \cdots & x-a_n
+    \end{vmatrix}
+  \]
+  である．第$1$列で余因子展開すると，
+  \begin{align*}
+     &
+    (x+\sum_{k=1}^{n} a_k)
+    \begin{vmatrix}
+      x-a_1    & 0           & \cdots & 0      \\
+      a_2 -a_1 & x-a_2       & \cdots & 0      \\
+      \vdots   & \vdots      & \ddots & \vdots \\
+      a_n-a_1  & a_{n-1}-a_2 & \cdots & x-a_n
+    \end{vmatrix}
+    \\
+     & = (x+\sum_{k=1}^{n} a_k) (x-a_1)(x-a_2) \dotsm (x-a_n) \\
+     & = (x+\sum_{k=1}^{n} a_k) \prod_{k=1}^{n} (x-a_k).
+  \end{align*}
+\end{tanswer}
+
+
+\subsection*{p90--91：1-(ハ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90--91：1-(ハ)}{p90--91：1-(ハ)}}
+
+\begin{tanswer}
+  この形の$n\times n $行列を$A_n$とすると，
+  \begin{align*}
+    A_{n+2} & =
+    \begin{vmatrix}
+      1+x^2  & x      & 0      & \cdots & 0      \\
+      x      & 1+x^2  & x      & \cdots & 0      \\
+      0      & x      & 1+x^2  & \cdots & 0      \\
+      \vdots & \vdots & \vdots & \ddots & \vdots \\
+      0      & 0      & 0      & \cdots & 1+x^2
+    \end{vmatrix} \\
+            & = (1+x^2)
+    \begin{vmatrix}
+      1+x^2  & x      & \cdots & 0      \\
+      x      & 1+x^2  & \cdots & 0      \\
+      \vdots & \vdots & \ddots & \vdots \\
+      0      & 0      & \cdots & 1+x^2
+    \end{vmatrix}
+    -x \begin{vmatrix}
+         x      & 0      & \cdots & 0      \\
+         x      & 1+x^2  & \cdots & 0      \\
+         \vdots & \vdots & \ddots & \vdots \\
+         0      & 0      & \cdots & 1+x^2
+       \end{vmatrix}
+    \\
+            & = (1+x^2) A_{n+1} -x^2 A_n
+  \end{align*}
+  となる．
+
+  よって，
+  \[
+    A_{n+2}-A_{n+1}=x^2 (A_{n+1}-A_n)\quad ( n \geqq 2) .
+  \]
+  これと$ A_1=1+x^2$，$ A_2 = 1+x^2 + x^4$により，$n \geqq 2$のとき
+
+  \begin{align*}
+    A_{n+1}-A_{n} & = x^2 (A_n-A_{n-1})                   \\
+                  & = x^4 (A_{n-1} - A_{n-2})             \\
+                  & = \dots = x^{2(n-1)}(A_2-A_1)         \\
+                  & = x^{2(n-1)} ((1+x^2 + x^4) -(1+x^2)) \\
+                  & = x^{2(n+1)}
+  \end{align*}
+  であるから，$n \geqq 2$のとき，
+  \begin{align*}
+    A_n & = A_1 +\sum_{k=1}^{n-1} x^{2k+2}                                \\
+        & = 1+x^2 + \frac{x^4(1-x^{2(n-1)})}{1-x^2}                       \\
+        & = 1+x^2 + \frac{x^4 (1-x^2)(1+x^2 + \dots + x^{2(n-2)})}{1-x^2} \\
+        & = 1+x^2 + x^4 + x^6 + \dots + x^{2n}
+  \end{align*}
+  となる．この$ A_n$を用いると，$ A_1 = 1+x^2 $，$ A_2 = 1+x^2+x^4$であるから，
+  与えられた行列式の値は，$n \times n$行列の場合
+  \[
+    1+x^2 + x^4 + x^6 + \dots + x^{2n}
+  \]
+  である．
+\end{tanswer}
+
+
+
+\subsection*{p90--91：1-(ニ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90--91：1-(ニ)}{p90--91：1-(ニ)}}
+
+\begin{tanswer}
+  第$1$列で余因子展開すると
+  \begin{align*}
+    (\text{与式}) & = -a^2\begin{vmatrix} a^2 & b^2 & 1 \\ c^2 & 0 & 1 \\ 1 & 1 & 0 \end{vmatrix}+b^2 \begin{vmatrix} a^2 & b^2 & 1 \\ 0 & c^2 & 1 \\ 1 & 1 & 0 \end{vmatrix} - \begin{vmatrix} a^2 & b^2 & 1 \\ 0 & c^2 & 1 \\ c^2 & 0 & 1 \end{vmatrix} \\
+                & = -a^2 (b^2+c^2 -a^2) +b^2 (b^2-c^2-a^2)- (a^2c^2+b^2c^2-c^4)                                                                                                                                                                         \\
+                & =a^4+b^4+c^4 -2a^2b^2 - 2b^2 c^2 -2c^2 a^2 .
+  \end{align*}
+\end{tanswer}
+
+
+
+\section*{p90--91：2}
+\addcontentsline{toc}{section}{\texorpdfstring{p90--91：2}{p90--91：2}}
+
+\subsection*{p90--91：2-(イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90--91：2-(イ)}{p90--91：2-(イ)}}
+
+\begin{tproof}
+  余因子展開を用いると，
+  \begin{align*}
+    (\text{与式}) & = -a \begin{vmatrix} a & b & c \\ -d & 0 &f \\ -e & -f & 0 \end{vmatrix} +b \begin{vmatrix} a & b & c \\ 0 & d & e \\ -e & -f & 0 \end{vmatrix} -c \begin{vmatrix} a & b & c \\ 0 & d & e \\ -d & 0 & f \end{vmatrix} \\
+                & = -a (-cdf +bfe-af^2)+b(be^2-cde-adf)-c(-adf+bde-cd^2)                                                                                                                                                                \\
+                & = af (cd-be+af) -be(-be+cd+af) +cf(af-be-cd)                                                                                                                                                                          \\
+                & = (af-be+cd)^2.
+  \end{align*}
+  となり，これが証明すべきことであった．
+\end{tproof}
+
+\subsection*{p90--91：2-(ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90--91：2-(ロ)}{p90--91：2-(ロ)}}
+
+\begin{tproof}
+  $A$を$n$次行列とする．${}^t A = -A$であるから，
+  \[
+    \abs{{}^t A}=(-1)^n\abs{A}.
+  \]
+  ここで，$n$は奇数であるから，
+  \[
+    \abs{{}^t A}=-\abs{A}.
+  \]
+  また，行列式の転置に関する不変性により，$\abs{{}^t A}=\abs{A}$なので，
+  \begin{align*}
+     & \abs{A}=-\abs{A} ,     \\
+     & \therefore ~ \abs{A}=0
+  \end{align*}
+  となり，これが証明すべきことであった．
+\end{tproof}
+
+
+\section*{p90--91：3}
+\addcontentsline{toc}{section}{\texorpdfstring{p90--91：3}{p90--91：3}}
+
+
+\subsection*{p90--91：3-(イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90--91：3-(イ)}{p90--91：3-(イ)}}
+
+\begin{tproof}
+  与えられた行列式に対して多重線型性を用いると，
+  \begin{align*}
+    \text{(与式)} & =
+    \begin{vmatrix}
+      A+B & A+B \\
+      B   & A
+    \end{vmatrix}
+    \\
+                & = \begin{vmatrix}
+                      A+B & O   \\
+                      B   & A-B
+                    \end{vmatrix}
+    \\
+                & = \abs{A+B} \cdot \abs{A-B}
+  \end{align*}
+  となり，これが証明すべきことであった．
+\end{tproof}
+
+\subsection*{p90--91：3-(ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90--91：3-(ロ)}{p90--91：3-(ロ)}}
+\begin{tanswer}
+  与えられた行列式に対して多重線型性を用いると，
+  \begin{align*}
+    \text{(与式)} & =
+    \begin{vmatrix}
+      A+iB & iA-B \\
+      B    & A
+    \end{vmatrix}
+    \\
+                & = \begin{vmatrix}
+                      A+iB & O    \\
+                      B    & A-iB
+                    \end{vmatrix}
+    \\
+                & = \det (A+iB) \cdot \det(A-iB)
+  \end{align*}
+  となり，いま$A$，$B$は実行列なので，
+  \begin{align*}
+    \det (A+iB) \cdot \det(A-iB) & = \det (A+iB) \cdot \overline{\det (A+iB)} \\
+                                 & = \abs{\det(A+iB)}^2
+  \end{align*}
+  である．
+\end{tanswer}
+
+
+
+
+\section*{p90--91：4}
+\addcontentsline{toc}{section}{\texorpdfstring{p90--91：4}{p90--91：4}}
+
+\begin{tproof}
+  $\alpha ^n =1$をみたす$\alpha \in \mathbb{C}$をひとつ固定する．
+  さて，与えられた行列式の第$j$行を$\alpha^{j-1}$倍して第$1$列に足す操作を行うと，この行列式は
+  \[
+    \begin{vmatrix}
+      \sum_{i=0}^{n-1} \alpha^i x_i              & x_1     & x_2     & \cdots & x_{n-1} \\
+      \alpha \sum_{i=0}^{n-1} \alpha^i x_i       & x_0     & x_1     & \cdots & x_{n-2} \\
+      \alpha^2 \sum_{i=0}^{n-1} \alpha^i x_i     & x_{n-1} & x_0     & \cdots & x_{n-3} \\
+      \vdots                                     & \vdots  & \vdots  & \vdots & \vdots  \\
+      \alpha^{n-1} \sum_{i=0}^{n-1} \alpha^i x_i & x_{n-2} & x_{n-3} & \cdots & x_0
+    \end{vmatrix}
+  \]
+  と変形できる．よって，この行列式は
+  \[
+    \sum_{i=0}^{n-1} \alpha^i x_i = x_0 + \alpha x_1 + \alpha^2 x_2 + \dots +\alpha^{n-1} x_{n-1}
+  \]
+  を因数にもつ．すべての$\alpha$に関してこのことがいえるから，因数定理により，この行列式は
+  \[
+    \prod_{\alpha^n=1} (x_0 + \alpha x_1 + \alpha^2 x_2 + \dots +\alpha^{n-1} x_{n-1})
+  \]
+  を因数にもつ．これは$n$次式であり，なおかつ$x_0$の係数は$1$であることより，結果として
+  \[
+    \begin{vmatrix}
+      x_0     & x_1    & x_2    & \cdots & x_{n-1} \\
+      x_{n-1} & x_0    & x_1    & \cdots & x_{n-2} \\
+      \vdots  & \vdots & \vdots & \vdots & \vdots  \\
+      x_1     & x_2    & x_3    & \cdots & x_0
+    \end{vmatrix}
+    =  \prod_{\alpha^n=1} (x_0 + \alpha x_1 + \alpha^2 x_2 + \dots +\alpha^{n-1} x_{n-1})
+  \]
+  である．これが証明すべきことであった．
+\end{tproof}
+
+
+\section*{p90--91：5}
+\addcontentsline{toc}{section}{\texorpdfstring{p90--91：5}{p90--91：5}}
+
+\begin{tanswer}
+  前問において，$n=4$，$x_1 = i$，$x_2 = 1$，$x_3=-i$とした場合を考えればよいので，$\alpha = \pm 1 , \pm i$により，
+  \begin{align*}
+    \text{(与式)} & = \prod_{\alpha^4=1} (x+ \alpha i +\alpha^2 -  \alpha^3i ) \\
+                & = (x+i+1-i) (x-i+1+i)(x-1-1-1)(x+1-1+1)                    \\
+                & =(x+1)^3(x-3)
+  \end{align*}
+  となる．
+\end{tanswer}
+
+
+
+\section*{p90--91：6}
+\addcontentsline{toc}{section}{\texorpdfstring{p90--91：6}{p90--91：6}}
+
+\begin{tproof}
+  $i \in \{ 1,2,\ldots,n \}$のもとで，$n$個の点を$(x_i , y_i ) \in \mathbb{R}^2$とする．このとき，
+  \[
+    \begin{cases}
+      a_0 + a_1 x_1 + a_2 {x_1}^2 + \dots + a_n {x_1}^{n-1} = y_1 \\
+      a_0 + a_1 x_2 + a_2 {x_2}^2 + \dots + a_n {x_2}^{n-1} = y_2 \\
+      \vdots                                                      \\
+      a_0 + a_1 x_n + a_2 {x_n}^2 + \dots + a_n {x_n}^{n-1} = y_3
+    \end{cases}
+  \]
+  である，これを行列の形に表すと，
+  \[
+    \begin{pmatrix}
+      1      & x_1    & {x_1}^2 & \cdots & {x_1}^{n-1} \\
+      1      & x_2    & {x_2}^2 & \cdots & {x_2}^{n-1} \\
+      \vdots & \vdots & \vdots  & \ddots & \vdots      \\
+      1      & x_n    & {x_n}^2 & \cdots & {x_n}^{n-1}
+    \end{pmatrix}
+    \begin{pmatrix}
+      a_0    \\
+      a_1    \\
+      \vdots \\
+      a_n
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+      y_1    \\
+      y_2    \\
+      \vdots \\
+      y_n
+    \end{pmatrix}
+  \]
+  となる．
+
+  ここで，
+  \[
+    A \coloneqq
+    \begin{pmatrix}
+      1      & x_1    & {x_1}^2 & \cdots & {x_1}^{n-1} \\
+      1      & x_2    & {x_2}^2 & \cdots & {x_2}^{n-1} \\
+      \vdots & \vdots & \vdots  & \ddots & \vdots      \\
+      1      & x_n    & {x_n}^2 & \cdots & {x_n}^{n-1}
+    \end{pmatrix}
+  \]
+  とおくと，$\abs{{}^t A}$はヴァンデルモンドの行列式である．
+
+  行列式の値は，行列の転置に対して不変なので，
+  \[
+    \abs{A}= \prod_{i < j} (x_j - x_i)
+  \]
+  となり，条件によりこの値は$0$でない．ゆえに先の連立方程式はただ一つの解をもつ．
+
+  以上の考察によって，これら$n$個の点を通る直線がただ一つ存在することが示された．
+\end{tproof}
+
+
+
+\section*{p90--91：7}
+\addcontentsline{toc}{section}{\texorpdfstring{p90--91：7}{p90--91：7}}
+
+
+\begin{tanswer}
+  与えられた行列式の係数行列式を$A$， $A$の第$j$列を${}^t (1, 0, 0 ,0 )$で置き換えた行列を$A_j$とする．
+  また，
+  \[
+    T = \begin{pmatrix} a & -b\\ b & a \end{pmatrix},\quad S = \begin{pmatrix} c & -d\\ d & c \end{pmatrix}
+  \]
+  とする．このとき，
+  \begin{align*}
+    \begin{vmatrix} T & -T \\  S & S \end{vmatrix} & = \begin{vmatrix} 2T & - T \\ O & S \end{vmatrix} \\
+                                                   & = \abs{2T} \abs{S}                                \\
+                                                   & = 4(a^2+b^2) (c^2+d^2).
+  \end{align*}
+  クラメールの公式により
+  \[
+    \begin{cases}
+      x  = \abs{A_1}/\abs{A}, \\
+      y = \abs{A_2}/\abs{A},  \\
+      z = \abs{A_3}/\abs{A},  \\
+      u = \abs{A_4}/\abs{A}.
+    \end{cases}
+  \]
+  さて，
+  \begin{align*}
+    \abs{A_1} & = \begin{vmatrix} 1 & -b & -a & b \\ 0 & a & -b & -a \\ 0 & -d & c & d \\ 0 & c & d & c \end{vmatrix} \\
+              & = 1 \cdot \begin{vmatrix} a & -b & -a \\ -d & c & d \\ c & d & c \end{vmatrix}                        \\
+              & = 2a(c^2+d^2).
+  \end{align*}
+  よって，
+  \[
+    x = \frac{\abs{A_1}}{\abs{A}} = \frac{2a(c^2+d^2)}{4(a^2+b^2)(c^2+d^2)} = \frac{a}{2(a^2+b^2)}.
+  \]
+  同様にして$y$，$z$，$u$を求めると
+  \[
+    x= \frac{a}{2(a^2+b^2)},\quad y = -\frac{b}{2(a^2+b^2)},\quad z = -\frac{a}{2(a^2+a^2)},\quad u = \frac{b}{2(a^2+b^2)}.
+  \]
+\end{tanswer}
+
+
+
+
+\section*{p90--91：8}
+\addcontentsline{toc}{section}{\texorpdfstring{p90--91：8}{p90--91：8}}
+
+\begin{tanswer}
+  与えられた行列式は，
+  \[
+    \begin{cases}
+      a_1 x + b_1 y =c_1 \\
+      a_2 x + b_2 y =c_2 \\
+      a_3 x + b_3 y =c_3
+    \end{cases}
+  \]
+  の拡大係数行列の行列式を表す．基本変形を施すと，この行列式は
+  \begin{align}
+     & \begin{pmatrix}
+         1 & 0 & g_1 \\
+         0 & 1 & g_2 \\
+         0 & 0 & g_3
+       \end{pmatrix}
+    \label{eq:8-0}
+    ,                 \\
+     & \begin{pmatrix}
+         1 & t & h_1 \\
+         0 & 0 & h_2 \\
+         0 & 0 & h_3
+       \end{pmatrix}
+    \label{eq:8-1}
+  \end{align}
+  の場合に変形できる．
+
+  \begin{enumerate}[(I)]
+    \item \eqref{eq:8-0}の場合，行列式が$0$となる条件は$g_3 =0$である，このとき，上の連立方程式の解$(x,y)$は存在し一意に定まる．これは$3$直線が$1$点で交わることを表す．
+    \item \eqref{eq:8-1}の場合，行列式は常に$0$であり，このとき，3直線はすべて平行であるか一致するかである．
+  \end{enumerate}
+
+  以上の考察により，与えられた行列式が$0$であるのは
+  \begin{enumerate}[(i)]
+    \item 3直線が$1$点で交わる
+    \item 3直線が平行である
+    \item 3直線が一致する
+  \end{enumerate}
+  のいずれかの場合である．
+\end{tanswer}
+
+
+
+
+
+\section*{p90--91：9}
+\addcontentsline{toc}{section}{\texorpdfstring{p90--91：9}{p90--91：9}}
+
+\begin{tproof}
+  3点$\mathrm{P}_1$，$\mathrm{P_2}$，$\mathrm{P_3}$を通る平面の方程式を$ax+by+cz+d=0$とおく．
+  このとき，
+  \[
+    \begin{cases}
+      ax+by+cz + d =0         \\
+      ax_1 + by_1 +cz_1 +d =0 \\
+      ax_2 + by_2 +cz_2 +d =0 \\
+      ax_3 + by_3 +cz_3 +d =0
+    \end{cases}
+  \]
+  が成立する．すなわちこれは
+  \[
+    \begin{pmatrix}
+      x   & y   & z   & 1 \\
+      x_1 & y_1 & z_1 & 1 \\
+      x_2 & y_2 & z_2 & 1 \\
+      x_3 & y_3 & z_3 & 1
+    \end{pmatrix}
+    \begin{pmatrix}
+      a \\
+      b \\
+      c \\
+      d
+    \end{pmatrix}
+    = \bm{0}
+  \]
+  をみたす．これを$a$，$b$，$c$，$d$についての連立方程式とみたとき，与条件により自明でない解があり，
+  \[
+    \begin{vmatrix}
+      x   & y   & z   & 1 \\
+      x_1 & y_1 & z_1 & 1 \\
+      x_2 & y_2 & z_2 & 1 \\
+      x_3 & y_3 & z_3 & 1
+    \end{vmatrix}
+    =0
+  \]
+  が成立する．これが証明すべきことであった．
+\end{tproof}
+
+
+
+\section*{p90--91：10}
+\addcontentsline{toc}{section}{\texorpdfstring{p90--91：10}{p90--91：10}}
+
+\begin{tproof}
+  必要性・十分性をそれぞれ証明する．
+  \begin{enumerate}
+    \item $A$が正則かつ$A^{-1}$が整数行列であると仮定し，$\det A=\pm 1$であることを示す．
+
+          $A$は整数行列であり，その行列式は，各要素の和と積でかけているから$\det A \in \mathbb{Z}$である．同様にして$\det (A^{-1}) \in \mathbb{Z}$である．逆行列の行列式は，
+          \[
+            \det (A^{-1})=\frac{1}{\det A}
+          \]
+          であり，つまり$\det A,1/\det A \in \mathbb{Z}$である．これを満たす整数は$\pm 1$だけである．
+    \item $\det A=\pm 1$であることを仮定し，$A$が正則かつ$A^{-1}$が整数行列であることを示す．
+          $\det A \neq 0$より$A$の正則性がわかる．また，$A$の余因子行列を$\tilde{A}$とすると，余因子はAの各要素の和と積によって表現される．つまり，余因子は整数であるから$\tilde{A}$は整数行列である. また
+          \[
+            A^{-1}=\frac{1}{\det A}\tilde{A}
+          \]
+          となる．$\det A=\pm 1$であり， 余因子は整数であるから，$A^{-1}$は整数行列である．
+  \end{enumerate}
+  以上の議論により証明された．
+\end{tproof}
+
+
+
+\section*{p90--91：11}
+\addcontentsline{toc}{section}{\texorpdfstring{p90--91：11}{p90--91：11}}
+
+\subsection*{p90--91：11-(イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90--91：11-(イ)}{p90--91：11-(イ)}}
+
+\begin{tproof}
+  ${}^t A_\sigma$は$(j,\sigma(j))$成分が$1$でそれ以外が$0$である行列である．
+  いま$A = (\bm{a}_1,\bm{a}_2,\ldots,\bm{a}_n)$とすると，
+  \begin{align*}
+    {}^t A_\sigma A_\sigma & =
+    \begin{pmatrix}
+      (\bm{a}_1,\bm{a}_1) & (\bm{a}_1,\bm{a}_2) & \cdots & (\bm{a}_1,\bm{a}_n) \\
+      (\bm{a}_2,\bm{a}_1) & (\bm{a}_2,\bm{a}_2) & \cdots & (\bm{a}_2,\bm{a}_n) \\
+      \vdots              & \vdots              & \ddots & \vdots              \\
+      (\bm{a}_n,\bm{a}_1) & (\bm{a}_n,\bm{a}_2) & \cdots & (\bm{a}_n,\bm{a}_n)
+    \end{pmatrix}
+    \\
+                           & = \begin{pmatrix} 1 & 0 & \cdots & 0 \\ 0 & 1 & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \cdots & 1 \end{pmatrix} \\
+                           & = E
+  \end{align*}
+  となり，$A$は直交行列である．
+\end{tproof}
+
+\subsection*{p90--91：11-(ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90--91：11-(ロ)}{p90--91：11-(ロ)}}
+
+\begin{tproof}
+  置換$\sigma$，$\tau$に関して
+  \[
+    a_{ij} =
+    \begin{cases}
+      1 & \text{if } i = \sigma(j) \\
+      0 & \text{otherwise}
+    \end{cases},
+    \quad
+    b_{ij}=
+    \begin{cases}
+      1 & \text{if } i = \tau(j) \\
+      0 & \text{otherwise}
+    \end{cases}
+  \]
+  と定義する．
+  このとき，
+  \[
+    (A_\sigma A_\tau)_{ik} = \sum_{j=1}^n a_{ij} b_{jk}.
+  \]
+  $b_{jk}$が$1$になるのは$j= \tau(k)$のときなので，
+  \[
+    (A_\sigma A_\tau)_{ik} = a_{i, \tau(k)}.
+  \]
+  さらに，$a_{i, \tau(k)}$が$1$になるのは$i = \sigma(\tau(k))$のときなので，
+  \[
+    (A_\sigma A_\tau)_{ik} =
+    \begin{cases}
+      1 & \text{if } i=\sigma \tau(k) \\
+      0 & \text{otherwise}
+    \end{cases}.
+  \]
+  これは$A_{\sigma \tau}$の定義そのものなので，
+  \[
+    A_\sigma A_\tau = A_{\sigma \tau}.
+  \]
+\end{tproof}
+
+
+\subsection*{p90--91：11-(ハ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90--91：11-(ハ)}{p90--91：11-(ハ)}}
+
+\begin{tproof}
+  $ \tau = \sigma^{-1}$とおくと，
+  \begin{align*}
+    A_\sigma & = \sum_{ \tau \in S_n} \sgn  (\tau) a_{1 \tau(1)} a_{2 \tau(2)} \cdots a_{n \tau(n)}               \\
+             & = \sum_{ \tau \in S_n} \sgn  (\tau) a_{\tau^{-1}(1)1} a_{\tau^{-1} (2)2} \cdots a_{\tau^{-1} (n)n} \\
+             & = \sum_{\sigma \in S_n} \sgn (\sigma^{-1}) a_{\sigma(1)1} a_{\sigma(2)2} \cdots a_{\sigma(n)n}     \\
+             & = \sum_{\sigma \in S_n} \sgn (\sigma) a_{\sigma(1)1} a_{\sigma(2)2} \cdots a_{\sigma(n)n}          \\
+             & = \sgn (\sigma).
+  \end{align*}
+  これにより
+  \[
+    \sgn (\sigma) = \pm 1 \iff A_\sigma = \pm 1.
+  \]
+\end{tproof}

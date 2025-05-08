@@ -1,0 +1,1412 @@
+\part*{第2章}
+\addcontentsline{toc}{part}{\texorpdfstring{第2章}{第2章}}
+
+
+\section*{p34：問1}
+\addcontentsline{toc}{section}{\texorpdfstring{p34：問1}{p34：問1}}
+
+\begin{tproof}
+  後半二つの主張は明らか．また，二つ目の主張は一つ目の主張と同様にして示すことができるので，一つ目のみ示すことにする．
+
+
+  $A=(a_{pq})$を$k \times l$行列，$B= (b_{qr})$，$C=(c_{qr})$を$l \times m$行列とする．示したい式の両辺がともに定義され，ともに$k \times m$行列であることはよい．行列$B+C$の$(q,r)$成分は$b_{qr}+c_{qr}$であるから，左辺の$(p,r)$成分は，
+  \[
+    \sum_{q=1}^{l}a_{pq}\left(b_{qr}+c_{qr}\right)=\sum_{q=1}^{l}a_{pq}b_{qr}+\sum_{q=1}^{l}a_{pq}c_{qr}
+  \]
+  とかける．この等号の右辺は$AB$の$(p,r)$成分と$AC$の$(p,r)$成分の和である．これより，主張が示された．
+\end{tproof}
+
+
+
+\section*{p40：問}
+\addcontentsline{toc}{section}{\texorpdfstring{p40：問}{p40：問}}
+
+\subsection*{p40：問-(イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p40：問-(イ)}{p40：問-(イ)}}
+
+\begin{tanswer}
+  \[
+    A_{11} = \begin{pmatrix} 1 & -1 \\ 0 & -2 \end{pmatrix},\quad A_{22} = \begin{pmatrix} -2 & 3 \\ 1 & 1 \end{pmatrix} ,\quad B_{11} = \begin{pmatrix} 2 & 1 \\ 0 & 1\end{pmatrix} ,\quad B_{22}= \begin{pmatrix} 1 & 1 \\ 2 & -3 \end{pmatrix}
+  \]
+  とおくと，
+  \begin{align*}
+    (\text{与式}) & = \begin{pmatrix} A_{11} & O \\ O & A_{22} \end{pmatrix} \begin{pmatrix} B_{11} & O \\ O & B_{22} \end{pmatrix} \\
+                & = \begin{pmatrix} A_{11} B_{11} & O \\ O & A_{22} B_{22} \end{pmatrix}                                          \\
+                & = \begin{pmatrix} 2 & 0 & 0 & 0 \\ 0 & -2 & 0 & 0 \\ 0 & 0 & 4 & -11 \\ 0 & 0 & 3 & -2 \end{pmatrix}
+  \end{align*}
+  である．
+\end{tanswer}
+
+\section*{p41：問1}
+\addcontentsline{toc}{section}{\texorpdfstring{p41：問1}{p41：問1}}
+%
+
+\begin{tanswer}
+  \begin{enumerate}
+    \item \mbox{　}
+          $ X =\begin{pmatrix} x_{11} & x_{12} \\ x_{21} & x_{22} \end{pmatrix}$とする．このとき，
+          \[
+            AX =\begin{pmatrix} x_{11}+2x_{21} &  x_{12}+2x_{22}  \\ 2x_{11} + 4x_{21} &2x_{12} + 4x_{22} \end{pmatrix}
+          \]
+          となり，これが$E_2$と等しくなるためには
+          \[
+            \begin{cases}
+              x_{11}+2x_{21} =1   \\
+              x_{12}+2x_{22}  =0  \\
+              2x_{11} + 4x_{21}=0 \\
+              2x_{12} + 4x_{22}=1
+            \end{cases}
+          \]
+          となることが必要かつ十分であるが，これを満たす$x_{11},x_{12},x_{21},x_{22} \in \mathbb{C}$は存在しない．よって前半の主張が示された．\par
+          後半について示す．$Y =\begin{pmatrix} y_{11} & y_{12} \\ y_{21} & y_{22} \end{pmatrix}$とする．このとき，
+          \[
+            YA = \begin{pmatrix} y_{11} +2y_{12} & 2y_{11}+4y_{12} \\ y_{21}+2y_{22} & 2y_{21}+4y_{22}  \end{pmatrix}
+          \]
+          となり，これが$E_2$と等しくなるためには
+          \[
+            \begin{cases}
+              y_{11} +2y_{12}=1   \\
+              2y_{11}+4y_{12}  =0 \\
+              y_{21}+2y_{22} =0   \\
+              2y_{21}+4y_{22} =1
+            \end{cases}
+          \]
+          となることが必要かつ十分であるが，これを満たす$y_{11},y_{12},y_{21},y_{22} \in \mathbb{C}$は存在しない．よって後半の主張も示された．\qed
+    \item \mbox{　}
+          $X,Y$を(1)で定義したものとする．このとき，
+          \[
+            AX = \begin{pmatrix} x_{11}+2x_{21} & x_{12}+2x_{22} \\ 0 & 0 \end{pmatrix}
+          \]
+          となり，これが$B$と等しくならないことは明らか．\par
+          後半について，
+          \[
+            YA =\begin{pmatrix} x_{11} & 2 x_{11} \\  x_{21}&  2x_{21} \end{pmatrix}
+          \]
+          となり，これが$B$と等しくなるためには$x_{11}=1$，$x_{21}=2$となることが必要かつ十分であるが，$x_{12}$，$x_{22}$については任意の複素数である．以上の議論により，このような$Y$は無限に存在する．\qed
+    \item  \mbox{　}
+          $A$の第$k$列の成分が全て$0$であるとする．ただしここで$ 1 \le k \le n,~ k \in \mathbb{N}$であるとする．
+          $XA=E$をみたす$X$が存在すると仮定する．このとき，$X$は明らかに$n \times n$行列であり，積$XA$は定義される．
+          いま$X=(x_{jk})$，$A=(a_{kj})$，$ 1 \le j ,k \le n$と表す．このとき，
+          \[
+            (XA \text{の}(j,j)\text{成分}) = \sum_{k=1}^{n} x_{jk} a_{kj} =0
+          \]
+          となり，これは$XA =E$に矛盾する．よってこのような$X$は存在しないことが示された．\qed
+  \end{enumerate}
+\end{tanswer}
+
+
+\section*{p42：問1}
+\addcontentsline{toc}{section}{\texorpdfstring{p42：問1}{p42：問1}}
+
+\begin{tproof}
+  まず，
+  \[
+    \overline{A} \ \overline{A^{-1}} = \overline{A A^{-1}}=E,\quad \overline{A^{-1}} \ \overline{A} =\overline{A^{-1} A}=E
+  \]
+  より，$\overline{A}$は正則で，逆行列は$\overline{A^{-1}}$である．さらに，
+  \[
+    {}^t A {}^t A^{-1} ={}^t (A^{-1} A)=E,\quad {}^t A^{-1} {}^t A = {}^t (A A^{-1})=E
+  \]
+  であるから，${}^t A$は正則であり，逆行列は${}^t A^{-1}$である．
+\end{tproof}
+
+\section*{p42：問2}
+\addcontentsline{toc}{section}{\texorpdfstring{p42：問2}{p42：問2}}
+
+\begin{tanswer}
+  \[
+    A \coloneqq \begin{pmatrix} a & b \\ c & d \end{pmatrix},\quad A' \coloneqq \begin{pmatrix} x & y \\ z & w \end{pmatrix}
+  \]
+  とする．このとき，
+  \[
+    A A' = \begin{pmatrix} a x + b z & ay + bw \\ cx + dz & cy +dw \end{pmatrix}
+  \]
+  である．$AA'=E$となる条件は，$x$，$y$，$z$，$w$についてのふたつの連立方程式
+  \[
+    \begin{cases}
+      ax+bz =1 \\
+      cx+dz =0
+    \end{cases}
+    ,\quad
+    \begin{cases}
+      ay+bw=0 \\
+      cy+dw=1
+    \end{cases}
+  \]
+  が解を持つことで，その条件は$ad-bc \ne 0$である．そのときの解は，
+  \[
+    (x,y,z,w)=  (\frac{d}{ad-bc},-\frac{b}{ad-bc},-\frac{c}{ad-bc},\frac{a}{ad-bc})
+  \]
+  である．これを用いて$A'A$を計算すると，$A' A =E$となり．たしかに$A'$は$A$の逆行列である．
+
+  以上の議論により，$ad - bc \ne 0$となることが必要十分条件である．
+\end{tanswer}
+
+\section*{p42：問3}
+\addcontentsline{toc}{section}{\texorpdfstring{p42：問3}{p42：問3}}
+
+\subsection*{p42：問3-(イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p42：問3-(イ)}{p42：問3-(イ)}}
+
+\begin{tanswer}
+  (2)の結果により，
+  \[
+    \frac{1}{3 \cdot 3 - 2 \cdot 4} \begin{pmatrix} 3 & -2 \\ -4 & 3 \end{pmatrix} =  \begin{pmatrix} 3 & -2 \\ -4 & 3 \end{pmatrix}
+  \]
+  が求める逆行列である．
+\end{tanswer}
+
+\subsection*{p42：問3-(ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p42：問3-(ロ)}{p42：問3-(ロ)}}
+
+\begin{tanswer}
+  まず，
+  \[
+    X= \begin{pmatrix} x_{11} & x_{12} & x_{13} \\x_{21} & x_{22} & x_{23} \\x_{31} & x_{32} & x_{33}  \end{pmatrix}
+  \]
+  としたときに
+  \begin{align*}
+    XA & =  \begin{pmatrix} x_{11} & x_{12} & x_{13} \\x_{21} & x_{22} & x_{23} \\x_{31} & x_{32} & x_{33}  \end{pmatrix}
+    \begin{pmatrix} 1 & 2 & -1 \\ 0& 1 & 3 \\ 0 & 0 & 1 \end{pmatrix}                                                                                                                                          \\
+       & = \begin{pmatrix} x_{11} & 2x_{11} + x_{12} & -x_{11} +3x_{12} +x_{13} \\ x_{21} & 2x_{21} + x_{22} & -x_{21} +3x_{22} +x_{23} \\  x_{31} & 2x_{31} + x_{32} & -x_{31} +3x_{32} +x_{33} \end{pmatrix} \\
+  \end{align*}
+  であるから，これに関して
+  \[
+    \begin{pmatrix} x_{11} & 2x_{11} + x_{12} & -x_{11} +3x_{12} +x_{13} \\ x_{21} & 2x_{21} + x_{22} & -x_{21} +3x_{22} +x_{23} \\  x_{31} & 2x_{31} + x_{32} & -x_{31} +3x_{32} +x_{33} \end{pmatrix} = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}
+  \]
+  となれば，行列$X$が求める逆行列である．
+  計算すると
+  \[
+    X = \begin{pmatrix} 1 & -2 & 7 \\ 0 & 1 & -3 \\ 0 & 0 & 1 \end{pmatrix}
+  \]
+  であり，これが求める逆行列であった．
+\end{tanswer}
+
+\subsection*{p42：問3-(ハ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p42：問3-(ハ)}{p42：問3-(ハ)}}
+
+\begin{tanswer}
+  まず，
+  \[
+    X= \begin{pmatrix} x_{11} & x_{12} & x_{13} & x_{14}\\x_{21} & x_{22} & x_{23} & x_{24} \\x_{31} & x_{32} & x_{33} & x_{34} \\x_{41} & x_{42} & x_{43} & x_{44} \end{pmatrix}
+  \]
+  としたとき，
+  \begin{align*}
+    XA & = \begin{pmatrix} x_{11} & x_{12} & x_{13} & x_{14}\\x_{21} & x_{22} & x_{23} & x_{24} \\x_{31} & x_{32} & x_{33} & x_{34} \\x_{41} & x_{42} & x_{43} & x_{44} \end{pmatrix}
+    \begin{pmatrix} 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0 \\ 0 & 1 & 0 & 0 \\ 1 & 0 & 0 & 0 \end{pmatrix}                                                                                     \\
+       & = \begin{pmatrix} x_{14} & x_{13} & x_{12} & x_{11} \\x_{24} & x_{23} & x_{22} & x_{21} \\x_{34} & x_{33} & x_{32} & x_{31} \\x_{44} & x_{43} & x_{42} & x_{41} \end{pmatrix}
+  \end{align*}
+  であるから，これに関して
+  \[
+    \begin{pmatrix} x_{14} & x_{13} & x_{12} & x_{11} \\x_{24} & x_{23} & x_{22} & x_{21} \\x_{34} & x_{33} & x_{32} & x_{31} \\x_{44} & x_{43} & x_{42} & x_{41} \end{pmatrix} = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix}
+  \]
+  となれば，行列$X$が求める逆行列である．
+
+  計算すると，
+  \[
+    X = \begin{pmatrix} 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0 \\ 0 & 1 & 0 & 0 \\ 1 & 0 & 0 & 0 \end{pmatrix}
+  \]
+  であり．これが求める逆行列であった．
+\end{tanswer}
+
+
+
+\section*{p52：問}
+\addcontentsline{toc}{section}{\texorpdfstring{p52：問}{p52：問}}
+
+\begin{tanswer}
+  \begin{align*}
+                                                                        &
+    \left(
+    \begin{array}{ccc|ccc}
+        1  & 3  & 2  & 1 & 0 & 0 \\
+        2  & 6  & 3  & 0 & 1 & 0 \\
+        -2 & -5 & -2 & 0 & 0 & 1
+      \end{array}
+    \right)                                                               \\
+    \xrightarrow{\text{第$1$行の$(-2)$倍，第$1$行の$2$倍をそれぞれ第$2$行，第$3$行に加える}}   &
+    \left( \begin{array}{ccc|ccc}
+               1 & 3 & 2  & 1  & 0 & 0 \\
+               0 & 0 & -1 & -2 & 1 & 0 \\
+               0 & 1 & 2  & 2  & 0 & 1
+             \end{array}
+    \right)                                                               \\
+    \xrightarrow{\text{第$2$行と第$3$行を交換する}}                               &
+    \left( \begin{array}{ccc|ccc}
+               1 & 3 & 2  & 1  & 0 & 0 \\
+               0 & 1 & 2  & 2  & 0 & 1 \\
+               0 & 0 & -1 & -2 & 1 & 0
+             \end{array}
+    \right)                                                               \\
+    \xrightarrow{\text{第$2$行の$(-3)$倍を第$1$行に加え，第$3$行の$(-4)$倍を第$1$行に加える}} &
+    \left( \begin{array}{ccc|ccc}
+               1 & 0 & 0  & 3  & -4 & -3 \\
+               0 & 1 & 2  & 2  & 0  & 1  \\
+               0 & 0 & -1 & -2 & 1  & 0
+             \end{array}
+    \right)                                                               \\
+    \xrightarrow{\text{第$3$行の$2$倍を第$2$行に加え，第$3$行を$(-1)$倍する}}            &
+    \left( \begin{array}{ccc|ccc}
+               1 & 0 & 0 & 3  & -4 & -3 \\
+               0 & 1 & 0 & -2 & 2  & 1  \\
+               0 & 0 & 1 & 2  & -1 & 0
+             \end{array}
+    \right)
+  \end{align*}
+  よって，求める逆行列は
+  \[
+    \begin{pmatrix}
+      3  & -4 & -3 \\
+      -2 & 2  & 1  \\
+      2  & -1 & 0
+    \end{pmatrix}
+  \]
+  である．
+\end{tanswer}
+
+
+
+
+\section*{p58：問}
+\addcontentsline{toc}{section}{\texorpdfstring{p58：問}{p58：問}}
+
+\subsection*{p58：問-(イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p58：問-(イ)}{p58：問-(イ)}}
+
+\begin{tanswer}
+  与えられた連立方程式について，拡大係数行列を考えて基本変形を施すと，
+  \[
+    \begin{pmatrix} 1 & 0 & 1 & -4/3 \\ 0 & 1 & 1 & 8/3 \\ 0 & 0 & 0 & 0 \end{pmatrix}
+  \]
+  となる．つまり，解は存在し，ひとつの任意定数を含む．任意定数を$ x_3 =\alpha$とすると，
+  \[
+    x_1 = -\frac{4}{3} - \alpha,\quad x_2 = \frac{8}{3} - \alpha,\quad x_3 = \alpha
+  \]
+  とかける．ベクトルの形で表すと，
+  \[
+    \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix} -4/3 \\ 8/3 \\ 0 \end{pmatrix} + \alpha \begin{pmatrix} -1 \\ -1 \\ 1 \end{pmatrix}
+  \]
+  である．
+\end{tanswer}
+
+
+\subsection*{p58：問-(ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p58：問-(ロ)}{p58：問-(ロ)}}
+
+\begin{tanswer}
+  与えられた連立方程式について，拡大係数行列を考えて基本変形を施すと，
+  \[
+    \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 1& 0 & 1 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & -1 \end{pmatrix}
+  \]
+  となるが，$0 = -1$とはならないため，この連立方程式は解を持たない．
+\end{tanswer}
+
+\subsection*{p58：問-(ハ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p58：問-(ハ)}{p58：問-(ハ)}}
+
+\begin{tanswer}
+  与えられた連立方程式について，拡大係数行列を考えて基本変形を施すと，
+  \[
+    \begin{pmatrix} 1 & 0 & 0 & 2 & 6 & 6 \\ 0 & 1& 0 & -2 & -11 & -9 \\ 0 & 0 & 1 & 0 & 19 & 14 \end{pmatrix}
+  \]
+  となる．ただしここで第3列と第4列を入れ替えた．
+
+  つまり，解は存在し，ふたつの任意定数を含む，任意定数を$x_3 = \alpha$，$x_5 = \beta$とすると，この連立方程式の解は
+  \[
+    x_1 = 6-2\alpha -2 \beta , \quad x_2 = -9 + 2\alpha +11 \beta , \quad x_3 = \alpha , \quad x_4 = 14-19\beta,\quad x_5 =\beta
+  \]
+  とかける．ベクトルの形で表すと，
+  \[
+    \begin{pmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \end{pmatrix} = \begin{pmatrix} 6 \\ -9 \\ 0 \\ 14 \\ 0 \end{pmatrix} + \alpha \begin{pmatrix} -2 \\ 2 \\ 1 \\ 0 \\ 0 \end{pmatrix} + \beta \begin{pmatrix} -2 \\ 11 \\ 0 \\ -19 \\ 1 \end{pmatrix}
+  \]
+  である．
+\end{tanswer}
+
+
+
+\section*{p62--63：問1}
+\addcontentsline{toc}{section}{\texorpdfstring{p62--63：問1}{p62--63：問1}}
+
+\begin{tproof}
+  定義に従って計算すると，
+  \begin{align*}
+    \norm{\bm{x}+\bm{y} }^2 +\norm{\bm{x}-\bm{y} }^2 & = (\bm{x}+\bm{y},\bm{x}+\bm{y})+(\bm{x}-\bm{y},\bm{x}-\bm{y})                                                                    \\
+                                                     & =(\bm{x},\bm{x})+(\bm{x},\bm{y})+(\bm{y},\bm{x})+(\bm{y},\bm{y})+(\bm{x},\bm{x})-(\bm{x},\bm{y})-(\bm{y},\bm{x})+(\bm{y},\bm{y}) \\
+                                                     & = 2((\bm{x}，\bm{x})+(\bm{y}，\bm{y}))                                                                                             \\
+                                                     & =2 (\norm{\bm{x}}^2+\norm{\bm{y}}^2)
+  \end{align*}
+  となり，これが証明すべきことであった．
+\end{tproof}
+\section*{p62-63：問2}
+\addcontentsline{toc}{section}{\texorpdfstring{p62：問2}{p62：問2}}
+\begin{tproof}
+  \[
+    \norm{\bm{x}+\bm{y}}^2=(\bm{x},\bm{x})+(\bm{x},\bm{y})+(\bm{y},\bm{x})+(\bm{y},\bm{y})
+  \]
+  である．ここで，$\bm{x}$と$\bm{y}$が直交することから，
+  \[
+    (\bm{x},\bm{y})＋(\bm{y},\bm{x})=(\bm{x},\bm{y})＋\overline{(\bm{x},\bm{y})}=0
+  \]
+  であり，これを用いると
+  \[
+    \norm{\bm{x}+\bm{y}}^2 =(\bm{x},\bm{x})+(\bm{y},\bm{y})=\norm{\bm{x}}^2 +\norm{\bm{y}}^2
+  \]
+  となる．$\bm{x},~\bm{y}$がともに実ベクトルのときは$(\bm{x},\bm{y})=0$であるから確かに逆が成り立つが，たとえば$\bm{x}=
+    \begin{pmatrix}
+      2 \\
+      0
+    \end{pmatrix}
+    ,~
+    \bm{y}=
+    \begin{pmatrix}
+      2i \\
+      0
+    \end{pmatrix}
+  $とすれば，等式は成り立つが$\bm{x}$と$\bm{y}$は直交しないため，逆は成り立たない．
+\end{tproof}
+
+\section*{p62--63：問3}
+\addcontentsline{toc}{section}{\texorpdfstring{p62--63：問3}{p62--63：問3}}
+
+\begin{tproof}
+  $\bm{x},\bm{y} \in \mathbb{R}^n$のとき，
+  \begin{align*}
+    \norm{\bm{x}+\bm{y}}^2 - \norm{\bm{x}-\bm{y}}^2 & = (\bm{x}+\bm{y},\bm{x}+\bm{y}) - (\bm{x}-\bm{y},\bm{x}-\bm{y})                                                                          \\
+                                                    & = \norm{\bm{x}}^2 +(\bm{x},\bm{y})+(\bm{y},\bm{x})+ \norm{\bm{y}}^2 - (\norm{\bm{x}}^2 -(\bm{x},\bm{y})-(\bm{y},\bm{x})+\norm{\bm{y}}^2) \\
+                                                    & = \norm{\bm{x}}^2 + 2(\bm{x},\bm{y}) + \norm{\bm{y}}^2 - (\norm{\bm{x}}^2 - 2(\bm{x},\bm{y}) + \norm{\bm{y}}^2)                          \\
+                                                    & = 4(\bm{x},\bm{y})
+  \end{align*}
+  であるから，この両辺を$4$で割るとただちに主張が従う．
+
+  また，$\bm{x},\bm{y} \in \mathbb{C}$のときにはこの等式が成り立たないことがある．
+  $\bm{x}={}^t (2i,0)$，$\bm{y}={}^t (2,0)$とすると，
+  \begin{align*}
+    \frac{\norm{\bm{x}+\bm{y}}^2 - \norm{\bm{x}-\bm{y}}^2 }{4} & = \frac{4-4}{4} \\
+                                                               & =0
+  \end{align*}
+  であるが，
+  \begin{align*}
+    (\bm{x},\bm{y}) & =(2,0) \begin{pmatrix} -2i  \\ 0 \end{pmatrix} \\
+                    & = -4i
+  \end{align*}
+  となり，確かにこれが反例になっている．
+\end{tproof}
+
+
+
+\section*{p65:問1}
+\addcontentsline{toc}{section}{\texorpdfstring{p65:問1}{p65:問1}}
+
+\begin{tanswer}
+  \[
+    A \coloneqq \begin{pmatrix} a & b \\ c & d\end{pmatrix} \in \mathbb{R}^{2 \times 2}
+  \]
+  とおく．このとき，
+  \begin{align*}
+    A {}^t A & = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \begin{pmatrix} a & c \\ b & d\end{pmatrix} \\
+             & = \begin{pmatrix} a^2 +b^2 & ac+bd \\ ac+bd & c^2 + d^2 \end{pmatrix}
+  \end{align*}
+  となり，これが$E$に等しいので，
+  \[
+    \begin{cases}
+      a^2 + b^2 =1 , \\
+      c^2 + d^2 =1 , \\
+      ac+bd =0
+    \end{cases}
+  \]
+  となる．このことから$ 0 \leqq \theta < 2\pi $，$ 0 \leqq \phi < 2\pi$として
+  \begin{align*}
+     & a = \cos \theta , \quad b = \sin \theta, \\
+     & c = \cos \phi , \quad d = \sin \phi
+  \end{align*}
+  とおくと，
+  \begin{align*}
+    ac+bd & = \cos \theta \cos \phi + \sin \theta \sin \phi \\
+          & = \cos (\theta - \phi)
+  \end{align*}
+  となり，これが$0$に等しいので．
+  \begin{align*}
+               & \theta -\phi = \pi /2 , 3\pi /2 ,         \\
+    \therefore & \phi = \theta - \pi /2 , \theta - 3\pi/2.
+  \end{align*}
+  これより，任意の二次直交行列は$ 0 \leqq \theta < 2\pi $，$ 0 \leqq \phi < 2\pi$として
+  \[
+    \begin{pmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \end{pmatrix},\quad \begin{pmatrix} \cos \theta & \sin \theta \\ \sin \theta & -\cos \theta \end{pmatrix}
+  \]
+  のいずれかで表される．
+\end{tanswer}
+
+\section*{p65:問2}
+\addcontentsline{toc}{section}{\texorpdfstring{p65:問2}{p65:問2}}
+
+\begin{tproof}
+  \[
+    (A^\ast A)^{\ast} = A^{\ast} A^{\ast \ast} = A^{\ast} A, \quad (A A^{\ast})^\ast = A^{\ast \ast} A^\ast =A A^{\ast}
+  \]
+  であるから，$A^\ast A$，$A A^{\ast}$はエルミート行列である．
+
+  また，任意の$n \times 1$ベクトル$\bm{x}$に対して，
+  \begin{align*}
+    (\bm{x}, A^{\ast}A \bm{x}) & = (A^{\ast \ast} \bm{x}, A \bm{x}) \\
+                               & = (A \bm{x}, A \bm{x})             \\
+                               & = \norm{A \bm{x}}^2 \geqq 0
+  \end{align*}
+  であり，また，$\bm{x}$として第$i$成分のみ1でほかの成分は$0$のベクトル$\bm{e}_i$をとると，
+  \[
+    (\bm{e}_i, A^{\ast}A \bm{e}_i) = \text{$A^{\ast}A$の$(i,i)$成分}
+  \]
+  となる．先の不等式よりこれは$0$または正なので，$A^{\ast}A$の対角成分は$0$または正である．同様にして$AA^{\ast}$の対角成分も$0$または正である．
+
+  以上のことが証明すべきことであった．
+\end{tproof}
+
+
+\part*{第2章・章末問題}
+\addcontentsline{toc}{part}{\texorpdfstring{第2章・章末問題}{第2章・章末問題}}
+
+\section*{p70--73：1}
+\addcontentsline{toc}{section}{\texorpdfstring{p70--73：1}{p70--73：1}}
+
+\subsection*{p70--73：1-(イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70--73：1-(イ)}{p70--73：1-(イ)}}
+
+\begin{tanswer}
+  \begin{align*}
+                                                                            &
+    \left(
+    \begin{array}{cccc|cccc}
+        3  & 3 & -5 & -6 & 1 & 0 & 0 & 0 \\
+        1  & 2 & -3 & -1 & 0 & 1 & 0 & 0 \\
+        2  & 3 & -5 & -3 & 0 & 0 & 1 & 0 \\
+        -1 & 0 & 2  & 2  & 0 & 0 & 0 & 1
+      \end{array}
+    \right)                                                                   \\
+    \xrightarrow{\text{第$1$行と第$2$行を交換する}}                                   &
+    \left( \begin{array}{cccc|cccc}
+               1  & 2 & -3 & -1 & 0 & 1 & 0 & 0 \\
+               3  & 3 & -5 & -6 & 1 & 0 & 0 & 0 \\
+               2  & 3 & -5 & -3 & 0 & 0 & 1 & 0 \\
+               -1 & 0 & 2  & 2  & 0 & 0 & 0 & 1
+             \end{array}
+    \right)                                                                   \\
+    \xrightarrow{\text{$(1,1)$をかなめとして左から第1列を掃き出す}}                          &
+    \left( \begin{array}{cccc|cccc}
+               1 & 2  & -3 & -1 & 0 & 1  & 0 & 0 \\
+               0 & -3 & 4  & -3 & 1 & -3 & 0 & 0 \\
+               0 & -1 & 1  & -1 & 0 & -2 & 1 & 0 \\
+               0 & 2  & -1 & 1  & 0 & 1  & 0 & 1
+             \end{array}
+    \right)                                                                   \\
+    \xrightarrow{\text{第$3$行を$(-1)$倍して第2行と交換し，$(2,2)$をかなめとして左から第$2$列を掃き出す}} &
+    \left( \begin{array}{cccc|cccc}
+               1 & 0 & -1 & -3 & 0 & -3 & 2  & 0 \\
+               0 & 1 & -1 & 1  & 0 & 2  & -1 & 0 \\
+               0 & 0 & 1  & 0  & 1 & 3  & -3 & 0 \\
+               0 & 0 & 1  & -1 & 0 & -3 & 2  & 1
+             \end{array}
+    \right)                                                                   \\
+    \xrightarrow{\text{$(3,3)$をかなめとして左から第$3$列を掃き出す}}                        &
+    \left( \begin{array}{cccc|cccc}
+               1 & 0 & 0 & -3 & 1  & 0  & -1 & 0 \\
+               0 & 1 & 0 & 1  & 1  & 5  & -4 & 0 \\
+               0 & 0 & 1 & 0  & 1  & 3  & -3 & 0 \\
+               0 & 0 & 0 & -1 & -1 & -6 & 5  & 1
+             \end{array}
+    \right)                                                                   \\
+    \xrightarrow{\text{第4行を$(-1)$倍して，$(4,4)$をかなめとして第$4$列を掃き出す}}             &
+    \left( \begin{array}{cccc|cccc}
+               1 & 0 & 0 & 0 & 4 & 18 & -16 & -3 \\
+               0 & 1 & 0 & 0 & 0 & -1 & 1   & 1  \\
+               0 & 0 & 1 & 0 & 1 & 3  & -3  & 0  \\
+               0 & 0 & 0 & 1 & 1 & 6  & -5  & -1
+             \end{array}
+    \right)
+  \end{align*}
+  よって，求める逆行列は，
+  \[
+    \begin{pmatrix}
+      4 & 18 & -16 & -3 \\ 0 & -1 & 1 & 1\\ 1 & 3 & -3 & 0 \\ 1 & 6 & -5 & -1
+    \end{pmatrix}
+  \]
+  である．
+\end{tanswer}
+
+
+
+\subsection*{p70--73：1-(ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70--73：1-(ロ)}{p70--73：1-(ロ)}}
+
+\begin{tanswer}
+  \begin{align*}
+                                                  &
+    \left(
+    \begin{array}{cccc|cccc}
+        1  & 2  & 0 & -1 & 1 & 0 & 0 & 0 \\
+        -3 & -5 & 1 & 2  & 0 & 1 & 0 & 0 \\
+        1  & 3  & 2 & -2 & 0 & 0 & 1 & 0 \\
+        0  & 2  & 1 & -1 & 0 & 0 & 0 & 1
+      \end{array}
+    \right)                                         \\
+    \xrightarrow{\text{$(1,1)$をかなめとして第$1$列を掃き出す}} &
+    \left( \begin{array}{cccc|cccc}
+               1 & 2 & 0 & -1 & 1  & 0 & 0 & 0 \\
+               0 & 1 & 1 & -1 & 3  & 1 & 0 & 0 \\
+               0 & 1 & 2 & -1 & -1 & 0 & 1 & 0 \\
+               0 & 2 & 1 & -1 & 0  & 0 & 0 & 1
+             \end{array}
+    \right)                                         \\
+    \xrightarrow{\text{$(2,2)$をかなめとして第$2$列を掃き出す}} &
+    \left( \begin{array}{cccc|cccc}
+               1 & 0 & -2 & 1  & -5 & -2 & 0 & 0 \\
+               0 & 1 & 1  & -1 & 3  & 1  & 0 & 0 \\
+               0 & 0 & 1  & 0  & -4 & -1 & 1 & 0 \\
+               0 & 0 & -1 & 1  & -6 & -2 & 0 & 1
+             \end{array}
+    \right)                                         \\
+    \xrightarrow{\text{$(3,3)$をかなめとして第$3$列を掃き出す}} &
+    \left( \begin{array}{cccc|cccc}
+               1 & 0 & 0 & 1  & -13 & -4 & 2  & 0 \\
+               0 & 1 & 0 & -1 & 7   & 2  & -1 & 0 \\
+               0 & 0 & 1 & 0  & -4  & -1 & 1  & 0 \\
+               0 & 0 & 0 & 1  & -10 & -3 & 1  & 1
+             \end{array}
+    \right)                                         \\
+    \xrightarrow{\text{$(3,3)$をかなめとして第$3$列を掃き出す}} &
+    \left( \begin{array}{cccc|cccc}
+               1 & 0 & 0 & 0 & -3  & -1 & 1 & -1 \\
+               0 & 1 & 0 & 0 & -3  & -1 & 0 & 1  \\
+               0 & 0 & 1 & 0 & -4  & -1 & 1 & 0  \\
+               0 & 0 & 0 & 1 & -10 & -3 & 1 & 1
+             \end{array}
+    \right)                                         \\
+  \end{align*}
+  よって，求める逆行列は
+  \[
+    \begin{pmatrix} -3 & -1 & 1& -1 \\ -3 & -1 & 0 & 1 \\ -4 & -1 & 1 & 0 \\ -10 & -3 & 1& 1 \end{pmatrix}
+  \]
+  である．
+\end{tanswer}
+
+
+
+\section*{p70--73：2}
+\addcontentsline{toc}{section}{\texorpdfstring{p70--73：2}{p70--73：2}}
+
+\subsection*{p70--73：2-(イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70--73：2-(イ)}{p70--73：2-(イ)}}
+
+\begin{tanswer}
+  与えられた連立方程式について，拡大係数行列を考えて基本変形を施すと，
+  \[
+    \begin{pmatrix} 1 & 0 & 0 & 2 & 2 & 0 \\ 0 & 1& 0 & 0 & 0 & -3/5 \\ 0 & 0 & 1 & -1 & 0 & 1/5 \\ 0 & 0 & 0 & 0 & 0 & 0 \end{pmatrix}
+  \]
+  となる．ただしここで第2列と第5列を入れ替えた．
+
+  つまり，解は存在し，2つの任意定数を含む．任意定数を$x_4 = \alpha$，$x_2 = \beta $とすると，
+  \[
+    x_1 = -2 \alpha - 2 \beta , \quad x_2 =\beta , \quad x_3 = \alpha + \frac{1}{5} , \quad x_4 = \alpha , \quad x_5 = -\frac{3}{5}
+  \]
+  となる．ベクトルの形で表すと
+  \[
+    \begin{pmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \end{pmatrix}= \begin{pmatrix} 0 \\ 0 \\ 1/5 \\ 0 \\ -3/5 \end{pmatrix} + \alpha \begin{pmatrix} -2 \\ 0 \\ 1 \\ 1 \\ 0 \end{pmatrix} + \beta \begin{pmatrix} -2 \\ 1 \\ 0 \\ 0 \\ 0 \end{pmatrix}
+  \]
+  となる．
+\end{tanswer}
+
+\subsection*{p70--73：2-(ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70--73：2-(ロ)}{p70--73：2-(ロ)}}
+
+\begin{tanswer}
+  与えられた連立方程式について，拡大係数行列を考えて基本変形を施すと，
+  \[
+    \begin{pmatrix} 1 & 0 & 0  & 2 & -1 \\ 0 & 1& 0  & -1 & 1 \\ 0 & 0 & 1 & -1 & -1 \\ 0 & 0 & 0 & 0 & 0 \end{pmatrix}
+  \]
+  となる．
+
+  つまり，解は存在し，一つの任意定数を含む．任意定数を$x_4 = \alpha$とすると，
+  \[
+    x_1 = -1 -2\alpha   , \quad x_2 =1+\alpha  , \quad x_3 =-1+ \alpha  , \quad x_4 = \alpha
+  \]
+  となる．ベクトルの形で表すと
+  \[
+    \begin{pmatrix} x_1 \\ x_2 \\ x_3 \\ x_4  \end{pmatrix}= \begin{pmatrix} -1 \\ 1 \\ -1 \\ 0 \end{pmatrix} +\alpha \begin{pmatrix} -2 \\ 1\\ 1 \\ 1\end{pmatrix}
+  \]
+  となる．
+\end{tanswer}
+
+
+
+\subsection*{p70--73：2-(ハ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70--73：2-(ハ)}{p70--73：2-(ハ)}}
+
+\begin{tanswer}
+  与えられた連立方程式について，拡大係数行列を考えて基本変形を施すと，
+  \[
+    \begin{pmatrix} 1 & 0 & 0  & 0 & 3 \\ 0 & 1& 0  & 0 & 4 \\ 0 & 0 & 1 & 0 & 1 \\ 0 & 0 & 0 & 1 & 1 \end{pmatrix}
+  \]
+  となる．
+
+  つまり，解は存在し，
+  \[
+    x_1 = 3 , \quad x_2 =4 , \quad x_3 = 1 , \quad x_4 = 1
+  \]
+  となる．ベクトルの形で表すと
+  \[
+    \begin{pmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \end{pmatrix}= \begin{pmatrix} 3 \\ 4 \\ 1 \\ 1 \end{pmatrix}
+  \]
+  となる．
+\end{tanswer}
+
+
+\subsection*{p70--73：2-(ニ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70--73：2-(ニ)}{p70--73：2-(ニ)}}
+
+\begin{tanswer}
+  与えられた連立方程式について，拡大係数行列を考えて基本変形を施すと，
+  \[
+    \begin{pmatrix} 1 & 0 & 0  & 2 & -2 & 0  \\ 0 & 1& 0  & 0 & 24 & 4 \\ 0 & 0 & 1 & 0 & 10 & 3 \end{pmatrix}
+  \]
+  となる．ただしここで第2列と第4列を入れ替えた．
+
+  つまり，解は存在し，$2$つの任意定数を含む．$x_2 = \alpha$，$x_5 = \beta$とすると，
+  \[
+    x_1 = -2\alpha + 2\beta  , \quad x_2 =\alpha  , \quad x_3 = 3 -10\beta  , \quad x_4 = 4 -24 \beta ,\quad x_5 =\beta
+  \]
+  となる．ベクトルの形で表すと
+  \[
+    \begin{pmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \end{pmatrix}= \begin{pmatrix} 0 \\ 0 \\ 3 \\ 3 \\ 0 \end{pmatrix} +\alpha \begin{pmatrix} -2 \\ 1\\ 0 \\ 0 \\ 0 \end{pmatrix} + \beta \begin{pmatrix} 2 \\ 0 \\ -10 \\ -24 \\ 1 \end{pmatrix}
+  \]
+  となる．
+\end{tanswer}
+
+
+
+
+\section*{p70--73：3}
+\addcontentsline{toc}{section}{\texorpdfstring{p70--73：3}{p70--73：3}}
+
+\subsection*{p70--73：3-(イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70--73：3-(イ)}{p70--73：3-(イ)}}
+
+\begin{tanswer}
+  \begin{align*}
+                                    &
+    \left(
+    \begin{array}{ccc|ccc}
+        1  & 3  & 2  & 1 & 0 & 0 \\
+        -1 & -2 & -1 & 0 & 1 & 0 \\
+        2  & 4  & 3  & 0 & 0 & 1
+      \end{array}
+    \right)                           \\
+    \xrightarrow{\text{第$1$列を掃き出す}} &
+    \left(
+    \begin{array}{ccc|ccc}
+        1 & 3  & 2  & 1  & 0 & 0 \\
+        0 & 1  & 1  & 1  & 1 & 0 \\
+        0 & -2 & -1 & -2 & 0 & 1
+      \end{array}
+    \right)                           \\
+    \xrightarrow{\text{第$2$列を掃き出す}} &
+    \left(
+    \begin{array}{ccc|ccc}
+        1 & 0 & -1 & -2 & -3 & 0 \\
+        0 & 1 & 1  & 1  & 1  & 0 \\
+        0 & 0 & 1  & 0  & 2  & 1
+      \end{array}
+    \right)                           \\
+    \xrightarrow{\text{第$3$列を掃き出す}} &
+    \left(
+    \begin{array}{ccc|ccc}
+        1 & 0 & 0 & -2 & -1 & 1  \\
+        0 & 1 & 0 & 1  & -1 & -1 \\
+        0 & 0 & 1 & 0  & 2  & 1
+      \end{array}
+    \right)
+  \end{align*}
+  である．ゆえに
+  \[
+    P^{-1} = \begin{pmatrix} -2 & -1 & 1\\ 1 & -1 & -1 \\ 0 & 2 & 1 \end{pmatrix}
+  \]
+  である．だから
+  \[
+    P^{-1} A P = \begin{pmatrix} 2 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 0 \end{pmatrix}
+  \]
+\end{tanswer}
+
+
+\subsection*{p70--73：3-(ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70--73：3-(ロ)}{p70--73：3-(ロ)}}
+
+
+\begin{tanswer}
+  $P^{-1} A P = B$とおくと，
+  \begin{align*}
+    A^n & = P B^n P^{-1}                                                                                                                                                                                                      \\
+        & = \begin{pmatrix} 1 & 3 & 2 \\ -1 & -2 & -1 \\ 2 & 4 & 3 \end{pmatrix} \begin{pmatrix} 2^n & 0 & 0 \\ 0 & 1^n & 0 \\ 0 & 0 & 0^n \end{pmatrix} \begin{pmatrix} -2 & -1 & 1\\ 1 & -1 & -1 \\ 0 & 2 & 1 \end{pmatrix} \\
+        & = \begin{pmatrix} -2^{n+1}+3 & -2^n -3 & 2^n -3 \\ 2^{n+1}-2 & 2^n +2 & -2^n -2 \\ -2^{n+2}+4 & -2^{n+1} -4 & 2^{n+1} -4 \end{pmatrix}
+  \end{align*}
+  となる．
+\end{tanswer}
+
+
+
+\section*{p70--73：4}
+\addcontentsline{toc}{section}{\texorpdfstring{p70--73：4}{p70--73：4}}
+
+\begin{tanswer}
+  与えられた行列を$A$とする．
+
+  $A$の第1列に，第2列から第$n$列までを足して変形すると，
+
+  \[
+    \begin{pmatrix}
+      (n-1)x+1 & x      & x      & \cdots & x      \\
+      (n-1)x+1 & 1      & x      & \cdots & x      \\
+      (n-1)x+1 & x      & 1      & \cdots & x      \\
+      \vdots   & \vdots & \vdots & \ddots & \vdots \\
+      (n-1)x+1 & x      & x      & \cdots & 1
+    \end{pmatrix}
+  \]
+  となる．
+
+  ここで，この行列の第$2$行から第$n$行までの各行から第$1$行を引くと，
+
+  \[
+    \begin{pmatrix}
+      (n-1)x+1 & x      & x      & \cdots & x      \\
+      0        & 1-x    & 0      & \cdots & 0      \\
+      0        & 0      & 1-x    & \cdots & 0      \\
+      \vdots   & \vdots & \vdots & \ddots & \vdots \\
+      0        & 0      & 0      & \cdots & 1 -x
+    \end{pmatrix}
+  \]
+  となるので，行列$A$の階数は，$x=1$のとき$1$，$ x= -1/(n-1)$のとき$n-1$，それ以外の場合は$n$である．
+\end{tanswer}
+
+
+
+
+\section*{p70--73：5}
+\addcontentsline{toc}{section}{\texorpdfstring{p70--73：5}{p70--73：5}}
+
+
+\begin{tproof}
+  $A$が正則でないと仮定すると，
+  \[
+    A \bm{x} = \bm{0}
+  \]
+  をみたす$\bm{x} \in \mathbb{C}^n$が存在する．
+
+  また，$\bm{x} ={} ^t (x_1,x_2,\dots,x_n)$とし，$x_1,x_2,\dots,x_n$の中で絶対値が最大のものを$x_p$とする．
+
+  $A \bm{x}$の$p$行を考えると，
+
+  \begin{align*}
+               & a_{p1} x_1 + a_{p2} x_2 + \dots + a_{pp} x_p + \dots + a_{pn} x_n = 0            \\
+    \therefore & ~ x_p = -(a_{p1}x_1 + a_{p2} x_2+ \dots + a_{pn} x_n) =- \sum_{\substack{i \ne p \\ i \in \{1,2,\dots,n\}}} a_{pi} x_i
+  \end{align*}
+  となる．
+
+  ここで，
+  \begin{align*}
+    \abs{x_p} & \leqq \sum_{\substack{i \ne p                \\ i \in \{1,2,\dots,n\}}} \abs{a_{pi}} \abs{x_i} \\
+              & < \sum_{\substack{i \ne p                    \\ i \in \{1,2,\dots,n\}}} \frac{1}{n-1} \abs{x_i} \\
+              & < \frac{n-1}{n-1} \cdot \abs{x_p} =\abs{x_p}
+  \end{align*}
+  と計算でき，$ \abs{x_p} < \abs{x_p}$となり，これは矛盾である．
+
+  よって，先の過程が誤りであり，このとき$A$は正則である．
+\end{tproof}
+
+
+\section*{p70--73：6}
+\addcontentsline{toc}{section}{\texorpdfstring{p70--73：6}{p70--73：6}}
+
+\subsection*{p70--73：6-(イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70--73：6-(イ)}{p70--73：6-(イ)}}
+\begin{tproof}
+  \[
+    A A^{k-1} = A^{k-1} A = E
+  \]
+  なので，$A$は正則である．
+\end{tproof}
+
+\subsection*{p70--73：6-(ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70--73：6-(ロ)}{p70--73：6-(ロ)}}
+
+
+\begin{tproof}
+  $A$が正則であるとすると，$A^{-1}$が存在して，
+  \begin{align*}
+     & A^{-1} A^{2} = A^{-1} A \\
+     & A = E
+  \end{align*}
+  となるが，これは矛盾であるため，$A$は正則でない．
+\end{tproof}
+
+\subsection*{p70--73：6-(ハ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70--73：6-(ハ)}{p70--73：6-(ハ)}}
+
+\begin{tproof}
+  $A$が正則であるとすると，
+  \begin{align*}
+    E & = (A^{-1} A)^{k} \\
+      & = A^{-k} A^{k}   \\
+      & = O
+  \end{align*}
+  となるが，これは矛盾であるため，$A$は正則でない．
+\end{tproof}
+
+\subsection*{p70--73：6-(ニ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70--73：6-(ニ)}{p70--73：6-(ニ)}}
+
+\begin{tproof}
+  $k$を用いて，$A^k$を考えると
+  \[
+    E = (E-A)(E+A+A^2+\dots+A^{k-1})
+  \]
+  であり，逆からかけても同じであるため，$E-A$は正則であり，
+  \[
+    (E-A)^{-1}=E+A+A^2+\dots+A^{k-1}
+  \]
+  である．
+
+  また，
+  \[
+    E=(E+A)(E-A+A^2-\dots+A^{k-1})
+  \]
+  であり，逆からかけても同じなので，$E+A$は正則であり，
+  \[
+    (E+A)^{-1} = E-A+A^2-\dots+A^{k-1}
+  \]
+  である．
+\end{tproof}
+
+
+
+\section*{p70--73：7}
+\addcontentsline{toc}{section}{\texorpdfstring{p70--73：7}{p70--73：7}}
+
+\begin{tproof}
+  $X=(x_{ij}),~Y=(y_{ij})$とする．
+  ここで，$XY$の$(i,i)$成分は$\sum_{j=1}^{n} x_{ij} y_{ji}$であるから，
+  \begin{equation*}
+    \tr (XY)  =  \sum_{i=1}^{n} \left( \sum_{j=1}^{n} x_{ij} y_{ji} \right)
+  \end{equation*}
+  となる．$YX$については，同様の議論により，
+  \begin{align*}
+    \tr  (YX) & =  \sum_{i=1}^{n}\left( \sum_{j=1}^{n}  y_{ij} x_{ji} \right)  \\
+              & =  \sum_{i=1}^{n} \left( \sum_{j=1}^{n}  x_{ji} y_{ij} \right)
+  \end{align*}
+  である．ここで，$i$と$j$をおきかえれば，
+  \begin{equation}
+    \tr  (YX) = \sum_{j=1}^{n} \left( \sum_{i=1}^{n}  x_{ij} y_{ji} \right)
+  \end{equation}
+  となる．これより，
+  \begin{equation}
+    \tr (XY) = \tr  (YX)
+  \end{equation}
+  を得て，これとトレースの線型性により$\tr (XY-YX) =0$であるが，$\tr  (E_n) =n \neq 0$であるため，これは矛盾である．
+
+  ゆえに，$XY-YX=E_n$となる$n$次行列$X,~Y$は存在しないことが示された．
+\end{tproof}
+
+
+
+\section*{p70--73：8}
+\addcontentsline{toc}{section}{\texorpdfstring{p70--73：8}{p70--73：8}}
+
+\begin{tproof}
+  行列$B$の階数を$r$とすると，$m$次正則行列$P$，$n$次正則行列$Q$によって，
+  \[
+    P B Q = F_{m,n} (r)
+  \]
+  と表せる．
+
+  これにより，
+  \[
+    ABQ = A P^{-1} F_{m,n} (r)
+  \]
+  とかける．$A_{11}$を$r$次の行列として，
+  \[
+    A P^{-1} = \begin{pmatrix} A_{11} & A_{12} \\ A_{21} & A_{22} \end{pmatrix}, \quad F_{m,n} (r) = \begin{pmatrix} E_r & O \\ O & O \end{pmatrix}
+  \]
+  とかくと，
+  \begin{align*}
+    A P^{-1} F_{m,n} (r) & = A P^{-1} Q                                            \\
+                         & = \begin{pmatrix} A_{11}& O \\ A_{21} & O \end{pmatrix}
+  \end{align*}
+  とかけ，$A_{11}$の定義により，$ABQ$の階数は$r$以下となる．いま$Q$は基本行列の積なので， $AB$の階数も$r$以下である．
+
+  行列$A$についても同様に示せる．
+
+  以上の議論により，行列$AB$の階数は行列$A$，行列$B$の階数以下であることが証明された．
+
+\end{tproof}
+
+
+
+
+\section*{p70--73：9}
+\addcontentsline{toc}{section}{\texorpdfstring{p70--73：9}{p70--73：9}}
+
+\begin{tanswer}
+  $3$つの平面が$1$本の直線を共有する必要十分条件は，
+  与式を$x$，$y$，$z$に関する方程式とみたときに，解が存在して$1$つの任意定数を含むことである．
+
+  これは
+  \[
+    \begin{cases}
+      r(A)=2 \\
+      r(A)=r(\tilde{A})
+    \end{cases}
+  \]
+  と同値であり，したがって，
+  \[
+    r(A)=r(\tilde{A})=2
+  \]
+  が必要十分条件である．
+\end{tanswer}
+
+
+
+
+\section*{p70--73：10}
+\addcontentsline{toc}{section}{\texorpdfstring{p70--73：10}{p70--73：10}}
+
+\subsection*{p70--73：10-(イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70--73：10-(イ)}{p70--73：10-(イ)}}
+
+\begin{tproof}
+  $AX=E$をみたす$n$次正則行列$X$が存在するとする．このとき，
+  \[
+    X = \begin{pmatrix} x_{11} & x_{12} \\ x_{21} & x_{22} \end{pmatrix}
+  \]
+  とおくと，
+  \begin{align*}
+    AX & = \begin{pmatrix} a & -b \\ b & a \end{pmatrix} \begin{pmatrix} x_{11} & x_{12} \\ x_{21} & x_{22} \end{pmatrix} \\
+       & = \begin{pmatrix} ax_{11}-bx_{21} & ax_{12}-bx_{22} \\ bx_{11}+ax_{21} & bx_{12}+ax_{22} \end{pmatrix}
+  \end{align*}
+  となり，これが$E$に等しいので，
+  \[
+    \begin{cases}
+      ax_{11}-bx_{21} =1 \\
+      ax_{12}-bx_{22} =0 \\
+      bx_{11}+ax_{21} =0 \\
+      bx_{12}+ax_{22} =1
+    \end{cases}
+  \]
+  となり，これを変形すると，
+  \[
+    \begin{cases}
+      (a^2+b^2) x_{11} = a \\
+      (a^2+b^2) x_{12} = b \\
+      (a^2+b^2) x_{21}=-b  \\
+      (a^2+b^2) x_{22} = a
+    \end{cases}
+  \]
+  となるから，このような$x_{11}$，$x_{12}$，$x_{21}$，$x_{22}$が存在する必要十分条件は
+  \[
+    a^2 + b^2 \ne 0
+  \]
+  である．このことから直ちに主張が従う．
+\end{tproof}
+
+
+
+
+\subsection*{p70--73：10-(ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70--73：10-(ロ)}{p70--73：10-(ロ)}}
+
+\begin{tproof}
+  \[
+    A' = \begin{pmatrix} a' & -b' \\ b' & a' \end{pmatrix} , \quad \alpha ' = a' + b' i
+  \]
+  とおく．
+
+  和については
+  \[
+    A+A' = \begin{pmatrix} a+a' & -(b+b') \\ b+b' & a+a' \end{pmatrix} , \quad \alpha + \alpha ' = (a+a') + (b+b') i
+  \]
+  となり，このときたしかに$A+A'$と$\alpha + \alpha '$が一対一に対応する．
+
+  積については
+  \[
+    A A' = \begin{pmatrix} a a' - b b' & - (a b' + b a') \\ a b' + b a' & a a' - b b' \end{pmatrix} , \quad \alpha \alpha ' = (a a' - b b') + (a b' + b a') i
+  \]
+  となり，たしかに$AA'$と$\alpha \alpha '$が一対一に対応する．
+
+  逆数については
+  \[
+    A^{-1} = \frac{1}{a^2+b^2} \begin{pmatrix} a & b \\ -b & a \end{pmatrix},\quad \frac{1}{\alpha} = \frac{1}{a^2+b^2}(a -bi )
+  \]
+  となり，たしかに$A^{-1}$と$1/\alpha$が一対一に対応する．
+
+  以上の考察により証明された．
+\end{tproof}
+
+
+
+
+\subsection*{p70--73：10-(ハ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70--73：10-(ハ)}{p70--73：10-(ハ)}}
+
+\begin{tproof}
+  \[
+    \alpha = r (\cos \theta + i \sin \theta)
+  \]
+  と表せるとすると，
+  \[
+    a+bi = r (\cos \theta + i \sin \theta )
+  \]
+  であるから，
+  \[
+    a= r \cos \theta , \quad r = r \sin \theta
+  \]
+  とかけ，このとき
+  \[
+    \begin{pmatrix} a & -b \\ b & a \end{pmatrix} = r \begin{pmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \end{pmatrix}
+  \]
+  となる．これが証明すべきことであった．
+\end{tproof}
+
+
+
+\section*{p70--73：11}
+\addcontentsline{toc}{section}{\texorpdfstring{p70--73：11}{p70--73：11}}
+
+\subsection*{p70--73：11-(イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70--73：11-(イ)}{p70--73：11-(イ)}}
+
+\begin{tproof}
+  ${}^t PP =E$を加味して$(P \pm E)$の転置行列を考えると
+  \[
+    {}^t (P \pm E) = {}^t P \pm {}^t PP = {}^t P {}^t (E \pm P)
+  \]
+  となり，これを用いると，
+
+  \begin{align*}
+    {}^t A & ={}^t  \{ (P-E)(P+E)^{-1} \}            \\
+           & = {}^t (P+E)^{-1} {}^t (P-E)            \\
+           & = (E+{}^t P)^{-1} {}^t P {}^t P (E-P)   \\
+           & = \{ {}^t P (P+E)  \}^{-1} {}^t P (E-P) \\
+           & = (P+E)^{-1} {}^t P^{-1} {}^t P (E-P)   \\
+           & = (P+E)^{-1} (E-P)                      \\
+           & = -(P+E)^{-1} \{ (P+E)-2E \}            \\
+           & = -(P+E)^{-1} (P+E) +2E (P+E)^{-1}      \\
+           & = -(P+E) (P+E)^{-1} +2E (P+E)^{-1}      \\
+           & = (-(P+E)+2E) (P+E)^{-1}                \\
+           & = -(P-E) (P+E)^{-1} = -A
+  \end{align*}
+  となり，これが証明すべきことであった．
+\end{tproof}
+
+
+\subsection*{p70--73：11-(ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70--73：11-(ロ)}{p70--73：11-(ロ)}}
+
+\begin{tproof}
+
+  計算すると，
+  \begin{align*}
+    E-A & = E-(P-E) (P+E)^{-1}                 \\
+        & = (P+E)(P+E)^{-1} - (P-E) (P+E)^{-1} \\
+        & = \{ (P+E)-(P-E) \} (P+E)^{-1}       \\
+        & = 2(P+E)^{-1}
+  \end{align*}
+  と変形でき，いま$(P+E)$が正則だから，$2(P+E)^{-1}$も正則であり，
+  \[
+    (E-A)^{-1} = \frac{1}{2} (P+E)
+  \]
+  である．
+\end{tproof}
+
+
+\subsection*{p70--73：11-(ハ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70--73：11-(ハ)}{p70--73：11-(ハ)}}
+
+\begin{tproof}
+  まず，
+  \begin{align*}
+    E+A & =(P+E)(P+E)^{-1}+(P-E) (P+E)^{-1} \\
+        & = \{ (P+E)+(P-E) \} (P+E)^{-1}    \\
+        & = 2P (P+E)^{-1}
+  \end{align*}
+  であるから，これを用いると
+  \[
+    (E+A)(E-A)^{-1} = 2P (P+E)^{-1} \frac{1}{2} (P+E) =P
+  \]
+  となり，これが証明すべきことであった．
+\end{tproof}
+
+
+\section*{p70--73：12}
+\addcontentsline{toc}{section}{\texorpdfstring{p70--73：12}{p70--73：12}}
+
+\begin{tproof}
+  以下の3つの命題が同値であることを示す．
+  \begin{enumerate}[(1)]
+    \item $A$は正規行列である．すなわち$A^\ast A = A A^\ast$である．
+    \item 任意の$\bm{x} \in \mathbb{C}^n$について，$\norm{A \bm{x}}=\norm{A^\ast \bm{x}}$が成立する．
+    \item 任意の$\bm{x},\bm{y} \in \mathbb{C}^n$について，$(A\bm{x}, A\bm{y}) = (A^\ast \bm{x}, A^\ast\bm{y})$が成立する．
+  \end{enumerate}
+  \begin{description}
+    \item[(1) $\Longrightarrow$ (2)] $\bm{x} \in \mathbb{C}^n$を任意にとる．このとき
+          \begin{align*}
+            \norm{A \bm{x}}^2 & = (A \bm{x}, A \bm{x})                                      \\
+                              & = (\bm{x}, A^\ast A\bm{x})                                  \\
+                              & = (\bm{x}, A A^\ast \bm{x}) \quad (\because \text{正規行列の定義}) \\
+                              & = (A^\ast \bm{x}, A^\ast \bm{x}) = \norm{A^\ast \bm{x}}^2
+          \end{align*}
+          であるから，$\norm{A \bm{x}}=\norm{A^\ast \bm{x}}$が成立する．
+    \item[(2) $\Longrightarrow$ (3)] $\bm{x},\bm{y} \in \mathbb{C}^n$を任意にとる．このとき
+          \begin{align*}
+            \norm{A(\bm{x}+\bm{y})}^2 & = (A(\bm{x}+\bm{y}), A(\bm{x}+\bm{y}))                                                     \\
+                                      & = \norm{A\bm{x}}^2  + (A\bm{x}, A\bm{y}) + (A\bm{y}, A\bm{x}) +\norm{A\bm{y}}^2            \\
+                                      & = \norm{A\bm{x}}^2  + (A\bm{x}, A\bm{y}) + \overline{(A\bm{x}, A\bm{y})} +\norm{A\bm{y}}^2
+          \end{align*}
+          であり，同様に計算すると
+          \[
+            \norm{A^\ast(\bm{x}+\bm{y})}^2 = \norm{A^\ast \bm{x}}^2  + (A^\ast \bm{x}, A^\ast\bm{y}) + \overline{(A^\ast \bm{x}, A^\ast\bm{y})} +\norm{A^\ast\bm{y}}^2
+          \]
+          を得る．$\norm{A(\bm{x}+\bm{y})}=\norm{A^\ast(\bm{x}+\bm{y})}$，$\norm{A\bm{x}}=\norm{A^\ast \bm{x}}$，$\norm{A\bm{y}}=\norm{A^\ast \bm{y}}$を仮定したので，
+          \[
+            (A\bm{x}, A\bm{y}) + \overline{(A\bm{x}, A\bm{y})} = (A^\ast \bm{x}, A^\ast\bm{y}) + \overline{(A^\ast \bm{x}, A^\ast\bm{y})}
+          \]
+          となり，これは$ \Re (A\bm{x}, A\bm{y}) = \Re (A^\ast \bm{x}, A^\ast\bm{y})$であることを表す．
+
+          また，$\bm{x}$を$i\bm{x}$におきかえることで，$ \Im (A\bm{x}, A\bm{y}) = \Im (A^\ast \bm{x}, A^\ast\bm{y})$も示される．ゆえにこのとき
+          \[
+            (A\bm{x}, A\bm{y}) = (A^\ast \bm{x}, A^\ast\bm{y}).
+          \]
+    \item[(3) $\Longrightarrow$ (1)] 任意の$\bm{x},\bm{y} \in \mathbb{C}^n$に対して，
+          \[
+            (\bm{x}, (A^\ast A-A A^\ast)\bm{y}) =0
+          \]
+          である．いま$\bm{y}$をいったん固定すると，$\bm{x}$は任意なので，$\bm{x}=(A^\ast A-A A^\ast)\bm{y}$とすることができ，
+          \begin{align*}
+             & \norm{(A^\ast A-A A^\ast)\bm{y}}^2  = 0,       \\
+             & \because ~ (A^\ast A-A A^\ast)\bm{y} = \bm{0}.
+          \end{align*}
+          $\bm{y}$は任意だから，$A^\ast A=A A^\ast$となり，$A$は正規行列である．
+  \end{description}
+  以上の議論により証明された．
+\end{tproof}
+
+
+
+
+\section*{p70--73：13}
+\addcontentsline{toc}{section}{\texorpdfstring{p70--73：13}{p70--73：13}}
+
+\subsection*{p70--73：13-(イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70--73：13-(イ)}{p70--73：13-(イ)}}
+
+\begin{tanswer}
+  まず，
+  \begin{align*}
+    [ [X,Y],Z ] & = [XY-YX,Z]           \\
+                & = (XY-YX)Z -Z(XY-YX)  \\
+                & = XYZ -YXZ -ZXY +ZYX.
+  \end{align*}
+  同様に計算すると，
+  \begin{align*}
+     & [[Y,Z],X] = YZX -ZYX -XYZ +XZY,  \\
+     & [ [Z,X],Y] = ZXY -XZY -YZX +YXZ.
+  \end{align*}
+  よって，
+  \[
+    [[X,Y],Z] +[[Y,Z],X]+[[Z,X],Y]=O
+  \]
+  である．
+\end{tanswer}
+
+
+\subsection*{p70--73：13-(ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70--73：13-(ロ)}{p70--73：13-(ロ)}}
+
+\begin{tproof}
+  $X$，$Y$は交代行列だから，
+  \[
+    X=- {}^t X ,\quad Y = -{}^t Y .
+  \]
+  これを用いると，
+  \begin{align*}
+    [X,Y] & = XY -YX                                   \\
+          & = (-{}^t X) (-{}^t Y) - (-{}^t Y)(-{}^t X) \\
+          & = {}^t (YX) - {}^t (XY)                    \\
+          & = -{}^t (XY-YX)                            \\
+          & = -{}^t [X,Y]
+  \end{align*}
+  となる．よってこのとき$[X,Y]$は交代行列である．
+\end{tproof}
+
+
+
+\subsection*{p70--73：13-(ハ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70--73：13-(ハ)}{p70--73：13-(ハ)}}
+
+\begin{tproof}
+  以下では
+  \[
+    Y = \begin{pmatrix} 0 & -z ' & y ' \\ z' & 0 & -x' \\ -y' & x ' & 0 \end{pmatrix},\quad \bm{y} = \begin{pmatrix} x' \\ y ' \\ z ' \end{pmatrix}
+  \]
+  とおく．
+  \begin{description}
+    \item[【$X+Y$と$\bm{x}+\bm{y}$について】]
+          \[
+            X + Y  = \begin{pmatrix} 0 & -z & y \\ z & 0 & -x \\ -y & x & 0 \end{pmatrix}+ \begin{pmatrix} 0 & -z ' & y ' \\ z' & 0 & -x' \\ -y' & x ' & 0 \end{pmatrix} = \begin{pmatrix} 0 & -(z+z)' & y+y' \\ z+z & 0 & -(x+x') \\ -(y+y') & x+x' & 0 \end{pmatrix}
+          \]
+          であり，なおかつ
+          \[
+            \bm{x}+\bm{y} =\begin{pmatrix} x \\ y \\ z \end{pmatrix}+ \begin{pmatrix} x' \\ y' \\ z' \end{pmatrix} = \begin{pmatrix} x+x' \\ y+y' \\ z+z' \end{pmatrix}
+          \]
+          であるから，たしかに$X+Y$と$\bm{x}+\bm{y}$は対応する．
+    \item[【$cX$と$c\bm{x}$について】]
+          \[
+            cX =c\begin{pmatrix} 0 & -z & y \\ z & 0 & -x \\ -y & x & 0 \end{pmatrix} =\begin{pmatrix} 0 & -cz & cy \\ cz & 0 & -cx \\ -cy & cx & 0 \end{pmatrix}
+          \]
+          であり，なおかつ
+          \[
+            c\bm{x} = c\begin{pmatrix} x \\ y \\ z \end{pmatrix} = \begin{pmatrix} cx \\ cy \\ cz \end{pmatrix}
+          \]
+          であるから，たしかに$cX$と$c\bm{x}$は対応する．
+    \item [【\text{$[X,Y]$と$\bm{x} \times \bm{y}$について】}]
+          \begin{align*}
+            [X,Y] & =\begin{pmatrix} 0 & -z & y \\ z & 0 & -x \\ -y & x & 0 \end{pmatrix}\begin{pmatrix} 0 & -z ' & y ' \\ z' & 0 & -x' \\ -y' & x ' & 0 \end{pmatrix}-\begin{pmatrix} 0 & -z ' & y ' \\ z' & 0 & -x' \\ -y' & x ' & 0 \end{pmatrix} \begin{pmatrix} 0 & -z & y \\ z & 0 & -x \\ -y & x & 0 \end{pmatrix} \\
+                  & = \begin{pmatrix} 0 & -z'x+x'z & y'x-x'y \\ z'x-x'z & 0 & -y'z+z'y \\ -y'x+x'y & z'y-y'z & 0 \end{pmatrix}
+          \end{align*}
+          であり，なおかつ
+          \[
+            \bm{x}\times \bm{y} = \begin{pmatrix} x \\ y \\ z \end{pmatrix} \times \begin{pmatrix} x' \\ y ' \\ z' \end{pmatrix} = \begin{pmatrix} yz'-zy' \\ zx'-xz' \\ xy'-yx' \end{pmatrix}
+          \]
+          であるから，たしかに$[X,Y]$と$\bm{x} \times \bm{y}$は対応する．
+    \item[【$X\bm{y}$と$\bm{x}\times\bm{y}$について】]
+          \[
+            \begin{pmatrix} 0 & -z & y \\ z & 0 & -x \\ -y & x & 0 \end{pmatrix} \begin{pmatrix} x' \\ y' \\ z' \end{pmatrix} = \begin{pmatrix} -zy'+yz' \\ zx'-xz' \\ -yx'+xy' \end{pmatrix}
+          \]
+          であり，なおかつ
+
+          \[
+            \bm{x}\times \bm{y} = \begin{pmatrix} x \\ y \\ z \end{pmatrix} \times \begin{pmatrix} x' \\ y ' \\ z' \end{pmatrix} = \begin{pmatrix} yz'-zy' \\ zx'-xz' \\ xy'-yx' \end{pmatrix}
+          \]
+          であるから，たしかに$X\bm{y}$と$\bm{x} \times \bm{y}$は対応する．
+  \end{description}
+\end{tproof}
+
+
+
+
+\subsection*{p70--73：13-(ニ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70--73：13-(ニ)}{p70--73：13-(ニ)}}
+\begin{tproof}
+  ハ)で証明したことから，$[X,Y]$には$\bm{x} \times \bm{y}$が対応する．
+
+  また，イ)で証明したことより，$[[X,Y],Z] +[[Y,Z],X]+[[Z,X],Y]=O$であり，
+  この左辺には$(\bm{x}\times\bm{y}) \times \bm{z} + (\bm{y}\times\bm{z}) \times \bm{x} + (\bm{z}\times\bm{x}) \times \bm{y}$が対応し，右辺には$\bm{0}$が対応する．
+
+  以上の考察により
+  \[
+    (\bm{x}\times\bm{y}) \times \bm{z} + (\bm{y}\times\bm{z}) \times \bm{x} + (\bm{z}\times\bm{x}) \times \bm{y} =\bm{0}
+  \]
+  であることが示された．
+\end{tproof}
+
+
+
+
+\section*{p70--73：14}
+\addcontentsline{toc}{section}{\texorpdfstring{p70--73：14}{p70--73：14}}
+
+\begin{tproof}
+  二つに分けて証明する，
+  \begin{description}
+    \item[イ)$\Longrightarrow$ロ)] \mbox{} \\
+          $A$が正則であると仮定すると，$A^{-1}$が存在し，
+          \[
+            \bm{x} = A^{-1} (A\bm{x})
+          \]
+          と変形できるから，$A \bm{x}$が非負ベクトルであれば，$\bm{x}$も非負ベクトルである．
+    \item[ロ)$\Longrightarrow$イ)] \mbox{} \\
+          まず，$ A \bm{x} =\bm{0}$であると仮定する．このとき，$A (-\bm{x}) =\bm{0}$であるから，
+          $A (-\bm{x})$も非負ベクトルであり，条件から$ \bm{x}$，$-\bm{x}$は非負ベクトルである．
+          したがって$\bm{x}=\bm{0}$となり，$A$は正則である．
+
+          また，非負ベクトル$\bm{x}$を任意にとると，
+          \[
+            \bm{x} = A (A^{-1} \bm{x})
+          \]
+          も非負ベクトルであり，条件から$A^{-1} \bm{x}$も非負ベクトルである．
+          ここで，$A^{-1}$が非負行列でないと仮定すると，ある単位ベクトル$\bm{e}_j$について，
+          $A^{-1} \bm{e}_j $が非負ベクトルでないことになり，$\bm{x}$が非負ベクトルであることに反する．
+          これより$A^{-1}$は非負行列である．
+  \end{description}
+  以上の議論により証明された．
+\end{tproof}
+
+
+
+
+
+
+\section*{p70--73：15}
+\addcontentsline{toc}{section}{\texorpdfstring{p70--73：15}{p70--73：15}}
+
+
+\subsection*{p70--73：15-(イ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70--73：15-(イ)}{p70--73：15-(イ)}}
+\begin{tproof}
+  まず，$A=(a_{ij})$，$\bm{f} = {}^t (f_1 , f_2,\dots,f_j) ={}^t (1,1,\dots,1)$とおくと，
+  $A \bm{f}$の第$i$行の成分は
+  \begin{align*}
+    \sum_{j=1}^{n} a_{ij} f_j & = \sum_{j=1}^{n} a_{ij} \\
+                              & =1
+  \end{align*}
+  であるから，$\bm{f}$の定義とあわせて，
+  \[
+    A \bm{f} =\bm{f}
+  \]
+  が成り立つ．
+\end{tproof}
+
+
+\subsection*{p70--73：15-(ロ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70--73：15-(ロ)}{p70--73：15-(ロ)}}
+
+\begin{tproof}
+  $C =AB=(c_{ij})$とすると，$C$の$(i,k)$成分は
+  \[
+    c_{ik}  =\sum_{j=1}^{n} a_{ij} b_{jk}
+  \]
+  である．これにより，
+  \begin{align*}
+    \sum_{k=1}^{n} c_{ik} & = \sum_{k=1}^{n} \left (\sum_{j=1}^{n} a_{ij} b_{jk}\right) \\
+                          & = \sum_{j=1}^{n} a_{ij} \sum_{k=1}^{n} b_{jk}               \\
+                          & = \sum_{j=1}^{n} a_{ij} \cdot 1                             \\
+                          & = 1
+  \end{align*}
+  であるから，$C$すなわち$AB$は確率行列である．
+\end{tproof}
+
+\subsection*{p70--73：15-(ハ)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p70--73：15-(ハ)}{p70--73：15-(ハ)}}
+
+\begin{tproof}
+  $ A \bm{x}=\alpha \bm{x}$において，$\bm{x}$の成分で絶対値が最大のものを$x_p$とする．
+
+  このとき，$ A \bm{x} = \alpha \bm{x}$の第$p$行成分の絶対値を考えると，
+  \begin{align*}
+    \abs{\alpha} \abs{x_p} & \leqq \sum_{j=1}^{n} a_{pj} \abs{x_j} \\
+                           & \leqq \sum_{j=1}^{n} a_{pj} \abs{x_p} \\
+                           & = \abs{x_p}
+  \end{align*}
+  であるから，
+  \[
+    \abs{\alpha} \abs{x_p} \leqq \abs{x_p}
+  \]
+  を得るので，
+  \[
+    \abs{\alpha} \leqq 1
+  \]
+  となり，これが証明すべきことであった．
+\end{tproof}
