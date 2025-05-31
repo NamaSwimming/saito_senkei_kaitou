@@ -832,6 +832,16 @@
 \addcontentsline{toc}{section}{\texorpdfstring{p29--30：1}{p29--30：1}}
 
 \begin{tproof}
+  \[
+    P=\left\{\bm{x}=t_1 \bm{x}_1+t_2\bm{x}_2+\dots+t_k\bm{x}_k\; \middle| \;t_i\ \ge 0\;(1\le i\le k),\;\sum_{i=1}^k t_i=1\right\}.
+  \]
+  であることを示す．
+  \begin{enumerate}[(i)]
+    \item $ P \subset \left\{\bm{x}=t_1 \bm{x}_1+t_2\bm{x}_2+\dots+t_k\bm{x}_k\; \middle| \;t_i\ \ge 0\;(1\le i\le k),\;\sum_{i=1}^k t_i=1\right\}$
+    \item $ P \supset \left\{\bm{x}=t_1 \bm{x}_1+t_2\bm{x}_2+\dots+t_k\bm{x}_k\; \middle| \;t_i\ \ge 0\;(1\le i\le k),\;\sum_{i=1}^k t_i=1\right\}$
+  \end{enumerate}
+  とする．
+  \paragraph{(i)の証明}
   四面体$\mathrm{P_1 P_2 P_3 P_4}$を考える．三角形$\mathrm{P_2 P_3 P_4}$の任意の周および内部の点を$\mathrm{T}$とする．
   $0 \leqq k \leqq 1$，$0 \leqq s \leqq 1$をみたす$k,s \in \mathbb{R}$によって
   \begin{align*}
@@ -880,38 +890,39 @@
     l(t_1+t_2+\dots+t_n)+(1-l)=1
   \]
   なので，$\{ \mathrm{P}_n \}$の点と$\mathrm{P}_{n+1}$とを結ぶ線分上の点はこのように表せる．
+  よって，$k=n$のときも問題の主張が成り立つ．
 
-  逆に，
+  \paragraph{(ii)の証明}
   \[
     \bm{x} = t_1 \bm{x}_1 + t_2 \bm{x}_2 + \dots + t_n \bm{x}_n + t_{n+1} \bm{x}_{n+1} , \quad t_1, t_2 ,\dots , t_n,t_{n+1} \geqq 0 ,\quad  t_1 +t_2 + \dots+t_n + t_{n+1} =1
   \]
   としたとき，
   \begin{align*}
     \bm{x} & =\frac{t_1 \bm{x}_1 + t_2 \bm{x}_2+\dots+ t_n \bm{x}_n}{t_1+t_2+\dots+t_n} \cdot (t_1+t_2+\dots+t_n) +t_{n+1} \bm{x}_{n+1} \\
-           & = T_n \bm{X}_n + t_{n+1} \bm{x}_{n+1}
+           & = (t_1 +t_2 + \dots +t_n) \bm{X}_n + t_{n+1} \bm{x}_{n+1}                                                                  \\
+           & = (1-t_{n+1}) \bm{X}_n + t_{n+1} \bm{x}_{n+1}                                                                              \\
   \end{align*}
-  と変形できる．ただし$T_n = t_1 + t_2 +\dots+t_n$とおいた．
+  と変形できる．
 
   さて
   \[
-    \frac{\bm{X}_n }{T_n} = \frac{t_1 \bm{x}_1 }{T_n}+ \frac{t_2 \bm{x}_2 }{T_n}+\dots +  \frac{t_n \bm{x}_n }{T_n}  \\
+    \frac{\bm{X}_n }{1-t_{n+1}} = \frac{t_1 \bm{x}_1 + t_2 \bm{x}_2+\dots+ t_n \bm{x}_n}{t_1+t_2+\dots+t_n}
   \]
   であることと
   \begin{align*}
-    \frac{t_1}{T_n}+\frac{t_2 }{T_n} +\dots +\frac{t_n }{T_n} & = \frac{T_n}{T_n} \\
-                                                              & = 1
+      & \frac{t_1}{t_1+t_2+\dots+t_n}+\frac{t_2 }{t_1+t_2+\dots+t_n} +\dots +\frac{t_n }{t_1+t_2+\dots+t_n} \\
+    = & \frac{t_1+t_2+\dots+t_n}{t_1+t_2+\dots+t_n}                                                         \\
+    = & 1
   \end{align*}
   であることにより，
   \[
-    \frac{\bm{X}_n}{T_n}
+    \frac{\bm{X}_n}{1-t_{n+1}}
   \]
   は，多面体$\{ \mathrm{P}_n \}$の内部の点であり．
   \[
-    T_n \cdot \frac{\bm{X}_n}{T_n} + t_{n+1} \bm{x}_{n+1}
+    (1-t_{n+1}) \cdot \frac{\bm{X}_n}{1-t_{n+1}} + t_{n+1} \bm{x}_{n+1}
   \]
   は多面体$\{ \mathrm{P}_n \}$の内部の点と$\mathrm{P}_{n+1}$を結ぶ線分上の点である．
-
-  よって，$k=n$のときも問題の主張が成り立つ．
 
   以上の考察により証明された．
 \end{tproof}
