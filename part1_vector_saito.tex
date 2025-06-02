@@ -842,7 +842,7 @@
   \end{enumerate}
   とする．
   \paragraph{(i)の証明}
-  四面体$\mathrm{P_1 P_2 P_3 P_4}$を考える．三角形$\mathrm{P_2 P_3 P_4}$の任意の周および内部の点を$\mathrm{T}$とする．
+  数学的帰納法により示す．$k=4$のときの考察のために，四面体$\mathrm{P_1 P_2 P_3 P_4}$を考える．三角形$\mathrm{P_2 P_3 P_4}$の任意の周および内部の点を$\mathrm{T}$とする．
   $0 \leqq k \leqq 1$，$0 \leqq s \leqq 1$をみたす$k,s \in \mathbb{R}$によって
   \begin{align*}
     \overrightarrow{\mathrm{P_2 T}} & = k \{ s \overrightarrow{\mathrm{P_2 P_3}} + (1-s) \overrightarrow{\mathrm{P_2 P_4}} \} \\
@@ -892,7 +892,20 @@
   なので，$\{ \mathrm{P}_n \}$の点と$\mathrm{P}_{n+1}$とを結ぶ線分上の点はこのように表せる．
   よって，$k=n$のときも問題の主張が成り立つ．
 
+  以上のことと数学的帰納法により，(i)が示された．
+
   \paragraph{(ii)の証明}
+  数学的帰納法により示す．$k=4$のときの考察のために
+  \[
+    \bm{x} = t_1 \bm{x}_1 + t_2 \bm{x}_2 + t_3 \bm{x}_3 + t_4 \bm{x}_4 ,\quad t_1, t_2 ,t_3 ,t_4 \geqq 0 ,\quad  t_1 +t_2 + t_3 + t_4 =1
+  \]
+  とする．このとき，
+  \[
+    \bm{x} =(t_1+t_2+t_3) \cdot \frac{t_1 \bm{x}_1 + t_2 \bm{x}_2 + t_3 \bm{x}_3}{t_1+t_2+t_3}  + t_4 \bm{x}_4
+  \]
+  と変形でき，p12：問3 の考察と併せると$\bm{x}$が四面体$\mathrm{P_1 P_2 P_3 P_4}$の内部の点であることが示される．
+
+  ここで，$n \geqq 4$として$k=n$のときに主張が成り立つと仮定する．
   \[
     \bm{x} = t_1 \bm{x}_1 + t_2 \bm{x}_2 + \dots + t_n \bm{x}_n + t_{n+1} \bm{x}_{n+1} , \quad t_1, t_2 ,\dots , t_n,t_{n+1} \geqq 0 ,\quad  t_1 +t_2 + \dots+t_n + t_{n+1} =1
   \]
@@ -902,29 +915,31 @@
            & = (t_1 +t_2 + \dots +t_n) \bm{X}_n + t_{n+1} \bm{x}_{n+1}                                                                  \\
            & = (1-t_{n+1}) \bm{X}_n + t_{n+1} \bm{x}_{n+1}                                                                              \\
   \end{align*}
-  と変形できる．
-
-  さて
+  と変形できる．このとき，以下の二つのことが導かれる：
   \[
-    \frac{\bm{X}_n }{1-t_{n+1}} = \frac{t_1 \bm{x}_1 + t_2 \bm{x}_2+\dots+ t_n \bm{x}_n}{t_1+t_2+\dots+t_n}
+    \frac{\bm{X}_n }{1-t_{n+1}} = \frac{t_1 \bm{x}_1 + t_2 \bm{x}_2+\dots+ t_n \bm{x}_n}{t_1+t_2+\dots+t_n}.
   \]
-  であることと
   \begin{align*}
       & \frac{t_1}{t_1+t_2+\dots+t_n}+\frac{t_2 }{t_1+t_2+\dots+t_n} +\dots +\frac{t_n }{t_1+t_2+\dots+t_n} \\
     = & \frac{t_1+t_2+\dots+t_n}{t_1+t_2+\dots+t_n}                                                         \\
-    = & 1
+    = & 1.
   \end{align*}
-  であることにより，
+  これらと数学的帰納法の仮定を併せると，
   \[
     \frac{\bm{X}_n}{1-t_{n+1}}
   \]
-  は，多面体$\{ \mathrm{P}_n \}$の内部の点であり．
+  は，多面体$\{ \mathrm{P}_n \}$の内部の点であり，
   \[
     (1-t_{n+1}) \cdot \frac{\bm{X}_n}{1-t_{n+1}} + t_{n+1} \bm{x}_{n+1}
   \]
   は多面体$\{ \mathrm{P}_n \}$の内部の点と$\mathrm{P}_{n+1}$を結ぶ線分上の点である．
 
-  以上の考察により証明された．
+  以上の考察と数学的帰納法により，(ii)が示された．
+  \paragraph{結論}
+  以上(i)，(ii)の考察により，
+  \[
+    P=\left\{\bm{x}=t_1 \bm{x}_1+t_2\bm{x}_2+\dots+t_k\bm{x}_k\; \middle| \;t_i\ \ge 0\;(1\le i\le k),\;\sum_{i=1}^k t_i=1\right\}.
+  \]
 \end{tproof}
 
 \section*{p29--30:2}
