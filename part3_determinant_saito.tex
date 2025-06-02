@@ -9,19 +9,19 @@
 \kakko{3文字の置換}
 
 \begin{tanswer}
-  3文字の置換は$3!=6$通りある．それを互換の回数によって分類する．
+  3文字の置換は$3!=6$個ある．それを互換の数によって分類する．
   \begin{description}
-    \item[0回] 1つのみ．偶置換かつ恒等置換．
+    \item[0つ] 1個のみ．偶置換かつ恒等置換．
           \[
             \begin{pmatrix} 1 & 2 & 3 \\ 1 & 2 & 3 \end{pmatrix}.
           \]
-    \item [1回] 3つ．奇置換．
+    \item [1つ] 3個．奇置換．
           \[
             \begin{pmatrix} 1 & 2 & 3\\ 1 & 3 & 2 \end{pmatrix},\quad
             \begin{pmatrix} 1 & 2 & 3\\ 3 & 2 & 1 \end{pmatrix},\quad
             \begin{pmatrix} 1 & 2 & 3\\ 2 & 1 & 3 \end{pmatrix}.
           \]
-    \item [2回] 2つ．偶置換．
+    \item [2つ] 2個．偶置換．
           \[
             \begin{pmatrix} 1 & 2 & 3\\ 2 & 3 & 1 \end{pmatrix},\quad
             \begin{pmatrix} 1 & 2 & 3\\ 3 & 1 & 2 \end{pmatrix}.
@@ -32,26 +32,46 @@
 \kakko{4文字の置換}
 
 \begin{tanswer}
-  4文字の置換は$4!=24$通りある．それを互換の回数によって分類する．
+  4文字の置換は$4!=24$通りある．それを互換の数によって分類する．
   \begin{description}
-    \item[0回] 1つのみ．偶置換かつ恒等置換．
+    \item[0つ] 1 個．偶置換（恒等置換）．
           \[
-            \begin{pmatrix} 1 & 2 & 3 &4 \\ 1 & 2 & 3 &4\end{pmatrix}.
+            \begin{pmatrix} 1 & 2 & 3 & 4 \\ 1 & 2 & 3 & 4 \end{pmatrix}.
           \]
-    \item [1回] 6つ．奇置換．
+    \item[1つ] 6 個．奇置換．
           \begin{align*}
-             & \begin{pmatrix} 1 & 2 & 3 & 4\\ 1 & 3 & 2 & 4\end{pmatrix},\quad
-            \begin{pmatrix} 1 & 2 & 3 &4 \\ 3 & 2 & 1  & 4\end{pmatrix},\quad
-            \begin{pmatrix} 1 & 2 & 3 & 4\\ 2 & 1 & 3 & 4\end{pmatrix},         \\
-             & \begin{pmatrix} 1 & 2 & 3 & 4\\ 1 & 2 & 4 & 3\end{pmatrix},\quad
-            \begin{pmatrix} 1 & 2 & 3 & 4\\ 1 & 4 & 3 & 2\end{pmatrix},\quad
-            \begin{pmatrix} 1 & 2 & 3 & 4\\ 4 & 2 & 3 & 1\end{pmatrix}.
+             & \begin{pmatrix} 1 & 2 & 3 & 4 \\ 1 & 2 & 4 & 3 \end{pmatrix},\quad
+            \begin{pmatrix} 1 & 2 & 3 & 4 \\ 1 & 3 & 2 & 4 \end{pmatrix},\quad
+            \begin{pmatrix} 1 & 2 & 3 & 4 \\ 1 & 4 & 3 & 2 \end{pmatrix},         \\
+             & \begin{pmatrix} 1 & 2 & 3 & 4 \\ 2 & 1 & 3 & 4 \end{pmatrix},\quad
+            \begin{pmatrix} 1 & 2 & 3 & 4 \\ 3 & 2 & 1 & 4 \end{pmatrix},\quad
+            \begin{pmatrix} 1 & 2 & 3 & 4 \\ 4 & 2 & 3 & 1 \end{pmatrix}.
           \end{align*}
-    \item [2回] 偶置換．
-          \[
-            \begin{pmatrix} 1 & 2 & 3 & 4 \\ 2 & 3 & 1 & 4\end{pmatrix},\quad
-            \begin{pmatrix} 1 & 2 & 3 & 4 \\ 3 & 1 & 2 & 4 \end{pmatrix},
-          \]
+
+    \item[2つ] 11 個．偶置換．
+          \begin{align*}
+             & \begin{pmatrix} 1 & 2 & 3 & 4 \\ 1 & 3 & 4 & 2 \end{pmatrix},\quad
+            \begin{pmatrix} 1 & 2 & 3 & 4 \\ 1 & 4 & 2 & 3 \end{pmatrix},\quad
+            \begin{pmatrix} 1 & 2 & 3 & 4 \\ 2 & 1 & 4 & 3 \end{pmatrix},         \\
+             & \begin{pmatrix} 1 & 2 & 3 & 4 \\ 2 & 3 & 1 & 4 \end{pmatrix},\quad
+            \begin{pmatrix} 1 & 2 & 3 & 4 \\ 2 & 4 & 3 & 1 \end{pmatrix},\quad
+            \begin{pmatrix} 1 & 2 & 3 & 4 \\ 3 & 1 & 2 & 4 \end{pmatrix},         \\
+             & \begin{pmatrix} 1 & 2 & 3 & 4 \\ 3 & 2 & 4 & 1 \end{pmatrix},\quad
+            \begin{pmatrix} 1 & 2 & 3 & 4 \\ 3 & 4 & 1 & 2 \end{pmatrix},\quad
+            \begin{pmatrix} 1 & 2 & 3 & 4 \\ 4 & 1 & 3 & 2 \end{pmatrix},         \\
+             & \begin{pmatrix} 1 & 2 & 3 & 4 \\ 4 & 2 & 1 & 3 \end{pmatrix},\quad
+            \begin{pmatrix} 1 & 2 & 3 & 4 \\ 4 & 3 & 2 & 1 \end{pmatrix}.
+          \end{align*}
+
+    \item[3つ] 6 個．奇置換
+          \begin{align*}
+             & \begin{pmatrix} 1 & 2 & 3 & 4 \\ 2 & 3 & 4 & 1 \end{pmatrix},\quad
+            \begin{pmatrix} 1 & 2 & 3 & 4 \\ 2 & 4 & 1 & 3 \end{pmatrix},\quad
+            \begin{pmatrix} 1 & 2 & 3 & 4 \\ 3 & 1 & 4 & 2 \end{pmatrix},         \\
+             & \begin{pmatrix} 1 & 2 & 3 & 4 \\ 3 & 4 & 2 & 1 \end{pmatrix},\quad
+            \begin{pmatrix} 1 & 2 & 3 & 4 \\ 4 & 1 & 2 & 3 \end{pmatrix},\quad
+            \begin{pmatrix} 1 & 2 & 3 & 4 \\ 4 & 3 & 1 & 2 \end{pmatrix}.
+          \end{align*}
   \end{description}
 \end{tanswer}
 
