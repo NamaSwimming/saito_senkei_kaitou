@@ -214,10 +214,10 @@
     \end{cases}
   \end{align*}
   から，
-  \begin{gather*}
-    -2x+2z=2 \\
-    \therefore \quad -x+z=1
-  \end{gather*}
+  \begin{align*}
+     & -2x+2z=2            \\
+     & \therefore ~ -x+z=1
+  \end{align*}
   である．このとき，$
     \begin{pmatrix}
       x \\
@@ -384,12 +384,16 @@
   \[
     \overrightarrow{\mathrm{OP_1}}=\bm{x}_1,\quad \overrightarrow{\mathrm{OP_2}}=\bm{x}_2,\quad \overrightarrow{\mathrm{OP_3}}=\bm{x}_3
   \]
-  とする．このとき，三角形$\mathrm{P_1 P_2 P_3}$上の任意の点の位置ベクトルを$\bm{x}$，$s,t$を$0 \le s,t \le 1$を満たす実数とすると，
-  \begin{gather*}
-    \bm{x}=\bm{x}_1 + s(\bm{x}_2 - \bm{x}_1) + t (\bm{x}_3 - \bm{x}_1) \\
-    \therefore \quad \bm{x} = (1-s-t)\bm{x}_1 + s\bm{x}_2 + t \bm{x}_3
-  \end{gather*}
-  となり，$1-s-t=t_1,~s=t_2,~t=t_3$と改めて書き直すと，$s,t$の定め方より，$0 \le t_1 ,t_2,t_3 \le 1$であり
+  とする．このとき，三角形$\mathrm{P_1 P_2 P_3}$上の任意の点の位置ベクトルを$\bm{x}$，$s$，$t$を$0 \le s \le 1$．$ 0 \le t \le 1$，$ s+ t \le 1$を満たす実数とすると，
+  \begin{align*}
+     & \bm{x}=\bm{x}_1 + s(\bm{x}_2 - \bm{x}_1) + t (\bm{x}_3 - \bm{x}_1) \\
+     & \therefore \quad \bm{x} = (1-s-t)\bm{x}_1 + s\bm{x}_2 + t \bm{x}_3
+  \end{align*}
+  となり，$1-s-t=t_1$，$s=t_2$，$t=t_3$と改めて書き直すと，$s$，$t$の定め方より，
+  \[
+    0 \le t_1 \le 1 ,\quad 0 \le t_2 \le 1 ,\quad 0 \le t_3 \le 1
+  \]
+  であり，
   \[
     \bm{x} = t_1\bm{x}_1 + t_2\bm{x}_2 + t_3 \bm{x}_3,\quad t_1+t_2+t_3=1
   \]
@@ -879,7 +883,7 @@
   \[
     t_1 \bm{x}_1 + t_2 \bm{x}_2+\dots+ t_n \bm{x}_n
   \]
-  は仮定により多面体$\{ \mathrm{P}_n \}$の内部の点であり，これを簡単のために$\bm{X}_n$とおく．
+  は仮定により多面体$\{ \mathrm{P}_n \}$の点であり，これを簡単のために$\bm{X}_n$とおく．
 
   さて，$\{ \mathrm{P}_n \}$の点と$\mathrm{P}_{n+1}$とを結ぶ線分上の点は，$ 0 \leqq l \leqq 1$をみたす$l \in \mathbb{R}$によって，
   \[
@@ -903,7 +907,7 @@
   \[
     \bm{x} =(t_1+t_2+t_3) \cdot \frac{t_1 \bm{x}_1 + t_2 \bm{x}_2 + t_3 \bm{x}_3}{t_1+t_2+t_3}  + t_4 \bm{x}_4
   \]
-  と変形でき，p12：問3 の考察と併せると$\bm{x}$が四面体$\mathrm{P_1 P_2 P_3 P_4}$の内部の点であることが示される．
+  と変形でき，p12：問3 の考察と併せると$\bm{x}$が四面体$\mathrm{P_1 P_2 P_3 P_4}$の点であることが示される．
 
   ここで，$n \geqq 4$として$k=n$のときに主張が成り立つと仮定する．
   \[
@@ -932,7 +936,7 @@
   \[
     (1-t_{n+1}) \cdot \frac{\bm{X}_n}{1-t_{n+1}} + t_{n+1} \bm{x}_{n+1}
   \]
-  は多面体$\{ \mathrm{P}_n \}$の内部の点と$\mathrm{P}_{n+1}$を結ぶ線分上の点である．
+  は多面体$\{ \mathrm{P}_n \}$の点と$\mathrm{P}_{n+1}$を結ぶ線分上の点である．
 
   以上の考察と数学的帰納法により，(ii)が示された．
   \paragraph{結論}
