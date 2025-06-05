@@ -275,18 +275,38 @@
 \section*{p10：問2}
 \addcontentsline{toc}{section}{\texorpdfstring{p10：問2}{p10：問2}}
 \begin{tproof}
-  $t$を$0 \le t \le 1$をみたす実数，線分$\mathrm{P_1 P_2}$上の任意の点の位置ベクトルを$\bm{x}$とする．
-  このとき，
-  \begin{align*}
-    \bm{x} & = \overrightarrow{\mathrm{O P_1}}+t\overrightarrow{\mathrm{P_1 P_2}} \\
-           & = \bm{x}_1 + t (\bm{x}_2 - \bm{x}_1)                                 \\
-           & = (1-t) \bm{x}_1 + t \bm{x}_2
-  \end{align*}
-  である．$1-t = t_1,~t=t_2$と改めておくと，$t$の定め方から$t_1 \ge 0,~t_2 \ge 0$であり，
+  $\overrightarrow{\mathrm{P_1 P_2}}$上の任意の点$\mathrm{P}$における位置ベクトル $\bm{x}$をとり，
   \[
-    \bm{x}= t_1 \bm{x}_1 + t_2 \bm{x}_2 ,\quad t_1 + t_2 =1
+    t =\frac{\norm{\overrightarrow{\mathrm{P_1 P}}}}{\norm{\overrightarrow{\mathrm{P_1 P_2}}}}.
   \]
-  となり，これが証明すべきことであった．
+  なる実数$t$を定める．
+  \[
+    \norm{\overrightarrow{\mathrm{P_1 P}}}+\norm{\overrightarrow{\mathrm{P P_2}}} =\norm{\overrightarrow{\mathrm{P_1 P_2}}}
+  \]
+  だから，両辺を$\norm{\overrightarrow{\mathrm{P_1 P_2}}}$で割り，
+  \[
+    t+\frac{\norm{\overrightarrow{\mathrm{P P_2}}}}{{\norm{\overrightarrow{\mathrm{P_1 P_2}}}}}=1
+  \]
+  より，$ 0 \leqq t \leqq 1$である．
+
+  また，
+  \[
+    \overrightarrow{\mathrm{P_1P}} = t \overrightarrow{\mathrm{P_1P_2}}
+  \]
+  であるから
+  \begin{align*}
+     & \bm{x}-\bm{x}_1 = t(\bm{x}_2-\bm{x}_1)          \\
+     & \therefore ~\bm{x} = (1-t)\bm{x}_1 + t\bm{x}_2.
+  \end{align*}
+  ここで
+  \[
+    1-t = t_1,\quad t=t_2
+  \]
+  と置き直すと $t_1,t_2\ge 0$，$t_1+t_2=1$ であり，
+  \[
+    \bm{x}=t_1\bm{x}_1+t_2\bm{x}_2
+  \]
+  となる．これが証明すべきことであった．
 \end{tproof}
 
 
