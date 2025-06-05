@@ -384,12 +384,53 @@
   \[
     \overrightarrow{\mathrm{OP_1}}=\bm{x}_1,\quad \overrightarrow{\mathrm{OP_2}}=\bm{x}_2,\quad \overrightarrow{\mathrm{OP_3}}=\bm{x}_3
   \]
-  とする．このとき，三角形$\mathrm{P_1 P_2 P_3}$上の任意の点の位置ベクトルを$\bm{x}$，$s$，$t$を$0 \le s \le 1$．$ 0 \le t \le 1$，$ s+ t \le 1$を満たす実数とすると，
+  とする．三角形$\mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3$上の任意の点の位置ベクトルを$\bm{x}$をとり，$\triangle \mathrm{P}_1 \mathrm{P}_3 \mathrm{P}$が三角形$\mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3$の面積を表すとし，
+  \[
+    s = \frac{ \triangle \mathrm{P}_1 \mathrm{P}_3 \mathrm{P}} { \triangle \mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3},\quad t = \frac{ \triangle\mathrm{P}_1 \mathrm{P} \mathrm{P}_2} { \triangle\mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3}
+  \]
+  と$s$，$t$を定める．
+  このとき，
+  \[
+    \triangle \mathrm{P}_1 \mathrm{P}_3 \mathrm{P} +\triangle\mathrm{P}_1 \mathrm{P} \mathrm{P}_2+ \triangle \mathrm{P} \mathrm{P}_2 \mathrm{P}_3 = \triangle \mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3
+  \]
+  の両辺を$ \triangle \mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3$で割ると，
+  \[
+    s+t + \frac{ \triangle \mathrm{P} \mathrm{P}_2 \mathrm{P}_3} { \triangle \mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3} = 1
+  \]
+  このことから，$ 0 \leqq s \leqq 1$，$0 \leqq t \leqq 1$，$s+t \leqq 1$を満たす実数$s$，$t$が存在することがわかる．
+
+  また，$\bm{x}_2 -\bm{x}_1$と$\bm{x}_3 -\bm{x}_1$は線型独立なので，$\bm{x}-\bm{x}_1$は，実数$a$,$b$を用いて，
+  \[
+    \bm{x} - \bm{x}_1 = a(\bm{x}_2 - \bm{x}_1) + b(\bm{x}_3 - \bm{x}_1)
+  \]
+  と一意に表せる．
+
+  ここで，
   \begin{align*}
-     & \bm{x}=\bm{x}_1 + s(\bm{x}_2 - \bm{x}_1) + t (\bm{x}_3 - \bm{x}_1) \\
-     & \therefore \quad \bm{x} = (1-s-t)\bm{x}_1 + s\bm{x}_2 + t \bm{x}_3
+    (\bm{x}_3 - \bm{x}_1) \times (\bm{x}-\bm{x}_1) & =  (\bm{x}_3 - \bm{x}_1) \times (a(\bm{x}_2 - \bm{x}_1) + b(\bm{x}_3 - \bm{x}_1)) \\
+                                                   & = a (\bm{x}_3- \bm{x}_1) \times (\bm{x}_2 - \bm{x}_1)                             \\
+                                                   & = a \cdot 2 \triangle \mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3.
   \end{align*}
-  となり，$1-s-t=t_1$，$s=t_2$，$t=t_3$と改めて書き直すと，$s$，$t$の定め方より，
+  $(\bm{x}_3 - \bm{x}_1) \times (\bm{x}-\bm{x}_1) = 2 \triangle \mathrm{P}_1 \mathrm{P}_3 \mathrm{P}$より，
+  \[
+    a = \frac{2 \triangle \mathrm{P}_1 \mathrm{P}_3 \mathrm{P}} {2 \triangle \mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3}= s.
+  \]
+  また，
+  \begin{align*}
+    (\bm{x}_2 - \bm{x}_1) \times (\bm{x}-\bm{x}_1) & =  (\bm{x}_2 - \bm{x}_1) \times (a(\bm{x}_2 - \bm{x}_1) + b(\bm{x}_3 - \bm{x}_1)) \\
+                                                   & = b (\bm{x}_2- \bm{x}_1) \times (\bm{x}_3 - \bm{x}_1)                             \\
+                                                   & = b \cdot 2 \triangle \mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3.
+  \end{align*}
+  $(\bm{x}_2 - \bm{x}_1) \times (\bm{x}-\bm{x}_1) = 2 \triangle \mathrm{P}_1 \mathrm{P} \mathrm{P}_2$より，
+  \[
+    b = \frac{2 \triangle \mathrm{P}_1 \mathrm{P} \mathrm{P}_2} {2 \triangle \mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3}=t.
+  \]
+  であるから，
+  \begin{align*}
+     & \bm{x} - \bm{x}_1 = s(\bm{x}_2 - \bm{x}_1) + t(\bm{x}_3 - \bm{x}_1) \\
+     & \therefore \quad \bm{x} = (1-s-t)\bm{x}_1 + s\bm{x}_2 + t\bm{x}_3.
+  \end{align*}
+  $1-s-t=t_1 $，$s=t_2$，$t=t_3$と改めて書き直すと，先に示したことから
   \[
     0 \le t_1 \le 1 ,\quad 0 \le t_2 \le 1 ,\quad 0 \le t_3 \le 1
   \]
