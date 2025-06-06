@@ -404,18 +404,18 @@
   \[
     \overrightarrow{\mathrm{OP_1}}=\bm{x}_1,\quad \overrightarrow{\mathrm{OP_2}}=\bm{x}_2,\quad \overrightarrow{\mathrm{OP_3}}=\bm{x}_3
   \]
-  とする．三角形$\mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3$上の任意の点の位置ベクトル$\bm{x}$をとり，$\triangle \mathrm{P}_1 \mathrm{P}_3 \mathrm{P}$が三角形$\mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3$の面積を表すとし，
+  とする．三角形$\mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3$上の任意の点の位置ベクトル$\bm{x}$をとり，$\triangle{\mathrm{P}_1 \mathrm{P}_3 \mathrm{P}}$が三角形$\mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3$の面積を表すとし，
   \[
-    s = \frac{ \triangle \mathrm{P}_1 \mathrm{P}_3 \mathrm{P}} { \triangle \mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3},\quad t = \frac{ \triangle\mathrm{P}_1 \mathrm{P} \mathrm{P}_2} { \triangle\mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3}
+    s = \frac{ \triangle{\mathrm{P}_1 \mathrm{P}_3 \mathrm{P}}} { \triangle{\mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3}},\quad t = \frac{ \triangle{\mathrm{P}_1 \mathrm{P} \mathrm{P}_2}} { \triangle{\mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3}}
   \]
   と$s$，$t$を定める．
   このとき，
   \[
-    \triangle \mathrm{P}_1 \mathrm{P}_3 \mathrm{P} +\triangle\mathrm{P}_1 \mathrm{P} \mathrm{P}_2+ \triangle \mathrm{P} \mathrm{P}_2 \mathrm{P}_3 = \triangle \mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3
+    \triangle{\mathrm{P}_1 \mathrm{P}_3 \mathrm{P}} +\triangle{\mathrm{P}_1 \mathrm{P} \mathrm{P}_2}+ \triangle{\mathrm{P} \mathrm{P}_2 \mathrm{P}_3} = \triangle{\mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3}
   \]
-  の両辺を$ \triangle \mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3$で割ると，
+  の両辺を$ \triangle{\mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3}$で割ると，
   \[
-    s+t + \frac{ \triangle \mathrm{P} \mathrm{P}_2 \mathrm{P}_3} { \triangle \mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3} = 1
+    s+t + \frac{ \triangle{\mathrm{P} \mathrm{P}_2 \mathrm{P}_3}} { \triangle{\mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3}} = 1
   \]
   このことから，$ 0 \leqq s \leqq 1$，$0 \leqq t \leqq 1$，$s+t \leqq 1$を満たす実数$s$，$t$が存在することがわかる．
 
@@ -428,24 +428,24 @@
   ここで，
   \begin{align*}
     (\bm{x}_3 - \bm{x}_1) \times (\bm{x}-\bm{x}_1) & =  (\bm{x}_3 - \bm{x}_1) \times (a(\bm{x}_2 - \bm{x}_1) + b(\bm{x}_3 - \bm{x}_1)) \\
-                                                   & = a (\bm{x}_3- \bm{x}_1) \times (\bm{x}_2 - \bm{x}_1)                             \\
-                                                   & = a \cdot 2 \triangle \mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3.
+                                                   & = a (\bm{x}_3- \bm{x}_1) \times (\bm{x}_2 - \bm{x}_1).
   \end{align*}
-  $(\bm{x}_3 - \bm{x}_1) \times (\bm{x}-\bm{x}_1) = 2 \triangle \mathrm{P}_1 \mathrm{P}_3 \mathrm{P}$より，
-  \[
-    a = \frac{2 \triangle \mathrm{P}_1 \mathrm{P}_3 \mathrm{P}} {2 \triangle \mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3}= s.
-  \]
+  つまり，$\norm{(\bm{x}_3 - \bm{x}_1) \times (\bm{x}-\bm{x}_1)} = a \norm{(\bm{x}_3- \bm{x}_1) \times (\bm{x}_2 - \bm{x}_1)}$であるから，
+  \begin{align*}
+     & 2 \triangle{\mathrm{P}_1 \mathrm{P} \mathrm{P}_3} = 2 a \triangle{\mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3},                         \\
+     & \therefore ~a = \frac{2 \triangle{\mathrm{P}_1 \mathrm{P}_3 \mathrm{P}}} {2 \triangle{\mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3}}= s.
+  \end{align*}
   また，
   \begin{align*}
     (\bm{x}_2 - \bm{x}_1) \times (\bm{x}-\bm{x}_1) & =  (\bm{x}_2 - \bm{x}_1) \times (a(\bm{x}_2 - \bm{x}_1) + b(\bm{x}_3 - \bm{x}_1)) \\
-                                                   & = b (\bm{x}_2- \bm{x}_1) \times (\bm{x}_3 - \bm{x}_1)                             \\
-                                                   & = b \cdot 2 \triangle \mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3.
+                                                   & = b (\bm{x}_2- \bm{x}_1) \times (\bm{x}_3 - \bm{x}_1).
   \end{align*}
-  $(\bm{x}_2 - \bm{x}_1) \times (\bm{x}-\bm{x}_1) = 2 \triangle \mathrm{P}_1 \mathrm{P} \mathrm{P}_2$より，
-  \[
-    b = \frac{2 \triangle \mathrm{P}_1 \mathrm{P} \mathrm{P}_2} {2 \triangle \mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3}=t.
-  \]
-  であるから，
+  つまり，$\norm{(\bm{x}_2 - \bm{x}_1) \times (\bm{x}-\bm{x}_1)} = b \norm{(\bm{x}_2- \bm{x}_1) \times (\bm{x}_3 - \bm{x}_1)}$であるから，
+  \begin{align*}
+     & 2 \triangle{\mathrm{P}_1 \mathrm{P} \mathrm{P}_2} = 2 b \triangle{\mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3},                         \\
+     & \therefore ~b = \frac{2 \triangle{\mathrm{P}_1 \mathrm{P} \mathrm{P}_2} }{2 \triangle{\mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3}}= t.
+  \end{align*}
+  よって，
   \begin{align*}
      & \bm{x} - \bm{x}_1 = s(\bm{x}_2 - \bm{x}_1) + t(\bm{x}_3 - \bm{x}_1) \\
      & \therefore \quad \bm{x} = (1-s-t)\bm{x}_1 + s\bm{x}_2 + t\bm{x}_3.
