@@ -430,7 +430,9 @@
     (\bm{x}_3 - \bm{x}_1) \times (\bm{x}-\bm{x}_1) & =  (\bm{x}_3 - \bm{x}_1) \times (a(\bm{x}_2 - \bm{x}_1) + b(\bm{x}_3 - \bm{x}_1)) \\
                                                    & = a (\bm{x}_3- \bm{x}_1) \times (\bm{x}_2 - \bm{x}_1).
   \end{align*}
-  つまり，$\norm{(\bm{x}_3 - \bm{x}_1) \times (\bm{x}-\bm{x}_1)} = a \norm{(\bm{x}_3- \bm{x}_1) \times (\bm{x}_2 - \bm{x}_1)}$であるから，
+  つまり，$\norm{(\bm{x}_3 - \bm{x}_1) \times (\bm{x}-\bm{x}_1)} = \abs{a} \norm{(\bm{x}_3- \bm{x}_1) \times (\bm{x}_2 - \bm{x}_1)}$である．
+  そして，$\triangle{\mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3}$を含む平面上で，点$\mathrm{P}$と$\mathrm{P}_2$は$\overrightarrow{\mathrm{P_1 P_3}}$に対して同じ側にあるので，
+  外積の定義により$a \ge 0$である．ゆえに，
   \begin{align*}
      & 2 \triangle{\mathrm{P}_1 \mathrm{P} \mathrm{P}_3} = 2 a \triangle{\mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3},                         \\
      & \therefore ~a = \frac{2 \triangle{\mathrm{P}_1 \mathrm{P}_3 \mathrm{P}}} {2 \triangle{\mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3}}= s.
@@ -440,7 +442,9 @@
     (\bm{x}_2 - \bm{x}_1) \times (\bm{x}-\bm{x}_1) & =  (\bm{x}_2 - \bm{x}_1) \times (a(\bm{x}_2 - \bm{x}_1) + b(\bm{x}_3 - \bm{x}_1)) \\
                                                    & = b (\bm{x}_2- \bm{x}_1) \times (\bm{x}_3 - \bm{x}_1).
   \end{align*}
-  つまり，$\norm{(\bm{x}_2 - \bm{x}_1) \times (\bm{x}-\bm{x}_1)} = b \norm{(\bm{x}_2- \bm{x}_1) \times (\bm{x}_3 - \bm{x}_1)}$であるから，
+  つまり，$\norm{(\bm{x}_2 - \bm{x}_1) \times (\bm{x}-\bm{x}_1)} = \abs{b} \norm{(\bm{x}_2- \bm{x}_1) \times (\bm{x}_3 - \bm{x}_1)}$である．
+  そして，$ \triangle{\mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3}$を含む平面上で，点$\mathrm{P}$と$\mathrm{P}_3$は$\overrightarrow{\mathrm{P_1 P_2}}$に対して同じ側にあるので，
+  外積の定義により$ b \ge 0$である．ゆえに，
   \begin{align*}
      & 2 \triangle{\mathrm{P}_1 \mathrm{P} \mathrm{P}_2} = 2 b \triangle{\mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3},                         \\
      & \therefore ~b = \frac{2 \triangle{\mathrm{P}_1 \mathrm{P} \mathrm{P}_2} }{2 \triangle{\mathrm{P}_1 \mathrm{P}_2 \mathrm{P}_3}}= t.
