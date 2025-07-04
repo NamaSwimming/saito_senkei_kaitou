@@ -896,61 +896,60 @@
 \part*{第1章・章末問題}
 \addcontentsline{toc}{part}{\texorpdfstring{第1章・章末問題}{第1章・章末問題}}
 
-
+\begin{comment}
 \section*{p29--30:1}
 \addcontentsline{toc}{section}{\texorpdfstring{p29--30：1}{p29--30：1}}
 
 \begin{tproof}
   \[
-    P=\left\{\bm{x}=t_1 \bm{x}_1+t_2\bm{x}_2+\dots+t_k\bm{x}_k\; \middle| \;t_i\ \ge 0\;(1\le i\le k),\;\sum_{i=1}^k t_i=1\right\}.
+    P=\left\{t_1 \bm{x}_1+t_2\bm{x}_2+\dots+t_k\bm{x}_k\; \middle| \;t_i\ \ge 0\;(1\le i\le k),\;\sum_{i=1}^k t_i=1\right\}.
   \]
   であることを示す．
   \begin{enumerate}[(i)]
-    \item $ P \subset \left\{\bm{x}=t_1 \bm{x}_1+t_2\bm{x}_2+\dots+t_k\bm{x}_k\; \middle| \;t_i\ \ge 0\;(1\le i\le k),\;\sum_{i=1}^k t_i=1\right\}$
-    \item $ P \supset \left\{\bm{x}=t_1 \bm{x}_1+t_2\bm{x}_2+\dots+t_k\bm{x}_k\; \middle| \;t_i\ \ge 0\;(1\le i\le k),\;\sum_{i=1}^k t_i=1\right\}$
+    \item $ P \subset \left\{t_1 \bm{x}_1+t_2\bm{x}_2+\dots+t_k\bm{x}_k\; \middle| \;t_i\ \ge 0\;(1\le i\le k),\;\sum_{i=1}^k t_i=1\right\}$
+    \item $ P \supset \left\{t_1 \bm{x}_1+t_2\bm{x}_2+\dots+t_k\bm{x}_k\; \middle| \;t_i\ \ge 0\;(1\le i\le k),\;\sum_{i=1}^k t_i=1\right\}$
   \end{enumerate}
   とする．
   \paragraph{(i)の証明}
-  数学的帰納法により示す．$k=4$のときの考察のために，四面体$\mathrm{P_1 P_2 P_3 P_4}$を考える．三角形$\mathrm{P_2 P_3 P_4}$の任意の周および内部の点を$\mathrm{T}$とする．
-  $0 \leqq k \leqq 1$，$0 \leqq s \leqq 1$をみたす$k,s \in \mathbb{R}$によって
-  \begin{align*}
-    \overrightarrow{\mathrm{P_2 T}} & = k \{ s \overrightarrow{\mathrm{P_2 P_3}} + (1-s) \overrightarrow{\mathrm{P_2 P_4}} \} \\
-                                    & = ks(\bm{x}_3 -\bm{x}_2) + k(1-s) (\bm{x}_4-\bm{x}_2)                                   \\
-                                    & = -k\bm{x}_2 + ks \bm{x}_3 + k(1-s) \bm{x}_4
-  \end{align*}
-  と表される．
+  数学的帰納法により示す．$k=4$のときの考察をし，以下では四面体$\mathrm{P_1 P_2 P_3 P_4}$を単に$\mathrm{P}$とかく．
+  $\bm{x} \in P$を任意にとり， 位置ベクトルの基準を$\mathrm{O}$とした上で，$\bm{x}$と対応する点を$\mathrm{T}$とする．
 
-  さて，線分$\mathrm{P_1 T}$上の任意の点を$\mathrm{Q}$とすると，$0 \leqq t \leqq 1$をみたす$t \in \mathbb{R}$によって
-
+  このとき，$\overrightarrow{\mathrm{P_1 T}}$はp12：問3により，$0 \leqq k \leqq 1$，$0 \leqq s \leqq 1$，$ s+k \leqq 1$をみたす$k,s \in \mathbb{R}$によって
   \begin{align*}
-    \overrightarrow{\mathrm{P_1 Q}} & =t \overrightarrow{\mathrm{P_1 T}}                                      \\
-                                    & = t\overrightarrow{\mathrm{P_2 T}} - t\overrightarrow{\mathrm{P_2 P_1}} \\
-                                    & = t (-k\bm{x}_2 + ks \bm{x}_3 + k(1-s) \bm{x}_4)-t(\bm{x}_1 -\bm{x}_2)  \\
-                                    & = -t\bm{x}_1 +(t-kt) \bm{x}_2 + kst \bm{x}_3 +kt(1-s) \bm{x}_4
+    \overrightarrow{\mathrm{P_1 T}} & = k \{ s \overrightarrow{\mathrm{P_1 P_2}} + (1-s) \overrightarrow{\mathrm{P_1 P_3}} \} \\
+                                    & = ks(\bm{x}_2 -\bm{x}_1) + k(1-s) (\bm{x}_3-\bm{x}_1)                                   \\
+                                    & = -k\bm{x}_1 + ks \bm{x}_2 + k(1-s) \bm{x}_3
   \end{align*}
-  と表されるから，$k=4$のときの求める位置ベクトルは．
+  と表される．このとき，線分$\mathrm{P_4 T}$上の点は，$0 \leqq t \leqq 1$をみたす$t \in \mathbb{R}$によって
   \begin{align*}
-    \bm{x} & = \bm{x}_1 + \overrightarrow{\mathrm{P_1 Q}}                     \\
-           & = (1-t) \bm{x}_1 +(t-kt)\bm{x}_2 +kst \bm{x}_3 +kt(1-s) \bm{x}_4
+    \overrightarrow{\mathrm{P_4 T}} & = t \overrightarrow{\mathrm{P_4 T}} + (1-t) \overrightarrow{\mathrm{P_1 T}} \\
+                                    & = t \bm{x}_4 + (1-t)(-k\bm{x}_1 + ks \bm{x}_2 + k(1-s) \bm{x}_3)            \\
+                                    & = -kt\bm{x}_1  + ks(1-t)\bm{x}_2 + k(1-s)(1-t)\bm{x}_3+ t\bm{x}_4           \\
+                                    & = (1-kt)\bm{x}_1  + ks(1-t)\bm{x}_2 + k(1-s)(1-t)\bm{x}_3 + t\bm{x}_4
   \end{align*}
   となり，
   \[
-    (1-t)+ (t-kt)+kst + kt(1-s)=1
+    (1-kt)+ks(1-t)+k(1-s)(1-t)+t = 1
   \]
-  であるから，$1-t = t_1$，$t-kt =t_2$，$kst = t_3$，$kt(1-s)=t_4$とおくと，
+  であるから，$1-kt = t_1$，$ks(1-t) =t_2$，$k(1-s)(1-t) = t_3$，$t t_4$とおくと，
   \[
     \bm{x}= t_1 \bm{x}_1 + t_2 \bm{x}_2 + t_3 \bm{x}_3 + t_4 \bm{x}_4 , \quad t_1, t_2 ,t_3 , t_4 \geqq 0 ,\quad  t_1 +t_2 + t_3 + t_4 =1
   \]
-  となり，ここまでで$k=4$の場合が示された．
-
+  となり，
+  \[
+    \bm{x} \in\left\{t_1 \bm{x}_1+t_2\bm{x}_2+t_3 \bm{x}_3+t_4\bm{x}_4\; \middle| \;t_i\ \ge 0\;(1\le i\le 4),\;\sum_{i=1}^{4} t_i=1\right\}.
+  \]
+  ここまでで$k=4$の場合が示された．
+  %のちに修正
   ここで，$n \geqq 4$として$k=n$のときに主張が成り立つと仮定する．
   このとき，
   \[
     t_1 \bm{x}_1 + t_2 \bm{x}_2+\dots+ t_n \bm{x}_n
   \]
-  は仮定により多面体$\{ \mathrm{P}_n \}$の点であり，これを簡単のために$\bm{X}_n$とおく．
+  は仮定により多面体$P$の点であり，これを簡単のために$\bm{X}_n$とおく．
 
-  さて，$\{ \mathrm{P}_n \}$の点と$\mathrm{P}_{n+1}$とを結ぶ線分上の点は，$ 0 \leqq l \leqq 1$をみたす$l \in \mathbb{R}$によって，
+  さて，$P$が$n+1$個の頂点をもつとし，$\bm{x} \in P$を任意にとる．
+  さて，$\bm{X}_n$と$\mathrm{P}_{n+1}$とを結ぶ線分上の点は，$ 0 \leqq l \leqq 1$をみたす$l \in \mathbb{R}$によって，
   \[
     l \overbrace{(  t_1 \bm{x}_1 + t_2 \bm{x}_2+\dots+ t_n \bm{x}_n)}^{\bm{X}_n}+(1-l) \bm{x}_{n+1} , \quad t_1+t_2+\dots + t_n =1
   \]
@@ -958,7 +957,8 @@
   \[
     l(t_1+t_2+\dots+t_n)+(1-l)=1
   \]
-  なので，$\{ \mathrm{P}_n \}$の点と$\mathrm{P}_{n+1}$とを結ぶ線分上の点はこのように表せる．
+  なので，$\bm{X}_n$と$\mathrm{P}_{n+1}$とを結ぶ線分上の点はこのように表せる．
+  ゆえにこのとき，$ x \in \left\{t_1 \bm{x}_1+t_2\bm{x}_2+\dots+t_k\bm{x}_k\; \middle| \;t_i\ \ge 0\;(1\le i\le k),\;\sum_{i=1}^k t_i=1\right\}$である．
   よって，$k=n$のときも問題の主張が成り立つ．
 
   以上のことと数学的帰納法により，(i)が示された．
@@ -1007,9 +1007,10 @@
   \paragraph{結論}
   以上(i)，(ii)の考察により，
   \[
-    P=\left\{\bm{x}=t_1 \bm{x}_1+t_2\bm{x}_2+\dots+t_k\bm{x}_k\; \middle| \;t_i\ \ge 0\;(1\le i\le k),\;\sum_{i=1}^k t_i=1\right\}.
+    P=\left\{ t_1 \bm{x}_1+t_2\bm{x}_2+\dots+t_k\bm{x}_k\; \middle| \;t_i\ \ge 0\;(1\le i\le k),\;\sum_{i=1}^k t_i=1\right\}.
   \]
 \end{tproof}
+\end{comment}
 
 \section*{p29--30:2}
 \addcontentsline{toc}{section}{\texorpdfstring{p29--30：2}{p29--30：2}}
